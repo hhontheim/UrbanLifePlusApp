@@ -6,6 +6,7 @@ url="<li><a href=\"itms-services://?action=download-manifest&url=https://honthei
 ipa="https:\/\/hontheim.net\/deploy\/ulp\/$1\/app.ipa"
 
 sed -i '' "s/url_to_replace/$ipa/g" ./manifest.plist
+sed -i '' "s/UrbanLifePlusApp/UrbanLife+/g" ./manifest.plist
 
 echo $url > append_on_server
 

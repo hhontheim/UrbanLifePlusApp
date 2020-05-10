@@ -1,0 +1,8 @@
+{
+    "Simulator Target Bundle": "net.hontheim.UrbanLifePlusApp",
+    "aps": {
+        "alert": "Hello!",
+        "badge": 5,
+        "sound": "default"
+    }
+}

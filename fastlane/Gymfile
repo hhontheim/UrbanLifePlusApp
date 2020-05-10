@@ -1,0 +1,30 @@
+# For more information about this configuration visit
+# https://docs.fastlane.tools/actions/gym/#gymfile
+
+# In general, you can use the options available
+# fastlane gym --help
+
+# Remove the # in front of the line to enable the option
+
+# scheme("Example")
+
+# sdk("iphoneos9.0")
+
+clean(true)
+
+output_directory("./build")
+
+output_name("app")
+
+# export_options("./fastlane/ExportOptions.plist")
+
+# export_options({
+#   method: "ad-hoc",
+#   include_bitcode: true,
+#   manifest: {
+#     appURL: "url_to_replace",
+#     displayImageURL: "https://hontheim.net/deploy/ulp/57.png",
+#     fullSizeImageURL: "https://hontheim.net/deploy/ulp/512.png"
+#   }
+#   #thinning: "<thin-for-all-variants>"
+# })

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>manifest</key>
+	<dict>
+		<key>appURL</key>
+		<string>url_to_replace</string>
+		<key>displayImageURL</key>
+		<string>https://hontheim.net/deploy/ulp/57.png</string>
+		<key>fullSizeImageURL</key>
+		<string>https://hontheim.net/deploy/ulp/512.png</string>
+	</dict>
+	<key>method</key>
+	<string>ad-hoc</string>
+	<key>include_bitcode</key>
+	<true/>
+	<key>include_symbols</key>
+	<true/>
+</dict>
+</plist>

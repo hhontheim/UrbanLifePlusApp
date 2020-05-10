@@ -1,0 +1,17 @@
+language: swift
+osx_image: xcode11.4
+install:
+  - bundle install
+jobs:
+  include:
+    - stage: fastlane
+      script:
+        - bundle install
+        - if [ "$TRAVIS_BRANCH" = "master" ]; then bundle exec fastlane deploy; fi
+      if: commit_message !~ /(Version Bump)/ AND branch = master AND (type NOT IN (pull_request)) AND (NOT tag =~ ^ci/.*)
+notifications:
+  slack:
+    secure: dgvP0msGjAT8wLplrQDPSb3lUOaK0AQHgmOH+mXYbDAojswAAAFEqu8qR8SDUdoN6DSwoh926EzgCMx9cg7xTyIBwjaa0sn7WF2PKShACgR7d72hvAXfb7Uq59v+NqARgDG7duoC6YZuaZVPbPWV4gKLnDG7RDk3IBficUx3J6MRb9/tMTpAC1fZBfzUBr1Ost+i3jriyQDQ8ssBOlxs9ok6L53uyoSuGC/RoxaVG2hJlFGBh5jqNzCEvmjC/oM8E6Qr0ja7KvvWcjVZO+NeOZeHMjmXYSEJ98rIqsLckiRtzOWpr0uznONXpbzyro6g7/Ba0iiWgWvuwPdfomxQcrvQCqGfE6er3OsXji1GmvnKR7AFcNH0/L8q5D86aoif3TWblmwVkouTnEz0tahdBlMu/SqnC5/LClVlcWvMrRd57Q6qhSR+sfTAmEndb28zIo+/mzAudeNLEcvJpp5Y+NT482Qi+cNaMVddlqBL6edINIlgL6e/Iru0v9Z7q0GzayYf/AguG2uPFgpT9b7g1V/uxh/YfwrPZBN1pErPQtD8XC3Vm8+1CiaxzdwI3MO6HfcemCiOspa1YSxIk8COMvjJI18iOn5Vn37RNZc4vTwFUG9duFklywtO44NSgHJrg+Pl5d5n1Ie8YvylaYsRampyE5CX65X0DehPOKv1cXc=
+addons:
+  ssh_known_hosts:
+    - ssh.strato.de:22

@@ -1,0 +1,974 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B8EC88824686BFF00655D58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88724686BFF00655D58 /* AppDelegate.swift */; };
+		2B8EC88A24686BFF00655D58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88924686BFF00655D58 /* SceneDelegate.swift */; };
+		2B8EC88C24686BFF00655D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88B24686BFF00655D58 /* ContentView.swift */; };
+		2B8EC88E24686C0200655D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
+		2B8EC89124686C0200655D58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC89024686C0200655D58 /* Preview Assets.xcassets */; };
+		2B8EC89424686C0200655D58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC89224686C0200655D58 /* LaunchScreen.storyboard */; };
+		2B8EC89F24686C0200655D58 /* UrbanLifePlusAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC89E24686C0200655D58 /* UrbanLifePlusAppTests.swift */; };
+		2B8EC8AA24686C0200655D58 /* UrbanLifePlusAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8A924686C0200655D58 /* UrbanLifePlusAppUITests.swift */; };
+		2B8EC8AF24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B8EC8B524686C0200655D58 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8B324686C0200655D58 /* Interface.storyboard */; };
+		2B8EC8B724686C0300655D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8B624686C0300655D58 /* Assets.xcassets */; };
+		2B8EC8BE24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B8EC8BD24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B8EC8C324686C0300655D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8C224686C0300655D58 /* ContentView.swift */; };
+		2B8EC8C524686C0300655D58 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8C424686C0300655D58 /* HostingController.swift */; };
+		2B8EC8C724686C0300655D58 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8C624686C0300655D58 /* ExtensionDelegate.swift */; };
+		2B8EC8C924686C0300655D58 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8C824686C0300655D58 /* NotificationController.swift */; };
+		2B8EC8CB24686C0300655D58 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8CA24686C0300655D58 /* NotificationView.swift */; };
+		2B8EC8CD24686C0400655D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8CC24686C0400655D58 /* Assets.xcassets */; };
+		2B8EC8D024686C0400655D58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8CF24686C0400655D58 /* Preview Assets.xcassets */; };
+		2B8EC8EA24686D3500655D58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
+		2B8EC8EB24686D3500655D58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
+		2B8EC8F22468777100655D58 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8F12468777100655D58 /* Test.swift */; };
+		2B8EC8F32468778700655D58 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8F12468777100655D58 /* Test.swift */; };
+		2B8EC8F52468799A00655D58 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8F42468799A00655D58 /* SnapshotHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B8EC89B24686C0200655D58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B8EC87C24686BFF00655D58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B8EC88324686BFF00655D58;
+			remoteInfo = UrbanLifePlusApp;
+		};
+		2B8EC8A624686C0200655D58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B8EC87C24686BFF00655D58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B8EC88324686BFF00655D58;
+			remoteInfo = UrbanLifePlusApp;
+		};
+		2B8EC8B024686C0200655D58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B8EC87C24686BFF00655D58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B8EC8AD24686C0200655D58;
+			remoteInfo = "UrbanLifePlusApp WatchKit App";
+		};
+		2B8EC8BF24686C0300655D58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B8EC87C24686BFF00655D58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B8EC8BC24686C0300655D58;
+			remoteInfo = "UrbanLifePlusApp WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B8EC8D824686C0400655D58 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2B8EC8BE24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC8DC24686C0400655D58 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2B8EC8AF24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2B8EC88424686BFF00655D58 /* UrbanLifePlusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanLifePlusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8EC88724686BFF00655D58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B8EC88924686BFF00655D58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B8EC88B24686BFF00655D58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B8EC88D24686C0200655D58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B8EC89024686C0200655D58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B8EC89324686C0200655D58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B8EC89524686C0200655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B8EC89A24686C0200655D58 /* UrbanLifePlusAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrbanLifePlusAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8EC89E24686C0200655D58 /* UrbanLifePlusAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanLifePlusAppTests.swift; sourceTree = "<group>"; };
+		2B8EC8A024686C0200655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B8EC8A524686C0200655D58 /* UrbanLifePlusAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrbanLifePlusAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8EC8A924686C0200655D58 /* UrbanLifePlusAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanLifePlusAppUITests.swift; sourceTree = "<group>"; };
+		2B8EC8AB24686C0200655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UrbanLifePlusApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8EC8B424686C0200655D58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2B8EC8B624686C0300655D58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B8EC8B824686C0300655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B8EC8BD24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "UrbanLifePlusApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8EC8C224686C0300655D58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B8EC8C424686C0300655D58 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		2B8EC8C624686C0300655D58 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		2B8EC8C824686C0300655D58 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2B8EC8CA24686C0300655D58 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		2B8EC8CC24686C0400655D58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B8EC8CF24686C0400655D58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B8EC8D124686C0400655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B8EC8D224686C0400655D58 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		2B8EC8EE24686D3F00655D58 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2B8EC8F12468777100655D58 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		2B8EC8F42468799A00655D58 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B8EC88124686BFF00655D58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC89724686C0200655D58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC8A224686C0200655D58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC8BA24686C0300655D58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B8EC87B24686BFF00655D58 = {
+			isa = PBXGroup;
+			children = (
+				2B8EC8E624686D1700655D58 /* Shared */,
+				2B8EC88624686BFF00655D58 /* UrbanLifePlusApp */,
+				2B8EC89D24686C0200655D58 /* UrbanLifePlusAppTests */,
+				2B8EC8A824686C0200655D58 /* UrbanLifePlusAppUITests */,
+				2B8EC8B224686C0200655D58 /* UrbanLifePlusApp WatchKit App */,
+				2B8EC8C124686C0300655D58 /* UrbanLifePlusApp WatchKit Extension */,
+				2B8EC88524686BFF00655D58 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B8EC88524686BFF00655D58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC88424686BFF00655D58 /* UrbanLifePlusApp.app */,
+				2B8EC89A24686C0200655D58 /* UrbanLifePlusAppTests.xctest */,
+				2B8EC8A524686C0200655D58 /* UrbanLifePlusAppUITests.xctest */,
+				2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */,
+				2B8EC8BD24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B8EC88624686BFF00655D58 /* UrbanLifePlusApp */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC88724686BFF00655D58 /* AppDelegate.swift */,
+				2B8EC88924686BFF00655D58 /* SceneDelegate.swift */,
+				2B8EC88B24686BFF00655D58 /* ContentView.swift */,
+				2B8EC88D24686C0200655D58 /* Assets.xcassets */,
+				2B8EC89224686C0200655D58 /* LaunchScreen.storyboard */,
+				2B8EC89524686C0200655D58 /* Info.plist */,
+				2B8EC88F24686C0200655D58 /* Preview Content */,
+			);
+			path = UrbanLifePlusApp;
+			sourceTree = "<group>";
+		};
+		2B8EC88F24686C0200655D58 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC89024686C0200655D58 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B8EC89D24686C0200655D58 /* UrbanLifePlusAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC89E24686C0200655D58 /* UrbanLifePlusAppTests.swift */,
+				2B8EC8A024686C0200655D58 /* Info.plist */,
+			);
+			path = UrbanLifePlusAppTests;
+			sourceTree = "<group>";
+		};
+		2B8EC8A824686C0200655D58 /* UrbanLifePlusAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC8F42468799A00655D58 /* SnapshotHelper.swift */,
+				2B8EC8A924686C0200655D58 /* UrbanLifePlusAppUITests.swift */,
+				2B8EC8AB24686C0200655D58 /* Info.plist */,
+			);
+			path = UrbanLifePlusAppUITests;
+			sourceTree = "<group>";
+		};
+		2B8EC8B224686C0200655D58 /* UrbanLifePlusApp WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC8B324686C0200655D58 /* Interface.storyboard */,
+				2B8EC8B624686C0300655D58 /* Assets.xcassets */,
+				2B8EC8B824686C0300655D58 /* Info.plist */,
+			);
+			path = "UrbanLifePlusApp WatchKit App";
+			sourceTree = "<group>";
+		};
+		2B8EC8C124686C0300655D58 /* UrbanLifePlusApp WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC8C224686C0300655D58 /* ContentView.swift */,
+				2B8EC8C424686C0300655D58 /* HostingController.swift */,
+				2B8EC8C624686C0300655D58 /* ExtensionDelegate.swift */,
+				2B8EC8C824686C0300655D58 /* NotificationController.swift */,
+				2B8EC8CA24686C0300655D58 /* NotificationView.swift */,
+				2B8EC8CC24686C0400655D58 /* Assets.xcassets */,
+				2B8EC8D124686C0400655D58 /* Info.plist */,
+				2B8EC8D224686C0400655D58 /* PushNotificationPayload.apns */,
+				2B8EC8CE24686C0400655D58 /* Preview Content */,
+			);
+			path = "UrbanLifePlusApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		2B8EC8CE24686C0400655D58 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC8CF24686C0400655D58 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B8EC8E624686D1700655D58 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC8ED24686D3500655D58 /* Localizable.strings */,
+				2B8EC8F12468777100655D58 /* Test.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B8EC88324686BFF00655D58 /* UrbanLifePlusApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8EC8DD24686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusApp" */;
+			buildPhases = (
+				2B8EC88024686BFF00655D58 /* Sources */,
+				2B8EC88124686BFF00655D58 /* Frameworks */,
+				2B8EC88224686BFF00655D58 /* Resources */,
+				2B8EC8DC24686C0400655D58 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B8EC8B124686C0200655D58 /* PBXTargetDependency */,
+			);
+			name = UrbanLifePlusApp;
+			productName = UrbanLifePlusApp;
+			productReference = 2B8EC88424686BFF00655D58 /* UrbanLifePlusApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B8EC89924686C0200655D58 /* UrbanLifePlusAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8EC8E024686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusAppTests" */;
+			buildPhases = (
+				2B8EC89624686C0200655D58 /* Sources */,
+				2B8EC89724686C0200655D58 /* Frameworks */,
+				2B8EC89824686C0200655D58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B8EC89C24686C0200655D58 /* PBXTargetDependency */,
+			);
+			name = UrbanLifePlusAppTests;
+			productName = UrbanLifePlusAppTests;
+			productReference = 2B8EC89A24686C0200655D58 /* UrbanLifePlusAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B8EC8A424686C0200655D58 /* UrbanLifePlusAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8EC8E324686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusAppUITests" */;
+			buildPhases = (
+				2B8EC8A124686C0200655D58 /* Sources */,
+				2B8EC8A224686C0200655D58 /* Frameworks */,
+				2B8EC8A324686C0200655D58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B8EC8A724686C0200655D58 /* PBXTargetDependency */,
+			);
+			name = UrbanLifePlusAppUITests;
+			productName = UrbanLifePlusAppUITests;
+			productReference = 2B8EC8A524686C0200655D58 /* UrbanLifePlusAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		2B8EC8AD24686C0200655D58 /* UrbanLifePlusApp WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8EC8D924686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusApp WatchKit App" */;
+			buildPhases = (
+				2B8EC8AC24686C0200655D58 /* Resources */,
+				2B8EC8D824686C0400655D58 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B8EC8C024686C0300655D58 /* PBXTargetDependency */,
+			);
+			name = "UrbanLifePlusApp WatchKit App";
+			productName = "UrbanLifePlusApp WatchKit App";
+			productReference = 2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		2B8EC8BC24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8EC8D524686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusApp WatchKit Extension" */;
+			buildPhases = (
+				2B8EC8B924686C0300655D58 /* Sources */,
+				2B8EC8BA24686C0300655D58 /* Frameworks */,
+				2B8EC8BB24686C0300655D58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UrbanLifePlusApp WatchKit Extension";
+			productName = "UrbanLifePlusApp WatchKit Extension";
+			productReference = 2B8EC8BD24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B8EC87C24686BFF00655D58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Henning Hontheim";
+				TargetAttributes = {
+					2B8EC88324686BFF00655D58 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					2B8EC89924686C0200655D58 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 2B8EC88324686BFF00655D58;
+					};
+					2B8EC8A424686C0200655D58 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 2B8EC88324686BFF00655D58;
+					};
+					2B8EC8AD24686C0200655D58 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					2B8EC8BC24686C0300655D58 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 2B8EC87F24686BFF00655D58 /* Build configuration list for PBXProject "UrbanLifePlusApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = de;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				de,
+				Base,
+			);
+			mainGroup = 2B8EC87B24686BFF00655D58;
+			productRefGroup = 2B8EC88524686BFF00655D58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B8EC88324686BFF00655D58 /* UrbanLifePlusApp */,
+				2B8EC89924686C0200655D58 /* UrbanLifePlusAppTests */,
+				2B8EC8A424686C0200655D58 /* UrbanLifePlusAppUITests */,
+				2B8EC8AD24686C0200655D58 /* UrbanLifePlusApp WatchKit App */,
+				2B8EC8BC24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B8EC88224686BFF00655D58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8EC89424686C0200655D58 /* LaunchScreen.storyboard in Resources */,
+				2B8EC8EA24686D3500655D58 /* Localizable.strings in Resources */,
+				2B8EC89124686C0200655D58 /* Preview Assets.xcassets in Resources */,
+				2B8EC88E24686C0200655D58 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC89824686C0200655D58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC8A324686C0200655D58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC8AC24686C0200655D58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8EC8B724686C0300655D58 /* Assets.xcassets in Resources */,
+				2B8EC8B524686C0200655D58 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC8BB24686C0300655D58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8EC8D024686C0400655D58 /* Preview Assets.xcassets in Resources */,
+				2B8EC8EB24686D3500655D58 /* Localizable.strings in Resources */,
+				2B8EC8CD24686C0400655D58 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B8EC88024686BFF00655D58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8EC88824686BFF00655D58 /* AppDelegate.swift in Sources */,
+				2B8EC8F22468777100655D58 /* Test.swift in Sources */,
+				2B8EC88A24686BFF00655D58 /* SceneDelegate.swift in Sources */,
+				2B8EC88C24686BFF00655D58 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC89624686C0200655D58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8EC89F24686C0200655D58 /* UrbanLifePlusAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC8A124686C0200655D58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8EC8AA24686C0200655D58 /* UrbanLifePlusAppUITests.swift in Sources */,
+				2B8EC8F52468799A00655D58 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8EC8B924686C0300655D58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8EC8C524686C0300655D58 /* HostingController.swift in Sources */,
+				2B8EC8C324686C0300655D58 /* ContentView.swift in Sources */,
+				2B8EC8C924686C0300655D58 /* NotificationController.swift in Sources */,
+				2B8EC8C724686C0300655D58 /* ExtensionDelegate.swift in Sources */,
+				2B8EC8CB24686C0300655D58 /* NotificationView.swift in Sources */,
+				2B8EC8F32468778700655D58 /* Test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B8EC89C24686C0200655D58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B8EC88324686BFF00655D58 /* UrbanLifePlusApp */;
+			targetProxy = 2B8EC89B24686C0200655D58 /* PBXContainerItemProxy */;
+		};
+		2B8EC8A724686C0200655D58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B8EC88324686BFF00655D58 /* UrbanLifePlusApp */;
+			targetProxy = 2B8EC8A624686C0200655D58 /* PBXContainerItemProxy */;
+		};
+		2B8EC8B124686C0200655D58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B8EC8AD24686C0200655D58 /* UrbanLifePlusApp WatchKit App */;
+			targetProxy = 2B8EC8B024686C0200655D58 /* PBXContainerItemProxy */;
+		};
+		2B8EC8C024686C0300655D58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B8EC8BC24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension */;
+			targetProxy = 2B8EC8BF24686C0300655D58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B8EC89224686C0200655D58 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B8EC89324686C0200655D58 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2B8EC8B324686C0200655D58 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B8EC8B424686C0200655D58 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		2B8EC8ED24686D3500655D58 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B8EC8EE24686D3F00655D58 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B8EC8D324686C0400655D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		2B8EC8D424686C0400655D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		2B8EC8D624686C0400655D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"UrbanLifePlusApp WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "UrbanLifePlusApp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development net.hontheim.UrbanLifePlusApp.watchkitapp.watchkitextension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		2B8EC8D724686C0400655D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"UrbanLifePlusApp WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "UrbanLifePlusApp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc net.hontheim.UrbanLifePlusApp.watchkitapp.watchkitextension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		2B8EC8DA24686C0400655D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				IBSC_MODULE = UrbanLifePlusApp_WatchKit_Extension;
+				INFOPLIST_FILE = "UrbanLifePlusApp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusApp.watchkitapp;
+				PRODUCT_NAME = "UrbanLifePlusApp WatchKit App";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development net.hontheim.UrbanLifePlusApp.watchkitapp";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		2B8EC8DB24686C0400655D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				IBSC_MODULE = UrbanLifePlusApp_WatchKit_Extension;
+				INFOPLIST_FILE = "UrbanLifePlusApp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusApp.watchkitapp;
+				PRODUCT_NAME = "UrbanLifePlusApp WatchKit App";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc net.hontheim.UrbanLifePlusApp.watchkitapp";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		2B8EC8DE24686C0400655D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"UrbanLifePlusApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = UrbanLifePlusApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development net.hontheim.UrbanLifePlusApp";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		2B8EC8DF24686C0400655D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"UrbanLifePlusApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = UrbanLifePlusApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc net.hontheim.UrbanLifePlusApp";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		2B8EC8E124686C0400655D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				INFOPLIST_FILE = UrbanLifePlusAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UrbanLifePlusApp.app/UrbanLifePlusApp";
+			};
+			name = Debug;
+		};
+		2B8EC8E224686C0400655D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				INFOPLIST_FILE = UrbanLifePlusAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UrbanLifePlusApp.app/UrbanLifePlusApp";
+			};
+			name = Release;
+		};
+		2B8EC8E424686C0400655D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				INFOPLIST_FILE = UrbanLifePlusAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UrbanLifePlusApp;
+			};
+			name = Debug;
+		};
+		2B8EC8E524686C0400655D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6NEGL975FK;
+				INFOPLIST_FILE = UrbanLifePlusAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UrbanLifePlusApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B8EC87F24686BFF00655D58 /* Build configuration list for PBXProject "UrbanLifePlusApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8EC8D324686C0400655D58 /* Debug */,
+				2B8EC8D424686C0400655D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8EC8D524686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusApp WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8EC8D624686C0400655D58 /* Debug */,
+				2B8EC8D724686C0400655D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8EC8D924686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusApp WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8EC8DA24686C0400655D58 /* Debug */,
+				2B8EC8DB24686C0400655D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8EC8DD24686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8EC8DE24686C0400655D58 /* Debug */,
+				2B8EC8DF24686C0400655D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8EC8E024686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8EC8E124686C0400655D58 /* Debug */,
+				2B8EC8E224686C0400655D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8EC8E324686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8EC8E424686C0400655D58 /* Debug */,
+				2B8EC8E524686C0400655D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B8EC87C24686BFF00655D58 /* Project object */;
+}

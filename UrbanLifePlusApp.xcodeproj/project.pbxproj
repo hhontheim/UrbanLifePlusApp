@@ -28,9 +28,15 @@
 		2B8EC8D024686C0400655D58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8CF24686C0400655D58 /* Preview Assets.xcassets */; };
 		2B8EC8EA24686D3500655D58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
 		2B8EC8EB24686D3500655D58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
-		2B8EC8F22468777100655D58 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8F12468777100655D58 /* Test.swift */; };
-		2B8EC8F32468778700655D58 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8F12468777100655D58 /* Test.swift */; };
+		2B8EC8F22468777100655D58 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8F12468777100655D58 /* LogInView.swift */; };
 		2B8EC8F52468799A00655D58 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8F42468799A00655D58 /* SnapshotHelper.swift */; };
+		2B90260D2469C99C00C30CC4 /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9026082469C99C00C30CC4 /* EnvironmentWindowKey.swift */; };
+		2B90260F2469C99C00C30CC4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9026092469C99C00C30CC4 /* UserData.swift */; };
+		2B9026112469C99C00C30CC4 /* UserDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B90260A2469C99C00C30CC4 /* UserDataKeychain.swift */; };
+		2B9026132469C99C00C30CC4 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B90260B2469C99C00C30CC4 /* Keychain.swift */; };
+		2B9026152469C99C00C30CC4 /* SignInWithAppleDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B90260C2469C99C00C30CC4 /* SignInWithAppleDelegates.swift */; };
+		2B9026202469D0DB00C30CC4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B90261F2469D0DB00C30CC4 /* HomeView.swift */; };
+		2BE0FC2B2469DECB00196821 /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC2A2469DECB00196821 /* SignInWithApple.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,8 +123,18 @@
 		2B8EC8D124686C0400655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8EC8D224686C0400655D58 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		2B8EC8EE24686D3F00655D58 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2B8EC8F12468777100655D58 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		2B8EC8F12468777100655D58 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		2B8EC8F42468799A00655D58 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		2B9026082469C99C00C30CC4 /* EnvironmentWindowKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentWindowKey.swift; sourceTree = "<group>"; };
+		2B9026092469C99C00C30CC4 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		2B90260A2469C99C00C30CC4 /* UserDataKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataKeychain.swift; sourceTree = "<group>"; };
+		2B90260B2469C99C00C30CC4 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		2B90260C2469C99C00C30CC4 /* SignInWithAppleDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithAppleDelegates.swift; sourceTree = "<group>"; };
+		2B90261C2469CC7800C30CC4 /* UrbanLifePlusApp WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UrbanLifePlusApp WatchKit App.entitlements"; sourceTree = "<group>"; };
+		2B90261D2469CD2500C30CC4 /* UrbanLifePlusApp WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UrbanLifePlusApp WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		2B90261E2469CD2B00C30CC4 /* UrbanLifePlusApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UrbanLifePlusApp.entitlements; sourceTree = "<group>"; };
+		2B90261F2469D0DB00C30CC4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2BE0FC2A2469DECB00196821 /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,9 +197,11 @@
 		2B8EC88624686BFF00655D58 /* UrbanLifePlusApp */ = {
 			isa = PBXGroup;
 			children = (
+				2B90261E2469CD2B00C30CC4 /* UrbanLifePlusApp.entitlements */,
 				2B8EC88724686BFF00655D58 /* AppDelegate.swift */,
 				2B8EC88924686BFF00655D58 /* SceneDelegate.swift */,
 				2B8EC88B24686BFF00655D58 /* ContentView.swift */,
+				2B90261F2469D0DB00C30CC4 /* HomeView.swift */,
 				2B8EC89224686C0200655D58 /* LaunchScreen.storyboard */,
 				2B8EC89524686C0200655D58 /* Info.plist */,
 				2B8EC88F24686C0200655D58 /* Preview Content */,
@@ -221,6 +239,7 @@
 		2B8EC8B224686C0200655D58 /* UrbanLifePlusApp WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				2B90261C2469CC7800C30CC4 /* UrbanLifePlusApp WatchKit App.entitlements */,
 				2B8EC8B324686C0200655D58 /* Interface.storyboard */,
 				2B8EC8B824686C0300655D58 /* Info.plist */,
 			);
@@ -230,6 +249,7 @@
 		2B8EC8C124686C0300655D58 /* UrbanLifePlusApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2B90261D2469CD2500C30CC4 /* UrbanLifePlusApp WatchKit Extension.entitlements */,
 				2B8EC8C224686C0300655D58 /* ContentView.swift */,
 				2B8EC8C424686C0300655D58 /* HostingController.swift */,
 				2B8EC8C624686C0300655D58 /* ExtensionDelegate.swift */,
@@ -253,11 +273,33 @@
 		2B8EC8E624686D1700655D58 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2B9026072469C99C00C30CC4 /* SignInWithApple */,
 				2B8EC8ED24686D3500655D58 /* Localizable.strings */,
-				2B8EC8F12468777100655D58 /* Test.swift */,
+				2B8EC8F12468777100655D58 /* LogInView.swift */,
 				2B8EC88D24686C0200655D58 /* Assets.xcassets */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		2B9026072469C99C00C30CC4 /* SignInWithApple */ = {
+			isa = PBXGroup;
+			children = (
+				2B90261B2469CA8700C30CC4 /* Helper */,
+				2BE0FC2A2469DECB00196821 /* SignInWithApple.swift */,
+			);
+			path = SignInWithApple;
+			sourceTree = "<group>";
+		};
+		2B90261B2469CA8700C30CC4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2B9026082469C99C00C30CC4 /* EnvironmentWindowKey.swift */,
+				2B9026092469C99C00C30CC4 /* UserData.swift */,
+				2B90260A2469C99C00C30CC4 /* UserDataKeychain.swift */,
+				2B90260B2469C99C00C30CC4 /* Keychain.swift */,
+				2B90260C2469C99C00C30CC4 /* SignInWithAppleDelegates.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,10 +497,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B90260F2469C99C00C30CC4 /* UserData.swift in Sources */,
+				2BE0FC2B2469DECB00196821 /* SignInWithApple.swift in Sources */,
 				2B8EC88824686BFF00655D58 /* AppDelegate.swift in Sources */,
-				2B8EC8F22468777100655D58 /* Test.swift in Sources */,
+				2B90260D2469C99C00C30CC4 /* EnvironmentWindowKey.swift in Sources */,
+				2B9026202469D0DB00C30CC4 /* HomeView.swift in Sources */,
+				2B9026112469C99C00C30CC4 /* UserDataKeychain.swift in Sources */,
+				2B8EC8F22468777100655D58 /* LogInView.swift in Sources */,
+				2B9026132469C99C00C30CC4 /* Keychain.swift in Sources */,
 				2B8EC88A24686BFF00655D58 /* SceneDelegate.swift in Sources */,
 				2B8EC88C24686BFF00655D58 /* ContentView.swift in Sources */,
+				2B9026152469C99C00C30CC4 /* SignInWithAppleDelegates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +537,6 @@
 				2B8EC8C924686C0300655D58 /* NotificationController.swift in Sources */,
 				2B8EC8C724686C0300655D58 /* ExtensionDelegate.swift in Sources */,
 				2B8EC8CB24686C0300655D58 /* NotificationView.swift in Sources */,
-				2B8EC8F32468778700655D58 /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,7 +646,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -656,7 +704,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -671,6 +719,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "UrbanLifePlusApp WatchKit Extension/UrbanLifePlusApp WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"UrbanLifePlusApp WatchKit Extension/Preview Content\"";
@@ -697,6 +746,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "UrbanLifePlusApp WatchKit Extension/UrbanLifePlusApp WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"UrbanLifePlusApp WatchKit Extension/Preview Content\"";
@@ -724,6 +774,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "UrbanLifePlusApp WatchKit App/UrbanLifePlusApp WatchKit App.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6NEGL975FK;
@@ -745,6 +796,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "UrbanLifePlusApp WatchKit App/UrbanLifePlusApp WatchKit App.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6NEGL975FK;
@@ -765,6 +817,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UrbanLifePlusApp/UrbanLifePlusApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"UrbanLifePlusApp/Preview Content\"";
@@ -788,6 +841,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UrbanLifePlusApp/UrbanLifePlusApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"UrbanLifePlusApp/Preview Content\"";

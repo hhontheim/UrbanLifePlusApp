@@ -9,8 +9,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var loggedIn: Bool = false
+    
     var body: some View {
-        Test()
+        ZStack {
+            TabView {
+                HomeView(loggedIn: $loggedIn)
+            }
+            if !loggedIn {
+                LogInView(loggedIn: $loggedIn)
+                    .animation(.default)
+                    .transition(.move(edge: .leading))
+            }
+        }
     }
 }
 

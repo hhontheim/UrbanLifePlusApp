@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B2B31FD2469B42200489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
+		2B2B31FE2469B44700489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
 		2B8EC88824686BFF00655D58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88724686BFF00655D58 /* AppDelegate.swift */; };
 		2B8EC88A24686BFF00655D58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88924686BFF00655D58 /* SceneDelegate.swift */; };
 		2B8EC88C24686BFF00655D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88B24686BFF00655D58 /* ContentView.swift */; };
@@ -17,14 +19,12 @@
 		2B8EC8AA24686C0200655D58 /* UrbanLifePlusAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8A924686C0200655D58 /* UrbanLifePlusAppUITests.swift */; };
 		2B8EC8AF24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B8EC8B524686C0200655D58 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8B324686C0200655D58 /* Interface.storyboard */; };
-		2B8EC8B724686C0300655D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8B624686C0300655D58 /* Assets.xcassets */; };
 		2B8EC8BE24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B8EC8BD24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B8EC8C324686C0300655D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8C224686C0300655D58 /* ContentView.swift */; };
 		2B8EC8C524686C0300655D58 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8C424686C0300655D58 /* HostingController.swift */; };
 		2B8EC8C724686C0300655D58 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8C624686C0300655D58 /* ExtensionDelegate.swift */; };
 		2B8EC8C924686C0300655D58 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8C824686C0300655D58 /* NotificationController.swift */; };
 		2B8EC8CB24686C0300655D58 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8CA24686C0300655D58 /* NotificationView.swift */; };
-		2B8EC8CD24686C0400655D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8CC24686C0400655D58 /* Assets.xcassets */; };
 		2B8EC8D024686C0400655D58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8CF24686C0400655D58 /* Preview Assets.xcassets */; };
 		2B8EC8EA24686D3500655D58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
 		2B8EC8EB24686D3500655D58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
@@ -106,7 +106,6 @@
 		2B8EC8AB24686C0200655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UrbanLifePlusApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8EC8B424686C0200655D58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		2B8EC8B624686C0300655D58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B8EC8B824686C0300655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8EC8BD24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "UrbanLifePlusApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8EC8C224686C0300655D58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,7 +113,6 @@
 		2B8EC8C624686C0300655D58 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		2B8EC8C824686C0300655D58 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		2B8EC8CA24686C0300655D58 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		2B8EC8CC24686C0400655D58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B8EC8CF24686C0400655D58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B8EC8D124686C0400655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8EC8D224686C0400655D58 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 				2B8EC88724686BFF00655D58 /* AppDelegate.swift */,
 				2B8EC88924686BFF00655D58 /* SceneDelegate.swift */,
 				2B8EC88B24686BFF00655D58 /* ContentView.swift */,
-				2B8EC88D24686C0200655D58 /* Assets.xcassets */,
 				2B8EC89224686C0200655D58 /* LaunchScreen.storyboard */,
 				2B8EC89524686C0200655D58 /* Info.plist */,
 				2B8EC88F24686C0200655D58 /* Preview Content */,
@@ -225,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				2B8EC8B324686C0200655D58 /* Interface.storyboard */,
-				2B8EC8B624686C0300655D58 /* Assets.xcassets */,
 				2B8EC8B824686C0300655D58 /* Info.plist */,
 			);
 			path = "UrbanLifePlusApp WatchKit App";
@@ -239,7 +235,6 @@
 				2B8EC8C624686C0300655D58 /* ExtensionDelegate.swift */,
 				2B8EC8C824686C0300655D58 /* NotificationController.swift */,
 				2B8EC8CA24686C0300655D58 /* NotificationView.swift */,
-				2B8EC8CC24686C0400655D58 /* Assets.xcassets */,
 				2B8EC8D124686C0400655D58 /* Info.plist */,
 				2B8EC8D224686C0400655D58 /* PushNotificationPayload.apns */,
 				2B8EC8CE24686C0400655D58 /* Preview Content */,
@@ -260,6 +255,7 @@
 			children = (
 				2B8EC8ED24686D3500655D58 /* Localizable.strings */,
 				2B8EC8F12468777100655D58 /* Test.swift */,
+				2B8EC88D24686C0200655D58 /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -437,7 +433,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B8EC8B724686C0300655D58 /* Assets.xcassets in Resources */,
+				2B2B31FD2469B42200489C97 /* Assets.xcassets in Resources */,
 				2B8EC8B524686C0200655D58 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,8 +443,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B8EC8D024686C0400655D58 /* Preview Assets.xcassets in Resources */,
+				2B2B31FE2469B44700489C97 /* Assets.xcassets in Resources */,
 				2B8EC8EB24686D3500655D58 /* Localizable.strings in Resources */,
-				2B8EC8CD24686C0400655D58 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

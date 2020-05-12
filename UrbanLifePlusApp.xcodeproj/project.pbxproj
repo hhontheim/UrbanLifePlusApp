@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2B2B31FD2469B42200489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
 		2B2B31FE2469B44700489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
+		2B8C893A246B2E0000E0BA25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
+		2B8C8945246B2F3700E0BA25 /* CommunicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8944246B2F3700E0BA25 /* CommunicationView.swift */; };
+		2B8C8948246B2FA600E0BA25 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8947246B2FA600E0BA25 /* ProfileView.swift */; };
 		2B8EC88824686BFF00655D58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88724686BFF00655D58 /* AppDelegate.swift */; };
 		2B8EC88A24686BFF00655D58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88924686BFF00655D58 /* SceneDelegate.swift */; };
 		2B8EC88C24686BFF00655D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88B24686BFF00655D58 /* ContentView.swift */; };
@@ -17,7 +20,7 @@
 		2B8EC89424686C0200655D58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC89224686C0200655D58 /* LaunchScreen.storyboard */; };
 		2B8EC89F24686C0200655D58 /* UrbanLifePlusAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC89E24686C0200655D58 /* UrbanLifePlusAppTests.swift */; };
 		2B8EC8AA24686C0200655D58 /* UrbanLifePlusAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8A924686C0200655D58 /* UrbanLifePlusAppUITests.swift */; };
-		2B8EC8AF24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B8EC8AF24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B8EC8B524686C0200655D58 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8B324686C0200655D58 /* Interface.storyboard */; };
 		2B8EC8BE24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B8EC8BD24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B8EC8C324686C0300655D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8C224686C0300655D58 /* ContentView.swift */; };
@@ -27,7 +30,6 @@
 		2B8EC8CB24686C0300655D58 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8CA24686C0300655D58 /* NotificationView.swift */; };
 		2B8EC8D024686C0400655D58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8CF24686C0400655D58 /* Preview Assets.xcassets */; };
 		2B8EC8EA24686D3500655D58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
-		2B8EC8EB24686D3500655D58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
 		2B8EC8F22468777100655D58 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8F12468777100655D58 /* LogInView.swift */; };
 		2B8EC8F52468799A00655D58 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8F42468799A00655D58 /* SnapshotHelper.swift */; };
 		2B90260D2469C99C00C30CC4 /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9026082469C99C00C30CC4 /* EnvironmentWindowKey.swift */; };
@@ -36,6 +38,8 @@
 		2BE0FC2B2469DECB00196821 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC2A2469DECB00196821 /* SignInWithAppleButton.swift */; };
 		2BE0FC2D246AD14800196821 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC2C246AD14800196821 /* Storage.swift */; };
 		2BE0FC32246AEC0B00196821 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC31246AEC0B00196821 /* Keychain.swift */; };
+		2BE0FC35246B05F700196821 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC34246B05F700196821 /* SettingsView.swift */; };
+		2BE0FC37246B141300196821 /* DevView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC36246B141300196821 /* DevView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B8C8944246B2F3700E0BA25 /* CommunicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationView.swift; sourceTree = "<group>"; };
+		2B8C8947246B2FA600E0BA25 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2B8EC88424686BFF00655D58 /* UrbanLifePlusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanLifePlusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8EC88724686BFF00655D58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B8EC88924686BFF00655D58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,9 +136,12 @@
 		2B90261D2469CD2500C30CC4 /* UrbanLifePlusApp WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UrbanLifePlusApp WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		2B90261E2469CD2B00C30CC4 /* UrbanLifePlusApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UrbanLifePlusApp.entitlements; sourceTree = "<group>"; };
 		2B90261F2469D0DB00C30CC4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2BCE2339246B238E0083E5B1 /* SignInWithAppleButtonWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonWatch.swift; sourceTree = "<group>"; };
 		2BE0FC2A2469DECB00196821 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		2BE0FC2C246AD14800196821 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2BE0FC31246AEC0B00196821 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		2BE0FC34246B05F700196821 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2BE0FC36246B141300196821 /* DevView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,15 +176,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B8C893B246B2E1200E0BA25 /* Main Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B90261F2469D0DB00C30CC4 /* HomeView.swift */,
+				2B8C8944246B2F3700E0BA25 /* CommunicationView.swift */,
+				2BE0FC34246B05F700196821 /* SettingsView.swift */,
+				2B8C893C246B2E2300E0BA25 /* Sub Views */,
+				2B8C8946246B2F4E00E0BA25 /* Supporting Views */,
+			);
+			path = "Main Views";
+			sourceTree = "<group>";
+		};
+		2B8C893C246B2E2300E0BA25 /* Sub Views */ = {
+			isa = PBXGroup;
+			children = (
+				2BE0FC36246B141300196821 /* DevView.swift */,
+				2B8C8947246B2FA600E0BA25 /* ProfileView.swift */,
+			);
+			path = "Sub Views";
+			sourceTree = "<group>";
+		};
+		2B8C893E246B2E4400E0BA25 /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				2BCE2339246B238E0083E5B1 /* SignInWithAppleButtonWatch.swift */,
+			);
+			path = Unused;
+			sourceTree = "<group>";
+		};
+		2B8C893F246B2E4E00E0BA25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC8C224686C0300655D58 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2B8C8940246B2E6900E0BA25 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				2B8EC8C824686C0300655D58 /* NotificationController.swift */,
+				2B8EC8CA24686C0300655D58 /* NotificationView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		2B8C8946246B2F4E00E0BA25 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
 		2B8EC87B24686BFF00655D58 = {
 			isa = PBXGroup;
 			children = (
 				2B8EC8E624686D1700655D58 /* Shared */,
 				2B8EC88624686BFF00655D58 /* UrbanLifePlusApp */,
+				2B8EC8C124686C0300655D58 /* UrbanLifePlusApp WatchKit Extension */,
 				2B8EC89D24686C0200655D58 /* UrbanLifePlusAppTests */,
 				2B8EC8A824686C0200655D58 /* UrbanLifePlusAppUITests */,
 				2B8EC8B224686C0200655D58 /* UrbanLifePlusApp WatchKit App */,
-				2B8EC8C124686C0300655D58 /* UrbanLifePlusApp WatchKit Extension */,
 				2B8EC88524686BFF00655D58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -198,8 +260,8 @@
 				2B90261E2469CD2B00C30CC4 /* UrbanLifePlusApp.entitlements */,
 				2B8EC88724686BFF00655D58 /* AppDelegate.swift */,
 				2B8EC88924686BFF00655D58 /* SceneDelegate.swift */,
-				2B8EC88B24686BFF00655D58 /* ContentView.swift */,
 				2BE0FC2E246ADD7900196821 /* Views */,
+				2B90261B2469CA8700C30CC4 /* Helper */,
 				2B8EC89224686C0200655D58 /* LaunchScreen.storyboard */,
 				2B8EC89524686C0200655D58 /* Info.plist */,
 				2B8EC88F24686C0200655D58 /* Preview Content */,
@@ -248,11 +310,11 @@
 			isa = PBXGroup;
 			children = (
 				2B90261D2469CD2500C30CC4 /* UrbanLifePlusApp WatchKit Extension.entitlements */,
-				2B8EC8C224686C0300655D58 /* ContentView.swift */,
-				2B8EC8C424686C0300655D58 /* HostingController.swift */,
 				2B8EC8C624686C0300655D58 /* ExtensionDelegate.swift */,
-				2B8EC8C824686C0300655D58 /* NotificationController.swift */,
-				2B8EC8CA24686C0300655D58 /* NotificationView.swift */,
+				2B8EC8C424686C0300655D58 /* HostingController.swift */,
+				2B8C893F246B2E4E00E0BA25 /* Views */,
+				2B8C8940246B2E6900E0BA25 /* Notification */,
+				2B8C893E246B2E4400E0BA25 /* Unused */,
 				2B8EC8D124686C0400655D58 /* Info.plist */,
 				2B8EC8D224686C0400655D58 /* PushNotificationPayload.apns */,
 				2B8EC8CE24686C0400655D58 /* Preview Content */,
@@ -271,10 +333,7 @@
 		2B8EC8E624686D1700655D58 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				2B9026072469C99C00C30CC4 /* SignInWithApple */,
-				2B90261B2469CA8700C30CC4 /* Helper */,
 				2B8EC8ED24686D3500655D58 /* Localizable.strings */,
-				2B8EC8F12468777100655D58 /* LogInView.swift */,
 				2B8EC88D24686C0200655D58 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -292,6 +351,7 @@
 		2B90261B2469CA8700C30CC4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2B9026072469C99C00C30CC4 /* SignInWithApple */,
 				2B9026082469C99C00C30CC4 /* EnvironmentWindowKey.swift */,
 				2BE0FC31246AEC0B00196821 /* Keychain.swift */,
 				2BE0FC2C246AD14800196821 /* Storage.swift */,
@@ -302,7 +362,9 @@
 		2BE0FC2E246ADD7900196821 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2B90261F2469D0DB00C30CC4 /* HomeView.swift */,
+				2B8EC8F12468777100655D58 /* LogInView.swift */,
+				2B8EC88B24686BFF00655D58 /* ContentView.swift */,
+				2B8C893B246B2E1200E0BA25 /* Main Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -490,8 +552,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B8EC8D024686C0400655D58 /* Preview Assets.xcassets in Resources */,
+				2B8C893A246B2E0000E0BA25 /* Localizable.strings in Resources */,
 				2B2B31FE2469B44700489C97 /* Assets.xcassets in Resources */,
-				2B8EC8EB24686D3500655D58 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,12 +568,16 @@
 				2B8EC88824686BFF00655D58 /* AppDelegate.swift in Sources */,
 				2B90260D2469C99C00C30CC4 /* EnvironmentWindowKey.swift in Sources */,
 				2B9026202469D0DB00C30CC4 /* HomeView.swift in Sources */,
+				2B8C8945246B2F3700E0BA25 /* CommunicationView.swift in Sources */,
 				2BE0FC2D246AD14800196821 /* Storage.swift in Sources */,
 				2B8EC8F22468777100655D58 /* LogInView.swift in Sources */,
+				2BE0FC37246B141300196821 /* DevView.swift in Sources */,
 				2BE0FC32246AEC0B00196821 /* Keychain.swift in Sources */,
 				2B8EC88A24686BFF00655D58 /* SceneDelegate.swift in Sources */,
 				2B8EC88C24686BFF00655D58 /* ContentView.swift in Sources */,
 				2B9026152469C99C00C30CC4 /* SignInWithAppleDelegates.swift in Sources */,
+				2B8C8948246B2FA600E0BA25 /* ProfileView.swift in Sources */,
+				2BE0FC35246B05F700196821 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +625,7 @@
 		};
 		2B8EC8B124686C0200655D58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 2B8EC8AD24686C0200655D58 /* UrbanLifePlusApp WatchKit App */;
 			targetProxy = 2B8EC8B024686C0200655D58 /* PBXContainerItemProxy */;
 		};
@@ -742,7 +809,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
 			};
 			name = Debug;
 		};
@@ -769,7 +836,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
 			};
 			name = Release;
 		};
@@ -791,7 +858,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
 			};
 			name = Debug;
 		};
@@ -813,7 +880,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
 			};
 			name = Release;
 		};
@@ -833,8 +900,10 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusApp;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = net.hontheim.UrbanLifePlusApp.catalyst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development net.hontheim.UrbanLifePlusApp";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
@@ -857,8 +926,10 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusApp;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = net.hontheim.UrbanLifePlusApp.catalyst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc net.hontheim.UrbanLifePlusApp";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;

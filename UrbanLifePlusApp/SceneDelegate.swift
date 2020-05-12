@@ -17,6 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -24,12 +25,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Create the SwiftUI view that provides the window contents.
         
-        checkForValidCredentials()
-        
+        let storageTemp = StorageTemp()
+        let storageLocal = StorageLocal()
+        let storageCloud = StorageCloud()
+       
+        checkForValidCredentials(storageLocal)
+       
         let contentView = ContentView()
-            .environmentObject(StorageTemp())
-            .environmentObject(StorageLocal())
-            .environmentObject(StorageCloud())
+            .environmentObject(storageTemp)
+            .environmentObject(storageLocal)
+            .environmentObject(storageCloud)
+        
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
@@ -69,18 +75,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
     
-    func checkForValidCredentials() {
+    func checkForValidCredentials( _ storageLocal: StorageLocal) {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
-        appleIDProvider.getCredentialState(forUserID: "") { (credentialState, error) in
+        appleIDProvider.getCredentialState(forUserID: Keychain.currentUserIdentifier) { (credentialState, error) in
             switch credentialState {
             case .authorized:
-                self.validCredentials = true
-            case .revoked, .notFound:
-                break
-            default:
+                break // The Apple ID credential is valid.
+            default: // .revoked, .notFound:
+                // The Apple ID credential is either revoked or was not found, so show the sign-in UI.
+                storageLocal.nuke()
                 break
             }
         }
     }
 }
-

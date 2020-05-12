@@ -27,12 +27,7 @@ class SignInWithAppleDelegates: NSObject {
 
 extension SignInWithAppleDelegates: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        switch authorization.credential {
-        case let appleIdCredential as ASAuthorizationAppleIDCredential:
-            self.handler(appleIdCredential)
-        default:
-            self.handler(nil)
-        }
+        handler(authorization.credential as? ASAuthorizationAppleIDCredential)
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {

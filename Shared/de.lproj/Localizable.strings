@@ -5,5 +5,21 @@
   Created by Henning Hontheim on 10.05.20.
   Copyright © 2020 Henning Hontheim. All rights reserved.
 */
-"test.string" = "Hallo, Welt!";
+"login.title %@" = "Hallo%@!";
+"login.newUser" = "Bitte erstelle dir einen Account,\ndamit du die App nutzen kannst!";
+"login.existingUser" = "Bitte melde dich wieder an,\ndamit du die App nutzen kannst!";
 
+"home.title %@" = "%@'s Startseite";
+"home.greeting %@" = "Hallo, %@!";
+"home.tab" = "Start";
+
+"communication.title" = "Kommunikation";
+"communication.tab" = "Kommunikation";
+"communication.send" = "Senden";
+
+"settings.title" = "Einstellungen";
+"settings.tab" = "Einstellungen";
+"settings.logout" = "Abmelden";
+
+"dev.title" = "Entwickler Menü";
+"dev.link" = "Entwickler Menü";

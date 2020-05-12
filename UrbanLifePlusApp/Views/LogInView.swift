@@ -31,7 +31,11 @@ struct LogInView: View {
                         .edgesIgnoringSafeArea(.all)
                 }
                 VStack {
-                    Text(storageLocal.userId.isEmpty ? "Neuer User" : "Existierender User")
+                    Spacer()
+                    Text(storageLocal.userId.isEmpty ? "login.newUser" : "login.existingUser")
+                        .font(.headline)
+                        .padding()
+                    Spacer()
                     SignInWithAppleButton(existingUser: storageLocal.userId.isEmpty)
                         .frame(width: UIScreen.screenWidth - 32, height: 60)
                         .onTapGesture(perform: handleAuthorizationAppleIDButtonPress)
@@ -39,9 +43,12 @@ struct LogInView: View {
                 }
             }
             .onAppear {
-                self.performExistingAccountSetupFlows()
+                if self.storageTemp.firstTimeSeeingLoginScreenAfterClosingTheApp {
+                    self.storageTemp.firstTimeSeeingLoginScreenAfterClosingTheApp = false
+                    self.performExistingAccountSetupFlows()
+                }
             }
-            .navigationBarTitle("Hallo\(storageLocal.userId.isEmpty ? "" : ", \(storageLocal.givenName)")!")
+            .navigationBarTitle("login.title \(storageLocal.userId.isEmpty ? "" : ", \(storageLocal.givenName)")")
         }
     }
     
@@ -53,13 +60,13 @@ struct LogInView: View {
     }
     
     private func performExistingAccountSetupFlows() {
-//        #if !targetEnvironment(simulator)
+        #if !targetEnvironment(simulator)
         let requests = [
             ASAuthorizationAppleIDProvider().createRequest(),
             ASAuthorizationPasswordProvider().createRequest()
         ]
         performSignIn(using: requests)
-//        #endif
+        #endif
     }
     
     private func performSignIn(using requests: [ASAuthorizationRequest]) {
@@ -73,6 +80,8 @@ struct LogInView: View {
             guard let fullName = appleIdCredential!.fullName, let email = appleIdCredential!.email else {
                 // Account exists, but Apple will only provide ID and neither `fullName` nor `email`.
                 // If `fullName` or `email` are nil, account already set up here!
+                self.saveUserIdInKeychain(appleIdCredential!.user)
+                self.storageLocal.userId = appleIdCredential!.user
                 self.signInSucceeded(true)
                 return
             }
@@ -96,7 +105,9 @@ struct LogInView: View {
 
     
     private func signInSucceeded(_ success: Bool) {
-        self.storageTemp.userIsLoggedIn = success
+        withAnimation {
+            self.storageTemp.userIsLoggedIn = success
+        }
     }
     
     private func saveUserIdInKeychain(_ userIdentifier: String) {

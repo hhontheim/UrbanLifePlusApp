@@ -20,14 +20,9 @@ struct StorageKey {
     static let cloud = "cloud"
 }
 
-//extension PersonNameComponents {
-//    func displayName(style: PersonNameComponentsFormatter.Style = .default) -> String {
-//        PersonNameComponentsFormatter.localizedString(from: self, style: style)
-//    }
-//}
-
 final class StorageTemp: ObservableObject {
     @Published var userIsLoggedIn: Bool = false
+    @Published var firstTimeSeeingLoginScreenAfterClosingTheApp: Bool = true
 }
 
 final class StorageLocal: ObservableObject {
@@ -66,6 +61,15 @@ final class StorageLocal: ObservableObject {
     
     final func set(_ value: Any, for key: String) {
         StorageLocal.defaults.set(value, forKey: key)
+    }
+    
+    final func nuke() {
+        userId = ""
+        givenName = ""
+        familyName = ""
+        email = ""
+        identityToken = Data()
+        authorizationCode = Data()
     }
 }
 

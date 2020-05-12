@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var loggedIn: Bool = false
+    @EnvironmentObject var storageTemp: StorageTemp
     
     var body: some View {
         ZStack {
             TabView {
-                HomeView(loggedIn: $loggedIn)
+                HomeView()
             }
-            if !loggedIn {
-                LogInView(loggedIn: $loggedIn)
+            if !storageTemp.userIsLoggedIn {
+                LogInView()
                     .animation(.default)
                     .transition(.move(edge: .leading))
             }

@@ -9,14 +9,23 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Binding var loggedIn: Bool
+    @EnvironmentObject var storageTemp: StorageTemp
+    @EnvironmentObject var storageLocal: StorageLocal
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("Home Screen")
+                Text("Hallo \(storageLocal.givenName)!")
+                    .font(.headline)
+                Text("userId: \"\(storageLocal.userId)\"")
+                Text("givenName: \"\(storageLocal.givenName)\"")
+                Text("familyName: \"\(storageLocal.familyName)\"")
+                Text("email: \"\(storageLocal.email)\"")
+                Text("identityToken: \"\(storageLocal.identityToken)\"")
+                Text("authorizationCode: \"\(storageLocal.authorizationCode)\"")
                 Button(action: {
-                    self.loggedIn = false
+//                    KeychainItem.deleteUserIdentifierFromKeychain()
+                    self.storageTemp.userIsLoggedIn = false
                 }) {
                     HStack {
                         Image(systemName: "lock.fill")

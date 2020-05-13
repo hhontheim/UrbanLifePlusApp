@@ -9,33 +9,49 @@
 import SwiftUI
 
 struct ContentView: View, SessionCommands {
-    @State var content: String = ""
-    @State var delivered: String = ""
-
+    @EnvironmentObject var userData: UserData
+    
+    
     var body: some View {
-//        ZStack {
-//            Text("Bitte öffne zuerst die App auf deinem iPhone um dich anmelden...")
-//        }
+        //        ZStack {
+        //            Text("Bitte öffne zuerst die App auf deinem iPhone um dich anmelden...")
+        //        }
         ScrollView {
-            Text("Hallo!")
-            Text("Value: \"\(content)\"")
-            Button(action: send) {
-                Text("communication.send")
+            Text("Value: \"\(userData.value)\"")
+            TextField("Text Feld", text: $userData.value)
+            Toggle(isOn: $userData.toggleMessage) {
+                Text("Toggle me")
             }
-            Text(delivered)
-            NavigationLink(destination: Text("Hello").navigationBarTitle("Detail")) {
-                Text("Click me!")
+            .padding()
+            Toggle(isOn: $userData.toggleUserInfo) {
+                Text("Toggle me")
             }
-        }.navigationBarTitle("Home")
+            .padding()
+            Button(action: sendMessage) {
+                Text("Send Message")
+            }
+            Button(action: sendUserInfo) {
+                Text("Send UserInfo")
+            }
+        }
+        .onAppear {
+            return
+        }
+        .navigationBarTitle("Home")
     }
     
-    func send() {
-        print("hi")
-        if sendMessage([StorageKey.value : "value"]) {
-            delivered = "true"
-        } else {
-            delivered = "Fail"
-        }
+    
+    func sendMessage() {
+        sendMessage([
+            StorageKey.value : userData.value,
+            StorageKey.toggleMessage : userData.toggleMessage
+        ])
+    }
+    
+    func sendUserInfo() {
+        sendUserInfoMessage([
+            StorageKey.toggleUserInfo : userData.toggleUserInfo
+        ])
     }
 }
 

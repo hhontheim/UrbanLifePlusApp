@@ -14,9 +14,10 @@ struct LogInView: View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     @Environment(\.window) var window: UIWindow?
     
-    @EnvironmentObject var storageTemp: StorageTemp
-    @EnvironmentObject var storageLocal: StorageLocal
-    @EnvironmentObject var storageCloud: StorageCloud
+    @EnvironmentObject var userData: UserData
+    
+    @Binding var firstTimeSeeingLoginScreenAfterClosingTheApp: Bool
+    @Binding var userIsLoggedIn: Bool
     
     @State var appleSignInDelegates: SignInWithAppleDelegates! = nil
     
@@ -32,23 +33,23 @@ struct LogInView: View {
                 }
                 VStack {
                     Spacer()
-                    Text(storageLocal.userId.isEmpty ? "login.newUser" : "login.existingUser")
+                    Text(userData.registered ? "login.existingUser" : "login.newUser")
                         .font(.headline)
                         .padding()
                     Spacer()
-                    SignInWithAppleButton(existingUser: storageLocal.userId.isEmpty)
+                    SignInWithAppleButton(registered: userData.registered)
                         .frame(width: UIScreen.screenWidth - 32, height: 60)
                         .onTapGesture(perform: handleAuthorizationAppleIDButtonPress)
                     .padding()
                 }
             }
             .onAppear {
-                if self.storageTemp.firstTimeSeeingLoginScreenAfterClosingTheApp {
-                    self.storageTemp.firstTimeSeeingLoginScreenAfterClosingTheApp = false
+                if self.firstTimeSeeingLoginScreenAfterClosingTheApp {
+                    self.firstTimeSeeingLoginScreenAfterClosingTheApp = false
                     self.performExistingAccountSetupFlows()
                 }
             }
-            .navigationBarTitle("login.title \(storageLocal.userId.isEmpty ? "" : ", \(storageLocal.givenName)")")
+            .navigationBarTitle("login.title \(userData.registered ? ", \(userData.givenName)" : "")")
         }
     }
     
@@ -81,7 +82,7 @@ struct LogInView: View {
                 // Account exists, but Apple will only provide ID and neither `fullName` nor `email`.
                 // If `fullName` or `email` are nil, account already set up here!
                 self.saveUserIdInKeychain(appleIdCredential!.user)
-                self.storageLocal.userId = appleIdCredential!.user
+                self.userData.userId = appleIdCredential!.user
                 self.signInSucceeded(true)
                 return
             }
@@ -106,7 +107,7 @@ struct LogInView: View {
     
     private func signInSucceeded(_ success: Bool) {
         withAnimation {
-            self.storageTemp.userIsLoggedIn = success
+            self.userIsLoggedIn = success
         }
     }
     
@@ -119,12 +120,13 @@ struct LogInView: View {
     }
     
     private func storeUserInformation(_ id: String, _ fullName: PersonNameComponents, _ email: String, _ identityToken: Data, _ authorizationCode: Data) {
-        storageLocal.userId = id
-        storageLocal.givenName = fullName.givenName ?? ""
-        storageLocal.familyName = fullName.familyName ?? ""
-        storageLocal.email = email
-        storageLocal.identityToken = identityToken
-        storageLocal.authorizationCode = authorizationCode
+        userData.registered = true
+        userData.userId = id
+        userData.givenName = fullName.givenName ?? ""
+        userData.familyName = fullName.familyName ?? ""
+        userData.email = email
+        userData.identityToken = identityToken
+        userData.authorizationCode = authorizationCode
     }
 }
 

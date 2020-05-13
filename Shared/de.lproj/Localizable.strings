@@ -9,9 +9,9 @@
 "login.newUser" = "Bitte erstelle dir einen Account,\ndamit du die App nutzen kannst!";
 "login.existingUser" = "Bitte melde dich wieder an,\ndamit du die App nutzen kannst!";
 
-"home.title %@" = "%@'s Startseite";
+"home.title %@" = "Startseite von %@";
 "home.greeting %@" = "Hallo, %@!";
-"home.tab" = "Start";
+"home.tab" = "Startseite";
 
 "communication.title" = "Kommunikation";
 "communication.tab" = "Kommunikation";

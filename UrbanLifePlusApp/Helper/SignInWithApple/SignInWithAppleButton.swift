@@ -11,10 +11,10 @@ import AuthenticationServices
 
 struct SignInWithAppleButton: UIViewRepresentable {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
-    let existingUser: Bool
+    let registered: Bool
         
     func makeUIView(context: Context) -> ASAuthorizationAppleIDButton {
-        ASAuthorizationAppleIDButton(authorizationButtonType: existingUser ? .continue : .signUp, authorizationButtonStyle: colorScheme == .light ? .black : .white)
+        ASAuthorizationAppleIDButton(authorizationButtonType: registered ? .continue : .signUp, authorizationButtonStyle: colorScheme == .light ? .black : .white)
     }
     
     func updateUIView(_ uiView: ASAuthorizationAppleIDButton, context: Context) {

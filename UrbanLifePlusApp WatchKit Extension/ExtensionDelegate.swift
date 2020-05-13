@@ -11,11 +11,15 @@ import WatchConnectivity
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
     
-    private lazy var sessionDelegater: SessionDelegater = {
-        return SessionDelegater()
-    }()
+    var userData: UserData!
+    
+    var sessionDelegater: SessionDelegater!
     
     func applicationDidFinishLaunching() {
+        userData = UserData()
+        
+        sessionDelegater = SessionDelegater(userData: userData)
+        
         if (WCSession.isSupported()) {
             let session = WCSession.default
             session.delegate = sessionDelegater

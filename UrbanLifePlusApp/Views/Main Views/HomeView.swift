@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var storageLocal: StorageLocal
+    @EnvironmentObject var userData: UserData
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("home.greeting \(storageLocal.givenName)")
+                Text("home.greeting \(userData.givenName)")
                     .font(.headline)
             }
-            .navigationBarTitle("home.title \(storageLocal.givenName)")
+            .navigationBarTitle("home.title \(userData.givenName)")
         }
         .tabItem {
             Text("home.tab")

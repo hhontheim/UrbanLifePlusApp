@@ -13,27 +13,33 @@ import WatchConnectivity
 // bridge the UI. Shared by the iOS app and watchOS app.
 //
 protocol SessionCommands {
-    func sendMessage(_ message: [String: Any]) -> Bool
+    func sendMessage(_ message: [String: Any])
+    func sendUserInfoMessage(_ userInfo: [String: Any])
 }
 
 // Implement the commands. Every command handles the communication and notifies clients
 // when WCSession status changes or data flows. Shared by the iOS app and watchOS app.
 //
 extension SessionCommands {
-    func sendMessage(_ message: [String: Any]) -> Bool {
-        var succeeded: Bool = false
-        
+    func sendMessage(_ message: [String: Any]) {
         guard WCSession.default.activationState == .activated else {
-            print("WCSession is not activeted yet!")
-            return succeeded
+            print("WCSession is not activeted yet! No Message sent!")
+            return
         }
 
         WCSession.default.sendMessage(message, replyHandler: { replyMessage in
-            succeeded = true
+            print("Message \"\(message)\" sent.")
         }, errorHandler: { error in
-            succeeded = false
-            print(error)
+            print("Error while sending message \"\(message)\":\n\(error)")
         })
-        return succeeded
+    }
+    
+    func sendUserInfoMessage(_ userInfo: [String: Any]) {
+        guard WCSession.default.activationState == .activated else {
+            print("WCSession is not activeted yet! No UserInfo sent!")
+            return
+        }
+        WCSession.default.transferUserInfo(userInfo)
+        print("User info dispatched")
     }
 }

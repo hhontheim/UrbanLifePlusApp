@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @EnvironmentObject var storageTemp: StorageTemp
-    @EnvironmentObject var storageLocal: StorageLocal
+    @Binding var userIsLoggedIn: Bool
+    @EnvironmentObject var userData: UserData
     
     let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     let build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
@@ -27,9 +27,9 @@ struct SettingsView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .clipShape(Circle())
                             VStack(alignment: .leading) {
-                                Text("\(storageLocal.givenName) \(storageLocal.familyName)")
+                                Text("\(userData.givenName) \(userData.familyName)")
                                     .font(.headline)
-                                Text(storageLocal.email)
+                                Text(userData.email)
                                     .font(.subheadline)
                                     .foregroundColor(.secondary)
                             }
@@ -41,7 +41,7 @@ struct SettingsView: View {
                         Text("dev.link")
                     }
                     Button(action: {
-                        self.storageTemp.userIsLoggedIn = false
+                        self.userIsLoggedIn = false
                     }) {
                         Text("settings.logout")
                     }
@@ -56,12 +56,4 @@ struct SettingsView: View {
                 .imageScale(.large)
         }
     }
-}
-
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        return SettingsView()
-            .environmentObject(StorageLocal()).environmentObject(StorageTemp())
-    }
-    
 }

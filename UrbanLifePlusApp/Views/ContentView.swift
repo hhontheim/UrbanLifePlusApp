@@ -9,24 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var storageTemp: StorageTemp
+    
+    #if !targetEnvironment(simulator)
+    @State var userIsLoggedIn: Bool = false
+    #else
+    @State var userIsLoggedIn: Bool = true
+    #endif
+    @State var firstTimeSeeingLoginScreenAfterClosingTheApp: Bool = true
     
     var body: some View {
         ZStack {
             TabView {
                 HomeView()
                 CommunicationView()
-                SettingsView()
+                SettingsView(userIsLoggedIn: $userIsLoggedIn)
             }
-            if !storageTemp.userIsLoggedIn {
-                LogInView()
+            if !userIsLoggedIn {
+                LogInView(firstTimeSeeingLoginScreenAfterClosingTheApp: $firstTimeSeeingLoginScreenAfterClosingTheApp, userIsLoggedIn: $userIsLoggedIn)
                     .animation(.default)
                     .transition(.move(edge: .bottom))
             }
         }
         .onAppear {
             #if targetEnvironment(simulator)
-            self.storageTemp.userIsLoggedIn = true
+            self.userIsLoggedIn = true
             #endif
         }
     }
@@ -34,18 +40,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let storageDebugTemp = StorageTemp()
-        let storageDebugLocal = StorageLocal()
-
         return ContentView()
-            .environmentObject(storageDebugTemp)
-            .environmentObject(storageDebugLocal)
-            .onAppear {
-                storageDebugTemp.userIsLoggedIn = true
-//                storageDebugLocal.userId = "IDIDIDIDID"
-//                storageDebugLocal.givenName = "Max"
-//                storageDebugLocal.familyName = "Mustermann"
-//                storageDebugLocal.email = "mustermann@hontheim.net"
-        }
     }
 }

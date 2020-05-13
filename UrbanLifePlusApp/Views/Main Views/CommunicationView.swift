@@ -9,18 +9,27 @@
 import SwiftUI
 
 struct CommunicationView: View, SessionCommands {
-    @State var content: String = ""
-    @State var delivered: String = ""
+    @EnvironmentObject var userData: UserData
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("Hallo!")
-                Text("Value: \"\(content)\"")
-                Button(action: send) {
-                    Text("communication.send")
+                Text("Value: \"\(userData.value)\"")
+                TextField("Text Feld", text: $userData.value)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                Toggle(isOn: $userData.toggleMessage) {
+                    Text("Toggle me")
                 }
-                Text(delivered)
+                Toggle(isOn: $userData.toggleUserInfo) {
+                    Text("Toggle me")
+                }
+                Button(action: sendMessage) {
+                    Text("Send Message")
+                }
+                Button(action: sendUserInfo) {
+                    Text("Send UserInfo")
+                }
             }
             .navigationBarTitle("communication.title")
         }
@@ -31,13 +40,17 @@ struct CommunicationView: View, SessionCommands {
         }
     }
     
-    func send() {
-        print("hi")
-        if sendMessage([StorageKey.value : "value"]) {
-            delivered = "true"
-        } else {
-            delivered = "Fail"
-        }
+    func sendMessage() {
+        sendMessage([
+            StorageKey.value : userData.value,
+            StorageKey.toggleMessage : userData.toggleMessage
+        ])
+    }
+    
+    func sendUserInfo() {
+        sendUserInfoMessage([
+            StorageKey.toggleUserInfo : userData.toggleUserInfo
+        ])
     }
 }
 

@@ -8,15 +8,22 @@
 
 import UIKit
 import WatchConnectivity
+import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var userData: UserData!
+    
     private lazy var sessionDelegater: SessionDelegater = {
-        return SessionDelegater()
+        return SessionDelegater(userData: userData)
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        userData = UserData()
+        
+        sessionDelegater = SessionDelegater(userData: userData)
+        
         if (WCSession.isSupported()) {
             let session = WCSession.default
             session.delegate = sessionDelegater

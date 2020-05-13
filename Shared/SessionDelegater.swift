@@ -11,7 +11,12 @@ import WatchConnectivity
 import SwiftUI
 
 class SessionDelegater: NSObject, WCSessionDelegate {
-    @EnvironmentObject var storageLocal: StorageLocal
+    var userData: UserData
+    
+    init(userData: UserData) {
+        self.userData = userData
+        super.init()
+    }    
     
     // Called when WCSession activation state is changed.
     //
@@ -34,8 +39,44 @@ class SessionDelegater: NSObject, WCSessionDelegate {
         print("From Watch: \(message)")
         #endif
         for (key, value) in message {
-//            storageLocal.set(value, for: key)
+            print("Will save \"\(value)\" for key \"\(key)\".")
+            DispatchQueue.main.async {
+                
+                switch key {
+                case StorageKey.toggleMessage:
+                    self.userData.toggleMessage = value as! Bool
+                    break
+                case StorageKey.toggleUserInfo:
+                    self.userData.toggleUserInfo = value as! Bool
+                    break
+                case StorageKey.value:
+                    self.userData.value = value as! String
+                    break
+                default:
+                    break
+                }
+            }
         }
+    }
+    
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
+        #if os(watchOS)
+        print("User Info Start From iPhone: \(userInfo)")
+        #elseif os(iOS)
+        print("User Info Start From Watch: \(userInfo)")
+        #endif
+        self.session(session, didReceiveMessage: userInfo)
+    }
+    
+    func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
+        if let error = error {
+            print(error)
+        }
+        #if os(watchOS)
+        print("User Info Ended From iPhone")
+        #elseif os(iOS)
+        print("User Info End From Watch")
+        #endif
     }
     
     // Called when a message is received and the peer needs a response.

@@ -10,76 +10,115 @@ import SwiftUI
 import Combine
 
 struct StorageKey {
+    static let value = "value"
+    static let toggleMessage = "toggleMessage"
+    static let toggleUserInfo = "toggleUserInfo"
+    
+    static let registered = "registered"
+    
     static let userId = "userId"
     static let givenName = "givenName"
     static let familyName = "familyName"
     static let email = "email"
     static let identityToken = "identityToken"
     static let authorizationCode = "authorizationCode"
-    
-    static let cloud = "cloud"
-    static let value = "value"
 }
+
+//#if os(iOS)
+//typealias StorageTemp = StorageTempPhone
+//typealias StorageLocal = StorageLocalPhone
+//#elseif os(watchOS)
+//typealias StorageTemp = StorageTempWatch
+//typealias StorageLocal = StorageLocalWatch
+//#endif
 
 #if os(iOS)
-typealias StorageTemp = StorageTempPhone
-typealias StorageLocal = StorageLocalPhone
-#elseif os(watchOS)
-typealias StorageTemp = StorageTempWatch
-typealias StorageLocal = StorageLocalWatch
-#endif
 
-final class StorageTempPhone: ObservableObject {
-    @Published var userIsLoggedIn: Bool = false
-    @Published var firstTimeSeeingLoginScreenAfterClosingTheApp: Bool = true
-}
-
-final class StorageTempWatch: ObservableObject {
-    @Published var userIsLoggedIn: Bool = false
-}
-
-final class StorageLocalPhone: ObservableObject {
-    static let defaults = UserDefaults.standard
+final class UserData: ObservableObject {
+    static let kvStore = NSUbiquitousKeyValueStore()
     
-    @Published var value: String = defaults.string(forKey: StorageKey.value) ?? "" {
+    @Published var value: String  {
         willSet {
             set(newValue, for: StorageKey.value)
         }
     }
+    @Published var toggleMessage: Bool {
+        willSet {
+            set(newValue, for: StorageKey.toggleMessage)
+        }
+    }
+    @Published var toggleUserInfo: Bool {
+        willSet {
+            set(newValue, for: StorageKey.toggleUserInfo)
+        }
+    }
+    @Published var registered: Bool {
+        willSet {
+            set(newValue, for: StorageKey.registered)
+        }
+    }
     
-    @Published var userId: String = defaults.string(forKey: StorageKey.userId) ?? "" {
+    @Published var userId: String {
         willSet {
             set(newValue, for: StorageKey.userId)
         }
     }
-    @Published var givenName: String = defaults.string(forKey: StorageKey.givenName) ?? "" {
-           willSet {
-               set(newValue, for: StorageKey.givenName)
-           }
-       }
-    @Published var familyName: String = defaults.string(forKey: StorageKey.familyName) ?? "" {
+    @Published var givenName: String {
+        willSet {
+            set(newValue, for: StorageKey.givenName)
+        }
+    }
+    @Published var familyName: String{
         willSet {
             set(newValue, for: StorageKey.familyName)
         }
     }
-    @Published var email: String = defaults.string(forKey: StorageKey.email) ?? "" {
+    @Published var email: String {
         willSet {
             set(newValue, for: StorageKey.email)
         }
     }
-    @Published var identityToken: Data = defaults.data(forKey: StorageKey.identityToken) ?? Data() {
+    @Published var identityToken: Data {
         willSet {
             set(newValue, for: StorageKey.identityToken)
         }
     }
-    @Published var authorizationCode: Data = defaults.data(forKey: StorageKey.authorizationCode) ?? Data() {
+    @Published var authorizationCode: Data {
         willSet {
             set(newValue, for: StorageKey.authorizationCode)
         }
     }
     
-    final func set(_ value: Any, for key: String) {
-        StorageLocal.defaults.set(value, forKey: key)
+    init() {
+        value = UserData.kvStore.string(forKey: StorageKey.value) ?? ""
+        toggleMessage = UserData.kvStore.bool(forKey: StorageKey.toggleMessage)
+        toggleUserInfo = UserData.kvStore.bool(forKey: StorageKey.toggleUserInfo)
+        registered = UserData.kvStore.bool(forKey: StorageKey.registered)
+        userId = UserData.kvStore.string(forKey: StorageKey.userId) ?? ""
+        givenName = UserData.kvStore.string(forKey: StorageKey.givenName) ?? ""
+        familyName = UserData.kvStore.string(forKey: StorageKey.familyName) ?? ""
+        email = UserData.kvStore.string(forKey: StorageKey.email) ?? ""
+        identityToken = UserData.kvStore.data(forKey: StorageKey.identityToken) ?? Data()
+        authorizationCode = UserData.kvStore.data(forKey: StorageKey.authorizationCode) ?? Data()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(UserData.externalValueChanged(notification:)), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: UserData.kvStore)
+    }
+    
+    private final func set(_ value: Any, for key: String) {
+        UserData.kvStore.set(value, forKey: key)
+    }
+    
+    @objc final func externalValueChanged(notification: NSNotification? = nil) {
+        value = UserData.kvStore.string(forKey: StorageKey.value) ?? ""
+        toggleMessage = UserData.kvStore.bool(forKey: StorageKey.toggleMessage)
+        toggleUserInfo = UserData.kvStore.bool(forKey: StorageKey.toggleUserInfo)
+        registered = UserData.kvStore.bool(forKey: StorageKey.registered)
+        userId = UserData.kvStore.string(forKey: StorageKey.userId) ?? ""
+        givenName = UserData.kvStore.string(forKey: StorageKey.givenName) ?? ""
+        familyName = UserData.kvStore.string(forKey: StorageKey.familyName) ?? ""
+        email = UserData.kvStore.string(forKey: StorageKey.email) ?? ""
+        identityToken = UserData.kvStore.data(forKey: StorageKey.identityToken) ?? Data()
+        authorizationCode = UserData.kvStore.data(forKey: StorageKey.authorizationCode) ?? Data()
     }
     
     final func nuke() {
@@ -92,7 +131,9 @@ final class StorageLocalPhone: ObservableObject {
     }
 }
 
-final class StorageLocalWatch: ObservableObject {
+#elseif os(watchOS)
+
+final class UserData: ObservableObject, SessionCommands {
     static let defaults = UserDefaults.standard
     
     @Published var value: String = defaults.string(forKey: StorageKey.value) ?? "" {
@@ -101,33 +142,21 @@ final class StorageLocalWatch: ObservableObject {
         }
     }
     
-    final func set(_ value: Any, for key: String) {
-        StorageLocal.defaults.set(value, forKey: key)
-    }
-}
-
-#if os(iOS)
-final class StorageCloud: ObservableObject {
-    static let kvStore = NSUbiquitousKeyValueStore()
-    
-    @Published var cloud: String {
+    @Published var toggleMessage: Bool = defaults.bool(forKey: StorageKey.toggleMessage) {
         willSet {
-            set(newValue, for: StorageKey.cloud)
+            set(newValue, for: StorageKey.toggleMessage)
         }
     }
     
-    init() {
-        cloud = StorageCloud.kvStore.string(forKey: StorageKey.cloud) ?? ""
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(StorageCloud.externalValueChanged(notification:)), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: StorageCloud.kvStore)
+    @Published var toggleUserInfo: Bool = defaults.bool(forKey: StorageKey.toggleUserInfo) {
+        willSet {
+            set(newValue, for: StorageKey.toggleUserInfo)
+        }
     }
     
-    final func set(_ value: Any, for key: String) {
-        StorageCloud.kvStore.set(value, forKey: key)
-    }
-    
-    @objc final func externalValueChanged(notification: NSNotification) {
-        cloud = StorageCloud.kvStore.string(forKey: StorageKey.cloud) ?? ""
+    private final func set(_ value: Any, for key: String) {
+        UserData.defaults.set(value, forKey: key)
     }
 }
+
 #endif

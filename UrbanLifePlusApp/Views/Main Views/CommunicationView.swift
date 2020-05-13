@@ -8,8 +8,9 @@
 
 import SwiftUI
 
-struct CommunicationView: View {
+struct CommunicationView: View, SessionCommands {
     @State var content: String = ""
+    @State var delivered: String = ""
     
     var body: some View {
         NavigationView {
@@ -19,6 +20,7 @@ struct CommunicationView: View {
                 Button(action: send) {
                     Text("communication.send")
                 }
+                Text(delivered)
             }
             .navigationBarTitle("communication.title")
         }
@@ -30,7 +32,12 @@ struct CommunicationView: View {
     }
     
     func send() {
-        print("Hello")
+        print("hi")
+        if sendMessage([StorageKey.value : "value"]) {
+            delivered = "true"
+        } else {
+            delivered = "Fail"
+        }
     }
 }
 

@@ -8,8 +8,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View, SessionCommands {
     @State var content: String = ""
+    @State var delivered: String = ""
+
     var body: some View {
 //        ZStack {
 //            Text("Bitte öffne zuerst die App auf deinem iPhone um dich anmelden...")
@@ -20,6 +22,7 @@ struct ContentView: View {
             Button(action: send) {
                 Text("communication.send")
             }
+            Text(delivered)
             NavigationLink(destination: Text("Hello").navigationBarTitle("Detail")) {
                 Text("Click me!")
             }
@@ -27,7 +30,12 @@ struct ContentView: View {
     }
     
     func send() {
-        print("Hello")
+        print("hi")
+        if sendMessage([StorageKey.value : "value"]) {
+            delivered = "true"
+        } else {
+            delivered = "Fail"
+        }
     }
 }
 

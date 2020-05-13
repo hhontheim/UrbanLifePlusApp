@@ -18,15 +18,34 @@ struct StorageKey {
     static let authorizationCode = "authorizationCode"
     
     static let cloud = "cloud"
+    static let value = "value"
 }
 
-final class StorageTemp: ObservableObject {
+#if os(iOS)
+typealias StorageTemp = StorageTempPhone
+typealias StorageLocal = StorageLocalPhone
+#elseif os(watchOS)
+typealias StorageTemp = StorageTempWatch
+typealias StorageLocal = StorageLocalWatch
+#endif
+
+final class StorageTempPhone: ObservableObject {
     @Published var userIsLoggedIn: Bool = false
     @Published var firstTimeSeeingLoginScreenAfterClosingTheApp: Bool = true
 }
 
-final class StorageLocal: ObservableObject {
+final class StorageTempWatch: ObservableObject {
+    @Published var userIsLoggedIn: Bool = false
+}
+
+final class StorageLocalPhone: ObservableObject {
     static let defaults = UserDefaults.standard
+    
+    @Published var value: String = defaults.string(forKey: StorageKey.value) ?? "" {
+        willSet {
+            set(newValue, for: StorageKey.value)
+        }
+    }
     
     @Published var userId: String = defaults.string(forKey: StorageKey.userId) ?? "" {
         willSet {
@@ -73,6 +92,21 @@ final class StorageLocal: ObservableObject {
     }
 }
 
+final class StorageLocalWatch: ObservableObject {
+    static let defaults = UserDefaults.standard
+    
+    @Published var value: String = defaults.string(forKey: StorageKey.value) ?? "" {
+        willSet {
+            set(newValue, for: StorageKey.value)
+        }
+    }
+    
+    final func set(_ value: Any, for key: String) {
+        StorageLocal.defaults.set(value, forKey: key)
+    }
+}
+
+#if os(iOS)
 final class StorageCloud: ObservableObject {
     static let kvStore = NSUbiquitousKeyValueStore()
     
@@ -96,3 +130,4 @@ final class StorageCloud: ObservableObject {
         cloud = StorageCloud.kvStore.string(forKey: StorageKey.cloud) ?? ""
     }
 }
+#endif

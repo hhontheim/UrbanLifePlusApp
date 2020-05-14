@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    var userData: UserData!
+    var storage: Storage!
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -24,12 +24,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         // Create the SwiftUI view that provides the window contents.
-        userData = (UIApplication.shared.delegate as! AppDelegate).userData
+        storage = (UIApplication.shared.delegate as! AppDelegate).storage
         
-        checkForValidCredentials(userData)
+        checkForValidCredentials(storage)
         
         let contentView = ContentView()
-            .environmentObject(userData)
+            .environmentObject(storage)
                 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
@@ -69,7 +69,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
     
-    func checkForValidCredentials( _ userData: UserData) {
+    func checkForValidCredentials( _ storage: Storage) {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         appleIDProvider.getCredentialState(forUserID: Keychain.currentUserIdentifier) { (credentialState, error) in
             switch credentialState {
@@ -77,7 +77,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             break // The Apple ID credential is valid.
             default: // .revoked, .notFound:
                 // The Apple ID credential is either revoked or was not found, so show the sign-in UI.
-                userData.nuke()
+                storage.nuke()
                 break
             }
         }

@@ -14,19 +14,19 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var userData: UserData!
+    var storage: Storage!
     
     private lazy var sessionDelegater: SessionDelegater = {
-        return SessionDelegater(userData: userData)
+        return SessionDelegater(storage: storage)
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         application.registerForRemoteNotifications()
         registerForPushNotifications()
         
-        userData = UserData()
+        storage = Storage()
         
-        sessionDelegater = SessionDelegater(userData: userData)
+        sessionDelegater = SessionDelegater(storage: storage)
         
         if (WCSession.isSupported()) {
             let session = WCSession.default
@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("didFailToRegisterForRemoteNotificationsWithError: \(error)")
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         print("didReceiveRemoteNotification: \(userInfo)")
     }
     

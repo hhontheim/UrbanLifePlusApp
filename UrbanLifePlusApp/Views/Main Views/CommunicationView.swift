@@ -9,22 +9,31 @@
 import SwiftUI
 
 struct CommunicationView: View, SessionCommands {
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var storage: Storage
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("Value: \"\(userData.value)\"")
-                TextField("Text Feld", text: $userData.value)
+                Text("Value: \"\(storage.settings.value)\"")
+                TextField("Text Feld", text: $storage.settings.value, onEditingChanged: { stillTyping in
+                    if !stillTyping {
+                        self.storage.persist()
+                    }
+                })
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-                Toggle(isOn: $userData.toggle) {
+                Toggle(isOn: $storage.settings.toggle) {
                     Text("Toggle")
                 }
                 Button(action: {
-                    self.sendAppContext(userData: self.userData)
+                    self.storage.persist()
                 }) {
-                    Text("Send Message")
+                    Text("Persist")
+                }
+                Button(action: {
+                    self.storage.nuke()
+                }) {
+                    Text("Nuke (not sim!)")
                 }
             }
             .navigationBarTitle("communication.title")

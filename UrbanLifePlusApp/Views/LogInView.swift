@@ -14,7 +14,7 @@ struct LogInView: View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     @Environment(\.window) var window: UIWindow?
     
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var storage: Storage
     
     @Binding var firstTimeSeeingLoginScreenAfterClosingTheApp: Bool
     @Binding var userIsLoggedIn: Bool
@@ -33,11 +33,11 @@ struct LogInView: View {
                 }
                 VStack {
                     Spacer()
-                    Text(userData.registered ? "login.existingUser" : "login.newUser")
+                    Text(storage.user.registered ? "login.existingUser" : "login.newUser")
                         .font(.headline)
                         .padding()
                     Spacer()
-                    SignInWithAppleButton(registered: userData.registered)
+                    SignInWithAppleButton(registered: storage.user.registered)
                         .frame(width: UIScreen.screenWidth - 32, height: 60)
                         .onTapGesture(perform: handleAuthorizationAppleIDButtonPress)
                     .padding()
@@ -49,7 +49,7 @@ struct LogInView: View {
                     self.performExistingAccountSetupFlows()
                 }
             }
-            .navigationBarTitle("login.title \(userData.registered ? ", \(userData.givenName)" : "")")
+            .navigationBarTitle("login.title \(storage.user.registered ? ", \(storage.user.givenName)" : "")")
         }
     }
     
@@ -82,7 +82,8 @@ struct LogInView: View {
                 // Account exists, but Apple will only provide ID and neither `fullName` nor `email`.
                 // If `fullName` or `email` are nil, account already set up here!
                 self.saveUserIdInKeychain(appleIdCredential!.user)
-                self.userData.userId = appleIdCredential!.user
+                self.storage.user.userId = appleIdCredential!.user
+                self.storage.persist()
                 self.signInSucceeded(true)
                 return
             }
@@ -120,13 +121,14 @@ struct LogInView: View {
     }
     
     private func storeUserInformation(_ id: String, _ fullName: PersonNameComponents, _ email: String, _ identityToken: Data, _ authorizationCode: Data) {
-        userData.registered = true
-        userData.userId = id
-        userData.givenName = fullName.givenName ?? ""
-        userData.familyName = fullName.familyName ?? ""
-        userData.email = email
-        userData.identityToken = identityToken
-        userData.authorizationCode = authorizationCode
+        storage.user.registered = true
+        storage.user.userId = id
+        storage.user.givenName = fullName.givenName ?? ""
+        storage.user.familyName = fullName.familyName ?? ""
+        storage.user.email = email
+        storage.user.identityToken = identityToken
+        storage.user.authorizationCode = authorizationCode
+        storage.persist()
     }
 }
 

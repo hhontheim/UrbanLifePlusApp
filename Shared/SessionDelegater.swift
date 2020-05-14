@@ -1,5 +1,5 @@
 //
-//  Communication.swift
+//  SessionDelegater.swift
 //  UrbanLifePlusApp
 //
 //  Created by Henning Hontheim on 13.05.20.
@@ -10,28 +10,16 @@ import Foundation
 import WatchConnectivity
 import SwiftUI
 
-class SessionDelegater: NSObject, WCSessionDelegate, SessionCommands {
-    var userData: UserData
+class SessionDelegater: NSObject, WCSessionDelegate {
+    var storage: Storage
     
-    init(userData: UserData) {
-        self.userData = userData
+    init(storage: Storage) {
+        self.storage = storage
         super.init()
-    }    
-    
-    // Called when WCSession activation state is changed.
-    //
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("activationDidComplete")
     }
     
-    // Called when WCSession reachability is changed.
-    //
-    func sessionReachabilityDidChange(_ session: WCSession) {
-        print("reachabilityDidChange")
-    }
-    
+    // MARK: - Message
     // Called when a message is received and the peer doesn't need a response.
-    //
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
         #if os(watchOS)
         print("Did receive message from iPhone: \(message)")
@@ -39,27 +27,49 @@ class SessionDelegater: NSObject, WCSessionDelegate, SessionCommands {
         print("Did receive message from Watch: \(message)")
         #endif
         
-        for (k, value) in message {
-            if let key: TransferKeys = TransferKeys(rawValue: k) {
+        for (transferKey, transferData) in message {
+            if let key: TransferKey = TransferKey(rawValue: transferKey) {
                 switch key {
-                case .requestAppContextFromPhone:
-                    #if os(iOS)
-                    if value as! Bool {
-                        print("Received AppContext Update Wanted On Watch!")
-                        sendAppContext(userData: userData)
-                    } else {
-                        print("Received AppContext Update !!!NOT!!! Wanted On Watch!")
+                case .updateFromCounterpart:
+                    if let data = transferData as? [StorageKey: Data] {
+                        for (storageKey, value) in data {
+                            print("Will save value \"\(value)\" for storageKey \"\(storageKey)\".")
+                            switch storageKey {
+                            case .user:
+                                DispatchQueue.main.async {
+                                    if let userDecoded: User = try? JSONDecoder().decode(User.self, from: value) {
+                                        self.storage.user = userDecoded
+                                        self.storage.persist(shouldSendUpdateToCounterpart: false)
+                                    }
+                                }
+                                break
+                            case .settings:
+                                DispatchQueue.main.async {
+                                    if let settingsDecoded: Settings = try? JSONDecoder().decode(Settings.self, from: value) {
+                                        self.storage.settings = settingsDecoded
+                                        self.storage.persist(shouldSendUpdateToCounterpart: false)
+                                    }
+                                }
+                                break
+                            }
+                        }
                     }
+                    break
+                case .requestDataFromPhone:
+                    #if os(iOS)
+                    guard let requested = transferData as? Bool else {
+                        print("Error handling requestDataFromPhone! Could not cast transferKey \"\(transferKey)\" as Bool!")
+                        break
+                    }
+                    DispatchQueue.main.async {
+                        self.storage.persist(shouldSendUpdateToCounterpart: requested)
+                    }
+                    print("Received AppContext Update Wanted On Watch! Requested: \(requested).")
                     #endif
                     break
                 }
-            } else if let key: StorageKey = StorageKey(rawValue: k) {
-                print("Will save value \"\(value)\" for key \"\(key)\".")
-                DispatchQueue.main.async {
-                    self.userData.updateExternally(for: key, with: value)
-                }
             } else {
-                print("Could not cast \(k) as any Key.")
+                print("Could not cast transferKey \"\(transferKey)\" as any TransferKey!")
             }
         }
     }
@@ -70,31 +80,44 @@ class SessionDelegater: NSObject, WCSessionDelegate, SessionCommands {
         replyHandler(message)
     }
     
+    // MARK: - AppContext message
     // Called when an application context is received.
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
         print("Received Application Context: \(applicationContext)")
         self.session(session, didReceiveMessage: applicationContext)
         #if os(watchOS)
         DispatchQueue.main.async {
-            self.userData.didReceiveInitialDataFromPhone = true
+            self.storage.didReceiveInitialDataFromPhone = true
         }
         #endif
     }
     
-    //    // Called when a user info is received.
-    //    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
-    //        print("Received UserInfo: \(userInfo)")
-    //        self.session(session, didReceiveMessage: userInfo)
-    //    }
-    //
-    //    // Called when a user info was transferred.
-    //    func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
-    //        if let error = error {
-    //            print("Error while transferring UserInfo: \(error)")
-    //            return
-    //        }
-    //        print("Transferred UserInfo!")
-    //    }
+    // MARK: - UserInfo message
+    // Called when a user info is received.
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
+        print("Received UserInfo: \(userInfo)")
+        self.session(session, didReceiveMessage: userInfo)
+    }
+    
+    // Called when a user info was transferred.
+    func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
+        if let error = error {
+            print("Error while transferring UserInfo: \(error)")
+            return
+        }
+        print("Transferred UserInfo!")
+    }
+    
+    // MARK: - Session Delegates
+    // Called when WCSession activation state is changed.
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("activationDidComplete: \(session.activationState.rawValue)")
+    }
+    
+    // Called when WCSession reachability is changed.
+    func sessionReachabilityDidChange(_ session: WCSession) {
+        print("reachabilityDidChange: \(session.activationState.rawValue)")
+    }
     
     #if os(iOS)
     func sessionDidBecomeInactive(_ session: WCSession) {

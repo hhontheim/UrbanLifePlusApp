@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @Binding var userIsLoggedIn: Bool
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var storage: Storage
     
     let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     let build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
@@ -27,9 +27,9 @@ struct SettingsView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .clipShape(Circle())
                             VStack(alignment: .leading) {
-                                Text("\(userData.givenName) \(userData.familyName)")
+                                Text("\(storage.user.givenName) \(storage.user.familyName)")
                                     .font(.headline)
-                                Text(userData.email)
+                                Text(storage.user.email)
                                     .font(.subheadline)
                                     .foregroundColor(.secondary)
                             }

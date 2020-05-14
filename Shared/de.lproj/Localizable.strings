@@ -28,4 +28,4 @@
 
 // Watch
 "launch.greeting %@" = "Hallo%@!";
-"launch.message" = "Bitte die App auf deinem iPhone, um dich anmelden!";
+"launch.message" = "Bitte öffne die App auf deinem iPhone, um dich anmelden!";

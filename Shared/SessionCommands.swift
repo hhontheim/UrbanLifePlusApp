@@ -11,30 +11,79 @@ import WatchConnectivity
 
 // Define an interface to wrap Watch Connectivity APIs and
 // bridge the UI. Shared by the iOS app and watchOS app.
-//
+
 protocol SessionCommands {
-    func sendMessage(_ message: [String: Any])
-    func sendAppContextMessage(_ userInfo: [String: Any])
+    #if os(watchOS)
+    func requestDataFromPhone()
+    #endif
+    
+    func sendUpdateToCounterpart(_ data: [StorageKey: Data])
 }
 
-// Implement the commands. Every command handles the communication and notifies clients
-// when WCSession status changes or data flows. Shared by the iOS app and watchOS app.
-//
+// MARK: - Public functions
 extension SessionCommands {
-    func sendMessage(_ message: [String: Any]) {
+    #if os(watchOS)
+    /// Sends a request from the watch to the phone to reply with the current storage.
+    func requestDataFromPhone() {
+        sendBackgroundMessage(queued: true, content: [TransferKey.requestDataFromPhone.rawValue: true])
+    }
+    #endif
+    
+    /// Sends new `data` to the counterpart app. Transfer will happen in background. If there is `data` on the other device to be delivered, it will be overridden!
+    /// - Parameter data: Data to send.
+    func sendUpdateToCounterpart(_ data: [StorageKey: Data]) {
+        var substitutedKeys: [String: Data] = [:]
+        
+        for (key, value) in data {
+            substitutedKeys[key.rawValue] = value
+        }
+        
+        sendBackgroundMessage(queued: false, content: [TransferKey.updateFromCounterpart.rawValue: substitutedKeys])
+    }
+}
+
+// MARK: - Private wrappers
+extension SessionCommands {
+    /// Sends a message to the counterpart app. Will only be delivered if the counterpart app is running in foreground.
+    /// - Parameter message: Message to be sent.
+    private func sendForegroundMessage(_ message: [String: Any]) {
+        sendMessage(message)
+    }
+    
+    /// Sends a message to the counterpart app. Will even be delivered if the counterpart app is running in background. Upon opening the counterpart app, content will be handed over. Can specify, if `content` should be added to FIFO queue.
+    /// - Parameters:
+    ///   - queued: If the `content` should be added to a FIFO queue.
+    ///   - content: Content to be sent.
+    private func sendBackgroundMessage(queued: Bool, content: [String: Any]) {
+        if queued {
+            transferUserInfo(content)
+        } else {
+            updateApplicationContext(content)
+        }
+    }
+}
+
+// MARK: - Private: Actual transfer happens here.
+extension SessionCommands {
+    
+    /// Actually sends the `message`.
+    /// - Parameter message: Message to be sent.
+    private func sendMessage(_ message: [String: Any]) {
         guard WCSession.default.activationState == .activated else {
             print("WCSession is not activeted yet! No Message sent!")
             return
         }
         
         WCSession.default.sendMessage(message, replyHandler: { replyMessage in
-            print("Message \"\(message)\" sent.")
+            print("Message \"\(message)\" sent. Reply: \(replyMessage)")
         }, errorHandler: { error in
             print("Error while sending message \"\(message)\":\n\(error)")
         })
     }
     
-    func sendAppContextMessage(_ applicationContext: [String: Any]) {
+    /// Actually sends the `applicationContext`.
+    /// - Parameter applicationContext: ApplicationContext to be sent.
+    private func updateApplicationContext(_ applicationContext: [String: Any]) {
         guard WCSession.default.activationState == .activated else {
             print("WCSession is not activeted yet! No AppContext sent!")
             return
@@ -47,20 +96,15 @@ extension SessionCommands {
         }
     }
     
-    #if os(watchOS)
-    func requestAppContextFromPhone() {
-        sendAppContextMessage([TransferKeys.requestAppContextFromPhone.rawValue : true])
-    }
-    #endif
     
-    func sendAppContext(userData: UserData) {
-        let dict = userData.getUserDataAsDictionary()
-        var translatedDict: [String: Any] = [:]
-        
-        for (key, value) in dict {
-            translatedDict[key.rawValue] = value
+    /// Actually sends the `userInfo`.
+    /// - Parameter userInfo: UserInfo to be sent.
+    private func transferUserInfo(_ userInfo: [String: Any]) {
+        guard WCSession.default.activationState == .activated else {
+            print("WCSession is not activeted yet! No UserInfo sent!")
+            return
         }
-        
-        sendAppContextMessage(translatedDict)
+        WCSession.default.transferUserInfo(userInfo)
+        print("UserInfo \"\(userInfo)\" on it's way...")
     }
 }

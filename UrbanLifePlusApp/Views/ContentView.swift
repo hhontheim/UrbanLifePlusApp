@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // TODO: Refactor these States to Storage
     #if !targetEnvironment(simulator)
     @State var userIsLoggedIn: Bool = false
     #else
@@ -29,11 +30,6 @@ struct ContentView: View {
                     .animation(.default)
                     .transition(.move(edge: .bottom))
             }
-        }
-        .onAppear {
-            #if targetEnvironment(simulator)
-            self.userIsLoggedIn = true
-            #endif
         }
     }
 }

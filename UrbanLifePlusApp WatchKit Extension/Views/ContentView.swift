@@ -10,27 +10,28 @@ import SwiftUI
 
 struct ContentView: View, SessionCommands {
     
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var storage: Storage
     
     var body: some View {
         ZStack {
-            if userData.didReceiveInitialDataFromPhone {
+            if storage.didReceiveInitialDataFromPhone {
                 ScrollView {
-                    Text("Value: \"\(userData.value)\"")
-                    TextField("Text Feld", text: $userData.value)
-                    Toggle(isOn: $userData.toggle) {
+                    Text("Name: \"\(storage.user.givenName) \(storage.user.familyName)\"")
+                    Text("Value: \"\(storage.settings.value)\"")
+                    TextField("Text Feld", text: $storage.settings.value)
+                    Toggle(isOn: $storage.settings.toggle) {
                         Text("Toggle me")
                     }
                     .padding()
                     Button(action: {
-                        self.requestAppContextFromPhone()
+                        self.requestDataFromPhone()
                     }) {
                         Text("Update")
                     }
                 }
                 .contextMenu(menuItems: {
                     Button(action: {
-                        self.requestAppContextFromPhone()
+                        self.requestDataFromPhone()
                     }, label: {
                         VStack{
                             Image(systemName: "arrow.clockwise")
@@ -45,7 +46,7 @@ struct ContentView: View, SessionCommands {
             }
         }
         .onAppear {
-            self.requestAppContextFromPhone()
+            self.requestDataFromPhone()
         }
     }
 }

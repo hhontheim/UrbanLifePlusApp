@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct LaunchView: View, SessionCommands {
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var storage: Storage
     
     var body: some View {
         Group {
@@ -17,11 +17,11 @@ struct LaunchView: View, SessionCommands {
                 .edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading) {
                 Spacer()
-                Text("launch.greeting \(userData.registered ? ", \(userData.givenName)" : "")")
+                Text("launch.greeting \(storage.user.registered ? ", \(storage.user.givenName)" : "")")
                 Text("launch.message")
                 Spacer()
                 Button(action: {
-                    self.requestAppContextFromPhone()
+                    self.requestDataFromPhone()
                 }) {
                     Text("Neu laden...")
                 }

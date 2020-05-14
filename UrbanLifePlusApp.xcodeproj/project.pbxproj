@@ -10,13 +10,13 @@
 		2B2B31FD2469B42200489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
 		2B2B31FE2469B44700489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
 		2B5205CF246C8C30000CA3A4 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8A01246C273300E0BA25 /* SessionDelegater.swift */; };
+		2B5205D0246D7143000CA3A4 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC2C246AD14800196821 /* Storage.swift */; };
 		2B8C893A246B2E0000E0BA25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
 		2B8C8945246B2F3700E0BA25 /* CommunicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8944246B2F3700E0BA25 /* CommunicationView.swift */; };
 		2B8C8948246B2FA600E0BA25 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8947246B2FA600E0BA25 /* ProfileView.swift */; };
 		2B8C8A02246C273300E0BA25 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8A01246C273300E0BA25 /* SessionDelegater.swift */; };
 		2B8C8A22246C400500E0BA25 /* SessionCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8A21246C400500E0BA25 /* SessionCommands.swift */; };
 		2B8C8A23246C400500E0BA25 /* SessionCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8A21246C400500E0BA25 /* SessionCommands.swift */; };
-		2B8C8A24246C46D600E0BA25 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC2C246AD14800196821 /* Storage.swift */; };
 		2B8EC88824686BFF00655D58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88724686BFF00655D58 /* AppDelegate.swift */; };
 		2B8EC88A24686BFF00655D58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88924686BFF00655D58 /* SceneDelegate.swift */; };
 		2B8EC88C24686BFF00655D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC88B24686BFF00655D58 /* ContentView.swift */; };
@@ -618,8 +618,8 @@
 				2B5205CF246C8C30000CA3A4 /* SessionDelegater.swift in Sources */,
 				2B8EC8C924686C0300655D58 /* NotificationController.swift in Sources */,
 				2B8EC8C724686C0300655D58 /* ExtensionDelegate.swift in Sources */,
+				2B5205D0246D7143000CA3A4 /* Storage.swift in Sources */,
 				2B8C8A23246C400500E0BA25 /* SessionCommands.swift in Sources */,
-				2B8C8A24246C46D600E0BA25 /* Storage.swift in Sources */,
 				2B8EC8CB24686C0300655D58 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

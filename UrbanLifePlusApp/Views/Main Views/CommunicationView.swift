@@ -18,17 +18,13 @@ struct CommunicationView: View, SessionCommands {
                 TextField("Text Feld", text: $userData.value)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-                Toggle(isOn: $userData.toggleMessage) {
-                    Text("Toggle me")
+                Toggle(isOn: $userData.toggle) {
+                    Text("Toggle")
                 }
-                Toggle(isOn: $userData.toggleUserInfo) {
-                    Text("Toggle me")
-                }
-                Button(action: sendMessage) {
+                Button(action: {
+                    self.sendUserDataToWatch(userData: self.userData)
+                }) {
                     Text("Send Message")
-                }
-                Button(action: sendUserInfo) {
-                    Text("Send UserInfo")
                 }
             }
             .navigationBarTitle("communication.title")
@@ -38,19 +34,6 @@ struct CommunicationView: View, SessionCommands {
             Image(systemName: "link")
                 .imageScale(.large)
         }
-    }
-    
-    func sendMessage() {
-        sendMessage([
-            StorageKey.value : userData.value,
-            StorageKey.toggleMessage : userData.toggleMessage
-        ])
-    }
-    
-    func sendUserInfo() {
-        sendUserInfoMessage([
-            StorageKey.toggleUserInfo : userData.toggleUserInfo
-        ])
     }
 }
 

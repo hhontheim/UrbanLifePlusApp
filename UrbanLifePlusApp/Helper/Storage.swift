@@ -9,48 +9,53 @@
 import SwiftUI
 import Combine
 
-struct StorageKey {
-    static let value = "value"
-    static let toggleMessage = "toggleMessage"
-    static let toggleUserInfo = "toggleUserInfo"
+enum StorageKey: String, CaseIterable {
+    case value = "value"
+    case toggle = "toggle"
     
-    static let registered = "registered"
+    case registered = "registered"
     
-    static let userId = "userId"
-    static let givenName = "givenName"
-    static let familyName = "familyName"
-    static let email = "email"
-    static let identityToken = "identityToken"
-    static let authorizationCode = "authorizationCode"
+    case userId = "userId"
+    case givenName = "givenName"
+    case familyName = "familyName"
+    case email = "email"
+    case identityToken = "identityToken"
+    case authorizationCode = "authorizationCode"
 }
-
-//#if os(iOS)
-//typealias StorageTemp = StorageTempPhone
-//typealias StorageLocal = StorageLocalPhone
-//#elseif os(watchOS)
-//typealias StorageTemp = StorageTempWatch
-//typealias StorageLocal = StorageLocalWatch
-//#endif
 
 final class UserData: ObservableObject, SessionCommands {
     
     #if os(iOS)
+    // Store in Key-Value iCloud
     static let container = NSUbiquitousKeyValueStore()
+    
+    // Update Data from Cloud
+    @objc final func externalValueChanged(notification: NSNotification? = nil) {
+        value = UserData.container.string(for: .value)
+        toggle = UserData.container.bool(for: .toggle)
+        registered = UserData.container.bool(for: .registered)
+        userId = UserData.container.string(for: .userId)
+        givenName = UserData.container.string(for: .givenName)
+        familyName = UserData.container.string(for: .familyName)
+        email = UserData.container.string(for: .email)
+        identityToken = UserData.container.data(for: .identityToken)
+        authorizationCode = UserData.container.data(for: .authorizationCode)
+    }
     #elseif os(watchOS)
+    // Store locally
     static let container = UserDefaults.standard
     #endif
     
     init() {
-        value = UserData.container.string(forKey: StorageKey.value) ?? ""
-        toggleMessage = UserData.container.bool(forKey: StorageKey.toggleMessage)
-        toggleUserInfo = UserData.container.bool(forKey: StorageKey.toggleUserInfo)
-        registered = UserData.container.bool(forKey: StorageKey.registered)
-        userId = UserData.container.string(forKey: StorageKey.userId) ?? ""
-        givenName = UserData.container.string(forKey: StorageKey.givenName) ?? ""
-        familyName = UserData.container.string(forKey: StorageKey.familyName) ?? ""
-        email = UserData.container.string(forKey: StorageKey.email) ?? ""
-        identityToken = UserData.container.data(forKey: StorageKey.identityToken) ?? Data()
-        authorizationCode = UserData.container.data(forKey: StorageKey.authorizationCode) ?? Data()
+        value = UserData.container.string(for: .value)
+        toggle = UserData.container.bool(for: .toggle)
+        registered = UserData.container.bool(for: .registered)
+        userId = UserData.container.string(for: .userId)
+        givenName = UserData.container.string(for: .givenName)
+        familyName = UserData.container.string(for: .familyName)
+        email = UserData.container.string(for: .email)
+        identityToken = UserData.container.data(for: .identityToken)
+        authorizationCode = UserData.container.data(for: .authorizationCode)
         
         #if os(iOS)
         NotificationCenter.default.addObserver(self, selector: #selector(UserData.externalValueChanged(notification:)), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: UserData.container)
@@ -59,59 +64,52 @@ final class UserData: ObservableObject, SessionCommands {
     
     @Published var value: String  {
         willSet {
-            set(newValue, for: StorageKey.value)
+            set(newValue, for: .value)
         }
     }
-    @Published var toggleMessage: Bool {
+    @Published var toggle: Bool {
         willSet {
-            set(newValue, for: StorageKey.toggleMessage)
+            set(newValue, for: .toggle)
         }
     }
-    @Published var toggleUserInfo: Bool {
-        willSet {
-            set(newValue, for: StorageKey.toggleUserInfo)
-        }
-    }
-    
     @Published var registered: Bool {
         willSet {
-            set(newValue, for: StorageKey.registered)
+            set(newValue, for: .registered)
         }
     }
-    
     @Published var userId: String {
         willSet {
-            set(newValue, for: StorageKey.userId)
+            set(newValue, for: .userId)
         }
     }
     @Published var givenName: String {
         willSet {
-            set(newValue, for: StorageKey.givenName)
+            set(newValue, for: .givenName)
         }
     }
     @Published var familyName: String{
         willSet {
-            set(newValue, for: StorageKey.familyName)
+            set(newValue, for: .familyName)
         }
     }
     @Published var email: String {
         willSet {
-            set(newValue, for: StorageKey.email)
+            set(newValue, for: .email)
         }
     }
     @Published var identityToken: Data {
         willSet {
-            set(newValue, for: StorageKey.identityToken)
+            set(newValue, for: .identityToken)
         }
     }
     @Published var authorizationCode: Data {
         willSet {
-            set(newValue, for: StorageKey.authorizationCode)
+            set(newValue, for: .authorizationCode)
         }
     }
     
-    private final func set(_ value: Any, for key: String) {
-        UserData.container.set(value, forKey: key)
+    private final func set(_ value: Any, for key: StorageKey) {
+        UserData.container.set(value, forKey: key.rawValue)
     }
     
     final func nuke() {
@@ -123,21 +121,35 @@ final class UserData: ObservableObject, SessionCommands {
         authorizationCode = Data()
     }
     
-    // Update Data from Cloud
-    @objc final func externalValueChanged(notification: NSNotification? = nil) {
-        value = UserData.container.string(forKey: StorageKey.value) ?? ""
-        toggleMessage = UserData.container.bool(forKey: StorageKey.toggleMessage)
-        toggleUserInfo = UserData.container.bool(forKey: StorageKey.toggleUserInfo)
-        registered = UserData.container.bool(forKey: StorageKey.registered)
-        userId = UserData.container.string(forKey: StorageKey.userId) ?? ""
-        givenName = UserData.container.string(forKey: StorageKey.givenName) ?? ""
-        familyName = UserData.container.string(forKey: StorageKey.familyName) ?? ""
-        email = UserData.container.string(forKey: StorageKey.email) ?? ""
-        identityToken = UserData.container.data(forKey: StorageKey.identityToken) ?? Data()
-        authorizationCode = UserData.container.data(forKey: StorageKey.authorizationCode) ?? Data()
-    }
+    
     
     func getAllValuesAsDictionary() -> [String: Any] {
         return ["": 0]
+    }
+}
+
+#if os(iOS)
+extension NSUbiquitousKeyValueStore: UserDataHelper {}
+#elseif os(watchOS)
+extension UserDefaults: UserDataHelper {}
+#endif
+
+
+
+protocol UserDataHelper {
+    func string(for key: StorageKey) -> String
+    func bool(for key: StorageKey) -> Bool
+    func data(for key: StorageKey) -> Data
+}
+
+extension UserDataHelper {
+    func string(for key: StorageKey) -> String {
+        UserData.container.string(forKey: key.rawValue) ?? ""
+    }
+    func bool(for key: StorageKey) -> Bool {
+        UserData.container.bool(forKey: key.rawValue)
+    }
+    func data(for key: StorageKey) -> Data {
+        UserData.container.data(forKey: key.rawValue) ?? Data()
     }
 }

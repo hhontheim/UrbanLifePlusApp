@@ -34,31 +34,31 @@ class SessionDelegater: NSObject, WCSessionDelegate {
     //
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
         #if os(watchOS)
-        print("From iPhone: \(message)")
+        print("Did receive message from iPhone: \(message)")
         #elseif os(iOS)
-        print("From Watch: \(message)")
+        print("Did receive message from Watch: \(message)")
         #endif
         for (key, value) in message {
-            print("Will save \"\(value)\" for key \"\(key)\".")
+            print("Got value \"\(value)\" for key \"\(key)\". Will not save, just print!")
             DispatchQueue.main.async {
-                
-                switch key {
-                case StorageKey.toggleMessage:
-                    self.userData.toggleMessage = value as! Bool
-                    break
-                case StorageKey.toggleUserInfo:
-                    self.userData.toggleUserInfo = value as! Bool
-                    break
-                case StorageKey.value:
-                    self.userData.value = value as! String
-                    break
-                default:
-                    break
+                if let x = value as? String {
+                    self.userData.value = x
+                } else {
+                    print("could not cast")
                 }
             }
         }
     }
     
+    // Called when a message is received and the peer needs a response.
+       //
+       func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
+           self.session(session, didReceiveMessage: message)
+           replyHandler(message) // Echo back the time stamp.
+       }
+    
+    // Called when a user info is received.
+    //
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
         #if os(watchOS)
         print("User Info Start From iPhone: \(userInfo)")
@@ -68,23 +68,17 @@ class SessionDelegater: NSObject, WCSessionDelegate {
         self.session(session, didReceiveMessage: userInfo)
     }
     
+    // Called when a user info was transferred.
+    //
     func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
         if let error = error {
             print(error)
+            return
         }
-        #if os(watchOS)
-        print("User Info Ended From iPhone")
-        #elseif os(iOS)
-        print("User Info End From Watch")
-        #endif
+        print("Transferred User Info!")
     }
     
-    // Called when a message is received and the peer needs a response.
-    //
-    func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
-        self.session(session, didReceiveMessage: message)
-        replyHandler(message) // Echo back the time stamp.
-    }
+   
     
     #if os(iOS)
     func sessionDidBecomeInactive(_ session: WCSession) {

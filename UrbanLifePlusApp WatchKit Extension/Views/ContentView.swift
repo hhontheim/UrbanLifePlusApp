@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View, SessionCommands {
     @EnvironmentObject var userData: UserData
     
-    @State var didReceiveInitialDataFromPhone: Bool = !false
+    @State var didReceiveInitialDataFromPhone: Bool = !false // TODO: Change
     
     var body: some View {
         //        ZStack {
@@ -22,19 +22,14 @@ struct ContentView: View, SessionCommands {
                 ScrollView {
                     Text("Value: \"\(userData.value)\"")
                     TextField("Text Feld", text: $userData.value)
-                    Toggle(isOn: $userData.toggleMessage) {
+                    Toggle(isOn: $userData.toggle) {
                         Text("Toggle me")
                     }
                     .padding()
-                    Toggle(isOn: $userData.toggleUserInfo) {
-                        Text("Toggle me")
-                    }
-                    .padding()
-                    Button(action: sendMessage) {
-                        Text("Send Message")
-                    }
-                    Button(action: sendUserInfo) {
-                        Text("Send UserInfo")
+                    Button(action: {
+                        self.requestUserDataFromPhone()
+                    }) {
+                        Text("requestUserDataFromPhone")
                     }
                 }
                 .onAppear {
@@ -52,31 +47,9 @@ struct ContentView: View, SessionCommands {
                         }
                     }
                 }
-                .onAppear {
-                    self.requestUserDataFromPhone()
-                }
                 .navigationBarTitle("UrbanLife+")
             }
         }
-    }
-    
-    func requestUserDataFromPhone() {
-//        sendUserInfoMessage([
-//            StorageKey.value : userData.requestDataFromPhone
-//        ])
-    }
-    
-    func sendMessage() {
-        sendMessage([
-            StorageKey.value : userData.value,
-            StorageKey.toggleMessage : userData.toggleMessage
-        ])
-    }
-    
-    func sendUserInfo() {
-        sendUserInfoMessage([
-            StorageKey.toggleUserInfo : userData.toggleUserInfo
-        ])
     }
 }
 

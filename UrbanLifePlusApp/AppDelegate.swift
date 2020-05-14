@@ -9,6 +9,7 @@
 import UIKit
 import WatchConnectivity
 import SwiftUI
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        application.registerForRemoteNotifications()
+        registerForPushNotifications()
+        
         userData = UserData()
         
         sessionDelegater = SessionDelegater(userData: userData)
@@ -34,6 +38,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         } else { print("WatchConnectivity is not supported on this device") }
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("didRegisterForRemoteNotificationsWithDeviceToken: \(deviceToken.hexString)")
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("didFailToRegisterForRemoteNotificationsWithError: \(error)")
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        print("didReceiveRemoteNotification: \(userInfo)")
+    }
+    
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options: [.alert, .sound, .badge]) {
+                granted, error in
+                print("Permission for Push Notifications granted: \(granted).")
+        }
     }
     
     // MARK: UISceneSession Lifecycle
@@ -53,3 +77,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+extension Data {
+    var hexString: String {
+        let hexString = map { String(format: "%02.2hhx", $0) }.joined()
+        return hexString
+    }
+}

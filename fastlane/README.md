@@ -21,9 +21,9 @@ or alternatively using `brew cask install fastlane`
 fastlane ios deploy
 ```
 
-### ios test
+### ios register
 ```
-fastlane ios test
+fastlane ios register
 ```
 
 

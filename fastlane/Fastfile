@@ -89,4 +89,10 @@ platform :ios do
     )
   end
 
+  lane :register do
+    register_devices(devices_file: "./devices.txt")
+    match(type: "adhoc", force_for_new_devices: true)
+    match(type: "development", force_for_new_devices: true)
+  end
+
 end

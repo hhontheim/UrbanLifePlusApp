@@ -9,16 +9,12 @@
 import SwiftUI
 
 struct ContentView: View, SessionCommands {
+    
     @EnvironmentObject var userData: UserData
     
-    @State var didReceiveInitialDataFromPhone: Bool = !false // TODO: Change
-    
     var body: some View {
-        //        ZStack {
-        //            Text("Bitte öffne zuerst die App auf deinem iPhone um dich anmelden...")
-        //        }
         ZStack {
-            if didReceiveInitialDataFromPhone {
+            if userData.didReceiveInitialDataFromPhone {
                 ScrollView {
                     Text("Value: \"\(userData.value)\"")
                     TextField("Text Feld", text: $userData.value)
@@ -27,28 +23,29 @@ struct ContentView: View, SessionCommands {
                     }
                     .padding()
                     Button(action: {
-                        self.requestUserDataFromPhone()
+                        self.requestAppContextFromPhone()
                     }) {
-                        Text("requestUserDataFromPhone")
+                        Text("Update")
                     }
                 }
-                .onAppear {
-                    return
-                }
-                .navigationBarTitle("Home")
-            } else {
-                Group {
-                    Color.black
-                        .edgesIgnoringSafeArea(.all)
-                    VStack {
-                        Text("Bitte öffne zuerst die App auf deinem iPhone um dich anmelden...")
-                        Button(action: {}) {
-                            Text("Neu laden...")
+                .contextMenu(menuItems: {
+                    Button(action: {
+                        self.requestAppContextFromPhone()
+                    }, label: {
+                        VStack{
+                            Image(systemName: "arrow.clockwise")
+                                .font(.title)
+                            Text("Update")
                         }
-                    }
-                }
-                .navigationBarTitle("UrbanLife+")
+                    })
+                })
+                    .navigationBarTitle("Home")
+            } else {
+                LaunchView()
             }
+        }
+        .onAppear {
+            self.requestAppContextFromPhone()
         }
     }
 }

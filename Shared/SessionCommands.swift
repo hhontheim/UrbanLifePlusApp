@@ -14,7 +14,7 @@ import WatchConnectivity
 //
 protocol SessionCommands {
     func sendMessage(_ message: [String: Any])
-    func sendUserInfoMessage(_ userInfo: [String: Any])
+    func sendAppContextMessage(_ userInfo: [String: Any])
 }
 
 // Implement the commands. Every command handles the communication and notifies clients
@@ -26,7 +26,7 @@ extension SessionCommands {
             print("WCSession is not activeted yet! No Message sent!")
             return
         }
-
+        
         WCSession.default.sendMessage(message, replyHandler: { replyMessage in
             print("Message \"\(message)\" sent.")
         }, errorHandler: { error in
@@ -34,26 +34,33 @@ extension SessionCommands {
         })
     }
     
-    func sendUserInfoMessage(_ userInfo: [String: Any]) {
+    func sendAppContextMessage(_ applicationContext: [String: Any]) {
         guard WCSession.default.activationState == .activated else {
-            print("WCSession is not activeted yet! No UserInfo sent!")
+            print("WCSession is not activeted yet! No AppContext sent!")
             return
         }
-        WCSession.default.transferUserInfo(userInfo)
-        print("User info \"\(userInfo)\" on it's way...")
+        do {
+            try WCSession.default.updateApplicationContext(applicationContext)
+            print("App Context \"\(applicationContext)\" on it's way...")
+        } catch let error {
+            print("Error while sending AppContext \"\(applicationContext)\":\n\(error)")
+        }
     }
     
     #if os(watchOS)
-    func requestUserDataFromPhone() {
-//        sendUserInfoMessage(["requestUserDataFromPhone" : true])
-        sendUserInfoMessage(["value" : "from watch"])
+    func requestAppContextFromPhone() {
+        sendAppContextMessage([TransferKeys.requestAppContextFromPhone.rawValue : true])
     }
     #endif
     
-    #if os(iOS)
-    func sendUserDataToWatch(userData: UserData) {
-//        sendUserInfoMessage(userData.getAllValuesAsDictionary())
-        sendUserInfoMessage(["value" : "from iPhone"])
+    func sendAppContext(userData: UserData) {
+        let dict = userData.getUserDataAsDictionary()
+        var translatedDict: [String: Any] = [:]
+        
+        for (key, value) in dict {
+            translatedDict[key.rawValue] = value
+        }
+        
+        sendAppContextMessage(translatedDict)
     }
-    #endif
 }

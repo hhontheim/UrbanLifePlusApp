@@ -10,7 +10,7 @@ import Foundation
 import WatchConnectivity
 import SwiftUI
 
-class SessionDelegater: NSObject, WCSessionDelegate {
+class SessionDelegater: NSObject, WCSessionDelegate, SessionCommands {
     var userData: UserData
     
     init(userData: UserData) {
@@ -38,47 +38,63 @@ class SessionDelegater: NSObject, WCSessionDelegate {
         #elseif os(iOS)
         print("Did receive message from Watch: \(message)")
         #endif
-        for (key, value) in message {
-            print("Got value \"\(value)\" for key \"\(key)\". Will not save, just print!")
-            DispatchQueue.main.async {
-                if let x = value as? String {
-                    self.userData.value = x
-                } else {
-                    print("could not cast")
+        
+        for (k, value) in message {
+            if let key: TransferKeys = TransferKeys(rawValue: k) {
+                switch key {
+                case .requestAppContextFromPhone:
+                    #if os(iOS)
+                    if value as! Bool {
+                        print("Received AppContext Update Wanted On Watch!")
+                        sendAppContext(userData: userData)
+                    } else {
+                        print("Received AppContext Update !!!NOT!!! Wanted On Watch!")
+                    }
+                    #endif
+                    break
                 }
+            } else if let key: StorageKey = StorageKey(rawValue: k) {
+                print("Will save value \"\(value)\" for key \"\(key)\".")
+                DispatchQueue.main.async {
+                    self.userData.updateExternally(for: key, with: value)
+                }
+            } else {
+                print("Could not cast \(k) as any Key.")
             }
         }
     }
     
     // Called when a message is received and the peer needs a response.
-       //
-       func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
-           self.session(session, didReceiveMessage: message)
-           replyHandler(message) // Echo back the time stamp.
-       }
+    func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
+        self.session(session, didReceiveMessage: message)
+        replyHandler(message)
+    }
     
-    // Called when a user info is received.
-    //
-    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
+    // Called when an application context is received.
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        print("Received Application Context: \(applicationContext)")
+        self.session(session, didReceiveMessage: applicationContext)
         #if os(watchOS)
-        print("User Info Start From iPhone: \(userInfo)")
-        #elseif os(iOS)
-        print("User Info Start From Watch: \(userInfo)")
-        #endif
-        self.session(session, didReceiveMessage: userInfo)
-    }
-    
-    // Called when a user info was transferred.
-    //
-    func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
-        if let error = error {
-            print(error)
-            return
+        DispatchQueue.main.async {
+            self.userData.didReceiveInitialDataFromPhone = true
         }
-        print("Transferred User Info!")
+        #endif
     }
     
-   
+    //    // Called when a user info is received.
+    //    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
+    //        print("Received UserInfo: \(userInfo)")
+    //        self.session(session, didReceiveMessage: userInfo)
+    //    }
+    //
+    //    // Called when a user info was transferred.
+    //    func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
+    //        if let error = error {
+    //            print("Error while transferring UserInfo: \(error)")
+    //            return
+    //        }
+    //        print("Transferred UserInfo!")
+    //    }
     
     #if os(iOS)
     func sessionDidBecomeInactive(_ session: WCSession) {

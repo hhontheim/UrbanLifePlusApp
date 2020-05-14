@@ -22,7 +22,7 @@ struct CommunicationView: View, SessionCommands {
                     Text("Toggle")
                 }
                 Button(action: {
-                    self.sendUserDataToWatch(userData: self.userData)
+                    self.sendAppContext(userData: self.userData)
                 }) {
                     Text("Send Message")
                 }

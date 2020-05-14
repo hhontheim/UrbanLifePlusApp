@@ -10,17 +10,21 @@ import SwiftUI
 import Combine
 
 enum StorageKey: String, CaseIterable {
-    case value = "value"
-    case toggle = "toggle"
+    case value
+    case toggle
     
-    case registered = "registered"
+    case registered
     
-    case userId = "userId"
-    case givenName = "givenName"
-    case familyName = "familyName"
-    case email = "email"
-    case identityToken = "identityToken"
-    case authorizationCode = "authorizationCode"
+    case userId
+    case givenName
+    case familyName
+    case email
+    case identityToken
+    case authorizationCode
+}
+
+enum TransferKeys: String, CaseIterable {
+    case requestAppContextFromPhone
 }
 
 final class UserData: ObservableObject, SessionCommands {
@@ -31,6 +35,7 @@ final class UserData: ObservableObject, SessionCommands {
     
     // Update Data from Cloud
     @objc final func externalValueChanged(notification: NSNotification? = nil) {
+        // TODO: Use replace method!
         value = UserData.container.string(for: .value)
         toggle = UserData.container.bool(for: .toggle)
         registered = UserData.container.bool(for: .registered)
@@ -41,9 +46,12 @@ final class UserData: ObservableObject, SessionCommands {
         identityToken = UserData.container.data(for: .identityToken)
         authorizationCode = UserData.container.data(for: .authorizationCode)
     }
+    
     #elseif os(watchOS)
     // Store locally
     static let container = UserDefaults.standard
+    
+    @Published var didReceiveInitialDataFromPhone = false
     #endif
     
     init() {
@@ -63,68 +71,140 @@ final class UserData: ObservableObject, SessionCommands {
     }
     
     @Published var value: String  {
-        willSet {
-            set(newValue, for: .value)
+        didSet {
+            set(value, for: .value, oldValue: oldValue)
         }
     }
     @Published var toggle: Bool {
-        willSet {
-            set(newValue, for: .toggle)
+        didSet {
+            set(toggle, for: .toggle, oldValue: oldValue)
         }
     }
     @Published var registered: Bool {
-        willSet {
-            set(newValue, for: .registered)
+        didSet {
+            set(registered, for: .registered, oldValue: oldValue)
         }
     }
     @Published var userId: String {
-        willSet {
-            set(newValue, for: .userId)
+        didSet {
+            set(userId, for: .userId, oldValue: oldValue)
         }
     }
     @Published var givenName: String {
-        willSet {
-            set(newValue, for: .givenName)
+        didSet {
+            set(givenName, for: .givenName, oldValue: oldValue)
         }
     }
     @Published var familyName: String{
-        willSet {
-            set(newValue, for: .familyName)
+        didSet {
+            set(familyName, for: .familyName, oldValue: oldValue)
         }
     }
     @Published var email: String {
-        willSet {
-            set(newValue, for: .email)
+        didSet {
+            set(email, for: .email, oldValue: oldValue)
         }
     }
     @Published var identityToken: Data {
-        willSet {
-            set(newValue, for: .identityToken)
+        didSet {
+            set(identityToken, for: .identityToken, oldValue: oldValue)
         }
     }
     @Published var authorizationCode: Data {
-        willSet {
-            set(newValue, for: .authorizationCode)
+        didSet {
+            set(authorizationCode, for: .authorizationCode, oldValue: oldValue)
         }
     }
     
-    private final func set(_ value: Any, for key: StorageKey) {
+    /// Persists the passed `value`. On iOS to iCloud, on watchOS to UserDefaults.
+    /// If needed, counterpard app will be updated.
+    ///
+    /// Runs if didSet of property was invoked.
+    /// - Parameters:
+    ///   - value: New value to persist.
+    ///   - key: `StorageKey` to use.
+    ///   - oldValue: Used to check for differences. If value was actually changed, send updated AppContext to counterpart app.
+    private final func set<T: Equatable>(_ value: T, for key: StorageKey, oldValue: T) {
+        // Actually save to disk and on iOS also in iCloud.
         UserData.container.set(value, forKey: key.rawValue)
+        
+        if value != oldValue {
+            sendAppContext(userData: self)
+        } else {
+            print("Data not changed")
+        }
     }
-    
+
     final func nuke() {
+        #if !targetEnvironment(simulator)
+        registered = false
         userId = ""
         givenName = ""
         familyName = ""
         email = ""
         identityToken = Data()
         authorizationCode = Data()
+        #else
+        registered = true
+        userId = "XXXXXX"
+        givenName = "Mustermann"
+        familyName = "Max"
+        email = "max.mustermann@hontheim.net"
+        identityToken = Data(base64Encoded: "aWRlbnRpdHlUb2tlbg==")!
+        authorizationCode = Data(base64Encoded: "YXV0aG9yaXphdGlvbkNvZGU=")!
+        #endif
     }
     
+    func getUserDataAsDictionary() -> [StorageKey: Any] {
+        return [
+            .value: value,
+            .toggle: toggle,
+            .registered: registered,
+            .userId: userId,
+            .givenName: givenName,
+            .familyName: familyName,
+            .email: email,
+            .identityToken: identityToken,
+            .authorizationCode: authorizationCode
+        ]
+    }
     
+    func updateExternally(for key: StorageKey, with newValue: Any) {
+        switch key {
+        case .value:
+            replace(&value, with: newValue)
+            break
+        case .toggle:
+            replace(&toggle, with: newValue)
+            break
+        case .registered:
+            replace(&registered, with: newValue)
+            break
+        case .userId:
+            replace(&userId, with: newValue)
+            break
+        case .givenName:
+            replace(&givenName, with: newValue)
+            break
+        case .familyName:
+            replace(&familyName, with: newValue)
+            break
+        case .email:
+            replace(&email, with: newValue)
+            break
+        case .identityToken:
+            replace(&identityToken, with: newValue)
+            break
+        case .authorizationCode:
+            replace(&authorizationCode, with: newValue)
+            break
+        }
+    }
     
-    func getAllValuesAsDictionary() -> [String: Any] {
-        return ["": 0]
+    func replace<T>(_ value: inout T, with newValue: Any){
+        if let v = newValue as? T {
+            value = v
+        }
     }
 }
 
@@ -142,6 +222,7 @@ protocol UserDataHelper {
     func data(for key: StorageKey) -> Data
 }
 
+// Helper for fetching Data from Disk by using StorageKeys.
 extension UserDataHelper {
     func string(for key: StorageKey) -> String {
         UserData.container.string(forKey: key.rawValue) ?? ""

@@ -5,6 +5,8 @@
   Created by Henning Hontheim on 10.05.20.
   Copyright © 2020 Henning Hontheim. All rights reserved.
 */
+
+// iOS
 "login.title %@" = "Hallo%@!";
 "login.newUser" = "Bitte erstelle dir einen Account,\ndamit du die App nutzen kannst!";
 "login.existingUser" = "Bitte melde dich wieder an,\ndamit du die App nutzen kannst!";
@@ -23,3 +25,7 @@
 
 "dev.title" = "Entwickler Menü";
 "dev.link" = "Entwickler Menü";
+
+// Watch
+"launch.greeting %@" = "Hallo%@!";
+"launch.message" = "Bitte die App auf deinem iPhone, um dich anmelden!";

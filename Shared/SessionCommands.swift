@@ -40,6 +40,18 @@ extension SessionCommands {
             return
         }
         WCSession.default.transferUserInfo(userInfo)
-        print("User info dispatched")
+        print("User info \"\(userInfo)\" dispatched.")
     }
+    
+    #if os(watchOS)
+    func requestUserDataFromPhone() {
+        sendUserInfoMessage(["requestUserDataFromPhone" : true])
+    }
+    #endif
+    
+    #if os(iOS)
+    func sendUserDataToWatch(userData: UserData) {
+        sendUserInfoMessage(userData.getAllValuesAsDictionary())
+    }
+    #endif
 }

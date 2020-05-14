@@ -136,4 +136,8 @@ final class UserData: ObservableObject, SessionCommands {
         identityToken = UserData.container.data(forKey: StorageKey.identityToken) ?? Data()
         authorizationCode = UserData.container.data(forKey: StorageKey.authorizationCode) ?? Data()
     }
+    
+    func getAllValuesAsDictionary() -> [String: Any] {
+        return ["": 0]
+    }
 }

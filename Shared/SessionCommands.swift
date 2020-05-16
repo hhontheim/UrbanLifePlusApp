@@ -25,7 +25,7 @@ extension SessionCommands {
     #if os(watchOS)
     /// Sends a request from the watch to the phone to reply with the current storage.
     func requestDataFromPhone() {
-        sendBackgroundMessage(queued: true, content: [TransferKey.requestDataFromPhone.rawValue: true])
+        sendAutomatedBackgroundMessage(queued: true, content: [TransferKey.requestDataFromPhone.rawValue: true])
     }
     #endif
     
@@ -38,7 +38,7 @@ extension SessionCommands {
             substitutedKeys[key.rawValue] = value
         }
         
-        sendBackgroundMessage(queued: false, content: [TransferKey.updateFromCounterpart.rawValue: substitutedKeys])
+        sendAutomatedBackgroundMessage(queued: false, content: [TransferKey.updateFromCounterpart.rawValue: substitutedKeys])
     }
 }
 
@@ -54,11 +54,15 @@ extension SessionCommands {
     /// - Parameters:
     ///   - queued: If the `content` should be added to a FIFO queue.
     ///   - content: Content to be sent.
-    private func sendBackgroundMessage(queued: Bool, content: [String: Any]) {
-        if queued {
-            transferUserInfo(content)
+    private func sendAutomatedBackgroundMessage(queued: Bool, content: [String: Any]) {
+        if WCSession.default.isReachable {
+            sendMessage(content)
         } else {
-            updateApplicationContext(content)
+            if queued {
+                transferUserInfo(content)
+            } else {
+                updateApplicationContext(content)
+            }
         }
     }
 }

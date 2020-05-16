@@ -111,27 +111,27 @@ class SessionDelegater: NSObject, WCSessionDelegate {
     // MARK: - Session Delegates
     // Called when WCSession activation state is changed.
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("activationDidComplete: \(session.activationState.rawValue)")
+        print("activationDidComplete. activationState: \(session.activationState)")
     }
     
     // Called when WCSession reachability is changed.
     func sessionReachabilityDidChange(_ session: WCSession) {
-        print("reachabilityDidChange: \(session.activationState.rawValue)")
+        print("reachabilityDidChange. isReachable: \(session.isReachable)")
     }
     
     #if os(iOS)
     func sessionDidBecomeInactive(_ session: WCSession) {
-        print("sessionDidBecomeInactive: \(session.activationState.rawValue)")
+        print("sessionDidBecomeInactive. activationState: \(session.activationState)")
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
         // Activate the new session after having switched to a new watch.
-        print("sessionDidDeactivate: \(session.activationState.rawValue)")
+        print("sessionDidDeactivate. activationState: \(session.activationState)")
         session.activate()
     }
     
     func sessionWatchStateDidChange(_ session: WCSession) {
-        print("sessionWatchStateDidChange: \(session.activationState.rawValue)")
+        print("sessionWatchStateDidChange. activationState: \(session.activationState)")
     }
     #endif
 }

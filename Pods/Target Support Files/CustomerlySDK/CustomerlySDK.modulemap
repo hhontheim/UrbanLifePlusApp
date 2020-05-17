@@ -1,0 +1,6 @@
+framework module CustomerlySDK {
+  umbrella header "CustomerlySDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -23,11 +23,18 @@
 "settings.tab" = "Einstellungen";
 "settings.logout" = "Abmelden";
 "settings.nuke" = "Alle Daten löschen...";
+"settings.help" = "Hilfe";
 
-"settings.nuke.shield.title" = "Möchtest Du wirklich alle Daten der App löschen?";
-"settings.nuke.shield.message" = "Dies kann nicht rückgängig gemacht werden!";
-"settings.nuke.shield.nuke" = "Ja, Daten löschen!";
-"settings.nuke.shield.abort" = "Nein, Daten behalten!";
+"settings.nuke.sheet.title" = "Möchtest Du wirklich alle Daten der App löschen?";
+"settings.nuke.sheet.message" = "Dies kann nicht rückgängig gemacht werden!";
+"settings.nuke.sheet.nuke" = "Ja, Daten löschen!";
+"settings.nuke.sheet.abort" = "Nein, Daten behalten!";
+
+"settings.help.sheet.title" = "Womit können wir helfen?";
+"settings.help.sheet.message" = "Möchtest Du mit jemandem chatten oder Feedback zur App geben?";
+"settings.help.sheet.chat" = "Ich möchte mit jemandem Chatten.";
+"settings.help.sheet.tech" = "Ich möchte Feedback geben.";
+"settings.help.sheet.abort" = "Abbrechen";
 
 "dev.title" = "Entwickler Menü";
 "dev.link" = "Entwickler Menü";

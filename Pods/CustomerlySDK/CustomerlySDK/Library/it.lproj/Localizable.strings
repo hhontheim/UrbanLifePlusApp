@@ -1,0 +1,61 @@
+/*
+ Localizable.strings
+ Customerly
+ 
+ Created by Paolo Musolino on 08/01/17.
+ Copyright © 2017 Customerly. All rights reserved.
+ */
+
+/* Image Picker Action Sheet */
+"actionSheetImagePicker_title" = "Seleziona un file da inviare";
+"actionSheetImagePicker_cancel" = "Annulla";
+"actionSheetImagePicker_takePhoto" = "Scatta una Foto";
+"actionSheetImagePicker_imageGallery" = "Galleria Immagini";
+"actionSheetImagePicker_error" = "Errore";
+"actionSheetImagePicker_confirm" = "OK";
+"actionSheetImagePicker_error_cameraNotAvailable" = "Ops, la camera non è disponibile";
+"actionSheetImagePicker_error_galleryNotAvailable" = "Ops, la galleria fotografica non è disponibile";
+
+/* Time Ago Since Date */
+"timeAgoSinceDate_yearsAgo %d" = "%da fa";
+"timeAgoSinceDate_yearAgo %d" = "%da fa";
+"timeAgoSinceDate_monthsAgo %d" = "%dm fa";
+"timeAgoSinceDate_monthAgo %d" = "%dm fa";
+"timeAgoSinceDate_weeksAgo %d" = "%ds fa";
+"timeAgoSinceDate_weekAgo %d" = "%ds fa";
+"timeAgoSinceDate_daysAgo %d" = "%dg fa";
+"timeAgoSinceDate_dayAgo %d" = "%dg fa";
+"timeAgoSinceDate_hoursAgo %d" = "%dh fa";
+"timeAgoSinceDate_hourAgo %d" = "%dh fa";
+"timeAgoSinceDate_minutesAgo %d" = "%dm fa";
+"timeAgoSinceDate_minuteAgo %d" = "%dm fa";
+"timeAgoSinceDate_secondsAgo %d" = "%ds fa";
+"timeAgoSinceDate_justNow" = "Ora";
+
+/* Conversation List */
+"supportTitle" = "Supporto";
+"youUser" = "Tu";
+"conversationListPoweredBy" = "Live Chat ⚡️ Customerly";
+"newConversationButton" = "Nuova conversazione";
+
+/* Chat View */
+"chatTitleView" = "Chat";
+"chatInsertEmail" = "Inserisci la tua email";
+"chatOK" = "OK";
+"chatCancel" = "Annulla";
+"chatEmail" = "Email";
+"chatAdminLastActivity" = "Ultima attività";
+"chatViewPoweredBy" = "Live Chat ⚡️ Customerly";
+"chatViewContactSupportLabel" = "Contatta l'assistenza scrivendo la tua domanda qui sotto.";
+"chatViewTextFieldPlaceholder" = "Scrivi la tua domanda";
+"chatViewRichMessageText" = "Questo messaggio è stato inviato via email. Tocca qui per leggerlo.";
+
+/* Survey View */
+"surveyTitleView" = "Sondaggio";
+"confirmSliderButton %d" = "Conferma %d";
+"confirmButton" = "Conferma";
+
+/* Extra */
+"pullToRefresh" = "Trascina per aggiornare";
+
+

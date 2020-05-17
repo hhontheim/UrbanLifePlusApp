@@ -7,11 +7,13 @@
 //
 
 import SwiftUI
+import CustomerlySDK
 
 struct SettingsView: View {
     @EnvironmentObject var storage: Storage
     
     @State var showNukeSheet: Bool = false
+    @State var showHelpSheet: Bool = false
     
     let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     let build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
@@ -57,9 +59,9 @@ struct SettingsView: View {
                             .foregroundColor(.red)
                     }
                     .actionSheet(isPresented: $showNukeSheet) {
-                        ActionSheet(title: Text("settings.nuke.shield.title"), message: Text("settings.nuke.shield.message"), buttons: [
-                            .cancel(Text("settings.nuke.shield.abort")),
-                            .destructive(Text("settings.nuke.shield.nuke")) {
+                        ActionSheet(title: Text("settings.nuke.sheet.title"), message: Text("settings.nuke.sheet.message"), buttons: [
+                            .cancel(Text("settings.nuke.sheet.abort")),
+                            .destructive(Text("settings.nuke.sheet.nuke")) {
                                 self.storage.nuke(shouldGoToSettingsToRevokeSIWA: true)
                                 self.storage.appState.userIsLoggedIn = false
                             }
@@ -77,6 +79,31 @@ struct SettingsView: View {
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("settings.title")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showHelpSheet = true
+                }) {
+                    HStack {
+                        Text("settings.help")
+                        Image(systemName: "questionmark.circle.fill")
+                            .imageScale(.large)
+                    }
+                }
+                .actionSheet(isPresented: $showHelpSheet) {
+                    ActionSheet(title: Text("settings.help.sheet.title"), message: Text("settings.help.sheet.message"), buttons: [
+                        .default(Text("settings.help.sheet.chat")) {
+                            self.storage.registerForCustomerly()
+                            if let window = UIApplication.shared.windows.first?.rootViewController {
+                                Customerly.sharedInstance.openSupport(from: window)
+                            }
+                        },
+                        .default(Text("settings.help.sheet.tech")) {
+                            
+                        },
+                        .cancel(Text("settings.help.sheet.abort")),
+                    ])
+                }
+            )
         }
         .tabItem {
             Text("settings.tab")

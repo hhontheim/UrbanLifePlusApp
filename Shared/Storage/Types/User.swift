@@ -17,6 +17,10 @@ struct User: Codable {
     var identityToken: Data
     var authorizationCode: Data
     
+    // Other
+    var pushToken: String
+
+    
     init() {
         userId = ""
         givenName = ""
@@ -24,5 +28,7 @@ struct User: Codable {
         email = ""
         identityToken = Data()
         authorizationCode = Data()
+        
+        pushToken = ""
     }
 }

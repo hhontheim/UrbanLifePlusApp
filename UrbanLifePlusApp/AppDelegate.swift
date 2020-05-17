@@ -10,6 +10,8 @@ import UIKit
 import WatchConnectivity
 import SwiftUI
 import UserNotifications
+import CustomerlySDK
+import Instabug
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -37,11 +39,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("WatchKit app is installed: \(session.isWatchAppInstalled).")
             
         } else { print("WatchConnectivity is not supported on this device") }
+        
+        activateCustomerly()
+        activateInstabug()
+        
         return true
+    }
+    
+    func activateCustomerly() {
+        Customerly.sharedInstance.configure(appId: "a24f5811")
+        Customerly.sharedInstance.activateApp()
+    }
+    
+    func activateInstabug() {
+        
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print("didRegisterForRemoteNotificationsWithDeviceToken: \(deviceToken.hexString)")
+        storage.user.pushToken = deviceToken.hexString
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
@@ -73,7 +89,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    
     
 }
 

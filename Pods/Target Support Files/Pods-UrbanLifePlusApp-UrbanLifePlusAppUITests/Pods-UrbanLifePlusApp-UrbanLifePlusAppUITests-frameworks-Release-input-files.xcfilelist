@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CustomerlySDK/CustomerlySDK.framework
+${PODS_ROOT}/Instabug/Instabug.framework
+${PODS_ROOT}/Instabug/Instabug.framework.dSYM
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework
+${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework

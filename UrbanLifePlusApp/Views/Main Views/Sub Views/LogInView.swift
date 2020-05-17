@@ -9,6 +9,7 @@
 import SwiftUI
 import UIKit
 import AuthenticationServices
+import CustomerlySDK
 
 struct LogInView: View {
     @Environment(\.window) var window: UIWindow?

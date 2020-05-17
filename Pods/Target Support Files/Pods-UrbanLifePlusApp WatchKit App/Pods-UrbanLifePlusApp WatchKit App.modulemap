@@ -1,0 +1,6 @@
+framework module Pods_UrbanLifePlusApp_WatchKit_App {
+  umbrella header "Pods-UrbanLifePlusApp WatchKit App-umbrella.h"
+
+  export *
+  module * { export * }
+}

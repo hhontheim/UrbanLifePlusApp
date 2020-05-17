@@ -1,0 +1,6 @@
+framework module Pods_UrbanLifePlusApp {
+  umbrella header "Pods-UrbanLifePlusApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hn3-Gq-xCx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Customerly Survey View Controller-->
+        <scene sceneID="ecB-xr-12E">
+            <objects>
+                <viewController storyboardIdentifier="CustomerlySurveyViewController" id="hn3-Gq-xCx" customClass="CustomerlySurveyViewController" customModule="CustomerlySDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GEy-tU-Td6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w2Z-Nr-ZZh" userLabel="background" customClass="CyImageView" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fy4-Dy-kPY" userLabel="Survey Alert View">
+                                <rect key="frame" x="30" y="273.5" width="315" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLC-jz-ObF" userLabel="Header View">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbw-5z-R7Q">
+                                                <rect key="frame" x="6" y="0.0" width="35" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="f7a-tW-qef"/>
+                                                </constraints>
+                                                <state key="normal" image="survey_back_button"/>
+                                                <connections>
+                                                    <action selector="back:" destination="hn3-Gq-xCx" eventType="touchUpInside" id="W15-Bc-Iyf"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykT-4W-iT6" customClass="CyLabel" customModule="CustomerlySDK" customModuleProvider="target">
+                                                <rect key="frame" x="41" y="15" width="233" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayr-JQ-h5Z">
+                                                <rect key="frame" x="274" y="0.0" width="35" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="Yke-xJ-MTk"/>
+                                                </constraints>
+                                                <state key="normal" image="close_button"/>
+                                                <connections>
+                                                    <action selector="close:" destination="hn3-Gq-xCx" eventType="touchUpInside" id="hGe-xF-qGw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ayr-JQ-h5Z" firstAttribute="leading" secondItem="ykT-4W-iT6" secondAttribute="trailing" id="0Ln-kM-7qQ"/>
+                                            <constraint firstItem="ykT-4W-iT6" firstAttribute="top" secondItem="tLC-jz-ObF" secondAttribute="top" constant="15" id="62X-XP-bUJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="ayr-JQ-h5Z" secondAttribute="bottom" id="HhM-Sg-FU4"/>
+                                            <constraint firstItem="dbw-5z-R7Q" firstAttribute="leading" secondItem="tLC-jz-ObF" secondAttribute="leading" constant="6" id="J7R-d7-FSS"/>
+                                            <constraint firstItem="dbw-5z-R7Q" firstAttribute="top" secondItem="tLC-jz-ObF" secondAttribute="top" id="L1z-oE-Aek"/>
+                                            <constraint firstAttribute="height" constant="50" id="RQd-3C-SD4"/>
+                                            <constraint firstItem="ayr-JQ-h5Z" firstAttribute="top" secondItem="tLC-jz-ObF" secondAttribute="top" id="giI-kr-PK7"/>
+                                            <constraint firstAttribute="bottom" secondItem="dbw-5z-R7Q" secondAttribute="bottom" id="l1D-xS-hZQ"/>
+                                            <constraint firstItem="ykT-4W-iT6" firstAttribute="leading" secondItem="dbw-5z-R7Q" secondAttribute="trailing" id="nI1-5u-299"/>
+                                            <constraint firstAttribute="bottom" secondItem="ykT-4W-iT6" secondAttribute="bottom" constant="14" id="okW-z3-3hq"/>
+                                            <constraint firstAttribute="trailing" secondItem="ayr-JQ-h5Z" secondAttribute="trailing" constant="6" id="udt-78-yyq"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lig-AW-tB1" customClass="CyLabel" customModule="CustomerlySDK" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="58" width="287" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="3MN-fx-JaK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zb-I7-jaR" customClass="CyLabel" customModule="CustomerlySDK" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="87" width="287" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="0qm-si-ll8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lig-AW-tB1" firstAttribute="leading" secondItem="fy4-Dy-kPY" secondAttribute="leading" constant="14" id="0pQ-CE-1Hn"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Zb-I7-jaR" secondAttribute="trailing" constant="14" id="1ag-sq-50o"/>
+                                    <constraint firstAttribute="trailing" secondItem="lig-AW-tB1" secondAttribute="trailing" constant="14" id="1bi-zO-x9N"/>
+                                    <constraint firstItem="tLC-jz-ObF" firstAttribute="top" secondItem="fy4-Dy-kPY" secondAttribute="top" id="1ty-EX-hcw"/>
+                                    <constraint firstAttribute="height" priority="250" constant="120" id="9mA-Fk-X7y"/>
+                                    <constraint firstItem="7Zb-I7-jaR" firstAttribute="top" secondItem="lig-AW-tB1" secondAttribute="bottom" constant="8" id="ELD-qG-CAh"/>
+                                    <constraint firstItem="7Zb-I7-jaR" firstAttribute="leading" secondItem="fy4-Dy-kPY" secondAttribute="leading" constant="14" id="av5-Py-cwu"/>
+                                    <constraint firstItem="lig-AW-tB1" firstAttribute="top" secondItem="tLC-jz-ObF" secondAttribute="bottom" constant="8" id="dCr-iO-CpY"/>
+                                    <constraint firstAttribute="trailing" secondItem="tLC-jz-ObF" secondAttribute="trailing" id="dxC-yh-9V5"/>
+                                    <constraint firstItem="tLC-jz-ObF" firstAttribute="leading" secondItem="fy4-Dy-kPY" secondAttribute="leading" id="rIG-7F-aog"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fy4-Dy-kPY" firstAttribute="leading" secondItem="a8i-qc-j8r" secondAttribute="leading" constant="30" id="5o6-T5-Sc3"/>
+                            <constraint firstAttribute="bottom" secondItem="w2Z-Nr-ZZh" secondAttribute="bottom" id="8zd-wd-db1"/>
+                            <constraint firstItem="a8i-qc-j8r" firstAttribute="trailing" secondItem="w2Z-Nr-ZZh" secondAttribute="trailing" id="Apy-L6-s75"/>
+                            <constraint firstItem="fy4-Dy-kPY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GEy-tU-Td6" secondAttribute="top" constant="20" id="G8c-0G-4c7"/>
+                            <constraint firstItem="a8i-qc-j8r" firstAttribute="trailing" secondItem="fy4-Dy-kPY" secondAttribute="trailing" constant="30" id="JAc-Ql-CbA"/>
+                            <constraint firstItem="fy4-Dy-kPY" firstAttribute="centerY" secondItem="GEy-tU-Td6" secondAttribute="centerY" id="MPa-gC-ZIT"/>
+                            <constraint firstItem="w2Z-Nr-ZZh" firstAttribute="leading" secondItem="a8i-qc-j8r" secondAttribute="leading" id="ZEJ-z5-qU5"/>
+                            <constraint firstItem="w2Z-Nr-ZZh" firstAttribute="top" secondItem="GEy-tU-Td6" secondAttribute="top" id="aIF-9v-U0X"/>
+                            <constraint firstItem="a8i-qc-j8r" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fy4-Dy-kPY" secondAttribute="bottom" constant="20" id="mBq-mB-YUU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a8i-qc-j8r"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="fy4-Dy-kPY" id="iTz-st-xO3"/>
+                        <outlet property="backButton" destination="dbw-5z-R7Q" id="7Jz-4c-1vB"/>
+                        <outlet property="backgroundAlertView" destination="w2Z-Nr-ZZh" id="aH6-f2-zCZ"/>
+                        <outlet property="headerTitleLabel" destination="ykT-4W-iT6" id="pMa-mv-MTQ"/>
+                        <outlet property="headerView" destination="tLC-jz-ObF" id="i3n-Mi-ufE"/>
+                        <outlet property="surveyDescriptionLabel" destination="7Zb-I7-jaR" id="t5B-SB-cUm"/>
+                        <outlet property="surveyTitleLabel" destination="lig-AW-tB1" id="x42-7f-TCm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8R-Fe-aJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.40000000000001" y="134.48275862068968"/>
+        </scene>
+        <!--Cy Survey List View Controller-->
+        <scene sceneID="kKr-AQ-hw4">
+            <objects>
+                <viewController storyboardIdentifier="CySurveyListViewController" id="bog-Df-YxJ" customClass="CySurveyListViewController" customModule="CustomerlySDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DIE-fU-eMF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="48" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ckx-b9-Dzy" customClass="CyTableView" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="1Iq-Or-FeR"/>
+                                </constraints>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="hkO-zM-zt6">
+                                    <rect key="frame" x="0.0" y="124" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="surveyButtonCell" rowHeight="48" id="8Na-Rr-scO" customClass="CySurveyButtonTableViewCell" customModule="CustomerlySDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Na-Rr-scO" id="IsQ-Ud-xPC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-RZ-kXP" customClass="CyButton" customModule="CustomerlySDK" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="40"/>
+                                                    <color key="backgroundColor" red="0.2627450980392157" green="0.59215686274509804" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="XUa-RZ-kXP" secondAttribute="bottom" constant="8" id="Hd7-rb-syY"/>
+                                                <constraint firstAttribute="trailing" secondItem="XUa-RZ-kXP" secondAttribute="trailing" constant="8" id="K5z-8b-Xmi"/>
+                                                <constraint firstItem="XUa-RZ-kXP" firstAttribute="leading" secondItem="IsQ-Ud-xPC" secondAttribute="leading" constant="8" id="dLW-qC-g2j"/>
+                                                <constraint firstItem="XUa-RZ-kXP" firstAttribute="top" secondItem="IsQ-Ud-xPC" secondAttribute="top" id="lEk-JL-t2f"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="button" destination="XUa-RZ-kXP" id="OJ3-5k-tUU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="radioButtonCell" rowHeight="48" id="JZv-wM-UfV" customClass="CySurveyButtonTableViewCell" customModule="CustomerlySDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="76" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JZv-wM-UfV" id="btq-Eg-sIx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0N-4T-rg8" customClass="CyButton" customModule="CustomerlySDK" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="Button" image="survey_radiobutton">
+                                                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="a0N-4T-rg8" firstAttribute="leading" secondItem="btq-Eg-sIx" secondAttribute="leading" constant="8" id="12w-33-Tqb"/>
+                                                <constraint firstAttribute="trailing" secondItem="a0N-4T-rg8" secondAttribute="trailing" constant="8" id="JsP-L0-zzy"/>
+                                                <constraint firstAttribute="bottom" secondItem="a0N-4T-rg8" secondAttribute="bottom" constant="8" id="rae-44-2Ak"/>
+                                                <constraint firstItem="a0N-4T-rg8" firstAttribute="top" secondItem="btq-Eg-sIx" secondAttribute="top" id="ytC-vy-Pdr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="button" destination="a0N-4T-rg8" id="y2w-At-2IH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ckx-b9-Dzy" firstAttribute="leading" secondItem="Hwf-RN-QEE" secondAttribute="leading" id="MMf-ZK-Rkh"/>
+                            <constraint firstItem="Hwf-RN-QEE" firstAttribute="trailing" secondItem="ckx-b9-Dzy" secondAttribute="trailing" id="Mgv-2B-EQr"/>
+                            <constraint firstItem="ckx-b9-Dzy" firstAttribute="top" secondItem="DIE-fU-eMF" secondAttribute="top" id="SMk-tO-kmf"/>
+                            <constraint firstItem="Hwf-RN-QEE" firstAttribute="bottom" secondItem="ckx-b9-Dzy" secondAttribute="bottom" id="ulv-Jt-2GJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hwf-RN-QEE"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="300"/>
+                    <connections>
+                        <outlet property="tableView" destination="ckx-b9-Dzy" id="uN0-z3-AKi"/>
+                        <outlet property="tableViewHeightConstraint" destination="1Iq-Or-FeR" id="4rW-o3-o7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6R-Zt-guJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605.60000000000002" y="171.81409295352324"/>
+        </scene>
+        <!--Cy Survey Picker View Controller-->
+        <scene sceneID="b34-6X-jna">
+            <objects>
+                <viewController storyboardIdentifier="CySurveyPickerViewController" id="Sc7-2K-iTm" customClass="CySurveyPickerViewController" customModule="CustomerlySDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="19O-uW-rYU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="za2-xs-UAK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbe-gf-LCk" customClass="CyButton" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="123" y="110" width="129" height="40"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.59215686270000001" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="c6b-Oq-WMh"/>
+                                    <constraint firstAttribute="width" constant="129" id="oAx-lg-cRC"/>
+                                </constraints>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirm:" destination="Sc7-2K-iTm" eventType="touchUpInside" id="gl5-lb-a7c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="za2-xs-UAK" firstAttribute="leading" secondItem="EMh-Ji-lWm" secondAttribute="leading" id="Blf-Hq-tQL"/>
+                            <constraint firstItem="bbe-gf-LCk" firstAttribute="centerX" secondItem="EMh-Ji-lWm" secondAttribute="centerX" id="SVM-QO-l7O"/>
+                            <constraint firstItem="EMh-Ji-lWm" firstAttribute="trailing" secondItem="za2-xs-UAK" secondAttribute="trailing" id="TnD-I5-TxC"/>
+                            <constraint firstItem="EMh-Ji-lWm" firstAttribute="bottom" secondItem="bbe-gf-LCk" secondAttribute="bottom" constant="10" id="bcm-VY-cuq"/>
+                            <constraint firstItem="bbe-gf-LCk" firstAttribute="top" secondItem="za2-xs-UAK" secondAttribute="bottom" constant="10" id="ofV-X0-nT1"/>
+                            <constraint firstItem="za2-xs-UAK" firstAttribute="top" secondItem="19O-uW-rYU" secondAttribute="top" id="vaH-gH-WNb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EMh-Ji-lWm"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="160"/>
+                    <connections>
+                        <outlet property="confirmButton" destination="bbe-gf-LCk" id="WE8-OD-48N"/>
+                        <outlet property="picker" destination="za2-xs-UAK" id="ohb-ok-u0q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccg-CJ-DDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1269.5999999999999" y="171.81409295352324"/>
+        </scene>
+        <!--Cy Survey Slider View Controller-->
+        <scene sceneID="bRM-uA-zFO">
+            <objects>
+                <viewController storyboardIdentifier="CySurveySliderViewController" id="6KM-YN-gjd" customClass="CySurveySliderViewController" customModule="CustomerlySDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ipM-5t-jdw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpL-j9-nXi" customClass="CyLabel" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="8" y="5" width="36" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="bwo-ue-Sfj"/>
+                                    <constraint firstAttribute="height" constant="21" id="t36-W1-23i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="1Oo-dX-0hJ">
+                                <rect key="frame" x="50" y="0.0" width="275" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BR8-Qx-ylg"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="6KM-YN-gjd" eventType="valueChanged" id="zHP-Ad-eeg"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rI-RG-Hoh" customClass="CyLabel" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="331" y="5" width="36" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JwG-9c-aEE"/>
+                                    <constraint firstAttribute="width" constant="36" id="XKC-Rl-uaN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zc-ms-ItP" customClass="CyButton" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="115" y="50" width="145" height="40"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.59215686270000001" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CmB-De-orJ"/>
+                                    <constraint firstAttribute="width" constant="145" id="Wkx-VZ-WqU"/>
+                                </constraints>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirm:" destination="6KM-YN-gjd" eventType="touchUpInside" id="uyP-XX-0RT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="02l-FC-AFE" firstAttribute="bottom" secondItem="1Zc-ms-ItP" secondAttribute="bottom" constant="10" id="0We-h2-U4K"/>
+                            <constraint firstItem="0rI-RG-Hoh" firstAttribute="top" secondItem="ipM-5t-jdw" secondAttribute="top" constant="5" id="2Is-Jd-JNb"/>
+                            <constraint firstItem="lpL-j9-nXi" firstAttribute="leading" secondItem="02l-FC-AFE" secondAttribute="leading" constant="8" id="8dF-la-gCH"/>
+                            <constraint firstItem="0rI-RG-Hoh" firstAttribute="leading" secondItem="1Oo-dX-0hJ" secondAttribute="trailing" constant="8" id="HF8-ro-j0o"/>
+                            <constraint firstItem="1Oo-dX-0hJ" firstAttribute="top" secondItem="ipM-5t-jdw" secondAttribute="top" id="K47-ya-8yJ"/>
+                            <constraint firstItem="lpL-j9-nXi" firstAttribute="top" secondItem="ipM-5t-jdw" secondAttribute="top" constant="5" id="TZt-pa-wT5"/>
+                            <constraint firstItem="1Zc-ms-ItP" firstAttribute="centerX" secondItem="02l-FC-AFE" secondAttribute="centerX" id="UcY-3k-aJz"/>
+                            <constraint firstItem="1Oo-dX-0hJ" firstAttribute="leading" secondItem="lpL-j9-nXi" secondAttribute="trailing" constant="8" id="UsC-gt-TAA"/>
+                            <constraint firstItem="02l-FC-AFE" firstAttribute="trailing" secondItem="0rI-RG-Hoh" secondAttribute="trailing" constant="8" id="hAg-4W-R0k"/>
+                            <constraint firstItem="1Zc-ms-ItP" firstAttribute="top" secondItem="1Oo-dX-0hJ" secondAttribute="bottom" constant="20" id="kqH-Ra-gAA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="02l-FC-AFE"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="100"/>
+                    <connections>
+                        <outlet property="confirmButton" destination="1Zc-ms-ItP" id="2Su-Y6-khO"/>
+                        <outlet property="horizontalSlider" destination="1Oo-dX-0hJ" id="GmD-kp-Rb2"/>
+                        <outlet property="maxLabel" destination="0rI-RG-Hoh" id="r8C-n0-nZh"/>
+                        <outlet property="minLabel" destination="lpL-j9-nXi" id="cRz-J7-U4P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUZ-d0-8ej" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965.5999999999999" y="171.81409295352324"/>
+        </scene>
+        <!--Cy Survey Stars View Controller-->
+        <scene sceneID="mBl-fg-hys">
+            <objects>
+                <viewController storyboardIdentifier="CySurveyStarsViewController" id="8ar-mD-Dz9" customClass="CySurveyStarsViewController" customModule="CustomerlySDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ewf-ac-VYb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGe-sp-zyh" customClass="CyButton" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="63" y="15" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HJN-4i-jza"/>
+                                    <constraint firstAttribute="width" constant="40" id="LZE-wy-G70"/>
+                                </constraints>
+                                <state key="normal" image="survey_star_full"/>
+                                <connections>
+                                    <action selector="selectStars:" destination="8ar-mD-Dz9" eventType="touchUpInside" id="crh-ZW-E9x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1a-pN-f91" customClass="CyButton" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="115" y="15" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="GlQ-jH-Rap"/>
+                                    <constraint firstAttribute="height" constant="40" id="T0P-hB-VUo"/>
+                                </constraints>
+                                <state key="normal" image="survey_star_full"/>
+                                <connections>
+                                    <action selector="selectStars:" destination="8ar-mD-Dz9" eventType="touchUpInside" id="ftZ-iA-HHC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmn-16-vLr" customClass="CyButton" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="167" y="15" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5OZ-XM-h2T"/>
+                                    <constraint firstAttribute="width" constant="40" id="O2f-BO-AUT"/>
+                                </constraints>
+                                <state key="normal" image="survey_star_full"/>
+                                <connections>
+                                    <action selector="selectStars:" destination="8ar-mD-Dz9" eventType="touchUpInside" id="mmT-ao-ufI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI3-LB-EE6" customClass="CyButton" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="219" y="15" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6B4-Yu-Skr"/>
+                                    <constraint firstAttribute="width" constant="40" id="pXK-Ro-zxw"/>
+                                </constraints>
+                                <state key="normal" image="survey_star_full"/>
+                                <connections>
+                                    <action selector="selectStars:" destination="8ar-mD-Dz9" eventType="touchUpInside" id="oeJ-Fp-jTY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nX8-fl-HBi" customClass="CyButton" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="271" y="15" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5nu-lo-n70"/>
+                                    <constraint firstAttribute="width" constant="40" id="Jla-oh-bnQ"/>
+                                </constraints>
+                                <state key="normal" image="survey_star_full"/>
+                                <connections>
+                                    <action selector="selectStars:" destination="8ar-mD-Dz9" eventType="touchUpInside" id="IJz-Jr-DF2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OI3-LB-EE6" firstAttribute="leading" secondItem="zmn-16-vLr" secondAttribute="trailing" constant="12" id="0Vq-7l-8A1"/>
+                            <constraint firstItem="zmn-16-vLr" firstAttribute="centerX" secondItem="s2V-5w-h1c" secondAttribute="centerX" id="80J-h1-Cow"/>
+                            <constraint firstItem="nX8-fl-HBi" firstAttribute="leading" secondItem="OI3-LB-EE6" secondAttribute="trailing" constant="12" id="BIN-lR-kYz"/>
+                            <constraint firstItem="t1a-pN-f91" firstAttribute="centerY" secondItem="ewf-ac-VYb" secondAttribute="centerY" id="J2i-J2-qeF"/>
+                            <constraint firstItem="zmn-16-vLr" firstAttribute="centerY" secondItem="ewf-ac-VYb" secondAttribute="centerY" id="MQT-xl-7bK"/>
+                            <constraint firstItem="zmn-16-vLr" firstAttribute="leading" secondItem="t1a-pN-f91" secondAttribute="trailing" constant="12" id="aQl-hH-sE0"/>
+                            <constraint firstItem="OI3-LB-EE6" firstAttribute="centerY" secondItem="ewf-ac-VYb" secondAttribute="centerY" id="bWW-Fn-vyB"/>
+                            <constraint firstItem="UGe-sp-zyh" firstAttribute="centerY" secondItem="ewf-ac-VYb" secondAttribute="centerY" id="jfG-K6-AhV"/>
+                            <constraint firstItem="nX8-fl-HBi" firstAttribute="centerY" secondItem="ewf-ac-VYb" secondAttribute="centerY" id="lEx-i7-BW2"/>
+                            <constraint firstItem="zmn-16-vLr" firstAttribute="top" secondItem="ewf-ac-VYb" secondAttribute="top" constant="15" id="lRn-Uq-wdH"/>
+                            <constraint firstItem="t1a-pN-f91" firstAttribute="leading" secondItem="UGe-sp-zyh" secondAttribute="trailing" constant="12" id="npV-as-CZg"/>
+                            <constraint firstAttribute="bottom" secondItem="zmn-16-vLr" secondAttribute="bottom" constant="15" id="yup-SS-Hgi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s2V-5w-h1c"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="70"/>
+                    <connections>
+                        <outlet property="starButton1" destination="UGe-sp-zyh" id="Evv-oC-eIi"/>
+                        <outlet property="starButton2" destination="t1a-pN-f91" id="9wD-wO-edt"/>
+                        <outlet property="starButton3" destination="zmn-16-vLr" id="nLP-Lr-yKa"/>
+                        <outlet property="starButton4" destination="OI3-LB-EE6" id="hYy-Jf-1Qo"/>
+                        <outlet property="starButton5" destination="nX8-fl-HBi" id="phf-Bh-7pc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZr-o7-jaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626" y="172"/>
+        </scene>
+        <!--Cy Survey Text Field View Controller-->
+        <scene sceneID="AGN-Wj-Ilm">
+            <objects>
+                <viewController storyboardIdentifier="CySurveyTextFieldViewController" id="Cq1-X5-xf8" customClass="CySurveyTextFieldViewController" customModule="CustomerlySDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="agK-2e-0C6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEf-A9-hkd" customClass="CyTextField" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="bQb-D0-YEw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF3-cu-Cno" customClass="CyButton" customModule="CustomerlySDK" customModuleProvider="target">
+                                <rect key="frame" x="123" y="52" width="129" height="40"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.59215686270000001" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mb6-6H-LBe"/>
+                                    <constraint firstAttribute="width" constant="129" id="wum-Fh-f2m"/>
+                                </constraints>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirm:" destination="Cq1-X5-xf8" eventType="touchUpInside" id="u3I-aa-YhA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oEf-A9-hkd" firstAttribute="top" secondItem="agK-2e-0C6" secondAttribute="top" id="VYt-HX-b9r"/>
+                            <constraint firstItem="aF3-cu-Cno" firstAttribute="centerX" secondItem="kQu-gk-Rs2" secondAttribute="centerX" id="dXM-Gj-qUe"/>
+                            <constraint firstItem="kQu-gk-Rs2" firstAttribute="bottom" secondItem="aF3-cu-Cno" secondAttribute="bottom" constant="10" id="hn0-oy-LnY"/>
+                            <constraint firstItem="aF3-cu-Cno" firstAttribute="top" secondItem="oEf-A9-hkd" secondAttribute="bottom" constant="10" id="iqR-A9-NU7"/>
+                            <constraint firstItem="kQu-gk-Rs2" firstAttribute="trailing" secondItem="oEf-A9-hkd" secondAttribute="trailing" id="qOh-UG-QZs"/>
+                            <constraint firstItem="oEf-A9-hkd" firstAttribute="leading" secondItem="kQu-gk-Rs2" secondAttribute="leading" id="xXz-G6-60O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kQu-gk-Rs2"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="102"/>
+                    <connections>
+                        <outlet property="confirmButton" destination="aF3-cu-Cno" id="hnI-vi-vca"/>
+                        <outlet property="textField" destination="oEf-A9-hkd" id="4K2-Nh-u14"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tay-QB-NVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3284" y="171.81409295352324"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close_button" width="20" height="20"/>
+        <image name="survey_back_button" width="20" height="20"/>
+        <image name="survey_radiobutton" width="20" height="20"/>
+        <image name="survey_star_full" width="40" height="40"/>
+    </resources>
+</document>

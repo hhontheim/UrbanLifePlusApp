@@ -1,0 +1,33 @@
+//
+//  CyConversationModel.swift
+//  Customerly
+//
+//  Created by Paolo Musolino on 01/12/16.
+//  Copyright © 2016 Customerly. All rights reserved.
+//
+
+import ObjectMapper
+
+class CyConversationModel: Mappable {
+
+    var conversation_id: Int?
+    var user_id: Int?
+    var last_message_date: Double?
+    var last_message_abstract : String?
+    var last_account: CyAccountModel?
+    var unread: Bool = false
+    
+    required init?(map: Map) {
+    }
+    
+    func mapping(map: Map)
+    {
+        conversation_id <- map["conversation_id"]
+        user_id <- map["user_id"]
+        last_message_date <- map["last_message_date"]
+        last_message_abstract <- map["last_message_abstract"]
+        last_account <- map["last_account"]
+        unread <- map["unread"]
+    }
+    
+}

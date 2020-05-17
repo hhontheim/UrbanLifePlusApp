@@ -1,0 +1,50 @@
+PODS:
+  - CustomerlySDK (3.1.1):
+    - Kingfisher (= 5.13.4)
+    - ObjectMapper (= 3.5.2)
+    - Socket.IO-Client-Swift (= 15.2.0)
+  - Instabug (9.1.2)
+  - Kingfisher (5.13.4):
+    - Kingfisher/Core (= 5.13.4)
+  - Kingfisher/Core (5.13.4)
+  - ObjectMapper (3.5.2)
+  - Socket.IO-Client-Swift (15.2.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.1)
+
+DEPENDENCIES:
+  - CustomerlySDK (from `https://github.com/hhontheim/Customerly-iOS-SDK.git`)
+  - Instabug (from `https://github.com/hhontheim/Instabug-iOS.git`)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - ObjectMapper
+    - Socket.IO-Client-Swift
+    - Starscream
+
+EXTERNAL SOURCES:
+  CustomerlySDK:
+    :git: https://github.com/hhontheim/Customerly-iOS-SDK.git
+  Instabug:
+    :git: https://github.com/hhontheim/Instabug-iOS.git
+
+CHECKOUT OPTIONS:
+  CustomerlySDK:
+    :commit: 337f64d74bd345f9c670569edd8fa68ee69a33b4
+    :git: https://github.com/hhontheim/Customerly-iOS-SDK.git
+  Instabug:
+    :commit: 6e4c4bd30de0a8f18e9224c448e8bd4708787fa2
+    :git: https://github.com/hhontheim/Instabug-iOS.git
+
+SPEC CHECKSUMS:
+  CustomerlySDK: 04327ad0dfb8d6b50185cb6cb87ebea2db36fe96
+  Instabug: 81363711cd25aca16c738200312db42476c64857
+  Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
+  ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
+  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+
+PODFILE CHECKSUM: 9e5a031346b0bd02684a556b61fd75c54e8f66ab
+
+COCOAPODS: 1.9.1

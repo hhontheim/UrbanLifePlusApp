@@ -9,6 +9,9 @@
 import Foundation
 import SwiftUI
 import Combine
+#if os(iOS)
+import CustomerlySDK
+#endif
 
 final class Storage: ObservableObject, SessionCommands, StorageHelper {
     let encoder = JSONEncoder()
@@ -92,6 +95,10 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
         } else {
             print("Was remote change. Won't send update to counterpart!")
         }
+        
+        #if os(iOS)
+        registerForCustomerly()
+        #endif
     }
     
     func nuke(shouldGoToSettingsToRevokeSIWA: Bool) {
@@ -102,4 +109,27 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
         persist()
         #endif
     }
+    
+    #if os(iOS)
+    func registerForCustomerly() {
+        var name: String = user.givenName
+        
+        if !user.familyName.isEmpty {
+            name += " "
+            name += user.familyName
+        }
+        
+        #if DEBUG
+        let runMode: String = "DEBUG"
+        #elseif RELEASE
+        let runMode: String = "RELEASE"
+        #endif
+        
+        Customerly.sharedInstance.registerUser(email: user.email, user_id: user.userId, name: name)
+        Customerly.sharedInstance.setAttributes(attributes: [
+            "pushToken": user.pushToken,
+            "runMode": runMode
+        ])
+    }
+    #endif
 }

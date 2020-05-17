@@ -6,52 +6,9 @@
 //  Copyright © 2020 Henning Hontheim. All rights reserved.
 //
 
-// TODO: Refactor to separate files!
 import Foundation
 import SwiftUI
 import Combine
-
-// Shared between devices. Persistent.
-struct User: Codable {
-    // Data from Sign In With Apple
-    var userId: String
-    var givenName: String
-    var familyName: String
-    var email: String
-    var identityToken: Data
-    var authorizationCode: Data
-    
-    init() {
-        userId = ""
-        givenName = ""
-        familyName = ""
-        email = ""
-        identityToken = Data()
-        authorizationCode = Data()
-    }
-}
-
-// Shared between devices. Persistent.
-struct AppState: Codable {
-    var userIsRegistered: Bool
-    var userIsLoggedIn: Bool
-    var shouldGoToSettingsToRevokeSIWA: Bool
-    
-    init() {
-        userIsRegistered = false
-        userIsLoggedIn = false
-        shouldGoToSettingsToRevokeSIWA = false
-    }
-}
-
-// Local storage. Not persistent.
-struct Local: Codable {
-    var firstTimeSeeingLoginScreenAfterClosingTheApp: Bool
-    
-    init() {
-        firstTimeSeeingLoginScreenAfterClosingTheApp = true
-    }
-}
 
 final class Storage: ObservableObject, SessionCommands, StorageHelper {
     let encoder = JSONEncoder()
@@ -144,37 +101,5 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
         appState.shouldGoToSettingsToRevokeSIWA = shouldGoToSettingsToRevokeSIWA
         persist()
         #endif
-    }
-}
-
-enum StorageKey: String, CaseIterable {
-    case user
-    case appState
-    case local
-}
-
-enum TransferKey: String, CaseIterable {
-    case requestDataFromPhone
-    case updateFromCounterpart
-}
-
-#if os(iOS)
-extension NSUbiquitousKeyValueStore: StorageHelper {}
-#elseif os(watchOS)
-extension UserDefaults: StorageHelper {}
-#endif
-
-protocol StorageHelper {
-    func pull(for key: StorageKey) -> Data?
-    func push(_ data: Data, for key: StorageKey)
-}
-
-extension StorageHelper {
-    func pull(for key: StorageKey) -> Data? {
-        Storage.container.data(forKey: key.rawValue)
-    }
-    
-    func push(_ data: Data, for key: StorageKey) {
-        Storage.container.set(data, forKey: key.rawValue)
     }
 }

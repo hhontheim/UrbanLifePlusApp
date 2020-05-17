@@ -9,9 +9,6 @@
 import UIKit
 import WatchConnectivity
 
-// Define an interface to wrap Watch Connectivity APIs and
-// bridge the UI. Shared by the iOS app and watchOS app.
-
 protocol SessionCommands {
     #if os(watchOS)
     func requestDataFromPhone()
@@ -42,7 +39,7 @@ extension SessionCommands {
     }
 }
 
-//// MARK: - Private wrappers
+//// MARK: - Wrappers
 //extension SessionCommands {
 //    private func sendMessage(guaranteed: Bool = true, overwriteAnyQueuedData: Bool = false, content: [String: Any]) {
 //            let session = WCSession.default
@@ -106,7 +103,6 @@ extension SessionCommands {
             print("Error while sending AppContext \"\(applicationContext)\":\n\(error)")
         }
     }
-    
     
     /// Actually sends the `userInfo`.
     /// - Parameter userInfo: UserInfo to be sent.

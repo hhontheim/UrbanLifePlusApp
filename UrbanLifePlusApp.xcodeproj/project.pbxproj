@@ -11,6 +11,18 @@
 		2B2B31FE2469B44700489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
 		2B2E768E2471AD7100CD2D95 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E768D2471AD7100CD2D95 /* HomeView.swift */; };
 		2B2E76912471ADA300CD2D95 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76902471ADA300CD2D95 /* LogInView.swift */; };
+		2B2E76942471B6A000CD2D95 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76932471B6A000CD2D95 /* StorageKey.swift */; };
+		2B2E76952471B6A000CD2D95 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76932471B6A000CD2D95 /* StorageKey.swift */; };
+		2B2E76972471B6BD00CD2D95 /* TransferKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76962471B6BD00CD2D95 /* TransferKey.swift */; };
+		2B2E76982471B6BD00CD2D95 /* TransferKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76962471B6BD00CD2D95 /* TransferKey.swift */; };
+		2B2E769A2471B6E400CD2D95 /* StorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76992471B6E400CD2D95 /* StorageHelper.swift */; };
+		2B2E769B2471B6E400CD2D95 /* StorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76992471B6E400CD2D95 /* StorageHelper.swift */; };
+		2B2E769E2471B75000CD2D95 /* Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E769D2471B75000CD2D95 /* Local.swift */; };
+		2B2E769F2471B75000CD2D95 /* Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E769D2471B75000CD2D95 /* Local.swift */; };
+		2B2E76A32471B78C00CD2D95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76A22471B78C00CD2D95 /* User.swift */; };
+		2B2E76A42471B78C00CD2D95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76A22471B78C00CD2D95 /* User.swift */; };
+		2B2E76A62471B7A700CD2D95 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76A52471B7A700CD2D95 /* AppState.swift */; };
+		2B2E76A72471B7A700CD2D95 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E76A52471B7A700CD2D95 /* AppState.swift */; };
 		2B5205CF246C8C30000CA3A4 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8A01246C273300E0BA25 /* SessionDelegater.swift */; };
 		2B5205D8246ED67F000CA3A4 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5205D7246ED67F000CA3A4 /* Storage.swift */; };
 		2B5205DA246ED7D7000CA3A4 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5205D7246ED67F000CA3A4 /* Storage.swift */; };
@@ -110,6 +122,12 @@
 /* Begin PBXFileReference section */
 		2B2E768D2471AD7100CD2D95 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2B2E76902471ADA300CD2D95 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		2B2E76932471B6A000CD2D95 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
+		2B2E76962471B6BD00CD2D95 /* TransferKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferKey.swift; sourceTree = "<group>"; };
+		2B2E76992471B6E400CD2D95 /* StorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageHelper.swift; sourceTree = "<group>"; };
+		2B2E769D2471B75000CD2D95 /* Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local.swift; sourceTree = "<group>"; };
+		2B2E76A22471B78C00CD2D95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2B2E76A52471B7A700CD2D95 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2B5205D1246DB3D2000CA3A4 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B5205D2246DD161000CA3A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2B5205D7246ED67F000CA3A4 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -157,7 +175,6 @@
 		2B90C7BC2471998C00AF8704 /* NukedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukedView.swift; sourceTree = "<group>"; };
 		2BCE2339246B238E0083E5B1 /* SignInWithAppleButtonWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonWatch.swift; sourceTree = "<group>"; };
 		2BE0FC2A2469DECB00196821 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
-		2BE0FC2C246AD14800196821 /* OldStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldStorage.swift; sourceTree = "<group>"; };
 		2BE0FC31246AEC0B00196821 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		2BE0FC34246B05F700196821 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2BE0FC36246B141300196821 /* DevView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevView.swift; sourceTree = "<group>"; };
@@ -212,11 +229,40 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
+		2B2E76922471B68200CD2D95 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				2B2E76932471B6A000CD2D95 /* StorageKey.swift */,
+				2B2E76962471B6BD00CD2D95 /* TransferKey.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		2B2E76A12471B78000CD2D95 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				2B2E76A22471B78C00CD2D95 /* User.swift */,
+				2B2E76A52471B7A700CD2D95 /* AppState.swift */,
+				2B2E769D2471B75000CD2D95 /* Local.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		2B2E76A82471B82200CD2D95 /* WatchCommunication */ = {
+			isa = PBXGroup;
+			children = (
+				2B8C8A21246C400500E0BA25 /* SessionCommands.swift */,
+				2B8C8A01246C273300E0BA25 /* SessionDelegater.swift */,
+			);
+			path = WatchCommunication;
+			sourceTree = "<group>";
+		};
 		2B5205D6246ED66A000CA3A4 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
 				2B5205D7246ED67F000CA3A4 /* Storage.swift */,
-				2BE0FC2C246AD14800196821 /* OldStorage.swift */,
+				2B2E76992471B6E400CD2D95 /* StorageHelper.swift */,
+				2B2E76A12471B78000CD2D95 /* Types */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -386,9 +432,9 @@
 		2B8EC8E624686D1700655D58 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2B2E76922471B68200CD2D95 /* Keys */,
 				2B5205D6246ED66A000CA3A4 /* Storage */,
-				2B8C8A01246C273300E0BA25 /* SessionDelegater.swift */,
-				2B8C8A21246C400500E0BA25 /* SessionCommands.swift */,
+				2B2E76A82471B82200CD2D95 /* WatchCommunication */,
 				2B8EC8ED24686D3500655D58 /* Localizable.strings */,
 				2B8EC88D24686C0200655D58 /* Assets.xcassets */,
 			);
@@ -633,12 +679,16 @@
 			files = (
 				2BE0FC2B2469DECB00196821 /* SignInWithAppleButton.swift in Sources */,
 				2B8C8A02246C273300E0BA25 /* SessionDelegater.swift in Sources */,
+				2B2E76972471B6BD00CD2D95 /* TransferKey.swift in Sources */,
+				2B2E76A62471B7A700CD2D95 /* AppState.swift in Sources */,
 				2B8EC88824686BFF00655D58 /* AppDelegate.swift in Sources */,
 				2B90C7BD2471998C00AF8704 /* NukedView.swift in Sources */,
 				2B90260D2469C99C00C30CC4 /* EnvironmentWindowKey.swift in Sources */,
 				2B9026202469D0DB00C30CC4 /* HomeView.swift in Sources */,
 				2B90C7BB2471955800AF8704 /* NukeInstructionsView.swift in Sources */,
+				2B2E76942471B6A000CD2D95 /* StorageKey.swift in Sources */,
 				2B8C8945246B2F3700E0BA25 /* CommunicationView.swift in Sources */,
+				2B2E769E2471B75000CD2D95 /* Local.swift in Sources */,
 				2B8C8A22246C400500E0BA25 /* SessionCommands.swift in Sources */,
 				2B8EC8F22468777100655D58 /* LogInView.swift in Sources */,
 				2BE0FC37246B141300196821 /* DevView.swift in Sources */,
@@ -646,9 +696,11 @@
 				2B8EC88A24686BFF00655D58 /* SceneDelegate.swift in Sources */,
 				2B8EC88C24686BFF00655D58 /* ContentView.swift in Sources */,
 				2B5205D8246ED67F000CA3A4 /* Storage.swift in Sources */,
+				2B2E769A2471B6E400CD2D95 /* StorageHelper.swift in Sources */,
 				2B9026152469C99C00C30CC4 /* SignInWithAppleDelegates.swift in Sources */,
 				2B8C8948246B2FA600E0BA25 /* ProfileView.swift in Sources */,
 				2BE0FC35246B05F700196821 /* SettingsView.swift in Sources */,
+				2B2E76A32471B78C00CD2D95 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,8 +729,14 @@
 				2B8EC8C324686C0300655D58 /* ContentView.swift in Sources */,
 				2B2E768E2471AD7100CD2D95 /* HomeView.swift in Sources */,
 				2B5205CF246C8C30000CA3A4 /* SessionDelegater.swift in Sources */,
+				2B2E76952471B6A000CD2D95 /* StorageKey.swift in Sources */,
 				2B8EC8C924686C0300655D58 /* NotificationController.swift in Sources */,
+				2B2E769F2471B75000CD2D95 /* Local.swift in Sources */,
+				2B2E76982471B6BD00CD2D95 /* TransferKey.swift in Sources */,
+				2B2E76A42471B78C00CD2D95 /* User.swift in Sources */,
 				2B8EC8C724686C0300655D58 /* ExtensionDelegate.swift in Sources */,
+				2B2E769B2471B6E400CD2D95 /* StorageHelper.swift in Sources */,
+				2B2E76A72471B7A700CD2D95 /* AppState.swift in Sources */,
 				2B8C8A23246C400500E0BA25 /* SessionCommands.swift in Sources */,
 				2B2E76912471ADA300CD2D95 /* LogInView.swift in Sources */,
 				2B5205DA246ED7D7000CA3A4 /* Storage.swift in Sources */,

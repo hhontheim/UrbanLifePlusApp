@@ -8,6 +8,7 @@
 
 import SwiftUI
 import CustomerlySDK
+import Instabug
 
 struct SettingsView: View {
     @EnvironmentObject var storage: Storage
@@ -98,7 +99,8 @@ struct SettingsView: View {
                             }
                         },
                         .default(Text("settings.help.sheet.tech")) {
-                            
+                            Instabug.identifyUser(withEmail: self.storage.user.email, name: self.storage.user.name)
+                            Instabug.show()
                         },
                         .cancel(Text("settings.help.sheet.abort")),
                     ])

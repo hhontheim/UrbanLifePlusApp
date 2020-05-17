@@ -20,6 +20,16 @@ struct User: Codable {
     // Other
     var pushToken: String
 
+    var name: String {
+        var n: String = givenName
+        
+        if !familyName.isEmpty {
+            n += " "
+            n += familyName
+        }
+        
+        return n
+    }
     
     init() {
         userId = ""

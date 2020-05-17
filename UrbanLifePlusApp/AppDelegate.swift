@@ -13,6 +13,14 @@ import UserNotifications
 import CustomerlySDK
 import Instabug
 
+#if DEBUG
+let liveMode = false
+#endif
+
+#if RELEASE
+let liveMode = true
+#endif
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -41,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else { print("WatchConnectivity is not supported on this device") }
         
         activateCustomerly()
-        activateInstabug()
+        activateInstabug(application, launchOptions)
         
         return true
     }
@@ -51,12 +59,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Customerly.sharedInstance.activateApp()
     }
     
-    func activateInstabug() {
+    func activateInstabug(_ application: UIApplication, _ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        // let appToken = liveMode ? "cd3e8a69524c773d05a8da64f5612db8" : "3c37aa0208e8a838565a5ad2d7071611" // ULP App
+        let appToken = liveMode ? "fc285088d5d705d5ec0e651d910c93f8" : "2a026da7ca3b0ba823c9cef873deb91b" // FL Demo
         
+        Instabug.start(withToken: appToken, invocationEvents: [.none])
+        Instabug.tintColor = UIColor.systemOrange
+        // Instabug.showWelcomeMessage(with: liveMode ? .live : .beta)
+        BugReporting.shouldCaptureViewHierarchy = true
+        Replies.pushNotificationsEnabled = true
+        
+        if let notification = launchOptions?[.remoteNotification] as? [String: AnyObject] {
+            Replies.didReceiveRemoteNotification(notification)
+        }
+        
+        UIApplication.shared.applicationIconBadgeNumber = Replies.unreadRepliesCount
+        application.applicationIconBadgeNumber = Replies.unreadRepliesCount
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print("didRegisterForRemoteNotificationsWithDeviceToken: \(deviceToken.hexString)")
+        Replies.didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
         storage.user.pushToken = deviceToken.hexString
     }
     
@@ -66,6 +89,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         print("didReceiveRemoteNotification: \(userInfo)")
+        Replies.didReceiveRemoteNotification(userInfo)
+        UIApplication.shared.applicationIconBadgeNumber = Replies.unreadRepliesCount
+        application.applicationIconBadgeNumber = Replies.unreadRepliesCount
     }
     
     func registerForPushNotifications() {

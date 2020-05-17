@@ -112,20 +112,13 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
     
     #if os(iOS)
     func registerForCustomerly() {
-        var name: String = user.givenName
-        
-        if !user.familyName.isEmpty {
-            name += " "
-            name += user.familyName
-        }
-        
         #if DEBUG
         let runMode: String = "DEBUG"
         #elseif RELEASE
         let runMode: String = "RELEASE"
         #endif
         
-        Customerly.sharedInstance.registerUser(email: user.email, user_id: user.userId, name: name)
+        Customerly.sharedInstance.registerUser(email: user.email, user_id: user.userId, name: user.name)
         Customerly.sharedInstance.setAttributes(attributes: [
             "pushToken": user.pushToken,
             "runMode": runMode

@@ -25,7 +25,7 @@ extension SessionCommands {
     #if os(watchOS)
     /// Sends a request from the watch to the phone to reply with the current storage.
     func requestDataFromPhone() {
-        sendBackgroundMessage(queued: true, content: [TransferKey.requestDataFromPhone.rawValue: true])
+        sendMessage([TransferKey.requestDataFromPhone.rawValue: true])
     }
     #endif
     
@@ -38,30 +38,40 @@ extension SessionCommands {
             substitutedKeys[key.rawValue] = value
         }
         
-        sendBackgroundMessage(queued: false, content: [TransferKey.updateFromCounterpart.rawValue: substitutedKeys])
+        transferUserInfo([TransferKey.updateFromCounterpart.rawValue: substitutedKeys])
     }
 }
 
-// MARK: - Private wrappers
-extension SessionCommands {
-    /// Sends a message to the counterpart app. Will only be delivered if the counterpart app is running in foreground.
-    /// - Parameter message: Message to be sent.
-    private func sendForegroundMessage(_ message: [String: Any]) {
-        sendMessage(message)
-    }
-    
-    /// Sends a message to the counterpart app. Will even be delivered if the counterpart app is running in background. Upon opening the counterpart app, content will be handed over. Can specify, if `content` should be added to FIFO queue.
-    /// - Parameters:
-    ///   - queued: If the `content` should be added to a FIFO queue.
-    ///   - content: Content to be sent.
-    private func sendBackgroundMessage(queued: Bool, content: [String: Any]) {
-        if queued {
-            transferUserInfo(content)
-        } else {
-            updateApplicationContext(content)
-        }
-    }
-}
+//// MARK: - Private wrappers
+//extension SessionCommands {
+//    private func sendMessage(guaranteed: Bool = true, overwriteAnyQueuedData: Bool = false, content: [String: Any]) {
+//            let session = WCSession.default
+//
+//            if session.isReachable {
+//                sendForegroundMessage(content)
+//            } else {
+//                sendBackgroundMessage(overwriteAnyQueuedData: overwriteAnyQueuedData, content: content)
+//            }
+//    }
+//
+//    /// Sends a message to the counterpart app. Will only be delivered if the counterpart app is running in foreground.
+//    /// - Parameter message: Message to be sent.
+//    private func sendForegroundMessage(_ content: [String: Any]) {
+//        sendMessage(content)
+//    }
+//
+//    /// Sends a message to the counterpart app. Will even be delivered if the counterpart app is running in background. Upon opening the counterpart app, content will be handed over. Can specify, if `content` should be added to FIFO queue.
+//    /// - Parameters:
+//    ///   - overwriteAnyQueuedData: If the `content` should be added to a FIFO queue.
+//    ///   - content: Content to be sent.
+//    private func sendBackgroundMessage(overwriteAnyQueuedData: Bool, content: [String: Any]) {
+//        if overwriteAnyQueuedData {
+//            updateApplicationContext(content)
+//        } else {
+//            transferUserInfo(content)
+//        }
+//    }
+//}
 
 // MARK: - Private: Actual transfer happens here.
 extension SessionCommands {
@@ -77,7 +87,8 @@ extension SessionCommands {
         WCSession.default.sendMessage(message, replyHandler: { replyMessage in
             print("Message \"\(message)\" sent. Reply: \(replyMessage)")
         }, errorHandler: { error in
-            print("Error while sending message \"\(message)\":\n\(error)")
+            print("Error while sending message \"\(message)\":\n\(error).\nSending as UserInfo...")
+            self.transferUserInfo(message)
         })
     }
     

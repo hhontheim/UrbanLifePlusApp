@@ -22,10 +22,34 @@
 "settings.title" = "Einstellungen";
 "settings.tab" = "Einstellungen";
 "settings.logout" = "Abmelden";
+"settings.nuke" = "Alle Daten löschen...";
+
+"settings.nuke.shield.title" = "Möchtest Du wirklich alle Daten der App löschen?";
+"settings.nuke.shield.message" = "Dies kann nicht rückgängig gemacht werden!";
+"settings.nuke.shield.nuke" = "Ja, Daten löschen!";
+"settings.nuke.shield.abort" = "Nein, Daten behalten!";
 
 "dev.title" = "Entwickler Menü";
 "dev.link" = "Entwickler Menü";
 
+"login.revokeSIWAInSettings.title" = "Daten gelöscht!";
+"login.revokeSIWAInSettings.text" = "Alle Daten wurden gelöscht.";
+"login.revokeSIWAInSettings.instructions.title" = "So erstellst Du einen neuen Account:";
+"login.revokeSIWAInSettings.instructions.text.1" = "Öffne die iPhone Einstellungen.";
+"login.revokeSIWAInSettings.instructions.text.2" = "Tippe oben auf Deinen Namen.";
+"login.revokeSIWAInSettings.instructions.text.3" = "Tippe auf \"Password & Sicherheit\".";
+"login.revokeSIWAInSettings.instructions.text.4" = "Tippe unter \"Mit Apple anmelden\" auf \"Apps, die deine Apple-ID verwenden\".";
+"login.revokeSIWAInSettings.instructions.text.5" = "Wähle \"UrbanLife+\" aus der Liste aus und entferne es.";
+"login.revokeSIWAInSettings.instructions.text.6" = "Beende \"UrbanLife+\" über den App-Switcher.";
+"login.revokeSIWAInSettings.instructions.text.7" = "Starte die App neu.";
+"login.revokeSIWAInSettings.toSettings" = "Zu den Einstellungen";
+
 // Watch
-"launch.greeting %@" = "Hallo%@!";
-"launch.message" = "Bitte öffne die App auf deinem iPhone, um dich anmelden!";
+"w.login.title" = "UrbanLife+";
+"w.login.greeting %@" = "Hallo%@!";
+"w.login.message" = "Bitte öffne die App auf deinem iPhone, um fortzufahren!";
+"w.login.reload" = "Neu laden...";
+
+"w.home.title" = "Start";
+"w.home.greeting %@" = "Hallo, %@!";
+"w.home.update" = "Update";

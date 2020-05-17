@@ -9,26 +9,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     
-    // TODO: Refactor these States to Storage
-    #if !targetEnvironment(simulator)
-    @State var userIsLoggedIn: Bool = false
-    #else
-    @State var userIsLoggedIn: Bool = true
-    #endif
-    @State var firstTimeSeeingLoginScreenAfterClosingTheApp: Bool = true
+    @EnvironmentObject var storage: Storage
     
     var body: some View {
         ZStack {
             TabView {
                 HomeView()
                 CommunicationView()
-                SettingsView(userIsLoggedIn: $userIsLoggedIn)
+                SettingsView()
             }
-            if !userIsLoggedIn {
-                LogInView(firstTimeSeeingLoginScreenAfterClosingTheApp: $firstTimeSeeingLoginScreenAfterClosingTheApp, userIsLoggedIn: $userIsLoggedIn)
-                    .animation(.default)
-                    .transition(.move(edge: .bottom))
+            if !storage.appState.userIsLoggedIn || storage.appState.shouldGoToSettingsToRevokeSIWA {
+                ZStack {
+                    if colorScheme == .light {
+                        Color.white
+                            .edgesIgnoringSafeArea(.all)
+                    } else {
+                        Color.black
+                            .edgesIgnoringSafeArea(.all)
+                    }
+                    if !storage.appState.userIsLoggedIn {
+                        LogInView()
+                    }
+                    if storage.appState.shouldGoToSettingsToRevokeSIWA {
+                        NukedView()
+                    }
+                }
             }
         }
     }
@@ -39,3 +46,4 @@ struct ContentView_Previews: PreviewProvider {
         return ContentView()
     }
 }
+

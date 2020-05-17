@@ -8,45 +8,17 @@
 
 import SwiftUI
 
-struct ContentView: View, SessionCommands {
+struct ContentView: View {
     
     @EnvironmentObject var storage: Storage
     
     var body: some View {
         ZStack {
-            if storage.didReceiveInitialDataFromPhone {
-                ScrollView {
-                    Text("Name: \"\(storage.user.givenName) \(storage.user.familyName)\"")
-                    Text("Value: \"\(storage.settings.value)\"")
-                    TextField("Text Feld", text: $storage.settings.value)
-                    Toggle(isOn: $storage.settings.toggle) {
-                        Text("Toggle me")
-                    }
-                    .padding()
-                    Button(action: {
-                        self.requestDataFromPhone()
-                    }) {
-                        Text("Update")
-                    }
-                }
-                .contextMenu(menuItems: {
-                    Button(action: {
-                        self.requestDataFromPhone()
-                    }, label: {
-                        VStack{
-                            Image(systemName: "arrow.clockwise")
-                                .font(.title)
-                            Text("Update")
-                        }
-                    })
-                })
-                    .navigationBarTitle("Home")
+            if storage.appState.userIsRegistered && !storage.appState.shouldGoToSettingsToRevokeSIWA && storage.appState.userIsLoggedIn {
+                HomeView()
             } else {
-                LaunchView()
+                LogInView()
             }
-        }
-        .onAppear {
-            self.requestDataFromPhone()
         }
     }
 }

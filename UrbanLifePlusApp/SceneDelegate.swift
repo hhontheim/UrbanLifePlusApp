@@ -12,8 +12,6 @@ import AuthenticationServices
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
-    @State var validCredentials: Bool = false
-    
     var window: UIWindow?
     
     var storage: Storage!
@@ -77,7 +75,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             break // The Apple ID credential is valid.
             default: // .revoked, .notFound:
                 // The Apple ID credential is either revoked or was not found, so show the sign-in UI.
-                storage.nuke()
+                storage.nuke(shouldGoToSettingsToRevokeSIWA: false)
                 break
             }
         }

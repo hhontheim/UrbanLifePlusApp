@@ -11,10 +11,8 @@ import Foundation
 import SwiftUI
 import Combine
 
+// Shared between devices. Persistent.
 struct User: Codable {
-    // Other Data
-    var registered: Bool
-    
     // Data from Sign In With Apple
     var userId: String
     var givenName: String
@@ -24,7 +22,6 @@ struct User: Codable {
     var authorizationCode: Data
     
     init() {
-        registered = false
         userId = ""
         givenName = ""
         familyName = ""
@@ -34,17 +31,28 @@ struct User: Codable {
     }
 }
 
-struct Settings: Codable {
-    var value: String
-    var toggle: Bool
+// Shared between devices. Persistent.
+struct AppState: Codable {
+    var userIsRegistered: Bool
+    var userIsLoggedIn: Bool
+    var shouldGoToSettingsToRevokeSIWA: Bool
     
     init() {
-        value = ""
-        toggle = false
+        userIsRegistered = false
+        userIsLoggedIn = false
+        shouldGoToSettingsToRevokeSIWA = false
     }
 }
 
-// TODO: Make struct?
+// Local storage. Not persistent.
+struct Local: Codable {
+    var firstTimeSeeingLoginScreenAfterClosingTheApp: Bool
+    
+    init() {
+        firstTimeSeeingLoginScreenAfterClosingTheApp = true
+    }
+}
+
 final class Storage: ObservableObject, SessionCommands, StorageHelper {
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()
@@ -59,12 +67,12 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
     
     // MARK: - Persistent
     @Published var user: User
-    @Published var settings: Settings
+    @Published var appState: AppState
     
     // MARK: - Non-Persistent
-    @Published var didReceiveInitialDataFromPhone: Bool = false
+    @Published var local: Local
     
-    // MARK: -
+    // MARK: - Init
     init() {
         if let userJSON: Data = Storage.container.pull(for: .user),
             let userDecoded: User = try? decoder.decode(User.self, from: userJSON) {
@@ -72,12 +80,15 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
         } else {
             self.user = User()
         }
-        if let settingsJSON: Data = Storage.container.pull(for: .settings),
-            let settingsDecoded: Settings = try? decoder.decode(Settings.self, from: settingsJSON) {
-            self.settings = settingsDecoded
+        
+        if let appStateJSON: Data = Storage.container.pull(for: .appState),
+            let appStateDecoded: AppState = try? decoder.decode(AppState.self, from: appStateJSON) {
+            self.appState = appStateDecoded
         } else {
-            self.settings = Settings()
+            self.appState = AppState()
         }
+        
+        local = Local()
         
         defer {
             registerForCloudUpdate()
@@ -95,9 +106,10 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
             let userDecoded: User = try? decoder.decode(User.self, from: userJSON) {
             self.user = userDecoded
         }
-        if let settingsJSON: Data = Storage.container.pull(for: .settings),
-            let settingsDecoded: Settings = try? decoder.decode(Settings.self, from: settingsJSON) {
-            self.settings = settingsDecoded
+        
+        if let appStateJSON: Data = Storage.container.pull(for: .appState),
+            let appStateDecoded: AppState = try? decoder.decode(AppState.self, from: appStateJSON) {
+            self.appState = appStateDecoded
         }
         persist()
     }
@@ -109,11 +121,14 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
             Storage.container.push(userEncoded, for: .user)
             dataToSend[.user] = userEncoded
         }
-        if let settingsEncoded: Data = try? encoder.encode(settings) {
-            Storage.container.push(settingsEncoded, for: .settings)
-            dataToSend[.settings] = settingsEncoded
+        
+        if let appStateEncoded: Data = try? encoder.encode(appState) {
+            Storage.container.push(appStateEncoded, for: .appState)
+            dataToSend[.appState] = appStateEncoded
         }
+        
         Storage.container.synchronize()
+        
         if shouldSendUpdateToCounterpart {
             print("Send to counterpart")
             sendUpdateToCounterpart(dataToSend)
@@ -122,10 +137,11 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
         }
     }
     
-    func nuke() {
+    func nuke(shouldGoToSettingsToRevokeSIWA: Bool) {
         #if !targetEnvironment(simulator)
         user = User()
-        settings = Settings()
+        appState = AppState()
+        appState.shouldGoToSettingsToRevokeSIWA = shouldGoToSettingsToRevokeSIWA
         persist()
         #endif
     }
@@ -133,7 +149,8 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
 
 enum StorageKey: String, CaseIterable {
     case user
-    case settings
+    case appState
+    case local
 }
 
 enum TransferKey: String, CaseIterable {

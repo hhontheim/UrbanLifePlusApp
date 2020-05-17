@@ -11,7 +11,6 @@ import SwiftUI
 struct DevView: View {
     @EnvironmentObject var storage: Storage
     
-    // TODO: Refactor these States
     @State var userId: String = ""
     @State var identityToken: String = ""
     @State var authorizationCode: String = ""

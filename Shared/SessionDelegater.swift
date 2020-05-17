@@ -31,26 +31,30 @@ class SessionDelegater: NSObject, WCSessionDelegate {
             if let key: TransferKey = TransferKey(rawValue: transferKey) {
                 switch key {
                 case .updateFromCounterpart:
-                    if let data = transferData as? [StorageKey: Data] {
-                        for (storageKey, value) in data {
-                            print("Will save value \"\(value)\" for storageKey \"\(storageKey)\".")
-                            switch storageKey {
-                            case .user:
-                                DispatchQueue.main.async {
-                                    if let userDecoded: User = try? JSONDecoder().decode(User.self, from: value) {
-                                        self.storage.user = userDecoded
-                                        self.storage.persist(shouldSendUpdateToCounterpart: false)
+                    if let data = transferData as? [String: Data] {
+                        for (key, value) in data {
+                            if let storageKey: StorageKey = StorageKey(rawValue: key) {
+                                print("Will save value \"\(value)\" for storageKey \"\(storageKey)\".")
+                                switch storageKey {
+                                case .user:
+                                    DispatchQueue.main.sync {
+                                        if let userDecoded: User = try? JSONDecoder().decode(User.self, from: value) {
+                                            self.storage.user = userDecoded
+                                            self.storage.persist(shouldSendUpdateToCounterpart: false)
+                                        }
                                     }
-                                }
-                                break
-                            case .settings:
-                                DispatchQueue.main.async {
-                                    if let settingsDecoded: Settings = try? JSONDecoder().decode(Settings.self, from: value) {
-                                        self.storage.settings = settingsDecoded
-                                        self.storage.persist(shouldSendUpdateToCounterpart: false)
+                                    break
+                                case .appState:
+                                    DispatchQueue.main.sync {
+                                        if let appStateDecoded: AppState = try? JSONDecoder().decode(AppState.self, from: value) {
+                                            self.storage.appState = appStateDecoded
+                                            self.storage.persist(shouldSendUpdateToCounterpart: false)
+                                        }
                                     }
+                                    break
+                                case .local:
+                                    fatalError("Local Data never transferred!")
                                 }
-                                break
                             }
                         }
                     }
@@ -61,7 +65,7 @@ class SessionDelegater: NSObject, WCSessionDelegate {
                         print("Error handling requestDataFromPhone! Could not cast transferKey \"\(transferKey)\" as Bool!")
                         break
                     }
-                    DispatchQueue.main.async {
+                    DispatchQueue.main.sync {
                         self.storage.persist(shouldSendUpdateToCounterpart: requested)
                     }
                     print("Received AppContext Update Wanted On Watch! Requested: \(requested).")
@@ -85,11 +89,6 @@ class SessionDelegater: NSObject, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
         print("Received Application Context: \(applicationContext)")
         self.session(session, didReceiveMessage: applicationContext)
-        #if os(watchOS)
-        DispatchQueue.main.async {
-            self.storage.didReceiveInitialDataFromPhone = true
-        }
-        #endif
     }
     
     // MARK: - UserInfo message

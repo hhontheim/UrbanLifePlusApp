@@ -11,46 +11,37 @@ import UIKit
 import AuthenticationServices
 
 struct LogInView: View {
-    @Environment(\.colorScheme) var colorScheme: ColorScheme
     @Environment(\.window) var window: UIWindow?
     
     @EnvironmentObject var storage: Storage
-    
-    @Binding var firstTimeSeeingLoginScreenAfterClosingTheApp: Bool
-    @Binding var userIsLoggedIn: Bool
-    
+        
     @State var appleSignInDelegates: SignInWithAppleDelegates! = nil
     
     var body: some View {
         NavigationView {
-            ZStack {
-                if colorScheme == .light {
-                    Color.white
-                        .edgesIgnoringSafeArea(.all)
-                } else {
-                    Color.black
-                        .edgesIgnoringSafeArea(.all)
-                }
-                VStack {
-                    Spacer()
-                    Text(storage.user.registered ? "login.existingUser" : "login.newUser")
-                        .font(.headline)
-                        .padding()
-                    Spacer()
-                    SignInWithAppleButton(registered: storage.user.registered)
-                        .frame(width: UIScreen.screenWidth - 32, height: 60)
-                        .onTapGesture(perform: handleAuthorizationAppleIDButtonPress)
+            VStack {
+                Spacer()
+                Text(storage.appState.userIsRegistered ? "login.existingUser" : "login.newUser")
+                    .font(.headline)
                     .padding()
-                }
+                Spacer()
+                SignInWithAppleButton()
+                    .frame(width: UIScreen.screenWidth - 32, height: 60)
+                    .onTapGesture(perform: handleAuthorizationAppleIDButtonPress)
+                    .padding()
             }
+            .navigationBarTitle("login.title \(storage.appState.userIsRegistered ? ", \(storage.user.givenName)" : "")")
             .onAppear {
-                if self.firstTimeSeeingLoginScreenAfterClosingTheApp {
-                    self.firstTimeSeeingLoginScreenAfterClosingTheApp = false
-                    self.performExistingAccountSetupFlows()
+                if !self.storage.appState.shouldGoToSettingsToRevokeSIWA {
+                    if self.storage.local.firstTimeSeeingLoginScreenAfterClosingTheApp {
+                        self.storage.local.firstTimeSeeingLoginScreenAfterClosingTheApp = false
+                        self.performExistingAccountSetupFlows()
+                    }
                 }
             }
-            .navigationBarTitle("login.title \(storage.user.registered ? ", \(storage.user.givenName)" : "")")
         }
+        .animation(.default)
+        .transition (.move(edge: .bottom))
     }
     
     private func handleAuthorizationAppleIDButtonPress() {
@@ -83,7 +74,6 @@ struct LogInView: View {
                 // If `fullName` or `email` are nil, account already set up here!
                 self.saveUserIdInKeychain(appleIdCredential!.user)
                 self.storage.user.userId = appleIdCredential!.user
-                self.storage.persist()
                 self.signInSucceeded(true)
                 return
             }
@@ -104,11 +94,14 @@ struct LogInView: View {
         authorizationController.performRequests()
     }
     
-
+    
     
     private func signInSucceeded(_ success: Bool) {
         withAnimation {
-            self.userIsLoggedIn = success
+            self.storage.appState.userIsLoggedIn = success
+            if success {
+                self.storage.persist()
+            }
         }
     }
     
@@ -121,19 +114,19 @@ struct LogInView: View {
     }
     
     private func storeUserInformation(_ id: String, _ fullName: PersonNameComponents, _ email: String, _ identityToken: Data, _ authorizationCode: Data) {
-        storage.user.registered = true
         storage.user.userId = id
         storage.user.givenName = fullName.givenName ?? ""
         storage.user.familyName = fullName.familyName ?? ""
         storage.user.email = email
         storage.user.identityToken = identityToken
         storage.user.authorizationCode = authorizationCode
-        storage.persist()
+        
+        storage.appState.userIsRegistered = true
     }
 }
 
 extension UIScreen{
-   static let screenWidth = UIScreen.main.bounds.size.width
-   static let screenHeight = UIScreen.main.bounds.size.height
-   static let screenSize = UIScreen.main.bounds.size
+    static let screenWidth = UIScreen.main.bounds.size.width
+    static let screenHeight = UIScreen.main.bounds.size.height
+    static let screenSize = UIScreen.main.bounds.size
 }

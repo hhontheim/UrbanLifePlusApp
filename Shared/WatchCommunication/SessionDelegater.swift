@@ -43,7 +43,6 @@ class SessionDelegater: NSObject, WCSessionDelegate {
                                             self.storage.persist(shouldSendUpdateToCounterpart: false)
                                         }
                                     }
-                                    break
                                 case .appState:
                                     DispatchQueue.main.sync {
                                         if let appStateDecoded: AppState = try? JSONDecoder().decode(AppState.self, from: value) {
@@ -51,14 +50,12 @@ class SessionDelegater: NSObject, WCSessionDelegate {
                                             self.storage.persist(shouldSendUpdateToCounterpart: false)
                                         }
                                     }
-                                    break
                                 case .local:
                                     fatalError("Local Data never transferred!")
                                 }
                             }
                         }
                     }
-                    break
                 case .requestDataFromPhone:
                     #if os(iOS)
                     guard let requested = transferData as? Bool else {
@@ -70,7 +67,6 @@ class SessionDelegater: NSObject, WCSessionDelegate {
                     }
                     print("Received AppContext Update Wanted On Watch! Requested: \(requested).")
                     #endif
-                    break
                 }
             } else {
                 print("Could not cast transferKey \"\(transferKey)\" as any TransferKey!")

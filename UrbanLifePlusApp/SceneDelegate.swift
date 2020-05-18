@@ -71,12 +71,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         appleIDProvider.getCredentialState(forUserID: Keychain.currentUserIdentifier) { (credentialState, error) in
             switch credentialState {
-            case .authorized:
-            break // The Apple ID credential is valid.
+            case .authorized: break
+            // The Apple ID credential is valid.
             default: // .revoked, .notFound:
                 // The Apple ID credential is either revoked or was not found, so show the sign-in UI.
                 storage.nuke(shouldGoToSettingsToRevokeSIWA: false)
-                break
             }
         }
     }

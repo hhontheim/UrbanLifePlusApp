@@ -19,7 +19,12 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
     
     #if os(iOS)
     // Store in Key-Value iCloud
+    #if targetEnvironment(simulator)
+    static let container = UserDefaults.standard
+    #else
     static let container = NSUbiquitousKeyValueStore()
+    #endif
+    
     #elseif os(watchOS)
     // Store locally on Watch
     static let container = UserDefaults.standard
@@ -102,12 +107,10 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
     }
     
     func nuke(shouldGoToSettingsToRevokeSIWA: Bool) {
-        #if !targetEnvironment(simulator)
         user = User()
         appState = AppState()
         appState.shouldGoToSettingsToRevokeSIWA = shouldGoToSettingsToRevokeSIWA
         persist()
-        #endif
     }
     
     #if os(iOS)

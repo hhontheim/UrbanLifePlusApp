@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CustomerlySDK:
-    :commit: 337f64d74bd345f9c670569edd8fa68ee69a33b4
+    :commit: 3107ca06b242f108bdc1daa7a4efdd97e4cf18d7
     :git: https://github.com/hhontheim/Customerly-iOS-SDK.git
   Instabug:
     :commit: 6e4c4bd30de0a8f18e9224c448e8bd4708787fa2
@@ -45,6 +45,6 @@ SPEC CHECKSUMS:
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 9e5a031346b0bd02684a556b61fd75c54e8f66ab
+PODFILE CHECKSUM: d6918abdef4ef868e03eb625d42ed160eb3e86bc
 
 COCOAPODS: 1.9.1

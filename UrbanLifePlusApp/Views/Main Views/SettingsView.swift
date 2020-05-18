@@ -52,7 +52,6 @@ struct SettingsView: View {
                     }) {
                         Text("settings.logout")
                     }
-                    #if !targetEnvironment(simulator)
                     Button(action: {
                         self.showNukeSheet = true
                     }) {
@@ -68,14 +67,6 @@ struct SettingsView: View {
                             }
                         ])
                     }
-                    #else
-                    Button(action: { }) {
-                        Text("Nuke not available in simulator!")
-                            .foregroundColor(.red)
-                            .disabled(true)
-                    }
-                    .disabled(true)
-                    #endif
                 }
             }
             .listStyle(GroupedListStyle())

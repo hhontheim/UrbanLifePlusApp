@@ -51,7 +51,7 @@ platform :ios do
     match(type: "development", readonly: is_ci)
     match(type: "adhoc", readonly: is_ci)
 
-    run_tests
+    # run_tests
 
     sh("brew install imagemagick")
 

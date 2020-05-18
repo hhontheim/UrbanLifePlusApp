@@ -38,6 +38,11 @@ struct ContentView: View {
                 }
             }
         }
+        .onAppear() {
+            #if targetEnvironment(simulator)
+            self.storage.nuke(shouldGoToSettingsToRevokeSIWA: false)
+            #endif
+        }
     }
 }
 

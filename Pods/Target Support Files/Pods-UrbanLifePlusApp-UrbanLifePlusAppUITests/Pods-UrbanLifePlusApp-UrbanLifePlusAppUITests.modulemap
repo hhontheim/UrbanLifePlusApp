@@ -1,6 +1,0 @@
-framework module Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests {
-  umbrella header "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

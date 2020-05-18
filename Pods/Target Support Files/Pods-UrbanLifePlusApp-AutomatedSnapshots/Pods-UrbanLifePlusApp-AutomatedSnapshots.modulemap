@@ -1,0 +1,6 @@
+framework module Pods_UrbanLifePlusApp_AutomatedSnapshots {
+  umbrella header "Pods-UrbanLifePlusApp-AutomatedSnapshots-umbrella.h"
+
+  export *
+  module * { export * }
+}

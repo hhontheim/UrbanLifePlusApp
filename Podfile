@@ -9,12 +9,7 @@ target 'UrbanLifePlusApp' do
   pod 'CustomerlySDK', :git => 'https://github.com/hhontheim/Customerly-iOS-SDK.git'
   pod 'Instabug', :git => 'https://github.com/hhontheim/Instabug-iOS.git'
 
-  target 'UrbanLifePlusAppTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'UrbanLifePlusAppUITests' do
+  target 'AutomatedSnapshots' do
     # Pods for testing
   end
 

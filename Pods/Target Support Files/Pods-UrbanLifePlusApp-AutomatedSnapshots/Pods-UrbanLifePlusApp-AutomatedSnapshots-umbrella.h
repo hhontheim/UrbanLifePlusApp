@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_UrbanLifePlusApp_UrbanLifePlusAppUITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_UrbanLifePlusApp_UrbanLifePlusAppUITestsVersionString[];
+FOUNDATION_EXPORT double Pods_UrbanLifePlusApp_AutomatedSnapshotsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_UrbanLifePlusApp_AutomatedSnapshotsVersionString[];
 

@@ -63,6 +63,10 @@ struct LogInView: View {
     }
     
     private func performSignIn(using requests: [ASAuthorizationRequest]) {
+        #if targetEnvironment(simulator)
+        self.storeUserInformation("simulatorUserId", PersonNameComponentsFormatter().personNameComponents(from: "Gavin Belson")!, "gavin.b@hontheim.net", Data(base64Encoded: "c2ltdWxhdG9ySWRlbnRpdHlUb2tlbg==")!, Data(base64Encoded: "c2ltdWxhdG9yQXV0aG9yaXphdGlvbkNvZGU=")!)
+        self.signInSucceeded(true)
+        #else
         appleSignInDelegates = SignInWithAppleDelegates(window: window) { appleIdCredential in
             guard let _ = appleIdCredential else {
                 // Here `appleIdCredential` is `nil`. Delegate did not work properly.
@@ -93,6 +97,7 @@ struct LogInView: View {
         authorizationController.presentationContextProvider = appleSignInDelegates
         
         authorizationController.performRequests()
+        #endif
     }
     
     

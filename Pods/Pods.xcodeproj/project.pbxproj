@@ -27,6 +27,7 @@
 		02A0C1F203841F59C171606EF017E960 /* SocketEnginePollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3445DFD1E70C970C2D054BCD9A380 /* SocketEnginePollable.swift */; };
 		02A2B21D75A2FA502083037BEACA3AC1 /* CyConversationMessagesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920AC4F4735C5EC9BD1ADB5D2C2D9660 /* CyConversationMessagesResponseModel.swift */; };
 		03A3052EC921CDDE33BAEB08BA502CA4 /* CyConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC096A130D03778EC8D208E44458CC /* CyConversationTableViewCell.swift */; };
+		049DA4BDA906EA244A301B548552A002 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD891E830E5C49370F900AF1B53D95E /* Foundation.framework */; };
 		0688C9BC1C46B8D9052737817F59218A /* CyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAE13FF6849CEF28677F68A91965D9 /* CyButton.swift */; };
 		06A8F33A27A196682F5DBA87EE3A11C0 /* CodableTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F06877724061D4BB189E82738270378 /* CodableTransform.swift */; };
 		0763F448B11339D32E54D79C066B44E9 /* CySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A76044B18F68C7DC4CF4711BC65FE1D /* CySound.swift */; };
@@ -52,10 +53,10 @@
 		24DDD70B967CFA4A3239EB96D080E831 /* CySurveyParamsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4E23A326C739A483C254C7A0DF36BE /* CySurveyParamsRequestModel.swift */; };
 		253F1FA5458EADD58F9764299C4F5449 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD891E830E5C49370F900AF1B53D95E /* Foundation.framework */; };
 		273477E86147519FFABC87A3049E20D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD891E830E5C49370F900AF1B53D95E /* Foundation.framework */; };
-		27384993CA58F09F2D20031191B28B41 /* Pods-UrbanLifePlusApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BF5E929647C4E272781CD19AB84DFA /* Pods-UrbanLifePlusApp-dummy.m */; };
+		27384993CA58F09F2D20031191B28B41 /* Pods-UrbanLifePlusApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B6E21D90B25E68426B7ACE8D4ECC6 /* Pods-UrbanLifePlusApp-dummy.m */; };
 		2822F58B91D4980DF37B9C6990060063 /* SocketIOClientOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94799A246B2F146821A4586B26C23D59 /* SocketIOClientOption.swift */; };
 		28526F528326520C78E05B32EB6664C9 /* ISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD02CDB5DCCAA46F7362EB5029A3D7 /* ISO8601DateTransform.swift */; };
-		2AF12DF5B0C70BD8D4753070CF9A27D4 /* Pods-UrbanLifePlusApp WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B63F0E9312ACCFAAE0ED5D573D72C /* Pods-UrbanLifePlusApp WatchKit Extension-dummy.m */; };
+		2AF12DF5B0C70BD8D4753070CF9A27D4 /* Pods-UrbanLifePlusApp WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE39214CB2C05361334DA8D9C26A7E /* Pods-UrbanLifePlusApp WatchKit Extension-dummy.m */; };
 		2C4B795412941A8A0FA4B5FB14D2D4D1 /* CySendMessageResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730416A96658C16F5EE07A2BB4B7E1B8 /* CySendMessageResponseModel.swift */; };
 		2C63A551516D5688AB3CEDC938DE9C7F /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D129A8F6E5E741CA43BA175D4516C34 /* WebSocket.swift */; };
 		2C8D7C829E8CA521009A8F928FAE3A24 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FEAD060C9C99870294CD854CC37261 /* ImageModifier.swift */; };
@@ -76,12 +77,12 @@
 		3BC75FB3F82037E00AEC9F00B6C91DFD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4718DE8DF893EEB98E506B93E729B373 /* CFNetwork.framework */; };
 		3C9DE89F9F2D77CCAC08348683C25515 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34315FAF53A3A71239FD7E9AEC2CA5B2 /* Foundation.framework */; };
 		3CEFEE9E4DF18C315852C7B037274E4C /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6F1C6D6A4A27AD02E7A353472F14E /* DiskStorage.swift */; };
-		3D21543FCD74788645C351C7EBE58A35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD891E830E5C49370F900AF1B53D95E /* Foundation.framework */; };
 		3F244C28550404D43EED52C3AF589220 /* CyConversationRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE9DC609101B59C7902285FB1A5910 /* CyConversationRequestModel.swift */; };
 		3F490BD59089795AED4FF9578A3BD42A /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C968BA43E17FE11232643B3275752 /* MemoryStorage.swift */; };
 		40ED90A7B23C27616846913035A4CF49 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D432013D8AAA9FD4672991662F7155C /* ImagePrefetcher.swift */; };
 		41455908E840FCC471228A95F664F03E /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739CC6E05F518A3E9D0E801FB35DE750 /* Kingfisher.swift */; };
 		42B4872D6B6F639184FDEC63B68EDB30 /* CyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056758ADE11D771739C9EC1A84E1621 /* CyColor.swift */; };
+		42FAE9F44C6C4A4EE2C7F0428B809B25 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 532C3F06BA7E3F9936785734C29B3931 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-dummy.m */; };
 		44F2BFF1F2905DA27717345E3E26B8DE /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C01E665D3232E4A99AEF21E61B40A3 /* Mapper.swift */; };
 		452450FE88309F333D381E3EE4540554 /* SocketEngineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6047AAC19C8F3BB7710AF2575B195182 /* SocketEngineSpec.swift */; };
 		46821BA8C5545CCB648FF3DD3082F66E /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C63608CD7B56FF6F389C173F80036 /* AnimatedImageView.swift */; };
@@ -90,7 +91,7 @@
 		49E7C2C3DE5C02BDE4FC36B39E112223 /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2997BC22BAD3FEBFC9CD3680A392A /* SocketAckManager.swift */; };
 		4AA8662B16D685DBF639BB090289E3AC /* CyDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960BA70A95F0D6147DF0AFB09ED65E9D /* CyDate.swift */; };
 		4AF98AAA93B75A5B2ED5B8041DA8C4ED /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A2E21D674F1FDF172B3345378046E5 /* MessageCell.xib */; };
-		4BACC64111058BAB262499675594B34F /* Pods-UrbanLifePlusApp WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E54F191DBB8061F8E1E3A0FD6A213EE6 /* Pods-UrbanLifePlusApp WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BACC64111058BAB262499675594B34F /* Pods-UrbanLifePlusApp WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F9E39260B6844E48C3CC6E057F983E /* Pods-UrbanLifePlusApp WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C8FF29AB7216C4A146EBD8E531DA2A5 /* CySurveySliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693BC78AC3F612462C28F7C1CAB32A4 /* CySurveySliderViewController.swift */; };
 		4CCD2157485227827E6160B2700FEE46 /* CyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3411BDFB5C446F08D28A6E3CF1307 /* CyTextView.swift */; };
 		4D93447EE43F117A17EC8C723D6D5E46 /* NSButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA163B2DD395F799D6C6D99D6A67C0 /* NSButton+Kingfisher.swift */; };
@@ -129,11 +130,8 @@
 		767E9267806ACF9D4A64047A5FEB6036 /* GIFAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E9F102AF834985E891F5A0A38A3469 /* GIFAnimatedImage.swift */; };
 		773A35E7D3F60475EF96125788B68E5F /* notification.m4r in Resources */ = {isa = PBXBuildFile; fileRef = D51D907EC97D66A0FAE675BCCC8B65F8 /* notification.m4r */; };
 		78056DA34B80DB8B32343CD29773F6D0 /* CyAdminModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6732C5B5634F459C386B366B8B96F3 /* CyAdminModel.swift */; };
-		7AD1951968A61939CB47FE785B5B01D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD891E830E5C49370F900AF1B53D95E /* Foundation.framework */; };
-		7CC5A96AC1324E4E0DD3D24083798426 /* Pods-UrbanLifePlusAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4482FF7E0370EB60208376D05C7D9B /* Pods-UrbanLifePlusAppTests-dummy.m */; };
 		7D86DD9D924CB2F2757AA178B0C25896 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF7DCD7B19C5A86CE471AF8FC62656 /* SessionDelegate.swift */; };
 		7EA7275D7AF3E1826BC45FC4E9EA3915 /* EnumTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FCF42547AFB8123D5DEF099CFA35D6 /* EnumTransform.swift */; };
-		805C2F643457F817169455659F14FCA9 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 045A437AAE3FFA9BBD459216AC98BC08 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8195FDB806060FB71543C5E0C5425023 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D7BC19D3764E41F2AE31FF0E8FD89 /* Compression.swift */; };
 		81E2A56B6D96D13B7F45EED547E6BD5C /* CustomerlyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44063736827217814AD2814357D1B48E /* CustomerlyNavigationController.swift */; };
 		84249ACF3566CC51E6C46E9822FB2407 /* CustomerlyImageGallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522AB34F2C852868FCD184DC02F8CCB1 /* CustomerlyImageGallery.storyboard */; };
@@ -148,12 +146,10 @@
 		9127321A8F6FC9D4810E7D12F6AE221E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2C7592F5450533B1C45758A4C1D4AA /* ObjectMapper.framework */; };
 		92B27C73B3D2E59613621EE8D03094F1 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524B6572F5A086F4D0739C7E5586600 /* Indicator.swift */; };
 		942EF85C1399BDA893F702FF9966AC14 /* SocketManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF46BC6F2366EBE5D072A9F129619A1 /* SocketManagerSpec.swift */; };
-		9712E98A41C9739EEC619EE90CBBA669 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 078860993B4680B533349B6E351F5747 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-dummy.m */; };
 		989E7C06365E73FA35E4741AF6A882CB /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D91D0371D79A087D9DF9BD5D10C06 /* DateTransform.swift */; };
 		98E2501C6255B92376DC7220C34AB774 /* CySettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6258511FA32F5E829206505B6A703CC /* CySettingsModel.swift */; };
 		9AC80612481900A40E25FF23CF985B49 /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6CF0644757C84C0A69985DEB0F805C /* SocketStringReader.swift */; };
 		9AC9ECF6A5E1EC04AE8CC704D354125F /* Socket.IO-Client-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF4DE09EEBE17D72CC97B542B73953CF /* Socket.IO-Client-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B30969DF1B643F1F999B71F78606E10 /* Pods-UrbanLifePlusAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E1CC2D1FBC76CF5AD45C62907B5304 /* Pods-UrbanLifePlusAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C0613136A5F67B53B7AAB5D081F3059 /* Socket.IO-Client-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 296A192771E0E18BBAA323CFF3F6400B /* Socket.IO-Client-Swift-dummy.m */; };
 		9C7757C8E459B27FC2BA3F32E881ABCE /* CyRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF48E8C92B5E789FCD6A406E8F29D18 /* CyRouting.swift */; };
 		9CA6FF7D4FF0F9E45A1E2BC7D91F34E8 /* CyAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059A288EDB7DA05EBA65352E5B98CE9 /* CyAccountModel.swift */; };
@@ -185,7 +181,7 @@
 		B88B2532776B23F74E04975C337B9BB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD891E830E5C49370F900AF1B53D95E /* Foundation.framework */; };
 		B9611827EAACD33854C5E874916ECC9E /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF220A5D63374DE5173AF41DF8FA12 /* Runtime.swift */; };
 		BAE172571A6F71CD52E0F5CD51D1B6EF /* CyHTTPValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0CC77A73DF2632F86061546F53563 /* CyHTTPValidation.swift */; };
-		BBF0C2D7EF580D8F5A22B4C66ED25D30 /* Pods-UrbanLifePlusApp WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09BF1D9966272740936AE4751658BE /* Pods-UrbanLifePlusApp WatchKit App-dummy.m */; };
+		BBF0C2D7EF580D8F5A22B4C66ED25D30 /* Pods-UrbanLifePlusApp WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61850E12DF52CD9417A804BCB649C5F0 /* Pods-UrbanLifePlusApp WatchKit App-dummy.m */; };
 		BE2B4483F4D41465E9699996D5C9AD9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD891E830E5C49370F900AF1B53D95E /* Foundation.framework */; };
 		BE5117DC0E421AF17D7AD4DDE63FBABF /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFEE748B4B961DC5902062FFBCBC7D /* Delegate.swift */; };
 		C0877C2E0879C5C232927786A041EA91 /* CyImageMassageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D4421D72DE25073AEA1FA473C2DE7E /* CyImageMassageTableViewCell.swift */; };
@@ -203,6 +199,7 @@
 		CD619984FFB17F825C4EE3E4D781F666 /* Customerly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D7F17ACF7AF2734757EE5C4189CED /* Customerly.swift */; };
 		D1C045A04C023FD6230274D0AE7FAD9E /* CyMessageSocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22975DF7E2FD97F9CCF554B271F137E /* CyMessageSocketModel.swift */; };
 		D247AE97C7DFFF1F455DEC8080A43E25 /* CySocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5134899DEA976AAF4CD13F111FD40A /* CySocket.swift */; };
+		D3AB425248610FA8E376C2FE14FB0445 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41C3BB72058DE5F5E3C00C6BE84FF052 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3EEC17A5F04644FC64A7AD880E52D27 /* CyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F4FA3A06AA403AFBAF1BD3308B0AA /* CyLabel.swift */; };
 		D5340447266A28380322F3EB56C04E9F /* SSLClientCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7674693A14BF2473B243FC90A7D4937 /* SSLClientCertificate.swift */; };
 		D601B897E1C2F53088A34D2C1C0AA0DB /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 210AF011E80DF591435294E13D7D561C /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -228,7 +225,7 @@
 		EC5F930C129F09543514097D75A5D9D3 /* CyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C0E1FEE1CCE70AC37F651C824834D1 /* CyStorage.swift */; };
 		EE5B05AC93B4A588CF6CE018AA45BF23 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4EECE54FE9DE8FCF16FBFBD22ACDD2B7 /* es.lproj */; };
 		EE98CFF41BF9B01C632ED6CBB3E560FD /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FB37033D5B1B7473F3393F60C7F051 /* SocketPacket.swift */; };
-		EFDCB626A2A9210199D3BBF63F0CB129 /* Pods-UrbanLifePlusApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00801771443DB6BB9584392A0A2F8ABA /* Pods-UrbanLifePlusApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFDCB626A2A9210199D3BBF63F0CB129 /* Pods-UrbanLifePlusApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F51B07171A44BEC1D6596D809F167CB /* Pods-UrbanLifePlusApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE45BA4433CA1968B640FEE5B976B6C /* FromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BDB4E0C89F7E98BDC0B4E4E3A3635E /* FromJSON.swift */; };
 		F09CEA64E441E6BF40A566C7CAE4A79C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3502595461974C4FDAD5E5A82C8B47BB /* UIKit.framework */; };
 		F14E55352AE374C5F26495AD9D94B4C6 /* CyWebsocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C071C841271C5922FFE0EEB4649EA /* CyWebsocketModel.swift */; };
@@ -240,7 +237,7 @@
 		F47EC60939D5F637813111ACF2CBBC86 /* SocketEnginePacketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC371F063398406C2D35CB25CB2807 /* SocketEnginePacketType.swift */; };
 		F498AD05177CA7E0B9326A134BDBDFCE /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D342EC35231337CF33A24C7B1E1B33 /* Kingfisher.framework */; };
 		F5392436F5CA243F5A2DEDBA83A84203 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD713FF30DC5C594547C383461B41E0 /* ImageCache.swift */; };
-		F862C087F53F0CD5C2F61917D931AF0D /* Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC65E855D26C8C16D71F7E186B42A464 /* Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F862C087F53F0CD5C2F61917D931AF0D /* Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6301E75D3959E2C50DABB2E74C642EC3 /* Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAB7B7E748B6DCD91E1D41D23B04F6A8 /* SizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692EA80754D40337EF7610F82EC445F /* SizeExtensions.swift */; };
 		FC8E9BF1C4573731BC0C181890DE7AA7 /* CyBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667361E428F990858FE67F30DD477D3 /* CyBanner.swift */; };
 		FE0D78F8149B4AD40FB9587ECD081C0B /* CyTrackingRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B6B3258706171B7F4063C9963BCD3 /* CyTrackingRequestModel.swift */; };
@@ -250,13 +247,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05DCC53B40D2C4BAAB8E12162881958B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E9F571848156A6AB51390A0EEBDF0737;
-			remoteInfo = CustomerlySDK;
-		};
 		10B64C608B7DB761BA84AF6C4C4514DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -278,19 +268,19 @@
 			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
 			remoteInfo = Kingfisher;
 		};
-		5BD59FADFCA44A2132342459A76F24EB /* PBXContainerItemProxy */ = {
+		79F7697710568F84788D7849B4204615 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 162E649F50FEC62B61BDD87D1BD422B4;
-			remoteInfo = ObjectMapper;
+			remoteGlobalIDString = 9B78EE4AF6AE03E79D88886319853FF7;
+			remoteInfo = Starscream;
 		};
-		5FF2B8BEE76AA73E0C86D9D7238569DC /* PBXContainerItemProxy */ = {
+		822825D320EBB7CE4CE183A47C525C35 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B593490A33943610DC035C394E10D07A;
-			remoteInfo = Instabug;
+			remoteGlobalIDString = A44D85440C5D58BC5C4D70A539C5EEF0;
+			remoteInfo = "Socket.IO-Client-Swift";
 		};
 		86AE46024B65DD65CFA96FC5B83ACE9A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -313,13 +303,6 @@
 			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
 			remoteInfo = Kingfisher;
 		};
-		A7710429A6D03783D5CD9C8BD8CC44F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
-			remoteInfo = Kingfisher;
-		};
 		B6C67A87BC6CDBCED70ADBF4E9792AF0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -334,12 +317,12 @@
 			remoteGlobalIDString = A44D85440C5D58BC5C4D70A539C5EEF0;
 			remoteInfo = "Socket.IO-Client-Swift";
 		};
-		D30F5A0781A4FAEF35E3BC2945869778 /* PBXContainerItemProxy */ = {
+		CF9AAB0B495CC960F27FC781402F9872 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A44D85440C5D58BC5C4D70A539C5EEF0;
-			remoteInfo = "Socket.IO-Client-Swift";
+			remoteGlobalIDString = B593490A33943610DC035C394E10D07A;
+			remoteInfo = Instabug;
 		};
 		D8257ADF19F6F56F5D54FB2AC342BB85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -348,14 +331,14 @@
 			remoteGlobalIDString = 648E7A0950D984AF6CB226ED3FEBE855;
 			remoteInfo = "CustomerlySDK-CustomerlySDK";
 		};
-		E027F36755B2287A3A2C385252CC29E1 /* PBXContainerItemProxy */ = {
+		E6408820A8ED0A4EB536BE689B4652D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9B78EE4AF6AE03E79D88886319853FF7;
-			remoteInfo = Starscream;
+			remoteGlobalIDString = 162E649F50FEC62B61BDD87D1BD422B4;
+			remoteInfo = ObjectMapper;
 		};
-		E6408820A8ED0A4EB536BE689B4652D8 /* PBXContainerItemProxy */ = {
+		E9897A2E51921133D41B7ACA2356801D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -369,45 +352,50 @@
 			remoteGlobalIDString = 162E649F50FEC62B61BDD87D1BD422B4;
 			remoteInfo = ObjectMapper;
 		};
-		FFE5A8B8FCBA43E4F9CFF45539218C2F /* PBXContainerItemProxy */ = {
+		F37C8748261CA2F991ACFA5170344ACE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EB62C5E757ED5875E63F5A373576B145;
-			remoteInfo = "Pods-UrbanLifePlusApp";
+			remoteGlobalIDString = E9F571848156A6AB51390A0EEBDF0737;
+			remoteInfo = CustomerlySDK;
+		};
+		F9DA80E5B6609F2C2D5BF9DEA5F23A57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
+			remoteInfo = Kingfisher;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0043051C78E6A3425619B99A274FA1CB /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/Cache/CacheSerializer.swift; sourceTree = "<group>"; };
-		00801771443DB6BB9584392A0A2F8ABA /* Pods-UrbanLifePlusApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UrbanLifePlusApp-umbrella.h"; sourceTree = "<group>"; };
 		00D6F1C6D6A4A27AD02E7A353472F14E /* DiskStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskStorage.swift; path = Sources/Cache/DiskStorage.swift; sourceTree = "<group>"; };
+		010CA35AE31A93EEFEB208CB5A4B8ECA /* Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		02DF1E6662C3EACD90777015783D7E5D /* ObjectMapper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ObjectMapper-Info.plist"; sourceTree = "<group>"; };
 		03EFD99DF73D2AF33DA8102E6C1F1D8B /* HexColorTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HexColorTransform.swift; path = Sources/HexColorTransform.swift; sourceTree = "<group>"; };
-		045A437AAE3FFA9BBD459216AC98BC08 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-umbrella.h"; sourceTree = "<group>"; };
 		04D342EC35231337CF33A24C7B1E1B33 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0595746C88FB748900064F7F92B86206 /* IBGReplies.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGReplies.h; path = Instabug.framework/Headers/IBGReplies.h; sourceTree = "<group>"; };
+		05F9E39260B6844E48C3CC6E057F983E /* Pods-UrbanLifePlusApp WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UrbanLifePlusApp WatchKit App-umbrella.h"; sourceTree = "<group>"; };
 		06E7619FDA50B95CCB4205F7A0753D82 /* CyTypingSocketModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyTypingSocketModel.swift; path = CustomerlySDK/Library/Models/CyTypingSocketModel.swift; sourceTree = "<group>"; };
-		078860993B4680B533349B6E351F5747 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-dummy.m"; sourceTree = "<group>"; };
 		0872BC683C375FB556C8275BDB50CCA6 /* CyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyViewController.swift; path = CustomerlySDK/Library/Subclasses/CyViewController.swift; sourceTree = "<group>"; };
 		0AA0B0DCF92CB8C27F4C67EC549C925F /* SocketParsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketParsable.swift; path = Source/SocketIO/Parse/SocketParsable.swift; sourceTree = "<group>"; };
 		0CF2A5168ACEDEABB94274B97A83861D /* CySurveyChoiceResponseModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySurveyChoiceResponseModel.swift; path = CustomerlySDK/Library/Models/CySurveyChoiceResponseModel.swift; sourceTree = "<group>"; };
-		0D16B806E62D9E3E2783092B4A93336A /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0D432013D8AAA9FD4672991662F7155C /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/Networking/ImagePrefetcher.swift; sourceTree = "<group>"; };
 		0E2B65337C5F90DCED8CDE8776E8D25D /* CyMapping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyMapping.swift; path = CustomerlySDK/Library/CyMapping.swift; sourceTree = "<group>"; };
+		0ECF38B170CE0CED30CEC3BA8EADB3A4 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots.debug.xcconfig"; sourceTree = "<group>"; };
 		0F84A8B9072AD25520EEB308B8094B23 /* CallbackQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackQueue.swift; path = Sources/Utility/CallbackQueue.swift; sourceTree = "<group>"; };
 		0FD891E830E5C49370F900AF1B53D95E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1033102EF29FC92F05142D7BA3EC972A /* CyErrorModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyErrorModel.swift; path = CustomerlySDK/Library/Models/CyErrorModel.swift; sourceTree = "<group>"; };
 		13132169EACD0EED3E144A6647D859CF /* CyDataFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyDataFetcher.swift; path = CustomerlySDK/Library/CyDataFetcher.swift; sourceTree = "<group>"; };
-		13883B023112745AEC7E0CED1DA36D07 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		13F0BC7653167587DB0652DBE541B7DC /* Pods-UrbanLifePlusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp.debug.xcconfig"; sourceTree = "<group>"; };
 		13F9655EE6E73BCDE9759676CEBFF294 /* IBGChats.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGChats.h; path = Instabug.framework/Headers/IBGChats.h; sourceTree = "<group>"; };
-		1404145AFF93ABDBD5BC798C25ED1F44 /* Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		147704AA18E0D790A2F59D2F78B61428 /* UIView+Instabug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Instabug.h"; path = "Instabug.framework/Headers/UIView+Instabug.h"; sourceTree = "<group>"; };
+		1498D791F0331901D514BA0319B4345D /* Pods-UrbanLifePlusApp WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UrbanLifePlusApp WatchKit App.modulemap"; sourceTree = "<group>"; };
 		14E5F010C2AADB79663E573AD250EE77 /* IBGSurvey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGSurvey.h; path = Instabug.framework/Headers/IBGSurvey.h; sourceTree = "<group>"; };
 		161C968BA43E17FE11232643B3275752 /* MemoryStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryStorage.swift; path = Sources/Cache/MemoryStorage.swift; sourceTree = "<group>"; };
 		16D4421D72DE25073AEA1FA473C2DE7E /* CyImageMassageTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyImageMassageTableViewCell.swift; path = "CustomerlySDK/Library/View Controllers/Cells/CyImageMassageTableViewCell.swift"; sourceTree = "<group>"; };
 		17B341CB49FE2162072CACEA3E878B4F /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = CustomerlySDK/Library/it.lproj; sourceTree = "<group>"; };
-		1831476ABD7EBC2CC67734CF796ED2C7 /* Pods-UrbanLifePlusApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UrbanLifePlusApp.modulemap"; sourceTree = "<group>"; };
 		18C7F86E56B609B80FF2E6F208CEC72F /* CyAttachmentModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyAttachmentModel.swift; path = CustomerlySDK/Library/Models/CyAttachmentModel.swift; sourceTree = "<group>"; };
 		19C07C133406718DBA59E6CFCAA3DF27 /* IBGBugReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGBugReporting.h; path = Instabug.framework/Headers/IBGBugReporting.h; sourceTree = "<group>"; };
 		1B0B300C6EBA9187E24018E74EE0DB7D /* SocketEngineWebsocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineWebsocket.swift; path = Source/SocketIO/Engine/SocketEngineWebsocket.swift; sourceTree = "<group>"; };
@@ -428,6 +416,7 @@
 		26F274194AFE1C950C3509591CBD056D /* ExtensionHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionHelpers.swift; path = Sources/Utility/ExtensionHelpers.swift; sourceTree = "<group>"; };
 		27C0027F2A2B9E1B57E608D28E7F31BB /* CustomerlySurveyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomerlySurveyViewController.swift; path = "CustomerlySDK/Library/View Controllers/CustomerlySurveyViewController.swift"; sourceTree = "<group>"; };
 		2845ECB4B00DBF7A12070989DEA7A96E /* CyConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyConfig.swift; path = CustomerlySDK/Library/CyConfig.swift; sourceTree = "<group>"; };
+		284AF4CAE8291353E0375DAA40870F09 /* Pods-UrbanLifePlusApp WatchKit Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp WatchKit Extension-Info.plist"; sourceTree = "<group>"; };
 		285A819E08E2E1C664FDBE68DA5FE67D /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/Utility/String+MD5.swift"; sourceTree = "<group>"; };
 		296A192771E0E18BBAA323CFF3F6400B /* Socket.IO-Client-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Socket.IO-Client-Swift-dummy.m"; sourceTree = "<group>"; };
 		29ACCFD24AD18549EE6F677BB69D03EB /* Socket.IO-Client-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Socket.IO-Client-Swift.modulemap"; sourceTree = "<group>"; };
@@ -436,61 +425,63 @@
 		2AD67750898D96D4C371AE64FB63FCA3 /* SocketIOClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClient.swift; path = Source/SocketIO/Client/SocketIOClient.swift; sourceTree = "<group>"; };
 		2B594206BCB99E534892365DE1E7D7A0 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA2997BC22BAD3FEBFC9CD3680A392A /* SocketAckManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckManager.swift; path = Source/SocketIO/Ack/SocketAckManager.swift; sourceTree = "<group>"; };
-		2D4E6B3E5597E8C34540E2777D080B69 /* Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		2D875FFF95BD4242BA7A5EFF2DCA93B4 /* ResourceBundle-CustomerlySDK-CustomerlySDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CustomerlySDK-CustomerlySDK-Info.plist"; sourceTree = "<group>"; };
 		2DBE7533A61C0F63982F862EE7CDFEC1 /* ImageDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProvider.swift; path = Sources/General/ImageSource/ImageDataProvider.swift; sourceTree = "<group>"; };
-		301CA7CD16FB773D4A3BBD60041AF8A1 /* Pods-UrbanLifePlusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp.release.xcconfig"; sourceTree = "<group>"; };
-		302D77DFF66555F3CB13639675C23ADA /* Pods-UrbanLifePlusApp WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UrbanLifePlusApp WatchKit Extension.modulemap"; sourceTree = "<group>"; };
 		3059A288EDB7DA05EBA65352E5B98CE9 /* CyAccountModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyAccountModel.swift; path = CustomerlySDK/Library/Models/CyAccountModel.swift; sourceTree = "<group>"; };
 		30B83A47FE8522C744258DD0232EE1D1 /* CySurveyPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySurveyPickerViewController.swift; path = "CustomerlySDK/Library/View Controllers/CySurveyPickerViewController.swift"; sourceTree = "<group>"; };
+		317684C31ACD93A5427E95382D4BB5C9 /* Pods-UrbanLifePlusApp WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		32CCF318D65208F617EDF0AED18457C6 /* Pods-UrbanLifePlusApp WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UrbanLifePlusApp WatchKit Extension.modulemap"; sourceTree = "<group>"; };
 		3376EB5654D454AC63DD77B51D30DFA2 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Source/SocketIO/Util/SSLSecurity.swift; sourceTree = "<group>"; };
 		34315FAF53A3A71239FD7E9AEC2CA5B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		345987447B96EF41C91743C7A3365B87 /* Banner.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = Banner.xib; path = CustomerlySDK/Library/UI/Banner.xib; sourceTree = "<group>"; };
-		347939E5E687FE45C1ACE184AFC394AC /* Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3502595461974C4FDAD5E5A82C8B47BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		358D8CF6D49E8CFDF27180DEC9897EE8 /* Kingfisher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.release.xcconfig; sourceTree = "<group>"; };
 		36642B353DB913A2F2722ACF324D21DA /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Image/Filter.swift; sourceTree = "<group>"; };
 		3B42A8BE6C1C06EFB8F389FECDC144DC /* SocketAckEmitter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckEmitter.swift; path = Source/SocketIO/Ack/SocketAckEmitter.swift; sourceTree = "<group>"; };
+		3BB26EA79296AD9FDADD83C52200CAA3 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots.release.xcconfig"; sourceTree = "<group>"; };
 		3D01688D2C1642D1E5EECCF7359168C7 /* SocketAnyEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAnyEvent.swift; path = Source/SocketIO/Client/SocketAnyEvent.swift; sourceTree = "<group>"; };
 		3D129A8F6E5E741CA43BA175D4516C34 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/Starscream/WebSocket.swift; sourceTree = "<group>"; };
 		3D2C7592F5450533B1C45758A4C1D4AA /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EEAE13FF6849CEF28677F68A91965D9 /* CyButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyButton.swift; path = CustomerlySDK/Library/Subclasses/CyButton.swift; sourceTree = "<group>"; };
 		40856FA26BC5E2D51F6BDF19E6D0042A /* ImageDrawing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDrawing.swift; path = Sources/Image/ImageDrawing.swift; sourceTree = "<group>"; };
 		41907C4DC52F702C4F01AABBE2598CAB /* Instabug-Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Instabug-Swift.h"; path = "Instabug.framework/Headers/Instabug-Swift.h"; sourceTree = "<group>"; };
+		41C3BB72058DE5F5E3C00C6BE84FF052 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots-umbrella.h"; sourceTree = "<group>"; };
 		426FD33026F1E97A454401B82BF0BB81 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CustomerlySDK/Library/Assets.xcassets; sourceTree = "<group>"; };
-		4285C41DCFB3152A5B36554DBDD9BC3B /* Pods-UrbanLifePlusApp WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp WatchKit App-Info.plist"; sourceTree = "<group>"; };
 		44063736827217814AD2814357D1B48E /* CustomerlyNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomerlyNavigationController.swift; path = "CustomerlySDK/Library/View Controllers/CustomerlyNavigationController.swift"; sourceTree = "<group>"; };
 		449DD949ADF4FD785ECFD5274984BAD2 /* ObjectMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-prefix.pch"; sourceTree = "<group>"; };
 		45620CEFE5DCF5696C552464BA603A4B /* SocketTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketTypes.swift; path = Source/SocketIO/Util/SocketTypes.swift; sourceTree = "<group>"; };
 		45C9A65F396B03257E2B5AF99AC226E6 /* SocketIOStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOStatus.swift; path = Source/SocketIO/Client/SocketIOStatus.swift; sourceTree = "<group>"; };
 		4718DE8DF893EEB98E506B93E729B373 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		48143B5CA0B1122A90F07DD3A3A0DF60 /* Pods-UrbanLifePlusApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		4824CC947DEAC938B319EC5940704AB0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		4B80EBB6CA3A87856C9D9DF0556D5826 /* IntegerOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegerOperators.swift; path = Sources/IntegerOperators.swift; sourceTree = "<group>"; };
+		4BA45A8DA312AAE07544B66B8160E91A /* Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		4C2465E0D949709B67591419AFCC5583 /* Kingfisher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kingfisher-Info.plist"; sourceTree = "<group>"; };
 		4CF14A0B811AC2D8F7AF60C3B2B68545 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		4DAB8F1239EC58864A23A6676DFF6F2D /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = Sources/TransformType.swift; sourceTree = "<group>"; };
 		4EECE54FE9DE8FCF16FBFBD22ACDD2B7 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = CustomerlySDK/Library/es.lproj; sourceTree = "<group>"; };
 		4F764F9F2C516214B69CA834FBE8345C /* CyMessageSeenRequestModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyMessageSeenRequestModel.swift; path = CustomerlySDK/Library/Models/CyMessageSeenRequestModel.swift; sourceTree = "<group>"; };
 		50C0B0879B7086918A819F704BF40B4B /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketIO.framework; path = "Socket.IO-Client-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51D9B9EDBD2C2F1CE5C29D23730FDF46 /* Pods-UrbanLifePlusApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UrbanLifePlusApp-frameworks.sh"; sourceTree = "<group>"; };
 		522AB34F2C852868FCD184DC02F8CCB1 /* CustomerlyImageGallery.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = CustomerlyImageGallery.storyboard; path = CustomerlySDK/Library/UI/CustomerlyImageGallery.storyboard; sourceTree = "<group>"; };
+		532C3F06BA7E3F9936785734C29B3931 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots-dummy.m"; sourceTree = "<group>"; };
 		5650C8918E52139FDF0F3A7F938B537E /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Sources/Starscream/SSLSecurity.swift; sourceTree = "<group>"; };
 		56FEAD060C9C99870294CD854CC37261 /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/Networking/ImageModifier.swift; sourceTree = "<group>"; };
+		582DEA34AC60E0E75D07D4351613E6D4 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots.modulemap"; sourceTree = "<group>"; };
 		5A76044B18F68C7DC4CF4711BC65FE1D /* CySound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySound.swift; path = CustomerlySDK/Library/Subclasses/CySound.swift; sourceTree = "<group>"; };
 		5BD713FF30DC5C594547C383461B41E0 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/Cache/ImageCache.swift; sourceTree = "<group>"; };
 		5C4397FDDCFC4E0616FBB558E00A122A /* CyRequestPingModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyRequestPingModel.swift; path = CustomerlySDK/Library/Models/CyRequestPingModel.swift; sourceTree = "<group>"; };
-		5D09BF1D9966272740936AE4751658BE /* Pods-UrbanLifePlusApp WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UrbanLifePlusApp WatchKit App-dummy.m"; sourceTree = "<group>"; };
 		5E73D778D0B00CA4BEC85E7E8A76DBA5 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/Operators.swift; sourceTree = "<group>"; };
+		5EE21197A2CBCF769E2DEDDD4936E7E6 /* Pods-UrbanLifePlusApp WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp WatchKit App-Info.plist"; sourceTree = "<group>"; };
+		5F51B07171A44BEC1D6596D809F167CB /* Pods-UrbanLifePlusApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UrbanLifePlusApp-umbrella.h"; sourceTree = "<group>"; };
 		6047AAC19C8F3BB7710AF2575B195182 /* SocketEngineSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineSpec.swift; path = Source/SocketIO/Engine/SocketEngineSpec.swift; sourceTree = "<group>"; };
+		61850E12DF52CD9417A804BCB649C5F0 /* Pods-UrbanLifePlusApp WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UrbanLifePlusApp WatchKit App-dummy.m"; sourceTree = "<group>"; };
 		624278178AA3715E903A163E469FC4A3 /* CyConversationRetrieveResponseModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyConversationRetrieveResponseModel.swift; path = CustomerlySDK/Library/Models/CyConversationRetrieveResponseModel.swift; sourceTree = "<group>"; };
 		62754C8072CB6DABAEA07AC5033D203D /* CyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyView.swift; path = CustomerlySDK/Library/Subclasses/CyView.swift; sourceTree = "<group>"; };
 		62F5B052DF7C5CAB51251241FE4ECA8E /* CyImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyImageView.swift; path = CustomerlySDK/Library/Subclasses/CyImageView.swift; sourceTree = "<group>"; };
+		6301E75D3959E2C50DABB2E74C642EC3 /* Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
 		634E6361571792E5A13AEBA236636C70 /* SocketIOClientConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientConfiguration.swift; path = Source/SocketIO/Client/SocketIOClientConfiguration.swift; sourceTree = "<group>"; };
 		63CF7D053B0BEE23940C452759854D43 /* SocketRawView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketRawView.swift; path = Source/SocketIO/Client/SocketRawView.swift; sourceTree = "<group>"; };
 		655C9A2A56A489B1D662E1BABE2DBD4F /* ImageProgressive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProgressive.swift; path = Sources/Image/ImageProgressive.swift; sourceTree = "<group>"; };
 		6692EA80754D40337EF7610F82EC445F /* SizeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeExtensions.swift; path = Sources/Utility/SizeExtensions.swift; sourceTree = "<group>"; };
-		66E14E133CBFD4CB18480C1AF59C67EE /* Pods-UrbanLifePlusApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp-Info.plist"; sourceTree = "<group>"; };
 		69415120AB091A1F98C2702CF7C6289A /* DataTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransform.swift; path = Sources/DataTransform.swift; sourceTree = "<group>"; };
 		699F8290EDEA3708A3EE774E16A4810F /* CyHeaderDateTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyHeaderDateTableViewCell.swift; path = "CustomerlySDK/Library/View Controllers/Cells/CyHeaderDateTableViewCell.swift"; sourceTree = "<group>"; };
 		6AF1BF5480A59A4AF3FC610346024640 /* ObjectMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.debug.xcconfig; sourceTree = "<group>"; };
@@ -499,10 +490,8 @@
 		6DC067C9583254090B21725633034FD1 /* Source.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Source.swift; path = Sources/General/ImageSource/Source.swift; sourceTree = "<group>"; };
 		6DCF7DCD7B19C5A86CE471AF8FC62656 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Sources/Networking/SessionDelegate.swift; sourceTree = "<group>"; };
 		6EB24967F943C412138F26A8F8EF3CD8 /* CyStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyStackView.swift; path = CustomerlySDK/Library/Subclasses/CyStackView.swift; sourceTree = "<group>"; };
-		6EBE98D417203F80F3C0FCF3657BC36B /* Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		6F550134A46B9F6547E7CCD58976588E /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Utility/Result.swift; sourceTree = "<group>"; };
 		6F5C2D72D80B0B90FE4612CE6037C223 /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
-		6F6BFE6FF0988422459B0805E3210672 /* Pods-UrbanLifePlusAppTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusAppTests-Info.plist"; sourceTree = "<group>"; };
 		70BCBDA54E8C9321CF995918956A0630 /* MapError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapError.swift; path = Sources/MapError.swift; sourceTree = "<group>"; };
 		72287D0CA841CAAF906B2828DD65B5F5 /* IBGCrashReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGCrashReporting.h; path = Instabug.framework/Headers/IBGCrashReporting.h; sourceTree = "<group>"; };
 		7234215687A4177C2AA9505BB3257518 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
@@ -512,39 +501,34 @@
 		730416A96658C16F5EE07A2BB4B7E1B8 /* CySendMessageResponseModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySendMessageResponseModel.swift; path = CustomerlySDK/Library/Models/CySendMessageResponseModel.swift; sourceTree = "<group>"; };
 		739CC6E05F518A3E9D0E801FB35DE750 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/General/Kingfisher.swift; sourceTree = "<group>"; };
 		74B088EBD8775842AF572EFE11DB4B7B /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/Image/ImageProcessor.swift; sourceTree = "<group>"; };
-		755B63F0E9312ACCFAAE0ED5D573D72C /* Pods-UrbanLifePlusApp WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UrbanLifePlusApp WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
 		7693BC78AC3F612462C28F7C1CAB32A4 /* CySurveySliderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySurveySliderViewController.swift; path = "CustomerlySDK/Library/View Controllers/CySurveySliderViewController.swift"; sourceTree = "<group>"; };
 		769F4FA3A06AA403AFBAF1BD3308B0AA /* CyLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyLabel.swift; path = CustomerlySDK/Library/Subclasses/CyLabel.swift; sourceTree = "<group>"; };
 		770D75E19FAF367D530EF0979545A1C2 /* Kingfisher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.debug.xcconfig; sourceTree = "<group>"; };
 		77556F0463C4575A931BA348D4EB4D44 /* IBGLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGLog.h; path = Instabug.framework/Headers/IBGLog.h; sourceTree = "<group>"; };
 		797C071C841271C5922FFE0EEB4649EA /* CyWebsocketModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyWebsocketModel.swift; path = CustomerlySDK/Library/Models/CyWebsocketModel.swift; sourceTree = "<group>"; };
-		79BF5E929647C4E272781CD19AB84DFA /* Pods-UrbanLifePlusApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UrbanLifePlusApp-dummy.m"; sourceTree = "<group>"; };
 		7BD08015AA960963BAE80793A79A8363 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/Extensions/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		7BDA163B2DD395F799D6C6D99D6A67C0 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Kingfisher.swift"; path = "Sources/Extensions/NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		7D58BD7445A475004070E2C48FEF031A /* CyTokenModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyTokenModel.swift; path = CustomerlySDK/Library/Models/CyTokenModel.swift; sourceTree = "<group>"; };
-		7DFF06FA2E874B586DD1515263F4CC54 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7E747314EDD9B244E3FCF5B1B7FCCA43 /* Pods_UrbanLifePlusAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UrbanLifePlusAppTests.framework; path = "Pods-UrbanLifePlusAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC5C1B19E5C393470A26EE1B584F5AB /* Socket.IO-Client-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Socket.IO-Client-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		7F00FDF249B4E3979532E4241E175903 /* Pods-UrbanLifePlusApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp-Info.plist"; sourceTree = "<group>"; };
 		7F1E27A5C352BF8BF7C6182A01853A02 /* InstabugStatic-Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "InstabugStatic-Swift.h"; path = "Instabug.framework/Headers/InstabugStatic-Swift.h"; sourceTree = "<group>"; };
 		7F9E9529F7665D61571CB7B197753A3B /* CyConversationModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyConversationModel.swift; path = CustomerlySDK/Library/Models/CyConversationModel.swift; sourceTree = "<group>"; };
+		842755E5B8C71F3658CAB97A27BAA108 /* Pods-UrbanLifePlusApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UrbanLifePlusApp-frameworks.sh"; sourceTree = "<group>"; };
 		844519EE4651D73601D9408491F203D1 /* CustomerlySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomerlySDK-umbrella.h"; sourceTree = "<group>"; };
 		848E2177C7158C078273418EB5944F82 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = CustomerlySDK/Library/Base.lproj; sourceTree = "<group>"; };
 		84DFDDB1266DCD119F20E9F00F6B1F27 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Utility/Box.swift; sourceTree = "<group>"; };
 		8556ABB732A9AD99BAD189FCCB743991 /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FB37033D5B1B7473F3393F60C7F051 /* SocketPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketPacket.swift; path = Source/SocketIO/Parse/SocketPacket.swift; sourceTree = "<group>"; };
-		875B9F47EE8E6334446632C455C704B3 /* Pods-UrbanLifePlusAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UrbanLifePlusAppTests.modulemap"; sourceTree = "<group>"; };
 		8771E161E2DE22A499D3CE82F5189692 /* CyDeviceModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyDeviceModel.swift; path = CustomerlySDK/Library/Models/CyDeviceModel.swift; sourceTree = "<group>"; };
+		87900A645BC7DC258CB9136D9F7598C2 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots-acknowledgements.markdown"; sourceTree = "<group>"; };
 		87A2E21D674F1FDF172B3345378046E5 /* MessageCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = MessageCell.xib; path = CustomerlySDK/Library/UI/MessageCell.xib; sourceTree = "<group>"; };
 		87C616A8B902302D95865DCB924C1D37 /* ImmutableMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmutableMappable.swift; path = Sources/ImmutableMappable.swift; sourceTree = "<group>"; };
 		87CD8AA00A62A0493CAD1F6787AB64CE /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/General/KingfisherManager.swift; sourceTree = "<group>"; };
-		8820B9ADE1422F3718CD6B4CCAF26F14 /* Pods-UrbanLifePlusApp WatchKit Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp WatchKit Extension-Info.plist"; sourceTree = "<group>"; };
 		88CC096A130D03778EC8D208E44458CC /* CyConversationTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyConversationTableViewCell.swift; path = "CustomerlySDK/Library/View Controllers/Cells/CyConversationTableViewCell.swift"; sourceTree = "<group>"; };
 		891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E9F102AF834985E891F5A0A38A3469 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
 		8A6CF0644757C84C0A69985DEB0F805C /* SocketStringReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketStringReader.swift; path = Source/SocketIO/Util/SocketStringReader.swift; sourceTree = "<group>"; };
 		8B12F3CCE38012234FBB9965DCF4B7FD /* CySurveyResponseModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySurveyResponseModel.swift; path = CustomerlySDK/Library/Models/CySurveyResponseModel.swift; sourceTree = "<group>"; };
-		8B2F7453425A86299581552D53B8C767 /* Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests.framework; path = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BB8E2714C9FCDE9D366F3EA139F5953 /* Pods-UrbanLifePlusAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UrbanLifePlusAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8DDA4613A9358078AB7DECBBBBC297BF /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/Extensions/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		8EDA2CEE41DA1B8CA35177156D158D86 /* CustomerlySDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CustomerlySDK.bundle; path = "CustomerlySDK-CustomerlySDK.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F06877724061D4BB189E82738270378 /* CodableTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableTransform.swift; path = Sources/CodableTransform.swift; sourceTree = "<group>"; };
@@ -564,12 +548,12 @@
 		96FCAEBAFBD278112CD58A8453F961D4 /* CustomerlyGalleryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomerlyGalleryViewController.swift; path = "CustomerlySDK/Library/View Controllers/CustomerlyGalleryViewController.swift"; sourceTree = "<group>"; };
 		971B21F6262927E92A44B0B65C5FE8C0 /* CyVersioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyVersioning.swift; path = CustomerlySDK/Library/CyVersioning.swift; sourceTree = "<group>"; };
 		98E47137637ACA97069A72B7EF3F12A4 /* SocketLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketLogger.swift; path = Source/SocketIO/Util/SocketLogger.swift; sourceTree = "<group>"; };
+		993436B3C288FCFD927659D1BBCED84F /* Pods-UrbanLifePlusApp-AutomatedSnapshots-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots-frameworks.sh"; sourceTree = "<group>"; };
 		9A75183666FE2183397D8E94ACF19AED /* ImageFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFormat.swift; path = Sources/Image/ImageFormat.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A19BA78C6D3C9911C63E6FD984ACCB97 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.modulemap"; sourceTree = "<group>"; };
-		A25A904ECBF6359BB658EB94F2AEFED0 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-frameworks.sh"; sourceTree = "<group>"; };
+		9DBE24A459CACE1093C59EFD5E929128 /* Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		A2CAC4C67C282F849BEB66C5074ED2A9 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Sources/Networking/RedirectHandler.swift; sourceTree = "<group>"; };
-		A4962C36F18FC45B90A69B4A90B9C4BC /* Pods-UrbanLifePlusAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A2D3B06B5DF171E7653AB32373A4C6FF /* Pods_UrbanLifePlusApp_AutomatedSnapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UrbanLifePlusApp_AutomatedSnapshots.framework; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A582CC5711FCCCDEF1A131420D5ACA48 /* ObjectMapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.release.xcconfig; sourceTree = "<group>"; };
 		A60B7DBBFCFBCC81304298C0921C9DBC /* SocketManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketManager.swift; path = Source/SocketIO/Manager/SocketManager.swift; sourceTree = "<group>"; };
 		A7674693A14BF2473B243FC90A7D4937 /* SSLClientCertificate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLClientCertificate.swift; path = Sources/Starscream/SSLClientCertificate.swift; sourceTree = "<group>"; };
@@ -590,24 +574,25 @@
 		B6258511FA32F5E829206505B6A703CC /* CySettingsModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySettingsModel.swift; path = CustomerlySDK/Library/Models/CySettingsModel.swift; sourceTree = "<group>"; };
 		B650BF0D34AB7E27108569219A49A14D /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/General/Deprecated.swift; sourceTree = "<group>"; };
 		B70C70281263DAD86F47B8EFD272DA27 /* CustomerlySDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomerlySDK.release.xcconfig; sourceTree = "<group>"; };
+		B761212D6A5113980C324FDBB6B622AC /* Pods-UrbanLifePlusApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UrbanLifePlusApp.modulemap"; sourceTree = "<group>"; };
 		B7AF5889AFAE27EBC89E7066D037338B /* CustomerlySDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomerlySDK-prefix.pch"; sourceTree = "<group>"; };
 		B82583233E750C66F61BD51D470A6D90 /* MessageWithImageCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = MessageWithImageCell.xib; path = CustomerlySDK/Library/UI/MessageWithImageCell.xib; sourceTree = "<group>"; };
+		B8268F158966D2DDB6D0DC11D43F2DE6 /* Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		B871AA8B9A46D29F4371109E1B33E62E /* CustomerlySDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomerlySDK.debug.xcconfig; sourceTree = "<group>"; };
 		B87412080619577F1993CAB51751F3EB /* CySingleActiveAdminCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySingleActiveAdminCollectionViewCell.swift; path = "CustomerlySDK/Library/View Controllers/Cells/CySingleActiveAdminCollectionViewCell.swift"; sourceTree = "<group>"; };
 		B8A3411BDFB5C446F08D28A6E3CF1307 /* CyTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyTextView.swift; path = CustomerlySDK/Library/Subclasses/CyTextView.swift; sourceTree = "<group>"; };
 		B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjectMapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B973FA0C6CA6BE00A4B56632896F797C /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Sources/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
 		B9C32D04554B3511FA822AE212340B40 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/General/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
-		B9D6BB4100CC85A20623770E380EB130 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-Info.plist"; sourceTree = "<group>"; };
-		BAEE5A2A7BAB1C403766538D07BB3B56 /* Pods-UrbanLifePlusApp WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UrbanLifePlusApp WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BC140FB7929EAFC5859D07A3FF4119A1 /* Pods-UrbanLifePlusAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB1DCA0C2D6BE6E305E140B8EFF44553 /* Pods-UrbanLifePlusApp WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		BD4D904014074D7D6D5F4CF08D0A4644 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
 		BDC69A11B4722910FBD4AD7F1AD81443 /* CustomerlySDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CustomerlySDK-dummy.m"; sourceTree = "<group>"; };
-		BE4482FF7E0370EB60208376D05C7D9B /* Pods-UrbanLifePlusAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UrbanLifePlusAppTests-dummy.m"; sourceTree = "<group>"; };
+		BF8630982DB20EB969063CA0274A5FE9 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots-Info.plist"; sourceTree = "<group>"; };
 		C056758ADE11D771739C9EC1A84E1621 /* CyColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyColor.swift; path = CustomerlySDK/Library/Subclasses/CyColor.swift; sourceTree = "<group>"; };
 		C143908525D6E7C7ECF251B2B75BD086 /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloaderDelegate.swift; path = Sources/Networking/ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
 		C296E8459B9DCBC7E5341F0C2853A749 /* URLTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLTransform.swift; path = Sources/URLTransform.swift; sourceTree = "<group>"; };
 		C3154EB2CD3D61BD4A8597FDD24809DE /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = Sources/TransformOf.swift; sourceTree = "<group>"; };
+		C35502EB33D39925DECABFDF7CD61170 /* Pods-UrbanLifePlusApp WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UrbanLifePlusApp WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41D7BC19D3764E41F2AE31FF0E8FD89 /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Starscream/Compression.swift; sourceTree = "<group>"; };
 		C49B52E8820AC008521E10592A96D8ED /* CustomerlyConversationListVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomerlyConversationListVC.swift; path = "CustomerlySDK/Library/View Controllers/CustomerlyConversationListVC.swift"; sourceTree = "<group>"; };
@@ -615,13 +600,12 @@
 		C5A55892E18CC64AC424F73A681EBCC0 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = Sources/DateFormatterTransform.swift; sourceTree = "<group>"; };
 		C6CDAA77A8CB9FD128D1A3EF418811CE /* SocketEngineClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineClient.swift; path = Source/SocketIO/Engine/SocketEngineClient.swift; sourceTree = "<group>"; };
 		C7BE9DC609101B59C7902285FB1A5910 /* CyConversationRequestModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyConversationRequestModel.swift; path = CustomerlySDK/Library/Models/CyConversationRequestModel.swift; sourceTree = "<group>"; };
-		C819CB766C379A742A14AC95F3EEE6EA /* Pods-UrbanLifePlusApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UrbanLifePlusApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C9A32E2651AD1E8FF75EFD5D973AE460 /* Pods-UrbanLifePlusApp WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
 		C9BDB4E0C89F7E98BDC0B4E4E3A3635E /* FromJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FromJSON.swift; path = Sources/FromJSON.swift; sourceTree = "<group>"; };
 		CCA268803694C2698E6A809F8543E109 /* Instabug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Instabug.h; path = Instabug.framework/Headers/Instabug.h; sourceTree = "<group>"; };
 		CCC5DB858FB3D4B6E261DB700658B543 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		CD866D34FAB43BA20085EF59C7362D5C /* NSDecimalNumberTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberTransform.swift; path = Sources/NSDecimalNumberTransform.swift; sourceTree = "<group>"; };
 		CD9F1F59A7D5D53DB67708D917C690C4 /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Image/Placeholder.swift; sourceTree = "<group>"; };
+		CE2B6E21D90B25E68426B7ACE8D4ECC6 /* Pods-UrbanLifePlusApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UrbanLifePlusApp-dummy.m"; sourceTree = "<group>"; };
 		CE3B6B3258706171B7F4063C9963BCD3 /* CyTrackingRequestModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyTrackingRequestModel.swift; path = CustomerlySDK/Library/Models/CyTrackingRequestModel.swift; sourceTree = "<group>"; };
 		CF190B538F40D39185F48EA91FF5DAEF /* CyDataModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyDataModel.swift; path = CustomerlySDK/Library/Models/CyDataModel.swift; sourceTree = "<group>"; };
 		CF1EC3AA054B4ABD0961B128A4FA3D2E /* SocketExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketExtensions.swift; path = Source/SocketIO/Util/SocketExtensions.swift; sourceTree = "<group>"; };
@@ -637,18 +621,16 @@
 		D51D907EC97D66A0FAE675BCCC8B65F8 /* notification.m4r */ = {isa = PBXFileReference; includeInIndex = 1; name = notification.m4r; path = CustomerlySDK/Library/notification.m4r; sourceTree = "<group>"; };
 		D5F070BD992D35F1D2589353B91D613D /* Instabug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Instabug.release.xcconfig; sourceTree = "<group>"; };
 		D5FCF42547AFB8123D5DEF099CFA35D6 /* EnumTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumTransform.swift; path = Sources/EnumTransform.swift; sourceTree = "<group>"; };
-		D666251384459AEE2E4792BB8DCD522F /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D69582462717B1F2B54A8F5ED6DA7378 /* CyMessageTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyMessageTableViewCell.swift; path = "CustomerlySDK/Library/View Controllers/Cells/CyMessageTableViewCell.swift"; sourceTree = "<group>"; };
-		D6AA4FB67BEAC66E5AD760F4C71ECA65 /* Pods-UrbanLifePlusApp WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UrbanLifePlusApp WatchKit App.modulemap"; sourceTree = "<group>"; };
-		D6E1CC2D1FBC76CF5AD45C62907B5304 /* Pods-UrbanLifePlusAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UrbanLifePlusAppTests-umbrella.h"; sourceTree = "<group>"; };
 		D7438ED913A2F25AA12126FC9779E502 /* Starscream-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Starscream-Info.plist"; sourceTree = "<group>"; };
-		D955F659C1E46D6B6B3A07D29386559E /* Pods-UrbanLifePlusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp.debug.xcconfig"; sourceTree = "<group>"; };
-		D9930D0C8C42D982B1086064C48ED481 /* Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		D900C3E195BA7D5B1C5C890C4EC763DF /* Pods-UrbanLifePlusApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		DAF78EAEF0C668ED014EA85B02E0A635 /* TransformOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOperators.swift; path = Sources/TransformOperators.swift; sourceTree = "<group>"; };
+		DB7BBC353DDB4BFDCDCE5E604BE75A9E /* Pods-UrbanLifePlusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp.release.xcconfig"; sourceTree = "<group>"; };
 		DC5134899DEA976AAF4CD13F111FD40A /* CySocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySocket.swift; path = CustomerlySDK/Library/CySocket.swift; sourceTree = "<group>"; };
 		DCDADE40431C77E61B4FB9B29B78BE7C /* CySurveyListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySurveyListViewController.swift; path = "CustomerlySDK/Library/View Controllers/CySurveyListViewController.swift"; sourceTree = "<group>"; };
 		DD600E0CC50A26AB6BF08F4D7B6D60EE /* CyCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyCollectionView.swift; path = CustomerlySDK/Library/Subclasses/CyCollectionView.swift; sourceTree = "<group>"; };
 		DD83BA34F6AF641496E551E1E5B71ECD /* CyAppConfigModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyAppConfigModel.swift; path = CustomerlySDK/Library/Models/CyAppConfigModel.swift; sourceTree = "<group>"; };
+		DE033A069FDA60F7F9CC855927C7C932 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots-acknowledgements.plist"; sourceTree = "<group>"; };
 		DE2A31AD0AF3FAFC5BBA82A846C45870 /* CySeenMessageSocketModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySeenMessageSocketModel.swift; path = CustomerlySDK/Library/Models/CySeenMessageSocketModel.swift; sourceTree = "<group>"; };
 		DEFE7A87512E357778B5CEB78E604FB0 /* ObjectMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ObjectMapper.modulemap; sourceTree = "<group>"; };
 		DF4DE09EEBE17D72CC97B542B73953CF /* Socket.IO-Client-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-umbrella.h"; sourceTree = "<group>"; };
@@ -657,18 +639,17 @@
 		E1A98616EB5DCA7B0B314AB01D8BA240 /* Pods_UrbanLifePlusApp_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UrbanLifePlusApp_WatchKit_App.framework; path = "Pods-UrbanLifePlusApp WatchKit App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20EAA28EAA6B34025FDE76912E6DFAE /* CyAppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyAppModel.swift; path = CustomerlySDK/Library/Models/CyAppModel.swift; sourceTree = "<group>"; };
 		E22975DF7E2FD97F9CCF554B271F137E /* CyMessageSocketModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyMessageSocketModel.swift; path = CustomerlySDK/Library/Models/CyMessageSocketModel.swift; sourceTree = "<group>"; };
-		E2812B8074721FEE83C4BF8A70CF03E5 /* Pods-UrbanLifePlusApp WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		E2C593A9C7EC06CCACE00A75E4436FB0 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image/Image.swift; sourceTree = "<group>"; };
+		E2EE39214CB2C05361334DA8D9C26A7E /* Pods-UrbanLifePlusApp WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UrbanLifePlusApp WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
 		E37DC5BD30E0E60D17A8DFC36339B879 /* CyActiveAdminsTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyActiveAdminsTableViewCell.swift; path = "CustomerlySDK/Library/View Controllers/Cells/CyActiveAdminsTableViewCell.swift"; sourceTree = "<group>"; };
 		E4CD73EE85FEF1C004B5CCF32DCE7575 /* ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToJSON.swift; path = Sources/ToJSON.swift; sourceTree = "<group>"; };
-		E54F191DBB8061F8E1E3A0FD6A213EE6 /* Pods-UrbanLifePlusApp WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UrbanLifePlusApp WatchKit App-umbrella.h"; sourceTree = "<group>"; };
 		E853246793A9E06BB4243C01A9BD1A3A /* ObjectMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-umbrella.h"; sourceTree = "<group>"; };
 		E8F06488379C7C8BC6EDA1229134D200 /* DictionaryTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryTransform.swift; path = Sources/DictionaryTransform.swift; sourceTree = "<group>"; };
+		EABD0BF757F57AD7413AB09D4D2400E5 /* Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		EC4C6DC0E065B6390D64A71C01F04366 /* InstabugCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InstabugCore.h; path = Instabug.framework/Headers/InstabugCore.h; sourceTree = "<group>"; };
 		EC6EC0FA02D6C28E49B7F28E5C126737 /* IBGSurveys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGSurveys.h; path = Instabug.framework/Headers/IBGSurveys.h; sourceTree = "<group>"; };
 		EC8DABD6C94BBD4B4221155CE695C679 /* EnumOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumOperators.swift; path = Sources/EnumOperators.swift; sourceTree = "<group>"; };
 		EE6E4749A342FD886EAFE16E0EA1ACAA /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Cache/Storage.swift; sourceTree = "<group>"; };
-		EFD6D30B5ECCA362DB87D170C928A3EC /* Pods-UrbanLifePlusAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		F0CF59BDB2E8363E05F1ACE569D0DC93 /* Starscream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.release.xcconfig; sourceTree = "<group>"; };
 		F0D79FF0D18C5F0AF6C7E268A4BCCCB1 /* Instabug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Instabug.debug.xcconfig; sourceTree = "<group>"; };
 		F375E59FC8123E65D461BA0E63A6596C /* Starscream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.debug.xcconfig; sourceTree = "<group>"; };
@@ -682,7 +663,7 @@
 		FA53D91ADE02725156A08A9425A786F0 /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Starscream.modulemap; sourceTree = "<group>"; };
 		FB40B06A907EA8A401000B38C63A9390 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/Networking/ImageDownloader.swift; sourceTree = "<group>"; };
 		FBA60224DD41121E6605B5751FFF726A /* Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = Sources/Mappable.swift; sourceTree = "<group>"; };
-		FC65E855D26C8C16D71F7E186B42A464 /* Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
+		FD33DC8C03BF9856A6FD79B827A0EA92 /* Pods-UrbanLifePlusApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UrbanLifePlusApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FD4E23A326C739A483C254C7A0DF36BE /* CySurveyParamsRequestModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySurveyParamsRequestModel.swift; path = CustomerlySDK/Library/Models/CySurveyParamsRequestModel.swift; sourceTree = "<group>"; };
 		FDF48E8C92B5E789FCD6A406E8F29D18 /* CyRouting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyRouting.swift; path = CustomerlySDK/Library/CyRouting.swift; sourceTree = "<group>"; };
 		FF52AD2018FC59FF7A23B6F6AA320CA5 /* CyInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyInt.swift; path = CustomerlySDK/Library/Subclasses/CyInt.swift; sourceTree = "<group>"; };
@@ -690,14 +671,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0CDE46E6EA0AEF4BBE8919032A05D0E8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7AD1951968A61939CB47FE785B5B01D4 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		10791E0CCD3EC060777D9B49093F8F5D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -746,11 +719,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0C201136A813463552712FFE2D7B2C9 /* Frameworks */ = {
+		696302E7A264FF3DCBA8A0F498C55239 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D21543FCD74788645C351C7EBE58A35 /* Foundation.framework in Frameworks */,
+				049DA4BDA906EA244A301B548552A002 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,20 +845,21 @@
 			path = CustomerlySDK;
 			sourceTree = "<group>";
 		};
-		165B24ACC5F4C495A5DBAFC49D45536E /* Pods-UrbanLifePlusApp WatchKit App */ = {
+		0CB7FD053639B5A3BAFE417A0B06CFED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6AA4FB67BEAC66E5AD760F4C71ECA65 /* Pods-UrbanLifePlusApp WatchKit App.modulemap */,
-				BAEE5A2A7BAB1C403766538D07BB3B56 /* Pods-UrbanLifePlusApp WatchKit App-acknowledgements.markdown */,
-				C9A32E2651AD1E8FF75EFD5D973AE460 /* Pods-UrbanLifePlusApp WatchKit App-acknowledgements.plist */,
-				5D09BF1D9966272740936AE4751658BE /* Pods-UrbanLifePlusApp WatchKit App-dummy.m */,
-				4285C41DCFB3152A5B36554DBDD9BC3B /* Pods-UrbanLifePlusApp WatchKit App-Info.plist */,
-				E54F191DBB8061F8E1E3A0FD6A213EE6 /* Pods-UrbanLifePlusApp WatchKit App-umbrella.h */,
-				2D4E6B3E5597E8C34540E2777D080B69 /* Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig */,
-				E2812B8074721FEE83C4BF8A70CF03E5 /* Pods-UrbanLifePlusApp WatchKit App.release.xcconfig */,
+				8EDA2CEE41DA1B8CA35177156D158D86 /* CustomerlySDK.bundle */,
+				D1FF15B1D02A006DAFC54BE99DD84BBA /* CustomerlySDK.framework */,
+				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
+				B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */,
+				D440A04BD01A0F48B7278C9B986A74CB /* Pods_UrbanLifePlusApp.framework */,
+				A2D3B06B5DF171E7653AB32373A4C6FF /* Pods_UrbanLifePlusApp_AutomatedSnapshots.framework */,
+				E1A98616EB5DCA7B0B314AB01D8BA240 /* Pods_UrbanLifePlusApp_WatchKit_App.framework */,
+				F3AF6A96B440CFBA4A680658FF842CEF /* Pods_UrbanLifePlusApp_WatchKit_Extension.framework */,
+				50C0B0879B7086918A819F704BF40B4B /* SocketIO.framework */,
+				891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */,
 			);
-			name = "Pods-UrbanLifePlusApp WatchKit App";
-			path = "Target Support Files/Pods-UrbanLifePlusApp WatchKit App";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		17B16C0A543E76D8A86FBB2693D78265 /* Support Files */ = {
@@ -896,22 +870,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Instabug";
-			sourceTree = "<group>";
-		};
-		1E0E9DC1ED1A269DA8B1A30B109C4DFD /* Pods-UrbanLifePlusApp WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				302D77DFF66555F3CB13639675C23ADA /* Pods-UrbanLifePlusApp WatchKit Extension.modulemap */,
-				347939E5E687FE45C1ACE184AFC394AC /* Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.markdown */,
-				D9930D0C8C42D982B1086064C48ED481 /* Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.plist */,
-				755B63F0E9312ACCFAAE0ED5D573D72C /* Pods-UrbanLifePlusApp WatchKit Extension-dummy.m */,
-				8820B9ADE1422F3718CD6B4CCAF26F14 /* Pods-UrbanLifePlusApp WatchKit Extension-Info.plist */,
-				FC65E855D26C8C16D71F7E186B42A464 /* Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h */,
-				6EBE98D417203F80F3C0FCF3657BC36B /* Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig */,
-				1404145AFF93ABDBD5BC798C25ED1F44 /* Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig */,
-			);
-			name = "Pods-UrbanLifePlusApp WatchKit Extension";
-			path = "Target Support Files/Pods-UrbanLifePlusApp WatchKit Extension";
 			sourceTree = "<group>";
 		};
 		26308C38F79CA3B55578244EA4554522 /* Support Files */ = {
@@ -1033,6 +991,23 @@
 			path = Instabug;
 			sourceTree = "<group>";
 		};
+		3D0B3D8E4E98F15CB775F391C2F5DB05 /* Pods-UrbanLifePlusApp-AutomatedSnapshots */ = {
+			isa = PBXGroup;
+			children = (
+				582DEA34AC60E0E75D07D4351613E6D4 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.modulemap */,
+				87900A645BC7DC258CB9136D9F7598C2 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-acknowledgements.markdown */,
+				DE033A069FDA60F7F9CC855927C7C932 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-acknowledgements.plist */,
+				532C3F06BA7E3F9936785734C29B3931 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-dummy.m */,
+				993436B3C288FCFD927659D1BBCED84F /* Pods-UrbanLifePlusApp-AutomatedSnapshots-frameworks.sh */,
+				BF8630982DB20EB969063CA0274A5FE9 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-Info.plist */,
+				41C3BB72058DE5F5E3C00C6BE84FF052 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-umbrella.h */,
+				0ECF38B170CE0CED30CEC3BA8EADB3A4 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.debug.xcconfig */,
+				3BB26EA79296AD9FDADD83C52200CAA3 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.release.xcconfig */,
+			);
+			name = "Pods-UrbanLifePlusApp-AutomatedSnapshots";
+			path = "Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots";
+			sourceTree = "<group>";
+		};
 		3DBEDD7D2343758E868473F86805B2B0 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1045,34 +1020,45 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		42B1C58405620BA6CB2CB8B917CB9701 /* Pods-UrbanLifePlusAppTests */ = {
+		531EFB657EFC3EEA3FED6AF16B35B200 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				875B9F47EE8E6334446632C455C704B3 /* Pods-UrbanLifePlusAppTests.modulemap */,
-				8BB8E2714C9FCDE9D366F3EA139F5953 /* Pods-UrbanLifePlusAppTests-acknowledgements.markdown */,
-				A4962C36F18FC45B90A69B4A90B9C4BC /* Pods-UrbanLifePlusAppTests-acknowledgements.plist */,
-				BE4482FF7E0370EB60208376D05C7D9B /* Pods-UrbanLifePlusAppTests-dummy.m */,
-				6F6BFE6FF0988422459B0805E3210672 /* Pods-UrbanLifePlusAppTests-Info.plist */,
-				D6E1CC2D1FBC76CF5AD45C62907B5304 /* Pods-UrbanLifePlusAppTests-umbrella.h */,
-				BC140FB7929EAFC5859D07A3FF4119A1 /* Pods-UrbanLifePlusAppTests.debug.xcconfig */,
-				EFD6D30B5ECCA362DB87D170C928A3EC /* Pods-UrbanLifePlusAppTests.release.xcconfig */,
+				67A97FC725500109E6E952B06563FF46 /* Pods-UrbanLifePlusApp */,
+				5C0B9A77058F19BC9B85A72BCAC52F51 /* Pods-UrbanLifePlusApp WatchKit App */,
+				A74E1067D0C91FCEEDEA5EA924728F63 /* Pods-UrbanLifePlusApp WatchKit Extension */,
+				3D0B3D8E4E98F15CB775F391C2F5DB05 /* Pods-UrbanLifePlusApp-AutomatedSnapshots */,
 			);
-			name = "Pods-UrbanLifePlusAppTests";
-			path = "Target Support Files/Pods-UrbanLifePlusAppTests";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		69F46253FFDAF0A18B01BF4683ABB687 /* Pods-UrbanLifePlusApp */ = {
+		5C0B9A77058F19BC9B85A72BCAC52F51 /* Pods-UrbanLifePlusApp WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				1831476ABD7EBC2CC67734CF796ED2C7 /* Pods-UrbanLifePlusApp.modulemap */,
-				C819CB766C379A742A14AC95F3EEE6EA /* Pods-UrbanLifePlusApp-acknowledgements.markdown */,
-				48143B5CA0B1122A90F07DD3A3A0DF60 /* Pods-UrbanLifePlusApp-acknowledgements.plist */,
-				79BF5E929647C4E272781CD19AB84DFA /* Pods-UrbanLifePlusApp-dummy.m */,
-				51D9B9EDBD2C2F1CE5C29D23730FDF46 /* Pods-UrbanLifePlusApp-frameworks.sh */,
-				66E14E133CBFD4CB18480C1AF59C67EE /* Pods-UrbanLifePlusApp-Info.plist */,
-				00801771443DB6BB9584392A0A2F8ABA /* Pods-UrbanLifePlusApp-umbrella.h */,
-				D955F659C1E46D6B6B3A07D29386559E /* Pods-UrbanLifePlusApp.debug.xcconfig */,
-				301CA7CD16FB773D4A3BBD60041AF8A1 /* Pods-UrbanLifePlusApp.release.xcconfig */,
+				1498D791F0331901D514BA0319B4345D /* Pods-UrbanLifePlusApp WatchKit App.modulemap */,
+				C35502EB33D39925DECABFDF7CD61170 /* Pods-UrbanLifePlusApp WatchKit App-acknowledgements.markdown */,
+				317684C31ACD93A5427E95382D4BB5C9 /* Pods-UrbanLifePlusApp WatchKit App-acknowledgements.plist */,
+				61850E12DF52CD9417A804BCB649C5F0 /* Pods-UrbanLifePlusApp WatchKit App-dummy.m */,
+				5EE21197A2CBCF769E2DEDDD4936E7E6 /* Pods-UrbanLifePlusApp WatchKit App-Info.plist */,
+				05F9E39260B6844E48C3CC6E057F983E /* Pods-UrbanLifePlusApp WatchKit App-umbrella.h */,
+				B8268F158966D2DDB6D0DC11D43F2DE6 /* Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig */,
+				BB1DCA0C2D6BE6E305E140B8EFF44553 /* Pods-UrbanLifePlusApp WatchKit App.release.xcconfig */,
+			);
+			name = "Pods-UrbanLifePlusApp WatchKit App";
+			path = "Target Support Files/Pods-UrbanLifePlusApp WatchKit App";
+			sourceTree = "<group>";
+		};
+		67A97FC725500109E6E952B06563FF46 /* Pods-UrbanLifePlusApp */ = {
+			isa = PBXGroup;
+			children = (
+				B761212D6A5113980C324FDBB6B622AC /* Pods-UrbanLifePlusApp.modulemap */,
+				FD33DC8C03BF9856A6FD79B827A0EA92 /* Pods-UrbanLifePlusApp-acknowledgements.markdown */,
+				D900C3E195BA7D5B1C5C890C4EC763DF /* Pods-UrbanLifePlusApp-acknowledgements.plist */,
+				CE2B6E21D90B25E68426B7ACE8D4ECC6 /* Pods-UrbanLifePlusApp-dummy.m */,
+				842755E5B8C71F3658CAB97A27BAA108 /* Pods-UrbanLifePlusApp-frameworks.sh */,
+				7F00FDF249B4E3979532E4241E175903 /* Pods-UrbanLifePlusApp-Info.plist */,
+				5F51B07171A44BEC1D6596D809F167CB /* Pods-UrbanLifePlusApp-umbrella.h */,
+				13F0BC7653167587DB0652DBE541B7DC /* Pods-UrbanLifePlusApp.debug.xcconfig */,
+				DB7BBC353DDB4BFDCDCE5E604BE75A9E /* Pods-UrbanLifePlusApp.release.xcconfig */,
 			);
 			name = "Pods-UrbanLifePlusApp";
 			path = "Target Support Files/Pods-UrbanLifePlusApp";
@@ -1104,36 +1090,6 @@
 			);
 			name = Starscream;
 			path = Starscream;
-			sourceTree = "<group>";
-		};
-		72D6A0F7C6DC4C3B143F3BBC609F98D9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8EDA2CEE41DA1B8CA35177156D158D86 /* CustomerlySDK.bundle */,
-				D1FF15B1D02A006DAFC54BE99DD84BBA /* CustomerlySDK.framework */,
-				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
-				B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */,
-				D440A04BD01A0F48B7278C9B986A74CB /* Pods_UrbanLifePlusApp.framework */,
-				8B2F7453425A86299581552D53B8C767 /* Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests.framework */,
-				E1A98616EB5DCA7B0B314AB01D8BA240 /* Pods_UrbanLifePlusApp_WatchKit_App.framework */,
-				F3AF6A96B440CFBA4A680658FF842CEF /* Pods_UrbanLifePlusApp_WatchKit_Extension.framework */,
-				7E747314EDD9B244E3FCF5B1B7FCCA43 /* Pods_UrbanLifePlusAppTests.framework */,
-				50C0B0879B7086918A819F704BF40B4B /* SocketIO.framework */,
-				891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7CB6FF83122F0A5B4DA18C964FF90995 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				69F46253FFDAF0A18B01BF4683ABB687 /* Pods-UrbanLifePlusApp */,
-				165B24ACC5F4C495A5DBAFC49D45536E /* Pods-UrbanLifePlusApp WatchKit App */,
-				1E0E9DC1ED1A269DA8B1A30B109C4DFD /* Pods-UrbanLifePlusApp WatchKit Extension */,
-				E02F899D55BD13FC7651CBBEA4DA8C4A /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests */,
-				42B1C58405620BA6CB2CB8B917CB9701 /* Pods-UrbanLifePlusAppTests */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		84C443E8CE146B8305BA3CE56BE863FA /* Socket.IO-Client-Swift */ = {
@@ -1206,6 +1162,22 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		A74E1067D0C91FCEEDEA5EA924728F63 /* Pods-UrbanLifePlusApp WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				32CCF318D65208F617EDF0AED18457C6 /* Pods-UrbanLifePlusApp WatchKit Extension.modulemap */,
+				010CA35AE31A93EEFEB208CB5A4B8ECA /* Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.markdown */,
+				EABD0BF757F57AD7413AB09D4D2400E5 /* Pods-UrbanLifePlusApp WatchKit Extension-acknowledgements.plist */,
+				E2EE39214CB2C05361334DA8D9C26A7E /* Pods-UrbanLifePlusApp WatchKit Extension-dummy.m */,
+				284AF4CAE8291353E0375DAA40870F09 /* Pods-UrbanLifePlusApp WatchKit Extension-Info.plist */,
+				6301E75D3959E2C50DABB2E74C642EC3 /* Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h */,
+				9DBE24A459CACE1093C59EFD5E929128 /* Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig */,
+				4BA45A8DA312AAE07544B66B8160E91A /* Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig */,
+			);
+			name = "Pods-UrbanLifePlusApp WatchKit Extension";
+			path = "Target Support Files/Pods-UrbanLifePlusApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
 		B3A8AEDAA8A15E9B0B5167CC9B9F42F9 /* ObjectMapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -1261,8 +1233,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				E3637CC6ECE62167E3692704480B49AC /* Frameworks */,
 				38FA5C97612148A0F24FCDC46F4B5BF3 /* Pods */,
-				72D6A0F7C6DC4C3B143F3BBC609F98D9 /* Products */,
-				7CB6FF83122F0A5B4DA18C964FF90995 /* Targets Support Files */,
+				0CB7FD053639B5A3BAFE417A0B06CFED /* Products */,
+				531EFB657EFC3EEA3FED6AF16B35B200 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1279,23 +1251,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/ObjectMapper";
-			sourceTree = "<group>";
-		};
-		E02F899D55BD13FC7651CBBEA4DA8C4A /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A19BA78C6D3C9911C63E6FD984ACCB97 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.modulemap */,
-				13883B023112745AEC7E0CED1DA36D07 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-acknowledgements.markdown */,
-				7DFF06FA2E874B586DD1515263F4CC54 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-acknowledgements.plist */,
-				078860993B4680B533349B6E351F5747 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-dummy.m */,
-				A25A904ECBF6359BB658EB94F2AEFED0 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-frameworks.sh */,
-				B9D6BB4100CC85A20623770E380EB130 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-Info.plist */,
-				045A437AAE3FFA9BBD459216AC98BC08 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-umbrella.h */,
-				D666251384459AEE2E4792BB8DCD522F /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig */,
-				0D16B806E62D9E3E2783092B4A93336A /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.release.xcconfig */,
-			);
-			name = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests";
-			path = "Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests";
 			sourceTree = "<group>";
 		};
 		E2E7847737A9F19D37E6D81ECB549C42 /* watchOS */ = {
@@ -1330,14 +1285,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0427ABC2577C5BBBE121D11F6C999B09 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				805C2F643457F817169455659F14FCA9 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2574E408C80C9CB5A43D9F03ECC25073 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1367,14 +1314,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F862C087F53F0CD5C2F61917D931AF0D /* Pods-UrbanLifePlusApp WatchKit Extension-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A31FB1A24E50B2080C2B4F7F88A26F8D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B30969DF1B643F1F999B71F78606E10 /* Pods-UrbanLifePlusAppTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1411,33 +1350,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE4C3BFE57D67B1A13026C1E78E7A467 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AB425248610FA8E376C2FE14FB0445 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		10F1B0B7FB302110AEDB9424F1F73F20 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 18E9B3686BEE75C1A52D2738C59ACE8E /* Build configuration list for PBXNativeTarget "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests" */;
-			buildPhases = (
-				0427ABC2577C5BBBE121D11F6C999B09 /* Headers */,
-				121458C2D88E775AFEC57C94C8F2FD35 /* Sources */,
-				0CDE46E6EA0AEF4BBE8919032A05D0E8 /* Frameworks */,
-				9AD42D207BBB69EFCBA9491567328003 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8FE01EEC85DDA91042D02F4F8671A943 /* PBXTargetDependency */,
-				2241D44D38DED67F0A3A80CD9FE47A63 /* PBXTargetDependency */,
-				9D61A1F63EF9C9B172F6D81371AAB266 /* PBXTargetDependency */,
-				DB2F8C7C5F3FC166AF191024E4F2E3FE /* PBXTargetDependency */,
-				603699389F87440409306D5F239B56C4 /* PBXTargetDependency */,
-				DAE2935AD5181F225B66A52C397D45DE /* PBXTargetDependency */,
-			);
-			name = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests";
-			productName = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests";
-			productReference = 8B2F7453425A86299581552D53B8C767 /* Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		162E649F50FEC62B61BDD87D1BD422B4 /* ObjectMapper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F9491BC983377B8A1085346CD2DBB7C /* Build configuration list for PBXNativeTarget "ObjectMapper" */;
@@ -1491,25 +1414,6 @@
 			productReference = E1A98616EB5DCA7B0B314AB01D8BA240 /* Pods_UrbanLifePlusApp_WatchKit_App.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		888AB1837E13581D356D7DE158E108C9 /* Pods-UrbanLifePlusAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C61FC6514257EFBABF1C38A003368CBC /* Build configuration list for PBXNativeTarget "Pods-UrbanLifePlusAppTests" */;
-			buildPhases = (
-				A31FB1A24E50B2080C2B4F7F88A26F8D /* Headers */,
-				A9E8B409A4B84C3C29C58AE179C04131 /* Sources */,
-				A0C201136A813463552712FFE2D7B2C9 /* Frameworks */,
-				460743157C8A049868BC2DC0A5E9F7D5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9F5460370C50AE2B8E242E1A55BDB34A /* PBXTargetDependency */,
-			);
-			name = "Pods-UrbanLifePlusAppTests";
-			productName = "Pods-UrbanLifePlusAppTests";
-			productReference = 7E747314EDD9B244E3FCF5B1B7FCCA43 /* Pods_UrbanLifePlusAppTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8927CADF7C876CDB26BC24A3873889B9 /* Build configuration list for PBXNativeTarget "Starscream" */;
@@ -1545,6 +1449,30 @@
 			name = "Socket.IO-Client-Swift";
 			productName = "Socket.IO-Client-Swift";
 			productReference = 50C0B0879B7086918A819F704BF40B4B /* SocketIO.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B33A18FDF881A6686DE4D223864A9C4C /* Pods-UrbanLifePlusApp-AutomatedSnapshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A071F62373DE61C856538EDFDDF962E9 /* Build configuration list for PBXNativeTarget "Pods-UrbanLifePlusApp-AutomatedSnapshots" */;
+			buildPhases = (
+				FE4C3BFE57D67B1A13026C1E78E7A467 /* Headers */,
+				BD34D18571933BCAE1D65B5A7A73636D /* Sources */,
+				696302E7A264FF3DCBA8A0F498C55239 /* Frameworks */,
+				A03E8A206370A3667652732AC21FA296 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C9CBFA74997E13E9EA6451EF4327751 /* PBXTargetDependency */,
+				172E286C93655848EB09EC3B3686C8FB /* PBXTargetDependency */,
+				85E4F34B0C4809C1F170C708E3710485 /* PBXTargetDependency */,
+				3B315A5A671D3FDA8656E6B3DD85EDB8 /* PBXTargetDependency */,
+				D9AF8B8E556E815416388F8ABF2B3F9A /* PBXTargetDependency */,
+				68A3D881C26EC79F8517277DFB723E3C /* PBXTargetDependency */,
+			);
+			name = "Pods-UrbanLifePlusApp-AutomatedSnapshots";
+			productName = "Pods-UrbanLifePlusApp-AutomatedSnapshots";
+			productReference = A2D3B06B5DF171E7653AB32373A4C6FF /* Pods_UrbanLifePlusApp_AutomatedSnapshots.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
@@ -1647,7 +1575,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 72D6A0F7C6DC4C3B143F3BBC609F98D9 /* Products */;
+			productRefGroup = 0CB7FD053639B5A3BAFE417A0B06CFED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1659,8 +1587,7 @@
 				EB62C5E757ED5875E63F5A373576B145 /* Pods-UrbanLifePlusApp */,
 				87FD0E05770FE85135C96C7BE2D8E808 /* Pods-UrbanLifePlusApp WatchKit App */,
 				FFC177F43925E629D8494099CC3E0307 /* Pods-UrbanLifePlusApp WatchKit Extension */,
-				10F1B0B7FB302110AEDB9424F1F73F20 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests */,
-				888AB1837E13581D356D7DE158E108C9 /* Pods-UrbanLifePlusAppTests */,
+				B33A18FDF881A6686DE4D223864A9C4C /* Pods-UrbanLifePlusApp-AutomatedSnapshots */,
 				A44D85440C5D58BC5C4D70A539C5EEF0 /* Socket.IO-Client-Swift */,
 				9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */,
 			);
@@ -1683,13 +1610,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		40F5E25E2DC7AF987AC9A2A0CF559EB2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		460743157C8A049868BC2DC0A5E9F7D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1724,7 +1644,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AD42D207BBB69EFCBA9491567328003 /* Resources */ = {
+		A03E8A206370A3667652732AC21FA296 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1763,14 +1683,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		121458C2D88E775AFEC57C94C8F2FD35 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9712E98A41C9739EEC619EE90CBBA669 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5ADBBFEF3E2324A9FD298276CB8D6B9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1981,11 +1893,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9E8B409A4B84C3C29C58AE179C04131 /* Sources */ = {
+		BD34D18571933BCAE1D65B5A7A73636D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CC5A96AC1324E4E0DD3D24083798426 /* Pods-UrbanLifePlusAppTests-dummy.m in Sources */,
+				42FAE9F44C6C4A4EE2C7F0428B809B25 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2045,17 +1957,23 @@
 			target = A44D85440C5D58BC5C4D70A539C5EEF0 /* Socket.IO-Client-Swift */;
 			targetProxy = 8E8522966BAFB283B6EC7419E7B3787F /* PBXContainerItemProxy */;
 		};
+		172E286C93655848EB09EC3B3686C8FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Instabug;
+			target = B593490A33943610DC035C394E10D07A /* Instabug */;
+			targetProxy = CF9AAB0B495CC960F27FC781402F9872 /* PBXContainerItemProxy */;
+		};
 		1ECD4C22D4BFC81B52EBFB28A301A3AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kingfisher;
 			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
 			targetProxy = 4C0097C70A92B5CA5C389E392A2F4E64 /* PBXContainerItemProxy */;
 		};
-		2241D44D38DED67F0A3A80CD9FE47A63 /* PBXTargetDependency */ = {
+		3B315A5A671D3FDA8656E6B3DD85EDB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Instabug;
-			target = B593490A33943610DC035C394E10D07A /* Instabug */;
-			targetProxy = 5FF2B8BEE76AA73E0C86D9D7238569DC /* PBXContainerItemProxy */;
+			name = ObjectMapper;
+			target = 162E649F50FEC62B61BDD87D1BD422B4 /* ObjectMapper */;
+			targetProxy = E9897A2E51921133D41B7ACA2356801D /* PBXContainerItemProxy */;
 		};
 		4E6267F7F1FE16072D78F8DA0CBC802F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2063,35 +1981,29 @@
 			target = E9F571848156A6AB51390A0EEBDF0737 /* CustomerlySDK */;
 			targetProxy = 86AE46024B65DD65CFA96FC5B83ACE9A /* PBXContainerItemProxy */;
 		};
-		603699389F87440409306D5F239B56C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Socket.IO-Client-Swift";
-			target = A44D85440C5D58BC5C4D70A539C5EEF0 /* Socket.IO-Client-Swift */;
-			targetProxy = D30F5A0781A4FAEF35E3BC2945869778 /* PBXContainerItemProxy */;
-		};
-		8FE01EEC85DDA91042D02F4F8671A943 /* PBXTargetDependency */ = {
+		5C9CBFA74997E13E9EA6451EF4327751 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CustomerlySDK;
 			target = E9F571848156A6AB51390A0EEBDF0737 /* CustomerlySDK */;
-			targetProxy = 05DCC53B40D2C4BAAB8E12162881958B /* PBXContainerItemProxy */;
+			targetProxy = F37C8748261CA2F991ACFA5170344ACE /* PBXContainerItemProxy */;
+		};
+		68A3D881C26EC79F8517277DFB723E3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = 9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */;
+			targetProxy = 79F7697710568F84788D7849B4204615 /* PBXContainerItemProxy */;
+		};
+		85E4F34B0C4809C1F170C708E3710485 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
+			targetProxy = F9DA80E5B6609F2C2D5BF9DEA5F23A57 /* PBXContainerItemProxy */;
 		};
 		97DF415FC8E1C4073D8B5E2FDDD47FD5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ObjectMapper;
 			target = 162E649F50FEC62B61BDD87D1BD422B4 /* ObjectMapper */;
 			targetProxy = E6408820A8ED0A4EB536BE689B4652D8 /* PBXContainerItemProxy */;
-		};
-		9D61A1F63EF9C9B172F6D81371AAB266 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Kingfisher;
-			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
-			targetProxy = A7710429A6D03783D5CD9C8BD8CC44F5 /* PBXContainerItemProxy */;
-		};
-		9F5460370C50AE2B8E242E1A55BDB34A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-UrbanLifePlusApp";
-			target = EB62C5E757ED5875E63F5A373576B145 /* Pods-UrbanLifePlusApp */;
-			targetProxy = FFE5A8B8FCBA43E4F9CFF45539218C2F /* PBXContainerItemProxy */;
 		};
 		A565B6490B9A68EF4490A665625A84A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2117,30 +2029,24 @@
 			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
 			targetProxy = 96E1B5BB312558071E3520712A943AF7 /* PBXContainerItemProxy */;
 		};
+		D9AF8B8E556E815416388F8ABF2B3F9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Socket.IO-Client-Swift";
+			target = A44D85440C5D58BC5C4D70A539C5EEF0 /* Socket.IO-Client-Swift */;
+			targetProxy = 822825D320EBB7CE4CE183A47C525C35 /* PBXContainerItemProxy */;
+		};
 		D9FFBEAC9922F40B5E6D1975D4600B85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "CustomerlySDK-CustomerlySDK";
 			target = 648E7A0950D984AF6CB226ED3FEBE855 /* CustomerlySDK-CustomerlySDK */;
 			targetProxy = D8257ADF19F6F56F5D54FB2AC342BB85 /* PBXContainerItemProxy */;
 		};
-		DAE2935AD5181F225B66A52C397D45DE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Starscream;
-			target = 9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */;
-			targetProxy = E027F36755B2287A3A2C385252CC29E1 /* PBXContainerItemProxy */;
-		};
-		DB2F8C7C5F3FC166AF191024E4F2E3FE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ObjectMapper;
-			target = 162E649F50FEC62B61BDD87D1BD422B4 /* ObjectMapper */;
-			targetProxy = 5BD59FADFCA44A2132342459A76F24EB /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		007D5787B0076A9735CFCB2ACB42321C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1404145AFF93ABDBD5BC798C25ED1F44 /* Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig */;
+			baseConfigurationReference = 4BA45A8DA312AAE07544B66B8160E91A /* Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -2415,9 +2321,9 @@
 			};
 			name = Debug;
 		};
-		36A9006AF377E42945808AF0336B34F2 /* Debug */ = {
+		38DE0EE192B2D15D81AC82DCE63A23F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC140FB7929EAFC5859D07A3FF4119A1 /* Pods-UrbanLifePlusAppTests.debug.xcconfig */;
+			baseConfigurationReference = 0ECF38B170CE0CED30CEC3BA8EADB3A4 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2430,7 +2336,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-UrbanLifePlusAppTests/Pods-UrbanLifePlusAppTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots/Pods-UrbanLifePlusApp-AutomatedSnapshots-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2439,7 +2345,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-UrbanLifePlusAppTests/Pods-UrbanLifePlusAppTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots/Pods-UrbanLifePlusApp-AutomatedSnapshots.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -2552,7 +2458,7 @@
 		};
 		65D358993A0F1EE5FDD1343495C541EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 301CA7CD16FB773D4A3BBD60041AF8A1 /* Pods-UrbanLifePlusApp.release.xcconfig */;
+			baseConfigurationReference = DB7BBC353DDB4BFDCDCE5E604BE75A9E /* Pods-UrbanLifePlusApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2753,7 +2659,7 @@
 		};
 		85014B3E2FD6305DE160D74453128FA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EBE98D417203F80F3C0FCF3657BC36B /* Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig */;
+			baseConfigurationReference = 9DBE24A459CACE1093C59EFD5E929128 /* Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -2791,7 +2697,7 @@
 		};
 		855449DED02EC95B53650229F7B26142 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D4E6B3E5597E8C34540E2777D080B69 /* Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig */;
+			baseConfigurationReference = B8268F158966D2DDB6D0DC11D43F2DE6 /* Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -2827,9 +2733,9 @@
 			};
 			name = Debug;
 		};
-		9F2E2CBCA8150EF6055A15CE8084DB25 /* Release */ = {
+		BF9E929D8132039BA483C852C62E7117 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D16B806E62D9E3E2783092B4A93336A /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.release.xcconfig */;
+			baseConfigurationReference = 3BB26EA79296AD9FDADD83C52200CAA3 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2842,7 +2748,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots/Pods-UrbanLifePlusApp-AutomatedSnapshots-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2851,7 +2757,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots/Pods-UrbanLifePlusApp-AutomatedSnapshots.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -2866,47 +2772,9 @@
 			};
 			name = Release;
 		};
-		A1B071F7780A9FB3675DF920408B1014 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D666251384459AEE2E4792BB8DCD522F /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		C4A0DA3BBFF2948EB581C7AA02243AAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D955F659C1E46D6B6B3A07D29386559E /* Pods-UrbanLifePlusApp.debug.xcconfig */;
+			baseConfigurationReference = 13F0BC7653167587DB0652DBE541B7DC /* Pods-UrbanLifePlusApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2959,48 +2827,9 @@
 			};
 			name = Debug;
 		};
-		EC3E9B03A2F4FDBDC6C5876ED3F75E95 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFD6D30B5ECCA362DB87D170C928A3EC /* Pods-UrbanLifePlusAppTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-UrbanLifePlusAppTests/Pods-UrbanLifePlusAppTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-UrbanLifePlusAppTests/Pods-UrbanLifePlusAppTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		ED803C39AE75BB20388A3DCA3EA2D6FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2812B8074721FEE83C4BF8A70CF03E5 /* Pods-UrbanLifePlusApp WatchKit App.release.xcconfig */;
+			baseConfigurationReference = BB1DCA0C2D6BE6E305E140B8EFF44553 /* Pods-UrbanLifePlusApp WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -3076,15 +2905,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18E9B3686BEE75C1A52D2738C59ACE8E /* Build configuration list for PBXNativeTarget "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A1B071F7780A9FB3675DF920408B1014 /* Debug */,
-				9F2E2CBCA8150EF6055A15CE8084DB25 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1F9491BC983377B8A1085346CD2DBB7C /* Build configuration list for PBXNativeTarget "ObjectMapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3175,11 +2995,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C61FC6514257EFBABF1C38A003368CBC /* Build configuration list for PBXNativeTarget "Pods-UrbanLifePlusAppTests" */ = {
+		A071F62373DE61C856538EDFDDF962E9 /* Build configuration list for PBXNativeTarget "Pods-UrbanLifePlusApp-AutomatedSnapshots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				36A9006AF377E42945808AF0336B34F2 /* Debug */,
-				EC3E9B03A2F4FDBDC6C5876ED3F75E95 /* Release */,
+				38DE0EE192B2D15D81AC82DCE63A23F9 /* Debug */,
+				BF9E929D8132039BA483C852C62E7117 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

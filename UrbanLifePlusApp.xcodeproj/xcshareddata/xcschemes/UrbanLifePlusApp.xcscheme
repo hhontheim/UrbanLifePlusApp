@@ -32,19 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2B8EC89924686C0200655D58"
-               BuildableName = "UrbanLifePlusAppTests.xctest"
-               BlueprintName = "UrbanLifePlusAppTests"
-               ReferencedContainer = "container:UrbanLifePlusApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "2B8EC8A424686C0200655D58"
-               BuildableName = "UrbanLifePlusAppUITests.xctest"
-               BlueprintName = "UrbanLifePlusAppUITests"
+               BuildableName = "AutomatedSnapshots.xctest"
+               BlueprintName = "AutomatedSnapshots"
                ReferencedContainer = "container:UrbanLifePlusApp.xcodeproj">
             </BuildableReference>
          </TestableReference>

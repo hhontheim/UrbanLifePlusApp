@@ -1,4 +1,4 @@
-${PODS_ROOT}/Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-frameworks.sh
+${PODS_ROOT}/Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots/Pods-UrbanLifePlusApp-AutomatedSnapshots-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/CustomerlySDK/CustomerlySDK.framework
 ${PODS_ROOT}/Instabug/Instabug.framework
 ${PODS_ROOT}/Instabug/Instabug.framework.dSYM

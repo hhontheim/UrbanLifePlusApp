@@ -39,7 +39,6 @@
 		2B8EC88E24686C0200655D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
 		2B8EC89124686C0200655D58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC89024686C0200655D58 /* Preview Assets.xcassets */; };
 		2B8EC89424686C0200655D58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC89224686C0200655D58 /* LaunchScreen.storyboard */; };
-		2B8EC89F24686C0200655D58 /* UrbanLifePlusAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC89E24686C0200655D58 /* UrbanLifePlusAppTests.swift */; };
 		2B8EC8AA24686C0200655D58 /* UrbanLifePlusAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EC8A924686C0200655D58 /* UrbanLifePlusAppUITests.swift */; };
 		2B8EC8AF24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B8EC8B524686C0200655D58 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8B324686C0200655D58 /* Interface.storyboard */; };
@@ -62,20 +61,12 @@
 		2BE0FC32246AEC0B00196821 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC31246AEC0B00196821 /* Keychain.swift */; };
 		2BE0FC35246B05F700196821 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC34246B05F700196821 /* SettingsView.swift */; };
 		2BE0FC37246B141300196821 /* DevView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC36246B141300196821 /* DevView.swift */; };
-		897E0709E9AF57A965EB32BE /* Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F82BCCF616CF6029A65BFE /* Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests.framework */; };
+		41FCA5233F163420833D9A9B /* Pods_UrbanLifePlusApp_AutomatedSnapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59963024D6B536A62D2B0C68 /* Pods_UrbanLifePlusApp_AutomatedSnapshots.framework */; };
 		D16EDB12C4704F7ED9EEBA69 /* Pods_UrbanLifePlusApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7924BBFCCD132362689227F /* Pods_UrbanLifePlusApp.framework */; };
 		E4724F5522A87590254C4918 /* Pods_UrbanLifePlusApp_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE76C077B2B1A847BA72C942 /* Pods_UrbanLifePlusApp_WatchKit_Extension.framework */; };
-		FD9DECE6EA7DE44CA07C1EBB /* Pods_UrbanLifePlusAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C1C329E1B419D4F8945210 /* Pods_UrbanLifePlusAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2B8EC89B24686C0200655D58 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2B8EC87C24686BFF00655D58 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2B8EC88324686BFF00655D58;
-			remoteInfo = UrbanLifePlusApp;
-		};
 		2B8EC8A624686C0200655D58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2B8EC87C24686BFF00655D58 /* Project object */;
@@ -128,7 +119,6 @@
 		0FAEBA1EF81C11B961BDADF7 /* Pods-UrbanLifePlusAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusAppTests.release.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusAppTests/Pods-UrbanLifePlusAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		1D215ADF38DA80507FC22F99 /* Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp WatchKit Extension/Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		21E18DF0ED5F582DB651EAA4 /* Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp WatchKit App/Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
-		27F82BCCF616CF6029A65BFE /* Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A06D71F1A68A2E5687C90DC /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B2E768D2471AD7100CD2D95 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2B2E76902471ADA300CD2D95 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -154,10 +144,7 @@
 		2B8EC89024686C0200655D58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B8EC89324686C0200655D58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B8EC89524686C0200655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B8EC89A24686C0200655D58 /* UrbanLifePlusAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrbanLifePlusAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B8EC89E24686C0200655D58 /* UrbanLifePlusAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanLifePlusAppTests.swift; sourceTree = "<group>"; };
-		2B8EC8A024686C0200655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B8EC8A524686C0200655D58 /* UrbanLifePlusAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrbanLifePlusAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8EC8A524686C0200655D58 /* AutomatedSnapshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomatedSnapshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8EC8A924686C0200655D58 /* UrbanLifePlusAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanLifePlusAppUITests.swift; sourceTree = "<group>"; };
 		2B8EC8AB24686C0200655D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UrbanLifePlusApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,8 +176,11 @@
 		2BE0FC34246B05F700196821 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2BE0FC36246B141300196821 /* DevView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevView.swift; sourceTree = "<group>"; };
 		38333B1EA48030501F852D9D /* Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp WatchKit Extension/Pods-UrbanLifePlusApp WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		4E07A62D6FCF71D5027B3477 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp-AutomatedSnapshots.release.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots/Pods-UrbanLifePlusApp-AutomatedSnapshots.release.xcconfig"; sourceTree = "<group>"; };
+		59963024D6B536A62D2B0C68 /* Pods_UrbanLifePlusApp_AutomatedSnapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanLifePlusApp_AutomatedSnapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C1C329E1B419D4F8945210 /* Pods_UrbanLifePlusAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanLifePlusAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CB57E6D225F7FDAB94DB19 /* Pods-UrbanLifePlusApp WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp WatchKit App/Pods-UrbanLifePlusApp WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		9D59B43458235EB3B9AB0088 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp-AutomatedSnapshots.debug.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots/Pods-UrbanLifePlusApp-AutomatedSnapshots.debug.xcconfig"; sourceTree = "<group>"; };
 		A07D8ECB02CD283CF5856D33 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.release.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B1B23DE3145D5CFE4A1098AD /* Pods-UrbanLifePlusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp.release.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp/Pods-UrbanLifePlusApp.release.xcconfig"; sourceTree = "<group>"; };
 		B8DD9E8A3F4E8456EE634ECC /* Pods-UrbanLifePlusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp.debug.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp/Pods-UrbanLifePlusApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,19 +199,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B8EC89724686C0200655D58 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD9DECE6EA7DE44CA07C1EBB /* Pods_UrbanLifePlusAppTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2B8EC8A224686C0200655D58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				897E0709E9AF57A965EB32BE /* Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests.framework in Frameworks */,
+				41FCA5233F163420833D9A9B /* Pods_UrbanLifePlusApp_AutomatedSnapshots.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,8 +347,7 @@
 				2B8EC8E624686D1700655D58 /* Shared */,
 				2B8EC88624686BFF00655D58 /* UrbanLifePlusApp */,
 				2B8EC8C124686C0300655D58 /* UrbanLifePlusApp WatchKit Extension */,
-				2B8EC89D24686C0200655D58 /* UrbanLifePlusAppTests */,
-				2B8EC8A824686C0200655D58 /* UrbanLifePlusAppUITests */,
+				2B8EC8A824686C0200655D58 /* AutomatedSnapshots */,
 				2B8EC8B224686C0200655D58 /* UrbanLifePlusApp WatchKit App */,
 				2B8EC88524686BFF00655D58 /* Products */,
 				2BD282AA24702EDD00FC2050 /* Frameworks */,
@@ -378,8 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				2B8EC88424686BFF00655D58 /* UrbanLifePlusApp.app */,
-				2B8EC89A24686C0200655D58 /* UrbanLifePlusAppTests.xctest */,
-				2B8EC8A524686C0200655D58 /* UrbanLifePlusAppUITests.xctest */,
+				2B8EC8A524686C0200655D58 /* AutomatedSnapshots.xctest */,
 				2B8EC8AE24686C0200655D58 /* UrbanLifePlusApp WatchKit App.app */,
 				2B8EC8BD24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension.appex */,
 			);
@@ -409,23 +389,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2B8EC89D24686C0200655D58 /* UrbanLifePlusAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				2B8EC89E24686C0200655D58 /* UrbanLifePlusAppTests.swift */,
-				2B8EC8A024686C0200655D58 /* Info.plist */,
-			);
-			path = UrbanLifePlusAppTests;
-			sourceTree = "<group>";
-		};
-		2B8EC8A824686C0200655D58 /* UrbanLifePlusAppUITests */ = {
+		2B8EC8A824686C0200655D58 /* AutomatedSnapshots */ = {
 			isa = PBXGroup;
 			children = (
 				2B8EC8F42468799A00655D58 /* SnapshotHelper.swift */,
 				2B8EC8A924686C0200655D58 /* UrbanLifePlusAppUITests.swift */,
 				2B8EC8AB24686C0200655D58 /* Info.plist */,
 			);
-			path = UrbanLifePlusAppUITests;
+			path = AutomatedSnapshots;
 			sourceTree = "<group>";
 		};
 		2B8EC8B224686C0200655D58 /* UrbanLifePlusApp WatchKit App */ = {
@@ -499,8 +470,8 @@
 				E7924BBFCCD132362689227F /* Pods_UrbanLifePlusApp.framework */,
 				DA0E28654819173E85D32295 /* Pods_UrbanLifePlusApp_WatchKit_App.framework */,
 				FE76C077B2B1A847BA72C942 /* Pods_UrbanLifePlusApp_WatchKit_Extension.framework */,
-				27F82BCCF616CF6029A65BFE /* Pods_UrbanLifePlusApp_UrbanLifePlusAppUITests.framework */,
 				73C1C329E1B419D4F8945210 /* Pods_UrbanLifePlusAppTests.framework */,
+				59963024D6B536A62D2B0C68 /* Pods_UrbanLifePlusApp_AutomatedSnapshots.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -527,6 +498,8 @@
 				A07D8ECB02CD283CF5856D33 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.release.xcconfig */,
 				FF773A723B789E2A6FDC8C70 /* Pods-UrbanLifePlusAppTests.debug.xcconfig */,
 				0FAEBA1EF81C11B961BDADF7 /* Pods-UrbanLifePlusAppTests.release.xcconfig */,
+				9D59B43458235EB3B9AB0088 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.debug.xcconfig */,
+				4E07A62D6FCF71D5027B3477 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -555,28 +528,9 @@
 			productReference = 2B8EC88424686BFF00655D58 /* UrbanLifePlusApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2B8EC89924686C0200655D58 /* UrbanLifePlusAppTests */ = {
+		2B8EC8A424686C0200655D58 /* AutomatedSnapshots */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2B8EC8E024686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusAppTests" */;
-			buildPhases = (
-				420778FB7E831B968DE90E4F /* [CP] Check Pods Manifest.lock */,
-				2B8EC89624686C0200655D58 /* Sources */,
-				2B8EC89724686C0200655D58 /* Frameworks */,
-				2B8EC89824686C0200655D58 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2B8EC89C24686C0200655D58 /* PBXTargetDependency */,
-			);
-			name = UrbanLifePlusAppTests;
-			productName = UrbanLifePlusAppTests;
-			productReference = 2B8EC89A24686C0200655D58 /* UrbanLifePlusAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2B8EC8A424686C0200655D58 /* UrbanLifePlusAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2B8EC8E324686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusAppUITests" */;
+			buildConfigurationList = 2B8EC8E324686C0400655D58 /* Build configuration list for PBXNativeTarget "AutomatedSnapshots" */;
 			buildPhases = (
 				9A615A3E7ACFA92DD2934780 /* [CP] Check Pods Manifest.lock */,
 				2B8EC8A124686C0200655D58 /* Sources */,
@@ -589,9 +543,9 @@
 			dependencies = (
 				2B8EC8A724686C0200655D58 /* PBXTargetDependency */,
 			);
-			name = UrbanLifePlusAppUITests;
+			name = AutomatedSnapshots;
 			productName = UrbanLifePlusAppUITests;
-			productReference = 2B8EC8A524686C0200655D58 /* UrbanLifePlusAppUITests.xctest */;
+			productReference = 2B8EC8A524686C0200655D58 /* AutomatedSnapshots.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		2B8EC8AD24686C0200655D58 /* UrbanLifePlusApp WatchKit App */ = {
@@ -644,10 +598,6 @@
 					2B8EC88324686BFF00655D58 = {
 						CreatedOnToolsVersion = 11.4;
 					};
-					2B8EC89924686C0200655D58 = {
-						CreatedOnToolsVersion = 11.4;
-						TestTargetID = 2B8EC88324686BFF00655D58;
-					};
 					2B8EC8A424686C0200655D58 = {
 						CreatedOnToolsVersion = 11.4;
 						TestTargetID = 2B8EC88324686BFF00655D58;
@@ -674,10 +624,9 @@
 			projectRoot = "";
 			targets = (
 				2B8EC88324686BFF00655D58 /* UrbanLifePlusApp */,
-				2B8EC89924686C0200655D58 /* UrbanLifePlusAppTests */,
-				2B8EC8A424686C0200655D58 /* UrbanLifePlusAppUITests */,
 				2B8EC8AD24686C0200655D58 /* UrbanLifePlusApp WatchKit App */,
 				2B8EC8BC24686C0300655D58 /* UrbanLifePlusApp WatchKit Extension */,
+				2B8EC8A424686C0200655D58 /* AutomatedSnapshots */,
 			);
 		};
 /* End PBXProject section */
@@ -691,13 +640,6 @@
 				2B8EC8EA24686D3500655D58 /* Localizable.strings in Resources */,
 				2B8EC89124686C0200655D58 /* Preview Assets.xcassets in Resources */,
 				2B8EC88E24686C0200655D58 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2B8EC89824686C0200655D58 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,15 +678,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots/Pods-UrbanLifePlusApp-AutomatedSnapshots-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots/Pods-UrbanLifePlusApp-AutomatedSnapshots-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UrbanLifePlusApp-AutomatedSnapshots/Pods-UrbanLifePlusApp-AutomatedSnapshots-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0ABFF92480DF15DD533495C5 /* [CP] Check Pods Manifest.lock */ = {
@@ -785,28 +727,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-UrbanLifePlusApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		420778FB7E831B968DE90E4F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UrbanLifePlusAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -867,7 +787,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-UrbanLifePlusApp-AutomatedSnapshots-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -908,14 +828,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B8EC89624686C0200655D58 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2B8EC89F24686C0200655D58 /* UrbanLifePlusAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2B8EC8A124686C0200655D58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -951,11 +863,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2B8EC89C24686C0200655D58 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2B8EC88324686BFF00655D58 /* UrbanLifePlusApp */;
-			targetProxy = 2B8EC89B24686C0200655D58 /* PBXContainerItemProxy */;
-		};
 		2B8EC8A724686C0200655D58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2B8EC88324686BFF00655D58 /* UrbanLifePlusApp */;
@@ -1036,7 +943,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 200517.2133;
+				CURRENT_PROJECT_VERSION = 200518;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 6NEGL975FK;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1100,7 +1007,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 200517.2133;
+				CURRENT_PROJECT_VERSION = 200518;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6NEGL975FK;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1282,76 +1189,22 @@
 			};
 			name = Release;
 		};
-		2B8EC8E124686C0400655D58 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF773A723B789E2A6FDC8C70 /* Pods-UrbanLifePlusAppTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6NEGL975FK;
-				INFOPLIST_FILE = UrbanLifePlusAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UrbanLifePlusApp.app/UrbanLifePlusApp";
-			};
-			name = Debug;
-		};
-		2B8EC8E224686C0400655D58 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FAEBA1EF81C11B961BDADF7 /* Pods-UrbanLifePlusAppTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6NEGL975FK;
-				INFOPLIST_FILE = UrbanLifePlusAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UrbanLifePlusApp.app/UrbanLifePlusApp";
-			};
-			name = Release;
-		};
 		2B8EC8E424686C0400655D58 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A06D71F1A68A2E5687C90DC /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig */;
+			baseConfigurationReference = 9D59B43458235EB3B9AB0088 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6NEGL975FK;
-				INFOPLIST_FILE = UrbanLifePlusAppUITests/Info.plist;
+				INFOPLIST_FILE = AutomatedSnapshots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlus.AutomatedSnapshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
@@ -1363,20 +1216,20 @@
 		};
 		2B8EC8E524686C0400655D58 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A07D8ECB02CD283CF5856D33 /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.release.xcconfig */;
+			baseConfigurationReference = 4E07A62D6FCF71D5027B3477 /* Pods-UrbanLifePlusApp-AutomatedSnapshots.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6NEGL975FK;
-				INFOPLIST_FILE = UrbanLifePlusAppUITests/Info.plist;
+				INFOPLIST_FILE = AutomatedSnapshots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlusAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.hontheim.UrbanLifePlus.AutomatedSnapshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
@@ -1425,16 +1278,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2B8EC8E024686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2B8EC8E124686C0400655D58 /* Debug */,
-				2B8EC8E224686C0400655D58 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2B8EC8E324686C0400655D58 /* Build configuration list for PBXNativeTarget "UrbanLifePlusAppUITests" */ = {
+		2B8EC8E324686C0400655D58 /* Build configuration list for PBXNativeTarget "AutomatedSnapshots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2B8EC8E424686C0400655D58 /* Debug */,

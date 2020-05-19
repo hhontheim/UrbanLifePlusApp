@@ -1,26 +1,15 @@
 //
-//  BTDevice.swift
-//  BLEDemo
+//  BluetoothDevice.swift
+//  UrbanLifePlusApp
 //
-//  Created by Jindrich Dolezy on 11/04/2018.
-//  Copyright © 2018 Dzindra. All rights reserved.
+//  Created by Henning Hontheim on 19.05.20.
+//  Copyright © 2020 Henning Hontheim. All rights reserved.
 //
 
 import Foundation
 import CoreBluetooth
 
-
-protocol BTDeviceDelegate: class {
-    func deviceConnected()
-    func deviceReady()
-    func deviceBlinkChanged(value: Bool)
-    func deviceSpeedChanged(value: Int)
-    func deviceSerialChanged(value: String)
-    func deviceDisconnected()
-
-}
-
-class BTDevice: NSObject {
+class BluetoothDevice: NSObject, CBPeripheralDelegate {
     private let peripheral: CBPeripheral
     private let manager: CBCentralManager
     private var blinkChar: CBCharacteristic?
@@ -77,13 +66,11 @@ class BTDevice: NSObject {
     func disconnect() {
         manager.cancelPeripheralConnection(peripheral)
     }
-}
-
-extension BTDevice {
-    // these are called from BTManager, do not call directly
+    
+    // MARK: - these are called from BluetoothManager, do not call directly
     
     func connectedCallback() {
-        peripheral.discoverServices([BTUUIDs.blinkService, BTUUIDs.infoService])
+        peripheral.discoverServices([BTUUID.blinkService, BTUUID.infoService])
         delegate?.deviceConnected()
     }
     
@@ -94,19 +81,17 @@ extension BTDevice {
     func errorCallback(error: Error?) {
         print("Device: error \(String(describing: error))")
     }
-}
-
-
-extension BTDevice: CBPeripheralDelegate {
+    
+    // MARK: - Delegate implementation
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         print("Device: discovered services")
         peripheral.services?.forEach {
             print("  \($0)")
-            if $0.uuid == BTUUIDs.infoService {
-                peripheral.discoverCharacteristics([BTUUIDs.infoSerial], for: $0)
-            } else if $0.uuid == BTUUIDs.blinkService {
-                peripheral.discoverCharacteristics([BTUUIDs.blinkOn,BTUUIDs.blinkSpeed], for: $0)
+            if $0.uuid == BTUUID.infoService {
+                peripheral.discoverCharacteristics([BTUUID.infoSerial], for: $0)
+            } else if $0.uuid == BTUUID.blinkService {
+                peripheral.discoverCharacteristics([BTUUID.blinkOn,BTUUID.blinkSpeed], for: $0)
             } else {
                 peripheral.discoverCharacteristics(nil, for: $0)
             }
@@ -120,14 +105,14 @@ extension BTDevice: CBPeripheralDelegate {
         service.characteristics?.forEach {
             print("   \($0)")
             
-            if $0.uuid == BTUUIDs.blinkOn {
+            if $0.uuid == BTUUID.blinkOn {
                 self.blinkChar = $0
                 peripheral.readValue(for: $0)
                 peripheral.setNotifyValue(true, for: $0)
-            } else if $0.uuid == BTUUIDs.blinkSpeed {
+            } else if $0.uuid == BTUUID.blinkSpeed {
                 self.speedChar = $0
                 peripheral.readValue(for: $0)
-            } else if $0.uuid == BTUUIDs.infoSerial {
+            } else if $0.uuid == BTUUID.infoSerial {
                 peripheral.readValue(for: $0)
             }
         }
@@ -147,7 +132,7 @@ extension BTDevice: CBPeripheralDelegate {
             _speed = Int(s)
             delegate?.deviceSpeedChanged(value: _speed)
         }
-        if characteristic.uuid == BTUUIDs.infoSerial, let d = characteristic.value {
+        if characteristic.uuid == BTUUID.infoSerial, let d = characteristic.value {
             serial = String(data: d, encoding: .utf8)
             if let serial = serial {
                 delegate?.deviceSerialChanged(value: serial)

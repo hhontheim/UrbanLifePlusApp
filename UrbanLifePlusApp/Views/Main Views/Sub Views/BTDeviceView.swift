@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct BTDeviceView: View {
-    var device: BTDevice
+    var device: BluetoothDevice
     
     @State var blink: Bool = false {
         willSet {

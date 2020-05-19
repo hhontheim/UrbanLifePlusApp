@@ -10,11 +10,11 @@ import Foundation
 import SwiftUI
 import CoreBluetooth
 
-class Bluetooth: ObservableObject, BTManagerDelegate {
+class Bluetooth: ObservableObject, BluetoothManagerDelegate {
     @EnvironmentObject var storage: Storage
     
-    private var manager = BTManager()
-    private var devices: [BTDevice] = []
+    private var manager = BluetoothManager()
+    private var devices: [BluetoothDevice] = []
     
     init() {
         updateStatusLabel()
@@ -26,7 +26,7 @@ class Bluetooth: ObservableObject, BTManagerDelegate {
         updateStatusLabel()
     }
     
-    func didDiscover(device: BTDevice) {
+    func didDiscover(device: BluetoothDevice) {
         devices = manager.devices
     }
     

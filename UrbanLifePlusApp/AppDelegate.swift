@@ -25,6 +25,7 @@ let liveMode = true
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var storage: Storage!
+    var bluetooth: Bluetooth!
     
     private lazy var sessionDelegater: SessionDelegater = {
         return SessionDelegater(storage: storage)
@@ -35,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerForPushNotifications()
         
         storage = Storage()
+        bluetooth = Bluetooth()
         
         sessionDelegater = SessionDelegater(storage: storage)
         

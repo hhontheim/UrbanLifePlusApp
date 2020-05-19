@@ -18,6 +18,7 @@ struct ContentView: View {
             TabView {
                 HomeView()
                 CommunicationView()
+                BTView()
                 SettingsView()
             }
             if !storage.appState.userIsLoggedIn || storage.appState.shouldGoToSettingsToRevokeSIWA {

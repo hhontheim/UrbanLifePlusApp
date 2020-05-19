@@ -8,10 +8,9 @@
 
 import Foundation
 import WatchConnectivity
-import SwiftUI
 
 class SessionDelegater: NSObject, WCSessionDelegate {
-    var storage: Storage
+    let storage: Storage
     
     init(storage: Storage) {
         self.storage = storage

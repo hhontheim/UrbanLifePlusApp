@@ -37,7 +37,7 @@ class BluetoothDevice: NSObject, CBPeripheralDelegate {
             
             _blink = newValue
             if let char = blinkChar {
-                peripheral.writeValue(Data(bytes: [_blink ? 1 : 0]), for: char, type: .withResponse)
+                peripheral.writeValue(Data([_blink ? 1 : 0]), for: char, type: .withResponse)
             }
         }
     }
@@ -50,7 +50,7 @@ class BluetoothDevice: NSObject, CBPeripheralDelegate {
             
             _speed = newValue
             if let char = speedChar {
-                peripheral.writeValue(Data(bytes: [UInt8(_speed)]), for: char, type: .withResponse)
+                peripheral.writeValue(Data([UInt8(_speed)]), for: char, type: .withResponse)
             }
         }
     }

@@ -9,6 +9,16 @@
 import Foundation
 import CoreBluetooth
 
+protocol BluetoothDeviceDelegate: class {
+    func deviceConnected()
+    func deviceReady()
+    func deviceBlinkChanged(value: Bool)
+    func deviceSpeedChanged(value: Int)
+    func deviceSerialChanged(value: String)
+    func deviceDisconnected()
+}
+
+
 class BluetoothDevice: NSObject, CBPeripheralDelegate {
     private let peripheral: CBPeripheral
     private let manager: CBCentralManager
@@ -140,5 +150,3 @@ class BluetoothDevice: NSObject, CBPeripheralDelegate {
         }
     }
 }
-
-

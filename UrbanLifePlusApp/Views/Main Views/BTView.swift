@@ -10,25 +10,25 @@ import SwiftUI
 
 struct BTView: View {
     @EnvironmentObject var storage: Storage
-    @EnvironmentObject var bluetooth: Bluetooth
+    @EnvironmentObject var bluetoothManager: BluetoothManager
     
     var body: some View {
         NavigationView {
             VStack {
                 Text("bt.greeting")
-                Toggle(isOn: $bluetooth.userWantsToConnect) {
+                Toggle(isOn: $bluetoothManager.userWantsToConnect) {
                     Text("userWantsToConnect")
                 }
                 List {
                     Section(header: Text("bt.devicesDisconnected")) {
-                        ForEach(bluetooth.devicesDisconnected) { device in
+                        ForEach(bluetoothManager.devicesDisconnected) { device in
                             NavigationLink(destination: BTDeviceView(device: device)) {
                                 Text("\(device.name)")
                             }
                         }
                     }
                     Section(header: Text("bt.devicesConnected")) {
-                        ForEach(bluetooth.devicesConnected) { device in
+                        ForEach(bluetoothManager.devicesConnected) { device in
                             NavigationLink(destination: BTDeviceView(device: device)) {
                                 Text("\(device.name)")
                             }

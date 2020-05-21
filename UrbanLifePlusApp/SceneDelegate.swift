@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     var storage: Storage!
-    var bluetooth: Bluetooth!
+    var bluetoothManager: BluetoothManager!
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -24,13 +24,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Create the SwiftUI view that provides the window contents.
         storage = (UIApplication.shared.delegate as! AppDelegate).storage
-        bluetooth = (UIApplication.shared.delegate as! AppDelegate).bluetooth
+        bluetoothManager = (UIApplication.shared.delegate as! AppDelegate).bluetoothManager
 
         checkForValidCredentials(storage)
         
         let contentView = ContentView()
             .environmentObject(storage)
-            .environmentObject(bluetooth)
+            .environmentObject(bluetoothManager)
                 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

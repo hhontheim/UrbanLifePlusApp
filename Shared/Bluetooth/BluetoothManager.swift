@@ -1,5 +1,5 @@
 //
-//  Bluetooth.swift
+//  BluetoothManager.swift
 //  UrbanLifePlusApp
 //
 //  Created by Henning Hontheim on 19.05.20.
@@ -12,7 +12,7 @@ import CoreBluetooth
 
 let timeInterval = 1.0
 
-class Bluetooth: NSObject, ObservableObject, CBCentralManagerDelegate {
+class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     @EnvironmentObject var storage: Storage
     
     @Published private(set) var devicesDisconnected: [BluetoothDevice] = []

@@ -18,8 +18,7 @@ protocol BluetoothDeviceDelegate: class {
     func deviceDisconnected()
 }
 
-
-class BluetoothDevice: NSObject, CBPeripheralDelegate {
+class BluetoothDevice: NSObject, CBPeripheralDelegate, Identifiable {
     private let peripheral: CBPeripheral
     private let manager: CBCentralManager
     private var blinkChar: CBCharacteristic?
@@ -27,7 +26,7 @@ class BluetoothDevice: NSObject, CBPeripheralDelegate {
     private var _blink: Bool = false
     private var _speed: Int = 5
     
-    weak var delegate: BluetoothDeviceDelegate?
+    weak var delegate: BluetoothDeviceDelegate? // TODO: Delete!
     var blink: Bool {
         get {
             return _blink
@@ -78,19 +77,6 @@ class BluetoothDevice: NSObject, CBPeripheralDelegate {
     }
     
     // MARK: - these are called from BluetoothManager, do not call directly
-    
-    func connectedCallback() {
-        peripheral.discoverServices([BTUUID.blinkService, BTUUID.infoService])
-        delegate?.deviceConnected()
-    }
-    
-    func disconnectedCallback() {
-        delegate?.deviceDisconnected()
-    }
-    
-    func errorCallback(error: Error?) {
-        print("Device: error \(String(describing: error))")
-    }
     
     // MARK: - Delegate implementation
     

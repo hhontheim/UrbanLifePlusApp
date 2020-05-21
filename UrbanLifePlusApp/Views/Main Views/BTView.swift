@@ -10,14 +10,32 @@ import SwiftUI
 
 struct BTView: View {
     @EnvironmentObject var storage: Storage
+    @EnvironmentObject var bluetooth: Bluetooth
     
     var body: some View {
         NavigationView {
             VStack {
                 Text("bt.greeting")
-//                Toggle(isOn: $bluetooth.discoverable) {
-//                    Text("bt.discoverable")
-//                }
+                Toggle(isOn: $bluetooth.userWantsToConnect) {
+                    Text("userWantsToConnect")
+                }
+                List {
+                    Section(header: Text("bt.devicesDisconnected")) {
+                        ForEach(bluetooth.devicesDisconnected) { device in
+                            NavigationLink(destination: BTDeviceView(device: device)) {
+                                Text("\(device.name)")
+                            }
+                        }
+                    }
+                    Section(header: Text("bt.devicesConnected")) {
+                        ForEach(bluetooth.devicesConnected) { device in
+                            NavigationLink(destination: BTDeviceView(device: device)) {
+                                Text("\(device.name)")
+                            }
+                        }
+                    }
+                }
+                .listStyle(GroupedListStyle())
             }
             .navigationBarTitle("bt.title")
         }

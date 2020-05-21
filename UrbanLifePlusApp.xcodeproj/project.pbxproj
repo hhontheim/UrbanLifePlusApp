@@ -63,8 +63,8 @@
 		2B90C7BD2471998C00AF8704 /* NukedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B90C7BC2471998C00AF8704 /* NukedView.swift */; };
 		2B9DF22024747829001D420D /* BluetoothDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF21F24747829001D420D /* BluetoothDevice.swift */; };
 		2B9DF22124747829001D420D /* BluetoothDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF21F24747829001D420D /* BluetoothDevice.swift */; };
-		2B9DF22324747885001D420D /* BTUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF22224747885001D420D /* BTUUID.swift */; };
-		2B9DF22424747885001D420D /* BTUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF22224747885001D420D /* BTUUID.swift */; };
+		2B9DF22324747885001D420D /* BluetoothUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF22224747885001D420D /* BluetoothUUID.swift */; };
+		2B9DF22424747885001D420D /* BluetoothUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF22224747885001D420D /* BluetoothUUID.swift */; };
 		2B9DF227247478CE001D420D /* BluetoothHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF226247478CE001D420D /* BluetoothHelper.swift */; };
 		2B9DF228247478CE001D420D /* BluetoothHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF226247478CE001D420D /* BluetoothHelper.swift */; };
 		2BE0FC2B2469DECB00196821 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC2A2469DECB00196821 /* SignInWithAppleButton.swift */; };
@@ -188,7 +188,7 @@
 		2B90C7BA2471955800AF8704 /* NukeInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NukeInstructionsView.swift; path = "UrbanLifePlusApp/Views/Main Views/SupportingViews/NukeInstructionsView.swift"; sourceTree = SOURCE_ROOT; };
 		2B90C7BC2471998C00AF8704 /* NukedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukedView.swift; sourceTree = "<group>"; };
 		2B9DF21F24747829001D420D /* BluetoothDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDevice.swift; sourceTree = "<group>"; };
-		2B9DF22224747885001D420D /* BTUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUUID.swift; sourceTree = "<group>"; };
+		2B9DF22224747885001D420D /* BluetoothUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothUUID.swift; sourceTree = "<group>"; };
 		2B9DF226247478CE001D420D /* BluetoothHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothHelper.swift; sourceTree = "<group>"; };
 		2BCE2339246B238E0083E5B1 /* SignInWithAppleButtonWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonWatch.swift; sourceTree = "<group>"; };
 		2BE0FC2A2469DECB00196821 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
@@ -252,7 +252,6 @@
 				2B011DEA247456A600D44ACA /* Bluetooth.swift */,
 				2B9DF225247478BE001D420D /* Helper */,
 				2B9DF21F24747829001D420D /* BluetoothDevice.swift */,
-				2B9DF22224747885001D420D /* BTUUID.swift */,
 				2B011DE92474568D00D44ACA /* Sample files */,
 			);
 			path = Bluetooth;
@@ -514,6 +513,7 @@
 			isa = PBXGroup;
 			children = (
 				2B9DF226247478CE001D420D /* BluetoothHelper.swift */,
+				2B9DF22224747885001D420D /* BluetoothUUID.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -870,7 +870,7 @@
 				2B011DEE247459E100D44ACA /* BTDeviceView.swift in Sources */,
 				2B8C8945246B2F3700E0BA25 /* CommunicationView.swift in Sources */,
 				2B2E769E2471B75000CD2D95 /* Local.swift in Sources */,
-				2B9DF22324747885001D420D /* BTUUID.swift in Sources */,
+				2B9DF22324747885001D420D /* BluetoothUUID.swift in Sources */,
 				2B8C8A22246C400500E0BA25 /* SessionCommands.swift in Sources */,
 				2B011DEB247456A600D44ACA /* Bluetooth.swift in Sources */,
 				2B8EC8F22468777100655D58 /* LogInView.swift in Sources */,
@@ -918,7 +918,7 @@
 				2B2E76A72471B7A700CD2D95 /* AppState.swift in Sources */,
 				2B8C8A23246C400500E0BA25 /* SessionCommands.swift in Sources */,
 				2B2E76912471ADA300CD2D95 /* LogInView.swift in Sources */,
-				2B9DF22424747885001D420D /* BTUUID.swift in Sources */,
+				2B9DF22424747885001D420D /* BluetoothUUID.swift in Sources */,
 				2B5205DA246ED7D7000CA3A4 /* Storage.swift in Sources */,
 				2B8EC8CB24686C0300655D58 /* NotificationView.swift in Sources */,
 			);

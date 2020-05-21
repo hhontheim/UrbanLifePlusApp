@@ -12,6 +12,7 @@ import SwiftUI
 import UserNotifications
 import CustomerlySDK
 import Instabug
+import BackgroundTasks
 
 #if DEBUG
 let liveMode = false
@@ -32,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "net.hontheim.UrbanLifePlusApp.refresh", using: nil, launchHandler: { task in
+            self.handleAppRefresh(task)
+        })
+        
         application.registerForRemoteNotifications()
         registerForPushNotifications()
         
@@ -54,6 +60,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         activateInstabug(application, launchOptions)
         
         return true
+    }
+    
+    func handleAppRefresh(_ task: BGTask) {
+        task.expirationHandler = {
+          task.setTaskCompleted(success: false)
+        }
+        refreshOperation()
+        scheduleAppRefresh()
+        task.setTaskCompleted(success: true)
+    }
+    
+    func scheduleAppRefresh() {
+        do {
+            let request = BGProcessingTaskRequest(identifier: "net.hontheim.UrbanLifePlusApp.refresh")
+            // Fetch no earlier than 15 minutes from now = 15 * 60
+            request.earliestBeginDate = Date(timeIntervalSinceNow: UIApplication.backgroundFetchIntervalMinimum)
+            try BGTaskScheduler.shared.submit(request)
+            print("scheduled")
+        } catch {
+            print("Could not schedule app refresh: \(error)")
+        }
+    }
+    
+    func refreshOperation() {
+        let content = UNMutableNotificationContent()
+        content.title = "Background Refresh Executed!"
+        content.subtitle = Date().description
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
     }
     
     func activateCustomerly() {

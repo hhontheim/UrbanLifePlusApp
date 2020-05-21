@@ -65,8 +65,8 @@
 		2B9DF22124747829001D420D /* BluetoothDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF21F24747829001D420D /* BluetoothDevice.swift */; };
 		2B9DF22324747885001D420D /* BluetoothUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF22224747885001D420D /* BluetoothUUID.swift */; };
 		2B9DF22424747885001D420D /* BluetoothUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF22224747885001D420D /* BluetoothUUID.swift */; };
-		2B9DF227247478CE001D420D /* BluetoothHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF226247478CE001D420D /* BluetoothHelper.swift */; };
-		2B9DF228247478CE001D420D /* BluetoothHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF226247478CE001D420D /* BluetoothHelper.swift */; };
+		2B9DF227247478CE001D420D /* BluetoothExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF226247478CE001D420D /* BluetoothExtensions.swift */; };
+		2B9DF228247478CE001D420D /* BluetoothExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF226247478CE001D420D /* BluetoothExtensions.swift */; };
 		2BE0FC2B2469DECB00196821 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC2A2469DECB00196821 /* SignInWithAppleButton.swift */; };
 		2BE0FC32246AEC0B00196821 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC31246AEC0B00196821 /* Keychain.swift */; };
 		2BE0FC35246B05F700196821 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0FC34246B05F700196821 /* SettingsView.swift */; };
@@ -185,7 +185,7 @@
 		2B90C7BC2471998C00AF8704 /* NukedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukedView.swift; sourceTree = "<group>"; };
 		2B9DF21F24747829001D420D /* BluetoothDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDevice.swift; sourceTree = "<group>"; };
 		2B9DF22224747885001D420D /* BluetoothUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothUUID.swift; sourceTree = "<group>"; };
-		2B9DF226247478CE001D420D /* BluetoothHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothHelper.swift; sourceTree = "<group>"; };
+		2B9DF226247478CE001D420D /* BluetoothExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothExtensions.swift; sourceTree = "<group>"; };
 		2BCE2339246B238E0083E5B1 /* SignInWithAppleButtonWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonWatch.swift; sourceTree = "<group>"; };
 		2BE0FC2A2469DECB00196821 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		2BE0FC31246AEC0B00196821 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
@@ -246,8 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				2B011DEA247456A600D44ACA /* Bluetooth.swift */,
-				2B9DF225247478BE001D420D /* Helper */,
 				2B9DF21F24747829001D420D /* BluetoothDevice.swift */,
+				2B9DF225247478BE001D420D /* Helper */,
 			);
 			path = Bluetooth;
 			sourceTree = "<group>";
@@ -496,8 +496,8 @@
 		2B9DF225247478BE001D420D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				2B9DF226247478CE001D420D /* BluetoothHelper.swift */,
 				2B9DF22224747885001D420D /* BluetoothUUID.swift */,
+				2B9DF226247478CE001D420D /* BluetoothExtensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -843,7 +843,7 @@
 				2BE0FC2B2469DECB00196821 /* SignInWithAppleButton.swift in Sources */,
 				2B8C8A02246C273300E0BA25 /* SessionDelegater.swift in Sources */,
 				2B2E76972471B6BD00CD2D95 /* TransferKey.swift in Sources */,
-				2B9DF227247478CE001D420D /* BluetoothHelper.swift in Sources */,
+				2B9DF227247478CE001D420D /* BluetoothExtensions.swift in Sources */,
 				2B2E76A62471B7A700CD2D95 /* AppState.swift in Sources */,
 				2B8EC88824686BFF00655D58 /* AppDelegate.swift in Sources */,
 				2B90C7BD2471998C00AF8704 /* NukedView.swift in Sources */,
@@ -896,7 +896,7 @@
 				2B2E76982471B6BD00CD2D95 /* TransferKey.swift in Sources */,
 				2B2E76A42471B78C00CD2D95 /* User.swift in Sources */,
 				2B8EC8C724686C0300655D58 /* ExtensionDelegate.swift in Sources */,
-				2B9DF228247478CE001D420D /* BluetoothHelper.swift in Sources */,
+				2B9DF228247478CE001D420D /* BluetoothExtensions.swift in Sources */,
 				2B011DF024745E1900D44ACA /* Bluetooth.swift in Sources */,
 				2B2E769B2471B6E400CD2D95 /* StorageHelper.swift in Sources */,
 				2B2E76A72471B7A700CD2D95 /* AppState.swift in Sources */,

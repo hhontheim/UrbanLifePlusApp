@@ -133,10 +133,6 @@
 		2B011DE62474556200D44ACA /* BTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTView.swift; sourceTree = "<group>"; };
 		2B011DEA247456A600D44ACA /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
 		2B011DED247459E100D44ACA /* BTDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTDeviceView.swift; sourceTree = "<group>"; };
-		2B011DFC2474724C00D44ACA /* BTDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDevice.swift; sourceTree = "<group>"; };
-		2B011DFD2474724C00D44ACA /* BTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTManager.swift; sourceTree = "<group>"; };
-		2B011DFE2474724C00D44ACA /* BTUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTUtils.swift; sourceTree = "<group>"; };
-		2B011DFF2474724C00D44ACA /* BTUUIDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTUUIDs.swift; sourceTree = "<group>"; };
 		2B2E768D2471AD7100CD2D95 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2B2E76902471ADA300CD2D95 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		2B2E76932471B6A000CD2D95 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
@@ -252,20 +248,8 @@
 				2B011DEA247456A600D44ACA /* Bluetooth.swift */,
 				2B9DF225247478BE001D420D /* Helper */,
 				2B9DF21F24747829001D420D /* BluetoothDevice.swift */,
-				2B011DE92474568D00D44ACA /* Sample files */,
 			);
 			path = Bluetooth;
-			sourceTree = "<group>";
-		};
-		2B011DE92474568D00D44ACA /* Sample files */ = {
-			isa = PBXGroup;
-			children = (
-				2B011DFC2474724C00D44ACA /* BTDevice.swift */,
-				2B011DFD2474724C00D44ACA /* BTManager.swift */,
-				2B011DFE2474724C00D44ACA /* BTUtils.swift */,
-				2B011DFF2474724C00D44ACA /* BTUUIDs.swift */,
-			);
-			path = "Sample files";
 			sourceTree = "<group>";
 		};
 		2B2E768C2471AD6100CD2D95 /* Main Views */ = {

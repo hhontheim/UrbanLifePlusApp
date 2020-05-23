@@ -1,151 +1,90 @@
 #include <BLEDevice.h>
 #include <BLEServer.h>
 #include <BLEUtils.h>
-#include <BLE2902.h>
-#include <TaskScheduler.h>
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 
-#define SERVICE_UUID              "9a8ca9ef-e43f-4157-9fee-c37a3d7dc12d"
-#define BLINK_UUID                "e94f85c8-7f57-4dbd-b8d3-2b56e107ed60"
-#define SPEED_UUID                "a8985fda-51aa-4f19-a777-71cf52abba1e"
+#define ULP_SERVICE_UUID          "F278E33F-D8F1-4F4B-8E04-885A5968FA11"
+
+#define USER_NAME_UUID            "4FB34DCC-27AB-4D22-AB77-9E3B03489CFC"
+#define USER_ID_UUID              "2D58B503-FE42-4010-BA8D-3F6A7632FCD5"
+#define USER_LED_UUID             "6067DAB3-D8C0-4D82-A486-C7499176B57A"
 
 #define DEVINFO_UUID              (uint16_t)0x180a
 #define DEVINFO_MANUFACTURER_UUID (uint16_t)0x2a29
 #define DEVINFO_NAME_UUID         (uint16_t)0x2a24
 #define DEVINFO_SERIAL_UUID       (uint16_t)0x2a25
 
-#define DEVICE_MANUFACTURER "ULP"
-#define DEVICE_NAME         "ULP Demo Device"
+#define DEVICE_MANUFACTURER       "ULP"
+#define DEVICE_NAME               "ULP Demo Device"
 
-#define PIN_BUTTON 0
 #define PIN_LED 2
-
-#define BACKLIGHT_PIN     13
 
 LiquidCrystal_I2C lcd(0x27,2,1,0,4,5,6,7,3,POSITIVE);
 
-Scheduler scheduler;
+BLECharacteristic *pCharacteristicUserName;
+BLECharacteristic *pCharacteristicUserId;
+BLECharacteristic *pCharacteristicUserLED;
 
-void buttonCb();
-void blinkCb();
-void blinkOffCb();
+bool connected = false;
+bool displayRefresh = true;
 
-Task taskBlink(500, TASK_FOREVER, &blinkCb, &scheduler, false, NULL, &blinkOffCb);
-Task taskButton(30, TASK_FOREVER, &buttonCb, &scheduler, true);
-
-uint8_t blinkOn;
-uint8_t blinkSpeed = 5;
-
-BLECharacteristic *pCharBlink;
-BLECharacteristic *pCharSpeed;
-
-
-
-void setBlink(bool on, bool notify = false) {
-  if (blinkOn == on) return;
-
-  blinkOn = on;
-  if (blinkOn) {
-    Serial.println("Blink ON");
-    taskBlink.restartDelayed(0);
-  } else {
-    Serial.println("Blink OFF");
-    taskBlink.disable();
-  }
-
-  pCharBlink->setValue(&blinkOn, 1);
-  if (notify) {
-    pCharBlink->notify();
-  }
-}
-
-void setBlinkSpeed(uint8_t v) {
-  blinkSpeed = v;
-  taskBlink.setInterval(v * 100);
-  Serial.println("Blink speed updated");
-}
-
-void buttonCb() {
-  uint8_t btn = digitalRead(PIN_BUTTON) != HIGH;
-  if (btn) {
-    setBlink(!blinkOn, true);
-    taskButton.delay(1000);
-  }
-}
-
-void blinkCb() {
-  digitalWrite(PIN_LED, taskBlink.getRunCounter() & 1);
-}
-
-void blinkOffCb() {
-  digitalWrite(PIN_LED, 0);
-}
+String userName = "";
+String userId = "";
+bool userLED = false;
 
 class MyServerCallbacks: public BLEServerCallbacks {
     void onConnect(BLEServer* pServer) {
       Serial.println("Connected");
-      echo("BLE", "Connected");
+      connected = true;
+      displayRefresh = true;
     };
 
     void onDisconnect(BLEServer* pServer) {
       Serial.println("Disconnected");
-      echo("BLE", "Disonnected");
+      connected = false;
+
+      userName = "";
+      userId = "";
+      userLED = false;
+
+      displayRefresh = true;
     }
 };
 
-class BlinkCallbacks: public BLECharacteristicCallbacks {
-    void onWrite(BLECharacteristic *pCharacteristic) {
-      std::string value = pCharacteristic->getValue();
-
-      if (value.length()  == 1) {
-        uint8_t v = value[0];
-        Serial.print("Got blink value: ");
-        Serial.println(v);
-        setBlink(v ? true : false);
-      } else {
-        Serial.println("Invalid data received");
-      }
-    }
+class UserNameCallbacks: public BLECharacteristicCallbacks {
+  void onWrite(BLECharacteristic *pCharacteristic) {
+    std::string value = pCharacteristic->getValue();
+    userName = String(value.c_str());
+    displayRefresh = true;
+  }
 };
 
-class SpeedCallbacks: public BLECharacteristicCallbacks {
-    void onWrite(BLECharacteristic *pCharacteristic) {
-      std::string value = pCharacteristic->getValue();
+class UserIdCallbacks: public BLECharacteristicCallbacks {
+  void onWrite(BLECharacteristic *pCharacteristic) {
+    std::string value = pCharacteristic->getValue();
+    userId = String(value.c_str());
+    displayRefresh = true;
+  }
+};
 
-      if (value.length() == 1) {
+class UserLEDCallbacks: public BLECharacteristicCallbacks {
+  void onWrite(BLECharacteristic *pCharacteristic) {
+    std::string value = pCharacteristic->getValue();
+    if (value.length()  == 1) {
         uint8_t v = value[0];
-        Serial.print("Got speed value: ");
-        if (v == 10) {
-          lcd.setCursor(14, 0);
-          lcd.print(v);
-        } else {
-          lcd.setCursor(14, 0);
-          lcd.print(0x00);
-          lcd.setCursor(15, 0);
-          lcd.print(v);
-        }
-        Serial.println(v);
-        if (v >= 1 && v <= 10) {
-          setBlinkSpeed(v);
-          return;
-        }
-      }
-      pCharSpeed->setValue(&blinkSpeed, 1);
-      Serial.println("Invalid data received");
+        userLED = v ? 1 : 0;
+        displayRefresh = true;
     }
+  }
 };
 
 void setup() {
   Serial.begin(115200);
   Serial.println("Starting...");
-
-  // Switch on the backlight
-  pinMode ( BACKLIGHT_PIN, OUTPUT );
-  digitalWrite ( BACKLIGHT_PIN, HIGH );
+  
   lcd.begin(16,2);
 
-  pinMode(PIN_BUTTON, INPUT);
   pinMode(PIN_LED, OUTPUT);
 
   String devName = DEVICE_NAME;
@@ -159,15 +98,17 @@ void setup() {
   pServer->setCallbacks(new MyServerCallbacks());
 
 
-  BLEService *pService = pServer->createService(SERVICE_UUID);
+  BLEService *pService = pServer->createService(ULP_SERVICE_UUID);
 
-  pCharBlink = pService->createCharacteristic(BLINK_UUID, BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_NOTIFY | BLECharacteristic::PROPERTY_WRITE);
-  pCharBlink->setCallbacks(new BlinkCallbacks());
-  pCharBlink->addDescriptor(new BLE2902());
+  pCharacteristicUserName = pService->createCharacteristic(USER_NAME_UUID, BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_WRITE);
+  pCharacteristicUserName->setCallbacks(new UserNameCallbacks());
 
-  pCharSpeed = pService->createCharacteristic(SPEED_UUID, BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_WRITE);
-  pCharSpeed->setCallbacks(new SpeedCallbacks());
-  pCharSpeed->setValue(&blinkSpeed, 1);
+  pCharacteristicUserId = pService->createCharacteristic(USER_ID_UUID, BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_WRITE);
+  pCharacteristicUserId->setCallbacks(new UserIdCallbacks());
+  
+  pCharacteristicUserLED = pService->createCharacteristic(USER_LED_UUID, BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_WRITE);
+  pCharacteristicUserLED->setCallbacks(new UserLEDCallbacks());
+  
 
   pService->start();
 
@@ -184,7 +125,6 @@ void setup() {
 
   pService->start();
 
-  // ----- Advertising
 
   BLEAdvertising *pAdvertising = pServer->getAdvertising();
 
@@ -195,25 +135,37 @@ void setup() {
 
   BLEAdvertisementData adv2;
   //adv2.setName(devName.c_str());
-  adv2.setCompleteServices(BLEUUID(SERVICE_UUID));
+  adv2.setCompleteServices(BLEUUID(ULP_SERVICE_UUID));
   pAdvertising->setScanResponseData(adv2);
 
   pAdvertising->start();
 
   Serial.println("Ready");
-  echo("BLE", "Ready...");
   Serial.print("Device name: ");
   Serial.println(devName);
 }
 
-void loop() {
-  scheduler.execute();
-}
-
 void echo(String first, String second) {
-  lcd.begin(16,2);
-  lcd.home ();
+  lcd.home();
   lcd.print(first);
   lcd.setCursor ( 0, 1 );
   lcd.print(second);
+}
+
+void loop() {
+  if (displayRefresh) {
+    lcd.clear();
+
+    if (connected) {
+      digitalWrite(PIN_LED, userLED ? 1 : 0);
+      lcd.home();
+      lcd.print("Hi, " + userName + "!");
+      lcd.setCursor(0, 1);
+      lcd.print("ID: " + userId.substring(0,7) + userId.substring(39, 44)); // 000615.d7814f22f99b4de3b395158c77848412.1933
+    } else {
+      echo("Device (" + String((uint32_t)(ESP.getEfuseMac() >> 24), HEX) + ")", "Ready to connect");
+    }
+
+    displayRefresh = false;
+  }
 }

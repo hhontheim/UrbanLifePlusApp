@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1649A61ACFFCBFA6EC0E3B0C /* Pods_UrbanLifePlusApp_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0E28654819173E85D32295 /* Pods_UrbanLifePlusApp_WatchKit_App.framework */; };
-		2B011DE72474556200D44ACA /* BTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B011DE62474556200D44ACA /* BTView.swift */; };
 		2B011DEB247456A600D44ACA /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B011DEA247456A600D44ACA /* BluetoothManager.swift */; };
 		2B011DF024745E1900D44ACA /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B011DEA247456A600D44ACA /* BluetoothManager.swift */; };
 		2B1C67D62479A49E002562F6 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C67D52479A49E002562F6 /* Bluetooth.swift */; };
 		2B1C67D72479A49E002562F6 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C67D52479A49E002562F6 /* Bluetooth.swift */; };
+		2B1C67DA2479B93D002562F6 /* BTSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C67D92479B93D002562F6 /* BTSettings.swift */; };
 		2B2B31FD2469B42200489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
 		2B2B31FE2469B44700489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
 		2B2E768E2471AD7100CD2D95 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E768D2471AD7100CD2D95 /* HomeView.swift */; };
@@ -33,7 +33,6 @@
 		2B5205D8246ED67F000CA3A4 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5205D7246ED67F000CA3A4 /* Storage.swift */; };
 		2B5205DA246ED7D7000CA3A4 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5205D7246ED67F000CA3A4 /* Storage.swift */; };
 		2B8C893A246B2E0000E0BA25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC8ED24686D3500655D58 /* Localizable.strings */; };
-		2B8C8945246B2F3700E0BA25 /* CommunicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8944246B2F3700E0BA25 /* CommunicationView.swift */; };
 		2B8C8948246B2FA600E0BA25 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8947246B2FA600E0BA25 /* ProfileView.swift */; };
 		2B8C8A02246C273300E0BA25 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8A01246C273300E0BA25 /* SessionDelegater.swift */; };
 		2B8C8A22246C400500E0BA25 /* SessionCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8A21246C400500E0BA25 /* SessionCommands.swift */; };
@@ -131,10 +130,10 @@
 		1D215ADF38DA80507FC22F99 /* Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp WatchKit Extension/Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		21E18DF0ED5F582DB651EAA4 /* Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp WatchKit App/Pods-UrbanLifePlusApp WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		2A06D71F1A68A2E5687C90DC /* Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests/Pods-UrbanLifePlusApp-UrbanLifePlusAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2B011DE62474556200D44ACA /* BTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTView.swift; sourceTree = "<group>"; };
 		2B011DEA247456A600D44ACA /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		2B011DED247459E100D44ACA /* BTDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTDeviceView.swift; sourceTree = "<group>"; };
 		2B1C67D52479A49E002562F6 /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
+		2B1C67D92479B93D002562F6 /* BTSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTSettings.swift; sourceTree = "<group>"; };
 		2B2E768D2471AD7100CD2D95 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2B2E76902471ADA300CD2D95 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		2B2E76932471B6A000CD2D95 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
@@ -257,6 +256,7 @@
 		2B1C67D82479ADC6002562F6 /* Unused */ = {
 			isa = PBXGroup;
 			children = (
+				2B8C8944246B2F3700E0BA25 /* CommunicationView.swift */,
 				2B011DED247459E100D44ACA /* BTDeviceView.swift */,
 			);
 			path = Unused;
@@ -322,8 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				2B90261F2469D0DB00C30CC4 /* HomeView.swift */,
-				2B8C8944246B2F3700E0BA25 /* CommunicationView.swift */,
-				2B011DE62474556200D44ACA /* BTView.swift */,
 				2BE0FC34246B05F700196821 /* SettingsView.swift */,
 				2B8C893C246B2E2300E0BA25 /* Sub Views */,
 				2B8C8946246B2F4E00E0BA25 /* Supporting Views */,
@@ -338,6 +336,7 @@
 				2B90C7BC2471998C00AF8704 /* NukedView.swift */,
 				2BE0FC36246B141300196821 /* DevView.swift */,
 				2B8C8947246B2FA600E0BA25 /* ProfileView.swift */,
+				2B1C67D92479B93D002562F6 /* BTSettings.swift */,
 			);
 			path = "Sub Views";
 			sourceTree = "<group>";
@@ -850,7 +849,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B011DE72474556200D44ACA /* BTView.swift in Sources */,
 				2BE0FC2B2469DECB00196821 /* SignInWithAppleButton.swift in Sources */,
 				2B1C67D62479A49E002562F6 /* Bluetooth.swift in Sources */,
 				2B8C8A02246C273300E0BA25 /* SessionDelegater.swift in Sources */,
@@ -863,7 +861,6 @@
 				2B9026202469D0DB00C30CC4 /* HomeView.swift in Sources */,
 				2B90C7BB2471955800AF8704 /* NukeInstructionsView.swift in Sources */,
 				2B2E76942471B6A000CD2D95 /* StorageKey.swift in Sources */,
-				2B8C8945246B2F3700E0BA25 /* CommunicationView.swift in Sources */,
 				2B2E769E2471B75000CD2D95 /* Local.swift in Sources */,
 				2B9DF22324747885001D420D /* BluetoothUUID.swift in Sources */,
 				2B8C8A22246C400500E0BA25 /* SessionCommands.swift in Sources */,
@@ -879,6 +876,7 @@
 				2B9026152469C99C00C30CC4 /* SignInWithAppleDelegates.swift in Sources */,
 				2B8C8948246B2FA600E0BA25 /* ProfileView.swift in Sources */,
 				2BE0FC35246B05F700196821 /* SettingsView.swift in Sources */,
+				2B1C67DA2479B93D002562F6 /* BTSettings.swift in Sources */,
 				2B2E76A32471B78C00CD2D95 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

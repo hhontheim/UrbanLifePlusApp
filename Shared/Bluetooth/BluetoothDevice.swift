@@ -74,9 +74,13 @@ class BluetoothDevice: NSObject, CBPeripheralDelegate, Identifiable {
     
     func fetchStorageUpdate() {
         guard storage != nil else { return }
-        userName = storage!.user.givenName
-        userId = storage!.user.userId
-        userLED = storage!.bluetooth.userWantsLEDOn
+        if storage?.appState.userIsLoggedIn ?? false {
+            userName = storage!.user.givenName
+            userId = storage!.user.userId
+            userLED = storage!.bluetooth.userWantsLEDOn
+        } else {
+            manager.cancelPeripheralConnection(peripheral)
+        }
         pushValuesToPeripheral()
     }
     

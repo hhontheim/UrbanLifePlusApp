@@ -10,6 +10,7 @@ import SwiftUI
 
 struct DevView: View {
     @EnvironmentObject var storage: Storage
+    @EnvironmentObject var bluetoothManager: BluetoothManager
     
     @State var userId: String = ""
     @State var identityToken: String = ""
@@ -17,6 +18,16 @@ struct DevView: View {
     
     var body: some View {
         List {
+            Section(header: Text("bt.devicesDisconnected")) {
+                ForEach(bluetoothManager.devicesDisconnected) { device in
+                    Text("\(device.name)")
+                }
+            }
+            Section(header: Text("bt.devicesConnected")) {
+                ForEach(bluetoothManager.devicesConnected) { device in
+                    Text("\(device.name)")
+                }
+            }
             Section(header: Text("Sign In With Apple Details")) {
                 VStack(alignment: .leading) {
                     Text("User ID")
@@ -50,8 +61,8 @@ struct DevView: View {
                 }
             }
         }
-        .listStyle(DefaultListStyle())
-        .navigationBarTitle("dev.title")
+        .listStyle(GroupedListStyle())
+        .navigationBarTitle("dev.title", displayMode: .inline)
     }
 }
 

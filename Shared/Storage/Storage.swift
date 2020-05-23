@@ -14,6 +14,8 @@ import CustomerlySDK
 #endif
 
 final class Storage: ObservableObject, SessionCommands, StorageHelper {
+    var bluetoothManager: BluetoothManager?
+    
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()
     
@@ -90,6 +92,10 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
         if let appStateEncoded: Data = try? encoder.encode(appState) {
             Storage.container.push(appStateEncoded, for: .appState)
             dataToSend[.appState] = appStateEncoded
+        }
+        
+        if bluetoothManager != nil {
+            bluetoothManager?.fetchStorageUpdate()
         }
         
         Storage.container.synchronize()

@@ -21,14 +21,22 @@ struct User: Codable {
     var pushToken: String
 
     var name: String {
-        var n: String = givenName
-        
-        if !familyName.isEmpty {
-            n += " "
-            n += familyName
+        get {
+            var n: String = givenName
+            
+            if !familyName.isEmpty {
+                n += " "
+                n += familyName
+            }
+            
+            return n
         }
-        
-        return n
+//        set {
+//            if let newName = PersonNameComponentsFormatter().personNameComponents(from: newValue), let newGivenName = newName.givenName, let newFamilyName = newName.familyName {
+//                givenName = newGivenName
+//                familyName = newFamilyName
+//            }
+//        }
     }
     
     init() {

@@ -9,24 +9,25 @@
 import SwiftUI
 
 struct BTDeviceView: View {
+//    @EnvironmentObject var bluetoothManager: BluetoothManager
     var device: BluetoothDevice
     
-    @State var blink: Bool = false
+    @State var toggle: Bool = false
     
     var body: some View {
         VStack {
             Text("\(device.name)")
-            Toggle(isOn: $blink) {
-                Text("T")
+            Button(action: {
+                self.toggle.toggle()
+                self.device.setUserLED(isOn: self.toggle)
+            }) {
+                Text("Toggle LED")
             }
-            Button("Toggle", action: {
-                self.blink.toggle()
-                self.device.blink = self.blink
-            })
         }
         .navigationBarTitle(Text(device.name), displayMode: .inline)
         .onAppear {
             self.device.connect()
+            self.toggle = false
         }
         .onDisappear {
             self.device.disconnect()

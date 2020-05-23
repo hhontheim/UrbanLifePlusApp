@@ -13,11 +13,10 @@ import CoreBluetooth
 let timeInterval = 1.0
 
 class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
-    @EnvironmentObject var storage: Storage
+    var storage: Storage?
     
     @Published private(set) var devicesDisconnected: [BluetoothDevice] = []
     @Published private(set) var devicesConnected: [BluetoothDevice] = []
-
     
     var timer = Timer()
     
@@ -47,7 +46,10 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
             }
             print("scanning: \(isActive)")
             if (isActive) {
-                manager.scanForPeripherals(withServices: BluetoothService.all, options: nil)
+                manager.scanForPeripherals(withServices: [
+                    BluetoothService.ulpService,
+                    BluetoothService.infoService
+                ], options: nil)
             } else {
                 manager.stopScan()
             }
@@ -90,7 +92,7 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
             print("already connected to newly discovered peripheral: \(peripheral)")
         } else if dDisconnected[id] == nil {
             print("new peripheral in range: \(peripheral), rssi: \(RSSI)")
-            let device: BluetoothDevice = BluetoothDevice(peripheral: peripheral, manager: manager)
+            let device: BluetoothDevice = BluetoothDevice(peripheral: peripheral, manager: manager, storage: storage)
             dDisconnected[id] = device
             didDiscover(device: device, rssi: RSSI)
         } else {
@@ -107,7 +109,10 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
             dConnected[id] = connectedDevice
         }
         
-        peripheral.discoverServices([BTUUID.blinkService, BTUUID.infoService])
+        peripheral.discoverServices([
+            BluetoothService.ulpService,
+            BluetoothService.infoService
+        ])
     }
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
@@ -140,6 +145,12 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     func disconnectAllDevices() {
         for (_, device) in dConnected {
             device.disconnect()
+        }
+    }
+    
+    func fetchStorageUpdate() {
+        for (_, device) in dConnected {
+            device.fetchStorageUpdate()
         }
     }
     

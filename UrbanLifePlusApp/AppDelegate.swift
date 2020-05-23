@@ -44,6 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         storage = Storage()
         bluetoothManager = BluetoothManager()
         
+        storage.bluetoothManager = bluetoothManager
+        bluetoothManager.storage = storage
+        
         sessionDelegater = SessionDelegater(storage: storage)
         
         if (WCSession.isSupported()) {

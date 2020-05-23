@@ -9,50 +9,42 @@
 import Foundation
 import CoreBluetooth
 
-protocol BluetoothDeviceDelegate: class {
-    func deviceConnected()
-    func deviceReady()
-    func deviceBlinkChanged(value: Bool)
-    func deviceSpeedChanged(value: Int)
-    func deviceSerialChanged(value: String)
-    func deviceDisconnected()
-}
-
 class BluetoothDevice: NSObject, CBPeripheralDelegate, Identifiable {
+    private let storage: Storage?
     private let peripheral: CBPeripheral
     private let manager: CBCentralManager
-    private var blinkChar: CBCharacteristic?
-    private var speedChar: CBCharacteristic?
-    private var _blink: Bool = false
-    private var _speed: Int = 5
+    private var userNameCharacteristic: CBCharacteristic?
+    private var userIdCharacteristic: CBCharacteristic?
+    private var userLEDCharacteristic: CBCharacteristic?
+
+    var userName: String = "" {
+//        willSet {
+//            guard userName != newValue else { return }
+//        }
+        didSet {
+            guard userName != oldValue else { return }
+            pushValuesToPeripheral()
+        }
+    }
+    var userId: String = "" {
+//        willSet {
+//            guard userId != newValue else { return }
+//        }
+        didSet {
+            guard userId != oldValue else { return }
+            pushValuesToPeripheral()
+        }
+    }
+    var userLED: Bool = false {
+//        willSet {
+//            guard userLED != newValue else { return }
+//        }
+        didSet {
+            guard userLED != oldValue else { return }
+            pushValuesToPeripheral()
+        }
+    }
     
-    weak var delegate: BluetoothDeviceDelegate? // TODO: Delete!
-    var blink: Bool {
-        get {
-            return _blink
-        }
-        set {
-            guard _blink != newValue else { return }
-            
-            _blink = newValue
-            if let char = blinkChar {
-                peripheral.writeValue(Data([_blink ? 1 : 0]), for: char, type: .withResponse)
-            }
-        }
-    }
-    var speed: Int {
-        get {
-            return _speed
-        }
-        set {
-            guard _speed != newValue else { return }
-            
-            _speed = newValue
-            if let char = speedChar {
-                peripheral.writeValue(Data([UInt8(_speed)]), for: char, type: .withResponse)
-            }
-        }
-    }
     var name: String {
         return peripheral.name ?? "Unknown device"
     }
@@ -61,78 +53,92 @@ class BluetoothDevice: NSObject, CBPeripheralDelegate, Identifiable {
     }
     private(set) var serial: String?
     
-    init(peripheral: CBPeripheral, manager: CBCentralManager) {
+    init(peripheral: CBPeripheral, manager: CBCentralManager, storage: Storage?) {
         self.peripheral = peripheral
         self.manager = manager
+        self.storage = storage
         super.init()
         self.peripheral.delegate = self
+        fetchStorageUpdate()
     }
     
     func connect() {
         manager.connect(peripheral, options: nil)
+        pushValuesToPeripheral()
     }
     
     func disconnect() {
         manager.cancelPeripheralConnection(peripheral)
     }
     
-    // MARK: - these are called from BluetoothManager, do not call directly
+    func setUserLED(isOn: Bool) {
+        userLED = isOn
+    }
+    
+    func fetchStorageUpdate() {
+        guard storage != nil else { return }
+        userName = storage!.user.givenName
+        print("BLE userName: \(userName)")
+        userId = storage!.user.userId
+        print("BLE userId: \(userId)")
+        pushValuesToPeripheral()
+    }
+    
+    func pushValuesToPeripheral() {
+        if let characteristic = userNameCharacteristic, let data = userName.data(using: .utf8) {
+            peripheral.writeValue(data, for: characteristic, type: .withResponse)
+        }
+        if let characteristic = userIdCharacteristic, let data = userId.data(using: .utf8) {
+            peripheral.writeValue(data, for: characteristic, type: .withResponse)
+        }
+        if let characteristic = userLEDCharacteristic {
+            peripheral.writeValue(Data([userLED ? 1 : 0]), for: characteristic, type: .withResponse)
+        }
+    }
     
     // MARK: - Delegate implementation
-    
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        print("Device: discovered services")
         peripheral.services?.forEach {
-            print("  \($0)")
-            if $0.uuid == BTUUID.infoService {
-                peripheral.discoverCharacteristics([BTUUID.infoSerial], for: $0)
-            } else if $0.uuid == BTUUID.blinkService {
-                peripheral.discoverCharacteristics([BTUUID.blinkOn,BTUUID.blinkSpeed], for: $0)
+            if $0.uuid == BluetoothService.infoService {
+                peripheral.discoverCharacteristics([
+//                    BluetoothCharacteristic.infoManufacturer,
+//                    BluetoothCharacteristic.infoName,
+                    BluetoothCharacteristic.infoSerial
+                ], for: $0)
+            } else if $0.uuid == BluetoothService.ulpService {
+                peripheral.discoverCharacteristics([
+                    BluetoothCharacteristic.ulpUserName,
+                    BluetoothCharacteristic.ulpUserId,
+                    BluetoothCharacteristic.ulpUserLED
+                ], for: $0)
             } else {
                 peripheral.discoverCharacteristics(nil, for: $0)
             }
-            
         }
-        print()
+        pushValuesToPeripheral()
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-        print("Device: discovered characteristics")
         service.characteristics?.forEach {
-            print("   \($0)")
-            
-            if $0.uuid == BTUUID.blinkOn {
-                self.blinkChar = $0
+            if $0.uuid == BluetoothCharacteristic.ulpUserName {
+                self.userNameCharacteristic = $0
                 peripheral.readValue(for: $0)
-                peripheral.setNotifyValue(true, for: $0)
-            } else if $0.uuid == BTUUID.blinkSpeed {
-                self.speedChar = $0
+            } else if $0.uuid == BluetoothCharacteristic.ulpUserId {
+                self.userIdCharacteristic = $0
                 peripheral.readValue(for: $0)
-            } else if $0.uuid == BTUUID.infoSerial {
+            } else if $0.uuid == BluetoothCharacteristic.ulpUserLED {
+                self.userLEDCharacteristic = $0
+                peripheral.readValue(for: $0)
+            } else if $0.uuid == BluetoothCharacteristic.infoSerial {
                 peripheral.readValue(for: $0)
             }
         }
-        print()
-        
-        delegate?.deviceReady()
+        pushValuesToPeripheral()
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        print("Device: updated value for \(characteristic)")
-        
-        if characteristic.uuid == blinkChar?.uuid, let b = characteristic.value?.parseBool() {
-            _blink = b
-            delegate?.deviceBlinkChanged(value: b)
-        }
-        if characteristic.uuid == speedChar?.uuid, let s = characteristic.value?.parseInt() {
-            _speed = Int(s)
-            delegate?.deviceSpeedChanged(value: _speed)
-        }
-        if characteristic.uuid == BTUUID.infoSerial, let d = characteristic.value {
+        if characteristic.uuid == BluetoothCharacteristic.infoSerial, let d = characteristic.value {
             serial = String(data: d, encoding: .utf8)
-            if let serial = serial {
-                delegate?.deviceSerialChanged(value: serial)
-            }
         }
     }
 }

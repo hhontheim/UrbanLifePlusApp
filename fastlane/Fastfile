@@ -55,14 +55,14 @@ platform :ios do
 
     sh("brew install imagemagick")
 
-    snapshot
-    frameit(
-     path: "./build/screenshots"
-    )
-    zip(
-     path: "./build/screenshots",
-     output_path: "./build/screenshots.zip"
-    )
+    # snapshot
+    # frameit(
+    #  path: "./build/screenshots"
+    # )
+    # zip(
+    #  path: "./build/screenshots",
+    #  output_path: "./build/screenshots.zip"
+    # )
 
     gym(export_options: {
       method: "ad-hoc",
@@ -85,7 +85,7 @@ platform :ios do
       description: log,
       commitish: "master",
       is_prerelease: false,
-      upload_assets: ["./build/app.ipa", "./build/screenshots.zip"]
+      upload_assets: ["./build/app.ipa"] # , "./build/screenshots.zip"]
     )
   end
 

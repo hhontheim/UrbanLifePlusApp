@@ -64,6 +64,7 @@ class BluetoothDevice: NSObject, CBPeripheralDelegate, Identifiable {
     
     func connect() {
         manager.connect(peripheral, options: nil)
+        fetchStorageUpdate()
         pushValuesToPeripheral()
     }
     
@@ -71,16 +72,11 @@ class BluetoothDevice: NSObject, CBPeripheralDelegate, Identifiable {
         manager.cancelPeripheralConnection(peripheral)
     }
     
-    func setUserLED(isOn: Bool) {
-        userLED = isOn
-    }
-    
     func fetchStorageUpdate() {
         guard storage != nil else { return }
         userName = storage!.user.givenName
-        print("BLE userName: \(userName)")
         userId = storage!.user.userId
-        print("BLE userId: \(userId)")
+        userLED = storage!.bluetooth.userWantsLEDOn
         pushValuesToPeripheral()
     }
     

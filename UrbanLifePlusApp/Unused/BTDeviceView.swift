@@ -19,7 +19,7 @@ struct BTDeviceView: View {
             Text("\(device.name)")
             Button(action: {
                 self.toggle.toggle()
-                self.device.setUserLED(isOn: self.toggle)
+                self.device.userLED = self.toggle
             }) {
                 Text("Toggle LED")
             }

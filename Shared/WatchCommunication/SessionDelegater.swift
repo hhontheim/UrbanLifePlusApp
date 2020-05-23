@@ -49,6 +49,13 @@ class SessionDelegater: NSObject, WCSessionDelegate {
                                             self.storage.persist(shouldSendUpdateToCounterpart: false)
                                         }
                                     }
+                                case .bluetooth:
+                                    DispatchQueue.main.sync {
+                                        if let bluetoothDecoded: Bluetooth = try? JSONDecoder().decode(Bluetooth.self, from: value) {
+                                            self.storage.bluetooth = bluetoothDecoded
+                                            self.storage.persist(shouldSendUpdateToCounterpart: false)
+                                        }
+                                    }
                                 case .local:
                                     fatalError("Local Data never transferred!")
                                 }

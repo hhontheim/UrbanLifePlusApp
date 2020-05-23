@@ -20,12 +20,6 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     
     var timer = Timer()
     
-    @Published var userWantsToConnect: Bool = false { // TODO: Read from storage
-        didSet {
-            // foo() // TODO: Do this
-        }
-    }
-    
     private let manager: CBCentralManager
     
     private var dConnected: [UUID:BluetoothDevice] = [:] {
@@ -105,7 +99,6 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         let id: UUID = peripheral.identifier
         
         if let connectedDevice = dDisconnected.removeValue(forKey: id) {
-            //dDisconnected[id] = nil // TODO: Needed?
             dConnected[id] = connectedDevice
         }
         
@@ -129,10 +122,12 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     }
     
     @objc func timerExec() {
-        if userWantsToConnect {
-            connectAllDevices()
-        } else {
-            disconnectAllDevices()
+        if let userWantsToConnectToPeripherals = storage?.bluetooth.userWantsToConnectToPeripherals {
+            if  userWantsToConnectToPeripherals {
+                connectAllDevices()
+            } else {
+                disconnectAllDevices()
+            }
         }
     }
     

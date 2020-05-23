@@ -35,6 +35,7 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
     // MARK: - Persistent
     @Published var user: User
     @Published var appState: AppState
+    @Published var bluetooth: Bluetooth
     
     // MARK: - Non-Persistent
     @Published var local: Local
@@ -53,6 +54,13 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
             self.appState = appStateDecoded
         } else {
             self.appState = AppState()
+        }
+        
+        if let bluetoothJSON: Data = Storage.container.pull(for: .bluetooth),
+            let bluetoothDecoded: Bluetooth = try? decoder.decode(Bluetooth.self, from: bluetoothJSON) {
+            self.bluetooth = bluetoothDecoded
+        } else {
+            self.bluetooth = Bluetooth()
         }
         
         local = Local()
@@ -78,6 +86,12 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
             let appStateDecoded: AppState = try? decoder.decode(AppState.self, from: appStateJSON) {
             self.appState = appStateDecoded
         }
+        
+        if let bluetoothJSON: Data = Storage.container.pull(for: .bluetooth),
+            let bluetoothDecoded: Bluetooth = try? decoder.decode(Bluetooth.self, from: bluetoothJSON) {
+            self.bluetooth = bluetoothDecoded
+        }
+        
         persist()
     }
     
@@ -92,6 +106,11 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
         if let appStateEncoded: Data = try? encoder.encode(appState) {
             Storage.container.push(appStateEncoded, for: .appState)
             dataToSend[.appState] = appStateEncoded
+        }
+        
+        if let bluetoothEncoded: Data = try? encoder.encode(bluetooth) {
+            Storage.container.push(bluetoothEncoded, for: .bluetooth)
+            dataToSend[.bluetooth] = bluetoothEncoded
         }
         
         if bluetoothManager != nil {
@@ -115,6 +134,7 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
     func nuke(shouldGoToSettingsToRevokeSIWA: Bool) {
         user = User()
         appState = AppState()
+        bluetooth = Bluetooth()
         appState.shouldGoToSettingsToRevokeSIWA = shouldGoToSettingsToRevokeSIWA
         persist()
     }

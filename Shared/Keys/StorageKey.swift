@@ -9,5 +9,6 @@
 enum StorageKey: String, CaseIterable {
     case user
     case appState
+    case bluetooth
     case local
 }

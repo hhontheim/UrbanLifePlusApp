@@ -10,8 +10,9 @@
 		1649A61ACFFCBFA6EC0E3B0C /* Pods_UrbanLifePlusApp_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0E28654819173E85D32295 /* Pods_UrbanLifePlusApp_WatchKit_App.framework */; };
 		2B011DE72474556200D44ACA /* BTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B011DE62474556200D44ACA /* BTView.swift */; };
 		2B011DEB247456A600D44ACA /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B011DEA247456A600D44ACA /* BluetoothManager.swift */; };
-		2B011DEE247459E100D44ACA /* BTDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B011DED247459E100D44ACA /* BTDeviceView.swift */; };
 		2B011DF024745E1900D44ACA /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B011DEA247456A600D44ACA /* BluetoothManager.swift */; };
+		2B1C67D62479A49E002562F6 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C67D52479A49E002562F6 /* Bluetooth.swift */; };
+		2B1C67D72479A49E002562F6 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C67D52479A49E002562F6 /* Bluetooth.swift */; };
 		2B2B31FD2469B42200489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
 		2B2B31FE2469B44700489C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8EC88D24686C0200655D58 /* Assets.xcassets */; };
 		2B2E768E2471AD7100CD2D95 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E768D2471AD7100CD2D95 /* HomeView.swift */; };
@@ -133,6 +134,7 @@
 		2B011DE62474556200D44ACA /* BTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTView.swift; sourceTree = "<group>"; };
 		2B011DEA247456A600D44ACA /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		2B011DED247459E100D44ACA /* BTDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTDeviceView.swift; sourceTree = "<group>"; };
+		2B1C67D52479A49E002562F6 /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
 		2B2E768D2471AD7100CD2D95 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2B2E76902471ADA300CD2D95 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		2B2E76932471B6A000CD2D95 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
@@ -252,6 +254,14 @@
 			path = Bluetooth;
 			sourceTree = "<group>";
 		};
+		2B1C67D82479ADC6002562F6 /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				2B011DED247459E100D44ACA /* BTDeviceView.swift */,
+			);
+			path = Unused;
+			sourceTree = "<group>";
+		};
 		2B2E768C2471AD6100CD2D95 /* Main Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +293,7 @@
 			children = (
 				2B2E76A22471B78C00CD2D95 /* User.swift */,
 				2B2E76A52471B7A700CD2D95 /* AppState.swift */,
+				2B1C67D52479A49E002562F6 /* Bluetooth.swift */,
 				2B2E769D2471B75000CD2D95 /* Local.swift */,
 			);
 			path = Types;
@@ -327,7 +338,6 @@
 				2B90C7BC2471998C00AF8704 /* NukedView.swift */,
 				2BE0FC36246B141300196821 /* DevView.swift */,
 				2B8C8947246B2FA600E0BA25 /* ProfileView.swift */,
-				2B011DED247459E100D44ACA /* BTDeviceView.swift */,
 			);
 			path = "Sub Views";
 			sourceTree = "<group>";
@@ -404,6 +414,7 @@
 				2B90261B2469CA8700C30CC4 /* Helper */,
 				2B8EC89224686C0200655D58 /* LaunchScreen.storyboard */,
 				2B8EC89524686C0200655D58 /* Info.plist */,
+				2B1C67D82479ADC6002562F6 /* Unused */,
 				2B8EC88F24686C0200655D58 /* Preview Content */,
 			);
 			path = UrbanLifePlusApp;
@@ -841,6 +852,7 @@
 			files = (
 				2B011DE72474556200D44ACA /* BTView.swift in Sources */,
 				2BE0FC2B2469DECB00196821 /* SignInWithAppleButton.swift in Sources */,
+				2B1C67D62479A49E002562F6 /* Bluetooth.swift in Sources */,
 				2B8C8A02246C273300E0BA25 /* SessionDelegater.swift in Sources */,
 				2B2E76972471B6BD00CD2D95 /* TransferKey.swift in Sources */,
 				2B9DF227247478CE001D420D /* BluetoothExtensions.swift in Sources */,
@@ -851,7 +863,6 @@
 				2B9026202469D0DB00C30CC4 /* HomeView.swift in Sources */,
 				2B90C7BB2471955800AF8704 /* NukeInstructionsView.swift in Sources */,
 				2B2E76942471B6A000CD2D95 /* StorageKey.swift in Sources */,
-				2B011DEE247459E100D44ACA /* BTDeviceView.swift in Sources */,
 				2B8C8945246B2F3700E0BA25 /* CommunicationView.swift in Sources */,
 				2B2E769E2471B75000CD2D95 /* Local.swift in Sources */,
 				2B9DF22324747885001D420D /* BluetoothUUID.swift in Sources */,
@@ -898,6 +909,7 @@
 				2B8EC8C724686C0300655D58 /* ExtensionDelegate.swift in Sources */,
 				2B9DF228247478CE001D420D /* BluetoothExtensions.swift in Sources */,
 				2B011DF024745E1900D44ACA /* BluetoothManager.swift in Sources */,
+				2B1C67D72479A49E002562F6 /* Bluetooth.swift in Sources */,
 				2B2E769B2471B6E400CD2D95 /* StorageHelper.swift in Sources */,
 				2B2E76A72471B7A700CD2D95 /* AppState.swift in Sources */,
 				2B8C8A23246C400500E0BA25 /* SessionCommands.swift in Sources */,

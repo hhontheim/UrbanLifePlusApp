@@ -13,25 +13,39 @@ struct BTView: View {
     @EnvironmentObject var bluetoothManager: BluetoothManager
     
     var body: some View {
-        NavigationView {
+        let bUserWantsToConnectToPeripherals = Binding(
+            get: { self.storage.bluetooth.userWantsToConnectToPeripherals },
+            set: {
+                self.storage.bluetooth.userWantsToConnectToPeripherals = $0
+                self.storage.persist()
+        }
+        )
+        let bUserWantsLEDOn = Binding(
+            get: { self.storage.bluetooth.userWantsLEDOn },
+            set: {
+                self.storage.bluetooth.userWantsLEDOn = $0
+                self.storage.persist()
+        }
+        )
+        
+        return NavigationView {
             VStack {
                 Text("bt.greeting")
-                Toggle(isOn: $bluetoothManager.userWantsToConnect) {
-                    Text("userWantsToConnect")
+                Toggle(isOn: bUserWantsToConnectToPeripherals) {
+                    Text("userWantsToConnectToPeripherals")
+                }
+                Toggle(isOn: bUserWantsLEDOn) {
+                    Text("userWantsLEDOn")
                 }
                 List {
                     Section(header: Text("bt.devicesDisconnected")) {
                         ForEach(bluetoothManager.devicesDisconnected) { device in
-                            NavigationLink(destination: BTDeviceView(device: device)) {
-                                Text("\(device.name)")
-                            }
+                            Text("\(device.name)")
                         }
                     }
                     Section(header: Text("bt.devicesConnected")) {
                         ForEach(bluetoothManager.devicesConnected) { device in
-                            NavigationLink(destination: BTDeviceView(device: device)) {
-                                Text("\(device.name)")
-                            }
+                            Text("\(device.name)")
                         }
                     }
                 }

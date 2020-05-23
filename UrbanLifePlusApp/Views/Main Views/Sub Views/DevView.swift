@@ -51,6 +51,7 @@ struct DevView: View {
             }
         }
         .listStyle(DefaultListStyle())
-        .navigationBarTitle("dev.title")    }
+        .navigationBarTitle("dev.title")
+    }
 }
 

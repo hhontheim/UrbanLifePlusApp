@@ -27,7 +27,7 @@ BLECharacteristic *pCharacteristicUserId;
 BLECharacteristic *pCharacteristicUserLED;
 
 bool connected = false;
-bool displayRefresh = true;
+bool refresh = true;
 
 String userName = "";
 String userId = "";
@@ -36,19 +36,21 @@ bool userLED = false;
 class MyServerCallbacks: public BLEServerCallbacks {
     void onConnect(BLEServer* pServer) {
       Serial.println("Connected");
+      digitalWrite(PIN_LED, 0);
       connected = true;
-      displayRefresh = true;
+      refresh = true;
     };
 
     void onDisconnect(BLEServer* pServer) {
       Serial.println("Disconnected");
+      digitalWrite(PIN_LED, 0);
       connected = false;
 
       userName = "";
       userId = "";
       userLED = false;
 
-      displayRefresh = true;
+      refresh = true;
     }
 };
 
@@ -56,7 +58,7 @@ class UserNameCallbacks: public BLECharacteristicCallbacks {
   void onWrite(BLECharacteristic *pCharacteristic) {
     std::string value = pCharacteristic->getValue();
     userName = String(value.c_str());
-    displayRefresh = true;
+    refresh = true;
   }
 };
 
@@ -64,7 +66,7 @@ class UserIdCallbacks: public BLECharacteristicCallbacks {
   void onWrite(BLECharacteristic *pCharacteristic) {
     std::string value = pCharacteristic->getValue();
     userId = String(value.c_str());
-    displayRefresh = true;
+    refresh = true;
   }
 };
 
@@ -74,7 +76,7 @@ class UserLEDCallbacks: public BLECharacteristicCallbacks {
     if (value.length()  == 1) {
         uint8_t v = value[0];
         userLED = v ? 1 : 0;
-        displayRefresh = true;
+        refresh = true;
     }
   }
 };
@@ -153,19 +155,19 @@ void echo(String first, String second) {
 }
 
 void loop() {
-  if (displayRefresh) {
+  if (refresh) {
     lcd.clear();
 
     if (connected) {
       digitalWrite(PIN_LED, userLED ? 1 : 0);
       lcd.home();
-      lcd.print("Hi, " + userName + "!");
+      lcd.print("Hello, " + userName + "!");
       lcd.setCursor(0, 1);
       lcd.print("ID: " + userId.substring(0,7) + userId.substring(39, 44)); // 000615.d7814f22f99b4de3b395158c77848412.1933
     } else {
       echo("Device (" + String((uint32_t)(ESP.getEfuseMac() >> 24), HEX) + ")", "Ready to connect");
     }
 
-    displayRefresh = false;
+    refresh = false;
   }
 }

@@ -45,7 +45,7 @@ struct SettingsView: View {
                 }
                 Section {
                     NavigationLink(destination: DevView()) {
-                        ListImageRow(imageName: "hammer", color: .black, text: Text("dev.link"))
+                        ListImageRow(imageName: "hammer", color: .black, text: Text("dev.link"), swapOutlineColorIfDarkMode: true)
                     }
                 }
                 Section {

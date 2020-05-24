@@ -9,15 +9,26 @@
 import SwiftUI
 
 struct ListImage: View {
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     let imageName: String
     let color: Color
+    var swapOutlineColorIfDarkMode: Bool = false
     
     var body: some View {
-        Rectangle()
-            .frame(width: 35, height: 35)
-            .foregroundColor(color)
-            .cornerRadius(8)
-            .inverseMask(Image(systemName: imageName).resizable().padding(8).scaledToFit())
+        ZStack {
+            if swapOutlineColorIfDarkMode && colorScheme == .dark {
+                Rectangle()
+                    .frame(width: 34, height: 34)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
+            Rectangle()
+                .frame(width: 35, height: 35)
+                .foregroundColor(color)
+                .cornerRadius(8)
+                .inverseMask(Image(systemName: imageName).resizable().padding(8).scaledToFit())
+        }
     }
 }
 

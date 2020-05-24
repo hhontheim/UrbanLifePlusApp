@@ -12,10 +12,11 @@ struct ListImageRow: View {
     let imageName: String
     let color: Color
     let text: Text
+    var swapOutlineColorIfDarkMode: Bool = false
     
     var body: some View {
         HStack {
-            ListImage(imageName: imageName, color: color)
+            ListImage(imageName: imageName, color: color, swapOutlineColorIfDarkMode: swapOutlineColorIfDarkMode)
             text
         }
     }

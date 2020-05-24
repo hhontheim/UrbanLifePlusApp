@@ -7,102 +7,58 @@
 //
 
 import SwiftUI
-import CustomerlySDK
-import Instabug
 
 struct HomeView: View {
     @EnvironmentObject var storage: Storage
     @EnvironmentObject var bluetoothManager: BluetoothManager
     
-    @State var showHelpSheet: Bool = false
-    
     var body: some View {
-        let bUserWantsToConnectToPeripherals = Binding(
-            get: { self.storage.bluetooth.userWantsToConnectToPeripherals },
-            set: {
-                self.storage.bluetooth.userWantsToConnectToPeripherals = $0
-                self.storage.persist()
-        }
+        let bUserWantsPhoneToConnectToPeripherals = Binding(
+            get: { self.storage.bluetooth.userWantsPhoneToConnectToPeripherals },
+            set: { self.storage.bluetooth.userWantsPhoneToConnectToPeripherals = $0; self.storage.persist() }
+        )
+        let bUserWantsWatchToConnectToPeripherals = Binding(
+            get: { self.storage.bluetooth.userWantsWatchToConnectToPeripherals },
+            set: { self.storage.bluetooth.userWantsWatchToConnectToPeripherals = $0; self.storage.persist() }
         )
         
         return NavigationView {
             List {
-                Section {
-                    NavigationLink(destination: ProfileView()) {
-                        HStack {
-                            Image(systemName: "person.crop.square.fill") // profiltImage
-                                .resizable()
-                                .frame(width: 50, height: 50) // 60 x 60
-                                .aspectRatio(contentMode: .fill)
-                                //                                .clipShape(Circle())
-                                .padding(.vertical, 2)
-                            VStack(alignment: .leading) {
-                                Text("\(storage.user.givenName) \(storage.user.familyName)")
-                                    .font(.headline)
-                                Text(storage.user.email)
-                                    .font(.subheadline)
-                                    .foregroundColor(.secondary)
-                            }
-                        }
+                Section(header:
+                    HStack {
+                        Spacer()
+                        Text("home.greeting \(storage.user.givenName)")
+                            .font(.title)
+                            .padding(.top, 18)
+                            .foregroundColor(.primary)
+                        Spacer()
+                    }
+                ) { EmptyView() }
+                Section(header: Text("home.sec.connect")) {
+                    Toggle(isOn: bUserWantsPhoneToConnectToPeripherals) {
+                        Text("home.sec.connect.phone")
+                    }
+                    Toggle(isOn: bUserWantsWatchToConnectToPeripherals) {
+                        Text("home.sec.connect.watch")
                     }
                 }
-                Section(header: Text("ble")) {
-                    Toggle(isOn: bUserWantsToConnectToPeripherals) {
-                        Text("i want to connect to devices")
-                    }
-                    NavigationLink(destination: BTSettings()) {
-                        Text("my preferences")
-                    }
-                }
-                Section(header: Text("devicesConnected")) {
+                Section(header: Text("home.sec.devices")) {
                     if bluetoothManager.devicesConnected.isEmpty {
-                        Text("no devices connected")
+                        Text("home.sec.devices.none")
                     } else {
-                        NavigationLink(destination: List {
-                            ForEach(bluetoothManager.devicesConnected) { device in
-                                Text("\(device.name)")
-                            }
-                            .listStyle(GroupedListStyle())
-                            .navigationBarTitle("connected devices", displayMode: .inline)
-                        }) {
-                            Text("see connected devices")
+                        ForEach(bluetoothManager.devicesConnected) { device in
+                            Text("\(device.name)")
                         }
-                    }
-                }
-                Section(header: Text("more.settings")) {
-                    NavigationLink(destination: SettingsView()) {
-                        Text("settings.link")
                     }
                 }
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("home.title")
-            .navigationBarItems(trailing:
-                Button(action: {
-                    self.showHelpSheet = true
-                }) {
-                    HStack {
-                        Text("settings.help")
-                        Image(systemName: "questionmark.circle.fill")
-                            .imageScale(.large)
-                    }
-                }
-                .actionSheet(isPresented: $showHelpSheet) {
-                    ActionSheet(title: Text("settings.help.sheet.title"), message: Text("settings.help.sheet.message"), buttons: [
-                        .default(Text("settings.help.sheet.chat")) {
-                            self.storage.registerForCustomerly()
-                            if let window = UIApplication.shared.windows.first?.rootViewController {
-                                Customerly.sharedInstance.openSupport(from: window)
-                            }
-                        },
-                        .default(Text("settings.help.sheet.tech")) {
-                            Instabug.identifyUser(withEmail: self.storage.user.email, name: self.storage.user.name)
-                            Instabug.show()
-                        },
-                        .cancel(Text("settings.help.sheet.abort")),
-                    ])
-                }
-            )
+            .navigationBarTitle(storage.user.givenName.suffix(1) == "s" ? "home.title.name.with.s \(storage.user.givenName)" : "home.title.name.without.s \(storage.user.givenName)")
+        }
+        .tabItem {
+            Text("home.tab")
+            Image(systemName: "house.fill")
+                .imageScale(.large)
         }
     }
 }

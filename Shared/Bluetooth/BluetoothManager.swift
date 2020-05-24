@@ -40,10 +40,7 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
             }
             print("scanning: \(isActive)")
             if (isActive) {
-                manager.scanForPeripherals(withServices: [
-                    BluetoothService.ulpService,
-                    BluetoothService.infoService
-                ], options: nil)
+                startSearching()
             } else {
                 manager.stopScan()
             }
@@ -110,6 +107,7 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         print("didFailToConnect: \(peripheral), error: \(String(describing: error))")
+        dDisconnected[peripheral.identifier] = nil
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
@@ -122,24 +120,42 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     }
     
     @objc func timerExec() {
-        if let userWantsToConnectToPeripherals = storage?.bluetooth.userWantsToConnectToPeripherals {
-            if  userWantsToConnectToPeripherals {
+        if let userWantsPhoneToConnectToPeripherals = storage?.bluetooth.userWantsPhoneToConnectToPeripherals, let userWantsWatchToConnectToPeripherals = storage?.bluetooth.userWantsWatchToConnectToPeripherals {
+            #if os(iOS)
+            if userWantsPhoneToConnectToPeripherals {
                 connectAllDevices()
             } else {
                 disconnectAllDevices()
             }
+            #elseif os(watchOS)
+            if userWantsWatchToConnectToPeripherals {
+                connectAllDevices()
+            } else {
+                disconnectAllDevices()
+            }
+            #endif
         }
     }
     
     func connectAllDevices() {
+        #if os(iOS)
         for (_, device) in dDisconnected {
             device.connect()
         }
+        #elseif os(watchOS)
+        for (_, device) in dDisconnected.prefix(2) {
+            device.connect()
+        }
+        #endif
     }
     
     func disconnectAllDevices() {
+        let actuallyConnectedDevices = manager.retrieveConnectedPeripherals(withServices: [BluetoothService.ulpService, BluetoothService.infoService])
+        
         for (_, device) in dConnected {
-            device.disconnect()
+            if actuallyConnectedDevices.firstIndex(of: device.peripheral) != nil {
+                device.disconnect()
+            }
         }
     }
     
@@ -147,6 +163,14 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         for (_, device) in dConnected {
             device.fetchStorageUpdate()
         }
+    }
+    
+    func startSearching() {
+        manager.stopScan()
+        manager.scanForPeripherals(withServices: [
+            BluetoothService.ulpService,
+            BluetoothService.infoService
+        ], options: nil)
     }
     
     // MARK: - Additional methods to react to changes. Just used for printings for now.

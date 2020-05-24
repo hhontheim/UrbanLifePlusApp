@@ -6,42 +6,36 @@
 //  Copyright © 2020 Henning Hontheim. All rights reserved.
 //
 
+// TODO: Clone Profile. Save button.
+
 import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var storage: Storage
     
     var body: some View {
-        List {
-            Section(header: Text("name")) {
-                VStack(alignment: .leading) {
-                    Text("givenName")
-                    TextField("Text Feld", text: $storage.user.givenName)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                }
-                VStack(alignment: .leading) {
-                    Text("givenName")
-                    TextField("Text Feld", text: $storage.user.familyName)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                }
+        UITextField.appearance().clearButtonMode = .whileEditing
+        
+        return List {
+            Section(header: Text("profile.givenName")) {
+                TextField("profile.givenName", text: $storage.user.givenName)
+                    .textContentType(.givenName)
             }
-            Section {
-                VStack(alignment: .leading) {
-                    Text("email")
-                    TextField("Text Feld", text: $storage.user.email)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                }
+            Section(header: Text("profile.familyName")) {
+                TextField("profile.familyName", text: $storage.user.familyName)
+                    .textContentType(.familyName)
             }
-            Section {
-                Button(action: {
-                    self.storage.persist()
-                }) {
-                    Text("Persist")
-                }
+            Section(header: Text("profile.email")) {
+                TextField("profile.email", text: $storage.user.email)
+                    .textContentType(.emailAddress)
+                    .keyboardType(.emailAddress)
             }
         }
         .listStyle(GroupedListStyle())
         .navigationBarTitle("profile.title", displayMode: .inline)
+        .onDisappear {
+            self.storage.persist()
+        }
     }
 }
 

@@ -11,19 +11,28 @@
 "login.newUser" = "Bitte erstelle dir einen Account,\ndamit du die App nutzen kannst!";
 "login.existingUser" = "Bitte melde dich wieder an,\ndamit du die App nutzen kannst!";
 
-"home.title" = "Mein UrbanLife+";
+"home.title.name.with.s %@" = "%@\' UrbanLife+";
+"home.title.name.without.s %@" = "%@\'s UrbanLife+";
 "home.greeting %@" = "Hallo, %@!";
 "home.tab" = "Startseite";
+"home.sec.connect" = "Bei anderen Geräten in der Nähe anmelden";
+"home.sec.connect.phone" = "Mit dem iPhone anmelden";
+"home.sec.connect.watch" = "Mit der Apple Watch anmelden";
+"home.sec.devices" = "Mit diesen Geräten bist du verbunden";
+"home.sec.devices.none" = "Aktuell mit keinen Geräten verbunden...";
 
-"communication.title" = "Kommunikation";
-"communication.tab" = "Kommunikation";
-"communication.send" = "Senden";
+"bt.title" = "Meine Präferenzen";
+"bt.tab" = "Präferenzen";
+"bt.dev.demo" = "ULP Demo Device";
+"bt.dev.demo.led" = "LED aktivieren";
+
+"bt.dummy" = "(Dummy device)";
 
 "settings.title" = "Einstellungen";
 "settings.tab" = "Einstellungen";
 "settings.logout" = "Abmelden";
 "settings.nuke" = "Alle Daten löschen...";
-"settings.help" = "Hilfe";
+"settings.help" = "Hilfe...";
 
 "settings.nuke.sheet.title" = "Möchtest Du wirklich alle Daten der App löschen?";
 "settings.nuke.sheet.message" = "Dies kann nicht rückgängig gemacht werden!";
@@ -38,6 +47,11 @@
 
 "dev.title" = "Entwickler Menü";
 "dev.link" = "Entwickler Menü";
+
+"profile.title" = "Mein Profil";
+"profile.givenName" = "Vorname";
+"profile.familyName" = "Nachname";
+"profile.email" = "E-Mail";
 
 "login.revokeSIWAInSettings.title" = "Daten gelöscht!";
 "login.revokeSIWAInSettings.text" = "Alle Daten wurden gelöscht.";
@@ -57,6 +71,12 @@
 "w.login.message" = "Bitte öffne die App auf deinem iPhone, um fortzufahren!";
 "w.login.reload" = "Neu laden...";
 
-"w.home.title" = "Start";
-"w.home.greeting %@" = "Hallo, %@!";
+"w.home.title" = "UrbanLife+";
 "w.home.update" = "Update";
+"w.home.prefs.link" = "Meine Präferenzen hier festlegen";
+"w.home.dev.link" = "Verbundene Geräte hier ansehen";
+
+"w.prefs.title" = "Meine Präferenzen";
+
+"w.dev.title" = "Verbundene Geräte";
+"w.dev.sec.watch" = "Mit der Watch verbundene Geräte";

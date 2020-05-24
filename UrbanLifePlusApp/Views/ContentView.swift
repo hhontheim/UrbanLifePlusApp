@@ -15,7 +15,11 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            HomeView()
+            TabView {
+                HomeView()
+                BTPreferences()
+                SettingsView()
+            }
             if !storage.appState.userIsLoggedIn || storage.appState.shouldGoToSettingsToRevokeSIWA {
                 ZStack {
                     if colorScheme == .light {

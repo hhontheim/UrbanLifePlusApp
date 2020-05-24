@@ -9,12 +9,14 @@
 import Foundation
 
 struct Bluetooth: Codable {
-    var userWantsToConnectToPeripherals: Bool
-    
+    var userWantsPhoneToConnectToPeripherals: Bool
+    var userWantsWatchToConnectToPeripherals: Bool
+
     var userWantsLEDOn: Bool
     
     init() {
-        userWantsToConnectToPeripherals = false
+        userWantsPhoneToConnectToPeripherals = false
+        userWantsWatchToConnectToPeripherals = false
         userWantsLEDOn = false
     }
 }

@@ -18,12 +18,12 @@ struct DevView: View {
     
     var body: some View {
         List {
-            Section(header: Text("bt.devicesDisconnected")) {
+            Section(header: Text("Disconnected BLE devices")) {
                 ForEach(bluetoothManager.devicesDisconnected) { device in
                     Text("\(device.name)")
                 }
             }
-            Section(header: Text("bt.devicesConnected")) {
+            Section(header: Text("Connected BLE devices")) {
                 ForEach(bluetoothManager.devicesConnected) { device in
                     Text("\(device.name)")
                 }

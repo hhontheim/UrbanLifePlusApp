@@ -13,11 +13,15 @@ import SwiftUI
 class HostingController: WKHostingController<AnyView> {
     
     var storage: Storage!
+    var bluetoothManager: BluetoothManager!
 
     override var body: AnyView {
         
         storage = (WKExtension.shared().delegate as! ExtensionDelegate).storage
-        
-        return AnyView(ContentView().environmentObject(storage))
+        bluetoothManager = (WKExtension.shared().delegate as! ExtensionDelegate).bluetoothManager
+
+        return AnyView(ContentView()
+            .environmentObject(storage)
+            .environmentObject(bluetoothManager))
     }
 }

@@ -12,12 +12,17 @@ import WatchConnectivity
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
     
     var storage: Storage!
+    var bluetoothManager: BluetoothManager!
     
     var sessionDelegater: SessionDelegater!
     
     func applicationDidFinishLaunching() {
         storage = Storage()
+        bluetoothManager = BluetoothManager()
         
+        storage.bluetoothManager = bluetoothManager
+        bluetoothManager.storage = storage
+
         sessionDelegater = SessionDelegater(storage: storage)
         
         if (WCSession.isSupported()) {

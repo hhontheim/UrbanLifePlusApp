@@ -69,8 +69,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         task.expirationHandler = {
           task.setTaskCompleted(success: false)
         }
-        refreshOperation()
-        scheduleAppRefresh()
+//        refreshOperation()
+//        scheduleAppRefresh()
         task.setTaskCompleted(success: true)
     }
     
@@ -91,9 +91,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         content.title = "Background Refresh Executed!"
         content.subtitle = Date().description
         content.sound = UNNotificationSound.default
-        
+
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        
+
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request)
     }

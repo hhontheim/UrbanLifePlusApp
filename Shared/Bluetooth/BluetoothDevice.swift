@@ -11,7 +11,7 @@ import CoreBluetooth
 
 class BluetoothDevice: NSObject, CBPeripheralDelegate, Identifiable {
     private let storage: Storage?
-    private let peripheral: CBPeripheral
+    let peripheral: CBPeripheral
     private let manager: CBCentralManager
     private var userNameCharacteristic: CBCharacteristic?
     private var userIdCharacteristic: CBCharacteristic?

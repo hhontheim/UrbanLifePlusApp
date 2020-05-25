@@ -41,9 +41,9 @@ platform :ios do
       tag: "ci/" + new_tag
     )
 
-    sh("git remote -v")
+    sh("sh ./travis_git.sh")
     push_to_git_remote(
-      remote: "origin",
+      remote: "travis",
       local_branch: "HEAD",
       remote_branch: ENV["TRAVIS_BRANCH"],
       tags: true

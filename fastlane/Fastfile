@@ -47,7 +47,8 @@ platform :ios do
     #   remote_branch: ENV["TRAVIS_BRANCH"],
     #   tags: true
     # )
-    sh("git push origin HEAD:master --tags")
+    sh("git remote add travis git@github.com:hhontheim/UrbanLifePlusApp.git")
+    sh("git push travis master --tags")
 
     match(type: "development", readonly: is_ci)
     match(type: "adhoc", readonly: is_ci)

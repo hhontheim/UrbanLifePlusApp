@@ -21,6 +21,7 @@ platform :ios do
 
   lane :deploy do
     setup_travis
+    sh("sh ./travis_git.sh")
     clean_build_artifacts
     ensure_git_status_clean
 
@@ -41,7 +42,6 @@ platform :ios do
       tag: "ci/" + new_tag
     )
 
-    sh("sh ./travis_git.sh")
     push_to_git_remote(
       remote: "travis",
       local_branch: "HEAD",
@@ -54,7 +54,7 @@ platform :ios do
 
     # run_tests
 
-    # 
+    # sh("brew install imagemagick")
 
     # snapshot
     # frameit(

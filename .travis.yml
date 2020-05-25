@@ -16,3 +16,4 @@ notifications:
 addons:
   ssh_known_hosts:
     - ssh.strato.de:22
+    - github.com

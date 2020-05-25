@@ -41,6 +41,7 @@ platform :ios do
       tag: "ci/" + new_tag
     )
 
+    sh("git remote -v")
     push_to_git_remote(
       remote: "origin",
       local_branch: "HEAD",
@@ -53,7 +54,7 @@ platform :ios do
 
     # run_tests
 
-    # sh("brew install imagemagick")
+    # 
 
     # snapshot
     # frameit(

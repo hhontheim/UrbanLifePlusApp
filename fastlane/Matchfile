@@ -1,4 +1,4 @@
-git_url("git@github.com:hhontheim/ulp-certificates.git")
+git_url("https://github.com/hhontheim/ulp-certificates.git")
 
 storage_mode("git")
 

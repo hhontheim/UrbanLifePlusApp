@@ -41,19 +41,20 @@ platform :ios do
       tag: "ci/" + new_tag
     )
 
-    push_to_git_remote(
-      remote: "origin",
-      local_branch: "HEAD",
-      remote_branch: ENV["TRAVIS_BRANCH"],
-      tags: true
-    )
+    # push_to_git_remote(
+    #   remote: "origin",
+    #   local_branch: "HEAD",
+    #   remote_branch: ENV["TRAVIS_BRANCH"],
+    #   tags: true
+    # )
+    sh("git push origin HEAD:master --tags")
 
     match(type: "development", readonly: is_ci)
     match(type: "adhoc", readonly: is_ci)
 
     # run_tests
 
-    sh("brew install imagemagick")
+    # sh("brew install imagemagick")
 
     # snapshot
     # frameit(

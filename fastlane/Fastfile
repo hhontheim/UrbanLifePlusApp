@@ -53,7 +53,7 @@ platform :ios do
 
     # run_tests
 
-    sh("brew install imagemagick")
+    # sh("brew install imagemagick")
 
     # snapshot
     # frameit(

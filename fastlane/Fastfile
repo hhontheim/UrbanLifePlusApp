@@ -43,13 +43,6 @@ platform :ios do
       tag: "ci/" + new_tag
     )
 
-    push_to_git_remote(
-      remote: "travis",
-      local_branch: "HEAD",
-      remote_branch: ENV["TRAVIS_BRANCH"],
-      tags: true
-    )
-
     match(type: "development", readonly: is_ci)
     match(type: "adhoc", readonly: is_ci)
 
@@ -78,6 +71,13 @@ platform :ios do
           fullSizeImageURL: "https://hontheim.net/deploy/ulp/512.png"
         }
       }
+    )
+
+    push_to_git_remote(
+      remote: "travis",
+      local_branch: "HEAD",
+      remote_branch: ENV["TRAVIS_BRANCH"],
+      tags: true
     )
 
     sh("sh ./upload_sftp.sh " + new_tag)

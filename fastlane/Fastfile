@@ -24,6 +24,8 @@ platform :ios do
     clean_build_artifacts
     ensure_git_status_clean
 
+    sh(" git remote add travis https://${GH_TOKEN}@github.com/hhontheim/UrbanLifePlusApp.git > /dev/null 2>&1")
+
     build_number = Time.new.utc.strftime("%y%m%d.%H%M")
     log = "[Install directly to iOS device here!](https://hontheim.net/deploy/ulp/)\n\nChangelog:\n\n" + changelog_from_git_commits(
       pretty: "- %s",
@@ -42,7 +44,7 @@ platform :ios do
     )
 
     push_to_git_remote(
-      remote: "origin",
+      remote: "travis",
       local_branch: "HEAD",
       remote_branch: ENV["TRAVIS_BRANCH"],
       tags: true

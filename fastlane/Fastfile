@@ -66,16 +66,19 @@ platform :ios do
     #  output_path: "./build/screenshots.zip"
     # )
 
-    gym(export_options: {
-      method: "ad-hoc",
-      include_bitcode: false,
-      include_symbols: false,
-      manifest: {
-        appURL: "url_to_replace",
-        displayImageURL: "https://hontheim.net/deploy/ulp/57.png",
-        fullSizeImageURL: "https://hontheim.net/deploy/ulp/512.png"
+    gym(
+      verbose: true,
+      export_options: {
+        method: "ad-hoc",
+        include_bitcode: false,
+        include_symbols: false,
+        manifest: {
+          appURL: "url_to_replace",
+          displayImageURL: "https://hontheim.net/deploy/ulp/57.png",
+          fullSizeImageURL: "https://hontheim.net/deploy/ulp/512.png"
+        }
       }
-    })
+    )
 
     sh("sh ./upload_sftp.sh " + new_tag)
 

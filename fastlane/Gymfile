@@ -10,7 +10,7 @@ scheme("UrbanLifePlusApp")
 
 # sdk("iphoneos9.0")
 
-clean(true)
+clean(false)
 
 output_directory("./build")
 

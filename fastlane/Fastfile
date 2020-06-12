@@ -95,9 +95,6 @@ platform :ios do
       is_prerelease: false,
       upload_assets: ["./build/app.ipa", "./build/screenshots.zip"]
     )
-    
-    clean_build_artifacts
-    xcclean
 
     match(type: "appstore", readonly: is_ci)
 

@@ -10,7 +10,7 @@ scheme("UrbanLifePlusApp")
 
 # open_report(true)
 
-# clean(true)
+clean(false)
 
 # Enable skip_build to skip debug builds for faster test performance
 skip_build(true)

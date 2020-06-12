@@ -48,20 +48,7 @@ platform :ios do
     match(type: "adhoc", readonly: is_ci)
     match(type: "appstore", readonly: is_ci)
 
-    # run_tests
-
-    # sh("brew install imagemagick")
-
-    snapshot(
-      override_status_bar: true
-    )
-    frameit(
-     path: "./build/screenshots"
-    )
-    zip(
-     path: "./build/screenshots",
-     output_path: "./build/screenshots.zip"
-    )
+    sh("brew install imagemagick")
 
     gym(
       verbose: true,
@@ -75,6 +62,19 @@ platform :ios do
           fullSizeImageURL: "https://hontheim.net/deploy/ulp/512.png"
         }
       }
+    )
+
+    # run_tests
+
+    snapshot(
+      override_status_bar: true
+    )
+    frameit(
+     path: "./build/screenshots"
+    )
+    zip(
+     path: "./build/screenshots",
+     output_path: "./build/screenshots.zip"
     )
 
     push_to_git_remote(
@@ -111,6 +111,7 @@ platform :ios do
         thinning: "<thin-for-all-variants>"
       }
     )
+
     upload_to_testflight(
       skip_waiting_for_build_processing: true,
       apple_id: "1517216646",
@@ -119,31 +120,31 @@ platform :ios do
       team_id: "118327074",
       skip_submission: true,
       demo_account_required: false,
-      distribute_external: false,
-      notify_external_testers: false,
-      changelog: git_commits_log,
-      localized_app_info: {
-        "default": {
-          feedback_email: "henning@hontheim.net",
-          marketing_url: "https://urbanlifeplus.hontheim.net/",
-          privacy_policy_url: "https://urbanlifeplus.hontheim.net/ios-app/datenschutzerklaerung",
-          description: "Testen Sie die neue Version der UrbanLife+ App!"
-        },
-        "de-DE": {
-          feedback_email: "henning@hontheim.net",
-          marketing_url: "https://urbanlifeplus.hontheim.net",
-          privacy_policy_url: "https://urbanlifeplus.hontheim.net/ios-app/datenschutzerklaerung",
-          description: "Testen Sie die neue Version der UrbanLife+ App!"
-        }
-      },
-      localized_build_info: {
-        "default": {
-          whats_new: git_commits_log
-        },
-        "de-DE": {
-          whats_new: git_commits_log
-        }
-      }
+      # notify_external_testers: false,
+      # distribute_external: false,
+      # changelog: git_commits_log,
+      # localized_app_info: {
+      #   "default": {
+      #     feedback_email: "henning@hontheim.net",
+      #     marketing_url: "https://urbanlifeplus.hontheim.net/",
+      #     privacy_policy_url: "https://urbanlifeplus.hontheim.net/ios-app/datenschutzerklaerung",
+      #     description: "Testen Sie die neue Version der UrbanLife+ App!"
+      #   },
+      #   "de-DE": {
+      #     feedback_email: "henning@hontheim.net",
+      #     marketing_url: "https://urbanlifeplus.hontheim.net",
+      #     privacy_policy_url: "https://urbanlifeplus.hontheim.net/ios-app/datenschutzerklaerung",
+      #     description: "Testen Sie die neue Version der UrbanLife+ App!"
+      #   }
+      # },
+      # localized_build_info: {
+      #   "default": {
+      #     whats_new: git_commits_log
+      #   },
+      #   "de-DE": {
+      #     whats_new: git_commits_log
+      #   }
+      # }
     )
   end
 

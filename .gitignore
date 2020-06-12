@@ -407,3 +407,4 @@ iOSInjectionProject/
 ## Gcc Patch
 /*.gcno
 
+/build Kopie

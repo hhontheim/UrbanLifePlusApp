@@ -96,6 +96,9 @@ platform :ios do
       upload_assets: ["./build/app.ipa", "./build/screenshots.zip"]
     )
     
+    clean_build_artifacts
+    xcclean
+
     match(type: "appstore", readonly: is_ci)
 
     gym(
@@ -115,7 +118,36 @@ platform :ios do
 
     upload_to_testflight(
       skip_waiting_for_build_processing: true,
-      apple_id: "1517216646",
+      apple_id: "1517216646"
+    )
+  end
+
+  lane :register do
+    register_devices(devices_file: "./devices.txt")
+    match(type: "adhoc", force_for_new_devices: true)
+    match(type: "development", force_for_new_devices: true)
+    match(type: "appstore", force_for_new_devices: true)
+  end
+
+  lane :tf do
+    gym(
+      verbose: true,
+      export_options: {
+        method: "app-store",
+        provisioningProfiles: { 
+          "net.hontheim.UrbanLifePlusApp" => "match AppStore net.hontheim.UrbanLifePlusApp",
+          "net.hontheim.UrbanLifePlusApp.watchkitapp" => "match AppStore net.hontheim.UrbanLifePlusApp.watchkitapp",
+          "net.hontheim.UrbanLifePlusApp.watchkitapp.watchkitextension" => "match AppStore net.hontheim.UrbanLifePlusApp.watchkitapp.watchkitextension"
+        },
+        include_bitcode: false,
+        include_symbols: false,
+        thinning: "<thin-for-all-variants>"
+      }
+    )
+    upload_to_testflight(
+      ipa: "build/app.ipa",
+      skip_waiting_for_build_processing: true,
+      apple_id: "1517216646"
       # uses_non_exempt_encryption: false,
       # app_identifier: "net.hontheim.UrbanLifePlusApp",
       # team_id: "118327074",
@@ -146,39 +178,6 @@ platform :ios do
       #     whats_new: git_commits_log
       #   }
       # }
-    )
-  end
-
-  lane :register do
-    register_devices(devices_file: "./devices.txt")
-    match(type: "adhoc", force_for_new_devices: true)
-    match(type: "development", force_for_new_devices: true)
-    match(type: "appstore", force_for_new_devices: true)
-  end
-
-  lane :tf do
-    gym(
-      verbose: true,
-      export_options: {
-        method: "app-store",
-        provisioningProfiles: { 
-          "net.hontheim.UrbanLifePlusApp" => "match AppStore net.hontheim.UrbanLifePlusApp",
-          "net.hontheim.UrbanLifePlusApp.watchkitapp" => "match AppStore net.hontheim.UrbanLifePlusApp.watchkitapp",
-          "net.hontheim.UrbanLifePlusApp.watchkitapp.watchkitextension" => "match AppStore net.hontheim.UrbanLifePlusApp.watchkitapp.watchkitextension"
-        },
-        include_bitcode: true,
-        include_symbols: true,
-        thinning: "<thin-for-all-variants>"
-      }
-    )
-
-    upload_to_testflight(
-      skip_waiting_for_build_processing: true,
-      apple_id: "1517216646",
-      # uses_non_exempt_encryption: false,
-      # app_identifier: "net.hontheim.UrbanLifePlusApp",
-      # team_id: "118327074",
-      skip_submission: true,
     )
   end
 

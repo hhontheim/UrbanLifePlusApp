@@ -119,7 +119,7 @@ platform :ios do
       # uses_non_exempt_encryption: false,
       # app_identifier: "net.hontheim.UrbanLifePlusApp",
       # team_id: "118327074",
-      skip_submission: true,
+      # skip_submission: true,
       # demo_account_required: false,
       # notify_external_testers: false,
       # distribute_external: false,

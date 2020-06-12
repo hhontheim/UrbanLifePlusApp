@@ -112,6 +112,8 @@ platform :ios do
       }
     )
     upload_to_testflight(
+      skip_waiting_for_build_processing: true,
+      apple_id: "1517216646",
       uses_non_exempt_encryption: false,
       app_identifier: "net.hontheim.UrbanLifePlusApp",
       team_id: "118327074",

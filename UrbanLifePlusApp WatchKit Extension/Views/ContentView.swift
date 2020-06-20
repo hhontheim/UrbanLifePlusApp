@@ -13,11 +13,6 @@ struct ContentView: View {
     @EnvironmentObject var storage: Storage
     
     var body: some View {
-        #if targetEnvironment(simulator)
-        return ZStack {
-            HomeView()
-        }
-        #else
         return ZStack {
             if storage.appState.userIsRegistered && !storage.appState.shouldGoToSettingsToRevokeSIWA && storage.appState.userIsLoggedIn {
                 HomeView()
@@ -25,7 +20,6 @@ struct ContentView: View {
                 LogInView()
             }
         }
-        #endif
     }
 }
 

@@ -20,13 +20,7 @@ final class Storage: ObservableObject, SessionCommands, StorageHelper {
     let decoder = JSONDecoder()
     
     #if os(iOS)
-    // Store in Key-Value iCloud
-    #if targetEnvironment(simulator)
-    static let container = UserDefaults.standard
-    #else
     static let container = NSUbiquitousKeyValueStore()
-    #endif
-    
     #elseif os(watchOS)
     // Store locally on Watch
     static let container = UserDefaults.standard

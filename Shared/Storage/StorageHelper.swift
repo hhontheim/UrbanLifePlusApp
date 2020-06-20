@@ -8,9 +8,7 @@
 
 import Foundation
 
-#if targetEnvironment(simulator)
-extension UserDefaults: StorageHelper {}
-#elseif os(iOS)
+#if os(iOS)
 extension NSUbiquitousKeyValueStore: StorageHelper {}
 #elseif os(watchOS)
 extension UserDefaults: StorageHelper {}

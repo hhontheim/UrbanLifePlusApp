@@ -104,8 +104,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func activateInstabug(_ application: UIApplication, _ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-        // let appToken = liveMode ? "cd3e8a69524c773d05a8da64f5612db8" : "3c37aa0208e8a838565a5ad2d7071611" // ULP App
-        let appToken = liveMode ? "fc285088d5d705d5ec0e651d910c93f8" : "2a026da7ca3b0ba823c9cef873deb91b" // FL Demo
+        let appToken = liveMode ? "cd3e8a69524c773d05a8da64f5612db8" : "3c37aa0208e8a838565a5ad2d7071611" // ULP App
+        // let appToken = liveMode ? "fc285088d5d705d5ec0e651d910c93f8" : "2a026da7ca3b0ba823c9cef873deb91b" // FL Demo
         
         Instabug.start(withToken: appToken, invocationEvents: [.none])
         Instabug.tintColor = UIColor.systemOrange

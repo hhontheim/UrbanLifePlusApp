@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = Instabug;
+			productName = Instabug;
 		};
 /* End PBXAggregateTarget section */
 
@@ -395,7 +396,7 @@
 		14E5F010C2AADB79663E573AD250EE77 /* IBGSurvey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGSurvey.h; path = Instabug.framework/Headers/IBGSurvey.h; sourceTree = "<group>"; };
 		161C968BA43E17FE11232643B3275752 /* MemoryStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryStorage.swift; path = Sources/Cache/MemoryStorage.swift; sourceTree = "<group>"; };
 		16D4421D72DE25073AEA1FA473C2DE7E /* CyImageMassageTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyImageMassageTableViewCell.swift; path = "CustomerlySDK/Library/View Controllers/Cells/CyImageMassageTableViewCell.swift"; sourceTree = "<group>"; };
-		17B341CB49FE2162072CACEA3E878B4F /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = CustomerlySDK/Library/it.lproj; sourceTree = "<group>"; };
+		17B341CB49FE2162072CACEA3E878B4F /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = CustomerlySDK/Library/it.lproj; sourceTree = "<group>"; };
 		18C7F86E56B609B80FF2E6F208CEC72F /* CyAttachmentModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyAttachmentModel.swift; path = CustomerlySDK/Library/Models/CyAttachmentModel.swift; sourceTree = "<group>"; };
 		19C07C133406718DBA59E6CFCAA3DF27 /* IBGBugReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGBugReporting.h; path = Instabug.framework/Headers/IBGBugReporting.h; sourceTree = "<group>"; };
 		1B0B300C6EBA9187E24018E74EE0DB7D /* SocketEngineWebsocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineWebsocket.swift; path = Source/SocketIO/Engine/SocketEngineWebsocket.swift; sourceTree = "<group>"; };
@@ -458,9 +459,9 @@
 		4C2465E0D949709B67591419AFCC5583 /* Kingfisher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kingfisher-Info.plist"; sourceTree = "<group>"; };
 		4CF14A0B811AC2D8F7AF60C3B2B68545 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		4DAB8F1239EC58864A23A6676DFF6F2D /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = Sources/TransformType.swift; sourceTree = "<group>"; };
-		4EECE54FE9DE8FCF16FBFBD22ACDD2B7 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = CustomerlySDK/Library/es.lproj; sourceTree = "<group>"; };
+		4EECE54FE9DE8FCF16FBFBD22ACDD2B7 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = CustomerlySDK/Library/es.lproj; sourceTree = "<group>"; };
 		4F764F9F2C516214B69CA834FBE8345C /* CyMessageSeenRequestModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyMessageSeenRequestModel.swift; path = CustomerlySDK/Library/Models/CyMessageSeenRequestModel.swift; sourceTree = "<group>"; };
-		50C0B0879B7086918A819F704BF40B4B /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketIO.framework; path = "Socket.IO-Client-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C0B0879B7086918A819F704BF40B4B /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		522AB34F2C852868FCD184DC02F8CCB1 /* CustomerlyImageGallery.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = CustomerlyImageGallery.storyboard; path = CustomerlySDK/Library/UI/CustomerlyImageGallery.storyboard; sourceTree = "<group>"; };
 		532C3F06BA7E3F9936785734C29B3931 /* Pods-UrbanLifePlusApp-AutomatedSnapshots-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots-dummy.m"; sourceTree = "<group>"; };
 		5650C8918E52139FDF0F3A7F938B537E /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Sources/Starscream/SSLSecurity.swift; sourceTree = "<group>"; };
@@ -515,7 +516,7 @@
 		7F9E9529F7665D61571CB7B197753A3B /* CyConversationModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyConversationModel.swift; path = CustomerlySDK/Library/Models/CyConversationModel.swift; sourceTree = "<group>"; };
 		842755E5B8C71F3658CAB97A27BAA108 /* Pods-UrbanLifePlusApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UrbanLifePlusApp-frameworks.sh"; sourceTree = "<group>"; };
 		844519EE4651D73601D9408491F203D1 /* CustomerlySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomerlySDK-umbrella.h"; sourceTree = "<group>"; };
-		848E2177C7158C078273418EB5944F82 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = CustomerlySDK/Library/Base.lproj; sourceTree = "<group>"; };
+		848E2177C7158C078273418EB5944F82 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Base.lproj; path = CustomerlySDK/Library/Base.lproj; sourceTree = "<group>"; };
 		84DFDDB1266DCD119F20E9F00F6B1F27 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Utility/Box.swift; sourceTree = "<group>"; };
 		8556ABB732A9AD99BAD189FCCB743991 /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FB37033D5B1B7473F3393F60C7F051 /* SocketPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketPacket.swift; path = Source/SocketIO/Parse/SocketPacket.swift; sourceTree = "<group>"; };
@@ -525,12 +526,12 @@
 		87C616A8B902302D95865DCB924C1D37 /* ImmutableMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmutableMappable.swift; path = Sources/ImmutableMappable.swift; sourceTree = "<group>"; };
 		87CD8AA00A62A0493CAD1F6787AB64CE /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/General/KingfisherManager.swift; sourceTree = "<group>"; };
 		88CC096A130D03778EC8D208E44458CC /* CyConversationTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyConversationTableViewCell.swift; path = "CustomerlySDK/Library/View Controllers/Cells/CyConversationTableViewCell.swift"; sourceTree = "<group>"; };
-		891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E9F102AF834985E891F5A0A38A3469 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
 		8A6CF0644757C84C0A69985DEB0F805C /* SocketStringReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketStringReader.swift; path = Source/SocketIO/Util/SocketStringReader.swift; sourceTree = "<group>"; };
 		8B12F3CCE38012234FBB9965DCF4B7FD /* CySurveyResponseModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySurveyResponseModel.swift; path = CustomerlySDK/Library/Models/CySurveyResponseModel.swift; sourceTree = "<group>"; };
 		8DDA4613A9358078AB7DECBBBBC297BF /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/Extensions/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
-		8EDA2CEE41DA1B8CA35177156D158D86 /* CustomerlySDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CustomerlySDK.bundle; path = "CustomerlySDK-CustomerlySDK.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EDA2CEE41DA1B8CA35177156D158D86 /* CustomerlySDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerlySDK.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F06877724061D4BB189E82738270378 /* CodableTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableTransform.swift; path = Sources/CodableTransform.swift; sourceTree = "<group>"; };
 		8F6287AECB456A9BCA159A1DE5D0E243 /* CustomerlySDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CustomerlySDK.modulemap; sourceTree = "<group>"; };
 		8F641B01A04F29B7963164D727A99252 /* ObjectMapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjectMapper-dummy.m"; sourceTree = "<group>"; };
@@ -550,10 +551,10 @@
 		98E47137637ACA97069A72B7EF3F12A4 /* SocketLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketLogger.swift; path = Source/SocketIO/Util/SocketLogger.swift; sourceTree = "<group>"; };
 		993436B3C288FCFD927659D1BBCED84F /* Pods-UrbanLifePlusApp-AutomatedSnapshots-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots-frameworks.sh"; sourceTree = "<group>"; };
 		9A75183666FE2183397D8E94ACF19AED /* ImageFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFormat.swift; path = Sources/Image/ImageFormat.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DBE24A459CACE1093C59EFD5E929128 /* Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		A2CAC4C67C282F849BEB66C5074ED2A9 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Sources/Networking/RedirectHandler.swift; sourceTree = "<group>"; };
-		A2D3B06B5DF171E7653AB32373A4C6FF /* Pods_UrbanLifePlusApp_AutomatedSnapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UrbanLifePlusApp_AutomatedSnapshots.framework; path = "Pods-UrbanLifePlusApp-AutomatedSnapshots.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2D3B06B5DF171E7653AB32373A4C6FF /* Pods_UrbanLifePlusApp_AutomatedSnapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanLifePlusApp_AutomatedSnapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A582CC5711FCCCDEF1A131420D5ACA48 /* ObjectMapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.release.xcconfig; sourceTree = "<group>"; };
 		A60B7DBBFCFBCC81304298C0921C9DBC /* SocketManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketManager.swift; path = Source/SocketIO/Manager/SocketManager.swift; sourceTree = "<group>"; };
 		A7674693A14BF2473B243FC90A7D4937 /* SSLClientCertificate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLClientCertificate.swift; path = Sources/Starscream/SSLClientCertificate.swift; sourceTree = "<group>"; };
@@ -581,7 +582,7 @@
 		B871AA8B9A46D29F4371109E1B33E62E /* CustomerlySDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomerlySDK.debug.xcconfig; sourceTree = "<group>"; };
 		B87412080619577F1993CAB51751F3EB /* CySingleActiveAdminCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySingleActiveAdminCollectionViewCell.swift; path = "CustomerlySDK/Library/View Controllers/Cells/CySingleActiveAdminCollectionViewCell.swift"; sourceTree = "<group>"; };
 		B8A3411BDFB5C446F08D28A6E3CF1307 /* CyTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyTextView.swift; path = CustomerlySDK/Library/Subclasses/CyTextView.swift; sourceTree = "<group>"; };
-		B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjectMapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B973FA0C6CA6BE00A4B56632896F797C /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Sources/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
 		B9C32D04554B3511FA822AE212340B40 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/General/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
 		BB1DCA0C2D6BE6E305E140B8EFF44553 /* Pods-UrbanLifePlusApp WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UrbanLifePlusApp WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
@@ -593,7 +594,7 @@
 		C296E8459B9DCBC7E5341F0C2853A749 /* URLTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLTransform.swift; path = Sources/URLTransform.swift; sourceTree = "<group>"; };
 		C3154EB2CD3D61BD4A8597FDD24809DE /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = Sources/TransformOf.swift; sourceTree = "<group>"; };
 		C35502EB33D39925DECABFDF7CD61170 /* Pods-UrbanLifePlusApp WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UrbanLifePlusApp WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41D7BC19D3764E41F2AE31FF0E8FD89 /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Starscream/Compression.swift; sourceTree = "<group>"; };
 		C49B52E8820AC008521E10592A96D8ED /* CustomerlyConversationListVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomerlyConversationListVC.swift; path = "CustomerlySDK/Library/View Controllers/CustomerlyConversationListVC.swift"; sourceTree = "<group>"; };
 		C4A95276DFC31F288FEDD35881C4448C /* KingfisherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherError.swift; path = Sources/General/KingfisherError.swift; sourceTree = "<group>"; };
@@ -613,12 +614,12 @@
 		D05954A1DE7D6F418AEA7CCE66468DC2 /* SocketEventHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEventHandler.swift; path = Source/SocketIO/Client/SocketEventHandler.swift; sourceTree = "<group>"; };
 		D0953B8C8296CC3379ECCA7F7F854AFB /* IBGReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGReport.h; path = Instabug.framework/Headers/IBGReport.h; sourceTree = "<group>"; };
 		D0C0CC77A73DF2632F86061546F53563 /* CyHTTPValidation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyHTTPValidation.swift; path = CustomerlySDK/Library/CyHTTPValidation.swift; sourceTree = "<group>"; };
-		D1FF15B1D02A006DAFC54BE99DD84BBA /* CustomerlySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CustomerlySDK.framework; path = CustomerlySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1FF15B1D02A006DAFC54BE99DD84BBA /* CustomerlySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomerlySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3795A7A5524382F4B86DE86E16B2222 /* WKInterfaceImage+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKInterfaceImage+Kingfisher.swift"; path = "Sources/Extensions/WKInterfaceImage+Kingfisher.swift"; sourceTree = "<group>"; };
 		D3A9975256ECEF3F4A104A73E7F8F9CB /* CyString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyString.swift; path = CustomerlySDK/Library/Subclasses/CyString.swift; sourceTree = "<group>"; };
 		D3EEBCA316915309A819BA395056A928 /* IBGFeatureRequests.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGFeatureRequests.h; path = Instabug.framework/Headers/IBGFeatureRequests.h; sourceTree = "<group>"; };
-		D440A04BD01A0F48B7278C9B986A74CB /* Pods_UrbanLifePlusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UrbanLifePlusApp.framework; path = "Pods-UrbanLifePlusApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D51D907EC97D66A0FAE675BCCC8B65F8 /* notification.m4r */ = {isa = PBXFileReference; includeInIndex = 1; name = notification.m4r; path = CustomerlySDK/Library/notification.m4r; sourceTree = "<group>"; };
+		D440A04BD01A0F48B7278C9B986A74CB /* Pods_UrbanLifePlusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanLifePlusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D51D907EC97D66A0FAE675BCCC8B65F8 /* notification.m4r */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = notification.m4r; path = CustomerlySDK/Library/notification.m4r; sourceTree = "<group>"; };
 		D5F070BD992D35F1D2589353B91D613D /* Instabug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Instabug.release.xcconfig; sourceTree = "<group>"; };
 		D5FCF42547AFB8123D5DEF099CFA35D6 /* EnumTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumTransform.swift; path = Sources/EnumTransform.swift; sourceTree = "<group>"; };
 		D69582462717B1F2B54A8F5ED6DA7378 /* CyMessageTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyMessageTableViewCell.swift; path = "CustomerlySDK/Library/View Controllers/Cells/CyMessageTableViewCell.swift"; sourceTree = "<group>"; };
@@ -636,7 +637,7 @@
 		DF4DE09EEBE17D72CC97B542B73953CF /* Socket.IO-Client-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-umbrella.h"; sourceTree = "<group>"; };
 		DF57601E005A092499EE19F628773F45 /* Socket.IO-Client-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Socket.IO-Client-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		DFDA52FAB14CEA7786F97706FC30F6D7 /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
-		E1A98616EB5DCA7B0B314AB01D8BA240 /* Pods_UrbanLifePlusApp_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UrbanLifePlusApp_WatchKit_App.framework; path = "Pods-UrbanLifePlusApp WatchKit App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1A98616EB5DCA7B0B314AB01D8BA240 /* Pods_UrbanLifePlusApp_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanLifePlusApp_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20EAA28EAA6B34025FDE76912E6DFAE /* CyAppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyAppModel.swift; path = CustomerlySDK/Library/Models/CyAppModel.swift; sourceTree = "<group>"; };
 		E22975DF7E2FD97F9CCF554B271F137E /* CyMessageSocketModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyMessageSocketModel.swift; path = CustomerlySDK/Library/Models/CyMessageSocketModel.swift; sourceTree = "<group>"; };
 		E2C593A9C7EC06CCACE00A75E4436FB0 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image/Image.swift; sourceTree = "<group>"; };
@@ -653,8 +654,8 @@
 		F0CF59BDB2E8363E05F1ACE569D0DC93 /* Starscream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.release.xcconfig; sourceTree = "<group>"; };
 		F0D79FF0D18C5F0AF6C7E268A4BCCCB1 /* Instabug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Instabug.debug.xcconfig; sourceTree = "<group>"; };
 		F375E59FC8123E65D461BA0E63A6596C /* Starscream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.debug.xcconfig; sourceTree = "<group>"; };
-		F3AF6A96B440CFBA4A680658FF842CEF /* Pods_UrbanLifePlusApp_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UrbanLifePlusApp_WatchKit_Extension.framework; path = "Pods-UrbanLifePlusApp WatchKit Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F49AB4B629D3F557559D2771F0D8E8B5 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = CustomerlySDK/Library/de.lproj; sourceTree = "<group>"; };
+		F3AF6A96B440CFBA4A680658FF842CEF /* Pods_UrbanLifePlusApp_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanLifePlusApp_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49AB4B629D3F557559D2771F0D8E8B5 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = CustomerlySDK/Library/de.lproj; sourceTree = "<group>"; };
 		F49F9588209BE4E0DC511D8D479B5E79 /* Socket.IO-Client-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-prefix.pch"; sourceTree = "<group>"; };
 		F723A6104D8736D73727025B55F4EC34 /* IBGNetworkLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGNetworkLogger.h; path = Instabug.framework/Headers/IBGNetworkLogger.h; sourceTree = "<group>"; };
 		F815FF6620BECE2000FF6B68DB0576CB /* ImageDataProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProcessor.swift; path = Sources/Networking/ImageDataProcessor.swift; sourceTree = "<group>"; };
@@ -667,7 +668,7 @@
 		FD4E23A326C739A483C254C7A0DF36BE /* CySurveyParamsRequestModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CySurveyParamsRequestModel.swift; path = CustomerlySDK/Library/Models/CySurveyParamsRequestModel.swift; sourceTree = "<group>"; };
 		FDF48E8C92B5E789FCD6A406E8F29D18 /* CyRouting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyRouting.swift; path = CustomerlySDK/Library/CyRouting.swift; sourceTree = "<group>"; };
 		FF52AD2018FC59FF7A23B6F6AA320CA5 /* CyInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CyInt.swift; path = CustomerlySDK/Library/Subclasses/CyInt.swift; sourceTree = "<group>"; };
-		FF9AB957DADE43038A38511D5F1CBB30 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = CustomerlySDK/Library/tr.lproj; sourceTree = "<group>"; };
+		FF9AB957DADE43038A38511D5F1CBB30 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = tr.lproj; path = CustomerlySDK/Library/tr.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -841,7 +842,6 @@
 				A5749812ED65E0B5938D0E71D749B7EC /* Resources */,
 				C3FA7EBFD9146795884F8577451429C9 /* Support Files */,
 			);
-			name = CustomerlySDK;
 			path = CustomerlySDK;
 			sourceTree = "<group>";
 		};
@@ -948,7 +948,6 @@
 				351E1ABE3C9B3809921D73ED46472FCB /* Core */,
 				90CE17C8B39C6FFF55A5E5E7AAE22A8B /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -987,7 +986,6 @@
 				FA67E25664FE5AC41F872F980DE761BA /* Frameworks */,
 				17B16C0A543E76D8A86FBB2693D78265 /* Support Files */,
 			);
-			name = Instabug;
 			path = Instabug;
 			sourceTree = "<group>";
 		};
@@ -1088,7 +1086,6 @@
 				3D129A8F6E5E741CA43BA175D4516C34 /* WebSocket.swift */,
 				26308C38F79CA3B55578244EA4554522 /* Support Files */,
 			);
-			name = Starscream;
 			path = Starscream;
 			sourceTree = "<group>";
 		};
@@ -1122,7 +1119,6 @@
 				3376EB5654D454AC63DD77B51D30DFA2 /* SSLSecurity.swift */,
 				6CD73999E17CB3B29A2CA09835F7421F /* Support Files */,
 			);
-			name = "Socket.IO-Client-Swift";
 			path = "Socket.IO-Client-Swift";
 			sourceTree = "<group>";
 		};
@@ -1207,7 +1203,6 @@
 				C296E8459B9DCBC7E5341F0C2853A749 /* URLTransform.swift */,
 				D9754CAD239682EBC61DAD466A07C0F8 /* Support Files */,
 			);
-			name = ObjectMapper;
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
@@ -1564,7 +1559,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 11.0";
@@ -2091,7 +2086,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CustomerlySDK";
 				IBSC_MODULE = CustomerlySDK;
 				INFOPLIST_FILE = "Target Support Files/CustomerlySDK/ResourceBundle-CustomerlySDK-CustomerlySDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = CustomerlySDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2116,7 +2111,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ObjectMapper/ObjectMapper-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2151,7 +2146,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2187,7 +2182,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2212,7 +2207,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2248,6 +2243,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2303,7 +2299,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2375,7 +2371,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ObjectMapper/ObjectMapper-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2421,6 +2417,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2511,7 +2508,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2536,7 +2533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2563,7 +2560,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2600,7 +2597,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2637,7 +2634,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CustomerlySDK/CustomerlySDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CustomerlySDK/CustomerlySDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2818,7 +2815,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CustomerlySDK";
 				IBSC_MODULE = CustomerlySDK;
 				INFOPLIST_FILE = "Target Support Files/CustomerlySDK/ResourceBundle-CustomerlySDK-CustomerlySDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = CustomerlySDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2883,7 +2880,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CustomerlySDK/CustomerlySDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CustomerlySDK/CustomerlySDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1140"
+   LastUpgradeVersion = "1200"
    version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -56,10 +56,8 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "UrbanLifePlusApp WatchKit Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/UrbanLife+">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B8EC8AD24686C0200655D58"
@@ -67,7 +65,7 @@
             BlueprintName = "UrbanLifePlusApp WatchKit App"
             ReferencedContainer = "container:UrbanLifePlusApp.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -77,10 +75,8 @@
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "UrbanLifePlusApp WatchKit Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/UrbanLife+">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B8EC8AD24686C0200655D58"
@@ -88,16 +84,7 @@
             BlueprintName = "UrbanLifePlusApp WatchKit App"
             ReferencedContainer = "container:UrbanLifePlusApp.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2B8EC8AD24686C0200655D58"
-            BuildableName = "UrbanLifePlusApp WatchKit App.app"
-            BlueprintName = "UrbanLifePlusApp WatchKit App"
-            ReferencedContainer = "container:UrbanLifePlusApp.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
